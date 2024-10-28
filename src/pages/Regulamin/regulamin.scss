@@ -1,0 +1,45 @@
+.Regulamin {
+    padding: 156px 20px 52px;
+     font-family: Poppins;
+     font-size: 16px;
+     font-weight: 400;
+     line-height: 22.4px;
+     text-align: left;
+    
+    &-title {
+        font-family: Poppins;
+        font-size: 40px;
+        font-weight: 600;
+        line-height: 60px;
+        text-align: left;
+        margin-bottom: 50px;
+
+        
+    }
+
+
+    h2 {
+        font-family: Poppins;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px;
+        text-align: left;
+        margin-bottom: 24px;
+    }
+
+    h3 {
+        margin-bottom: 5px;
+    }
+
+
+    ol {
+        list-style-type: decimal;
+        margin-left: 35px;
+    }
+   
+
+   section {
+    margin-bottom: 46px;
+   }
+}
+

@@ -1,0 +1,148 @@
+
+.Program {
+   
+    display: flex;
+    flex: 11;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 100%;
+
+    &-container {
+        padding: 14px 17px 0 
+    }
+    
+    
+
+    &__topContainer {
+        background-image: url('/program-bg.jpg ');
+        width: 100%;
+        min-height: 475px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        max-width: 1406px;
+        border-radius: 49px;
+        margin: 0 auto ;       
+        box-sizing: border-box;
+        padding: 96px 85px 52px;  
+       
+
+        
+
+        &-title {
+            font-family: Poppins;
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 60px;
+            letter-spacing: 0.01em;
+            text-align: left;
+            margin-bottom: 20px;
+            color: white;
+            
+        }
+
+        &-description {
+            font-family: Poppins;
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 36px;
+            letter-spacing: -0.02em;
+            text-align: left;
+            color: white;
+            margin-bottom: 45px;
+
+        }
+
+        &-button {
+            max-width: 256px;
+        }
+    }
+
+
+    &__agenda {
+        width: 100%;
+        background-image: url('/program-latki.svg');
+        background-position: center -200px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+        max-width: 1440px;
+        margin: 0 auto;
+        padding-bottom: 138px;
+
+        &-container {
+            max-width: 1240px;
+            margin: 0 auto;
+            color: #345B55;
+        }
+
+
+
+        &-title {
+            font-family: Poppins;
+            font-size: 40px;
+            font-weight: 600;
+            line-height: 60px;
+            text-align: left;
+            margin-bottom:  66px;
+            padding-top: 97px ;
+            
+
+
+
+        }
+
+
+        &-row {
+            width: 100%;
+            border-bottom: 2px solid #345B55;
+            min-height: 82px;
+            display: flex;
+            align-items: center;
+            gap: 180px;
+
+            &:first-child {
+                border-top: 2px solid #345B55;
+            }
+        }
+
+        &-time {
+            min-width: 179px;
+            height: 59px;
+            color: #FFFFFF;
+            font-family: Poppins;
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 36px;
+            letter-spacing: -0.02em;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 20px;
+            background-color: #345B55;
+            text-wrap: nowrap;
+            padding: 0 19px;
+            box-sizing: border-box;
+
+
+            
+
+            &--gray {
+               opacity: 80%;
+            }
+        }
+
+        &-description {
+            //styleName: WP_H3;
+            font-family: Poppins;
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 36px;
+            text-align: left;
+
+        }
+        
+    }
+
+}

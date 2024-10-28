@@ -1,0 +1,98 @@
+@import '../../styles/mixins.scss';
+
+.Card {
+    width: 302px;
+    height: 460px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 33px 20px 16px;
+    box-sizing: border-box;
+    background-color: #B7C274;
+    justify-content: space-between;
+
+    @include device(tablet) {
+        width: 300px;
+        height: 460px;
+    }
+
+    @include device(mobile, tablet ) {
+        width: 350px;
+        height: 360px;
+        padding: 15px 10px 28px;
+    }
+
+    &-image {
+        margin-bottom: 29px;
+        height: 60px;
+
+        @include device(mobile) {
+            margin-bottom: 13px;
+        }
+    }
+
+    &-textWrapper {
+        height: 100%;
+    }
+
+    &-title {
+        font-family: 'Poppins';
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 36px;
+        letter-spacing: -0.02em;
+        text-align: center;
+        margin-bottom: 17px;
+
+        @include device(mobile,tablet) {
+            margin-bottom: 5px;
+
+        }
+    }
+
+    &-description { 
+        font-family: Poppins;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
+        text-align: center;
+
+        @include device(mobile, tablet) {
+            margin-bottom: 13px; 
+        }
+    }
+
+    &-button {
+        all: unset; 
+        cursor: pointer;
+        min-width: 246px;
+        height: 47px;
+        background-color: #FFFFFF;
+        box-sizing: border-box;
+        padding: 8px 32px 8px 32px;
+        gap: 10px;
+        border-radius: 30px ;
+        opacity: 0px;
+        font-family: Poppins;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px;
+        text-align: center;
+        text-wrap: nowrap;
+        transition: 0.2s;
+
+        &:hover {
+            scale: 105%;
+        }
+
+        @include device(mobile, tablet) {
+            //styleName: WP_M_Button;
+            font-family: Poppins;
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 18px;
+            
+        }
+    }
+}

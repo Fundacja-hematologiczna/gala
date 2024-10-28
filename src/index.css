@@ -1,0 +1,31 @@
+@import './styles/reset.css';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+html {
+    
+    min-height: 100vh;
+}
+
+body {
+    
+    min-height: 100vh ;
+}
+
+#root {
+    
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    width: 100%;
+    box-sizing: border-box;
+    height: auto; 
+}
+
+
+body {
+    padding: 0;
+}
