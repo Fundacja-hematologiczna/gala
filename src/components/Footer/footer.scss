@@ -1,189 +1,171 @@
 @import '../../styles/mixins.scss';
 
 .Footer {
-    background-color: #345B55;
-    color: white;
-    padding: 0 17px 28px;
+  background-color: #345b55;
+  color: white;
+  padding: 0 17px 28px;
 
-    &-container {
-        @include device(mobile) {
-            max-width: 400px;
-        }
+  &-container {
+    @include device(mobile) {
+      max-width: 400px;
+    }
+  }
+
+  &__logo {
+    &-img {
+      margin: 18px 0 42px;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 446px;
+      height: 76px;
+      background-image: url('/footer-logo.png');
+
+      @include device(mobile) {
+        height: 52px;
+        max-width: 279px;
+        background-image: url('/stopka-logo-mobile.png');
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px;
+
+    @include device(mobile) {
+      flex-direction: column-reverse;
+      gap: 44px;
     }
 
-    &__logo {
-        &-img {
-            margin: 18px 0 42px;     
-            background-size: contain;
-            background-position: center;
-            background-repeat: no-repeat;
-            width: 446px;
-            height: 76px;
-            background-image: url('/footer-logo.png');
+    &-contact {
+      justify-content: space-around;
 
-            @include device(mobile) {
-                height: 52px;
-                max-width: 279px;
-                background-image: url('/stopka-logo-mobile.png');    
-            }
-
-        }
-    }
-
-    &__content {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        gap: 20px;
-
-        @include device(mobile) {
-            flex-direction: column-reverse;
-            gap:44px;
-        }
-
-        &-contact {
-            justify-content: space-around;
-
-            &-title {
-                font-family: Poppins;
-                font-size: 20px;
-                font-weight: 600;
-                line-height: 30px;
-                text-align: left;
-                margin-bottom: 5px;
-
-                @include device(mobile) {
-                    font-size: 16px;
-                    font-weight: 700;
-                    line-height: 24px;
-                    text-align: center;
-                    margin-bottom: 26px;
-
-                }
-                
-            }
-
-            &-description {
-                font-family: Poppins;
-                font-size: 16px;
-                font-weight: 400;
-                line-height: 24px;
-                text-align: left;
-
-                margin-bottom: 8px;
-                
-                @include device(mobile) {
-                    //styleName: WP_Small copy;
-                    font-family: Poppins;
-                    font-size: 14px;
-                    font-weight: 400;
-                    line-height: 21px;
-                    text-align: left;
-
-
-                }
-
-
-
-            }
-        }
-
-        &-donate {
-
-            &-title {
-                font-family: Poppins;
-                font-size: 20px;
-                font-weight: 600;
-                line-height: 30px;
-                text-align: left;
-                margin-bottom: 5px;
-
-                @include device(mobile) {
-                    font-size: 16px;
-                    font-weight: 700;
-                    line-height: 24px;
-                    text-align: center;
-                    margin-bottom: 26px;
-                }
-                
-            }
-
-            &-description {
-                font-family: Poppins;
-                font-size: 16px;
-                font-weight: 400;
-                line-height: 24px;
-                text-align: left;
-
-                margin-bottom: 8px;
-
-                @include device(mobile) {
-                    //styleName: WP_Small copy;
-                    font-family: Poppins;
-                    font-size: 14px;
-                    font-weight: 400;
-                    line-height: 21px;
-                    text-align: left;
-                }
-
-                &--noWrap {
-                    text-wrap: nowrap;
-                }
-                
-            }
-        }
-
-
-        &-icons {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-between;
-
-            @include device(mobile) {
-                flex-direction: row;
-                max-width: 231px;
-                margin: 0 auto;
-                gap: 65px;
-
-            }
-        }
-    }
-
-    &__links {
-        margin: 71px auto 0;
-        gap:20px;
-        justify-content: space-between;
-        display: flex;
-        max-width: 1032px;
+      &-title {
         font-family: Poppins;
         font-size: 20px;
-        font-weight: 300;
+        font-weight: 600;
         line-height: 30px;
-        text-align: center;
-        color: white;
+        text-align: left;
+        margin-bottom: 5px;
 
         @include device(mobile) {
-            font-size: 10px;
-            font-weight: 400;
-            line-height: 15px;
-            letter-spacing: 0.03em;
-            text-align: center;
-
+          font-size: 16px;
+          font-weight: 700;
+          line-height: 24px;
+          text-align: center;
+          margin-bottom: 26px;
         }
+      }
 
-        &-link {
-            text-decoration: none;
-            color: white;
-            transition: 0.1s;
+      &-description {
+        font-family: Poppins;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: left;
 
-            &:hover {
-                scale: 103%;
-            }
-            
+        margin-bottom: 8px;
+
+        @include device(mobile) {
+          //styleName: WP_Small copy;
+          font-family: Poppins;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 21px;
+          text-align: left;
         }
-
+      }
     }
 
-    
+    &-donate {
+      &-title {
+        font-family: Poppins;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 30px;
+        text-align: left;
+        margin-bottom: 5px;
+
+        @include device(mobile) {
+          font-size: 16px;
+          font-weight: 700;
+          line-height: 24px;
+          text-align: center;
+          margin-bottom: 26px;
+        }
+      }
+
+      &-description {
+        font-family: Poppins;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: left;
+
+        margin-bottom: 8px;
+
+        @include device(mobile) {
+          //styleName: WP_Small copy;
+          font-family: Poppins;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 21px;
+          text-align: left;
+        }
+
+        &--noWrap {
+          text-wrap: nowrap;
+        }
+      }
+    }
+
+    &-icons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+
+      @include device(mobile) {
+        flex-direction: row;
+        max-width: 231px;
+        margin: 0 auto;
+        gap: 65px;
+      }
+    }
+  }
+
+  &__links {
+    margin: 71px auto 0;
+    gap: 20px;
+    justify-content: space-between;
+    display: flex;
+    max-width: 1032px;
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 30px;
+    text-align: center;
+    color: white;
+
+    @include device(mobile) {
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 15px;
+      letter-spacing: 0.03em;
+      text-align: center;
+    }
+
+    &-link {
+      text-decoration: none;
+      color: white;
+      transition: 0.1s;
+
+      &:hover {
+        scale: 103%;
+      }
+    }
+  }
 }

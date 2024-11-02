@@ -1,5 +1,5 @@
 import { Card } from '../../components/Card/Card.jsx';
-import { Button } from '../../components/Button/Button.jsx';
+import { Button } from '../../components/Button/Button';
 import './home.scss';
 import { useNavigate } from 'react-router-dom';
 import '../../index.css';
