@@ -1,0 +1,12 @@
+{
+  "MENU_OPTIONS": {
+    "MAIN_PAGE": "main page",
+    "REGISTRATION": "registration",
+    "PLACE": "place",
+    "PROGRAM": "program",
+    "AUCTION": "auction",
+    "CONTRIBUTORS": "contributors",
+    "GALLERY": "gallery",
+    "CONTACT": "contact"
+  }
+}

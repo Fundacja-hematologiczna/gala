@@ -1,0 +1,71 @@
+.burgerMenu {
+  position: fixed;
+  height: 100dvh;
+  width: 100dvw;
+  background-color: #345b55;
+  inset: 0 auto auto 0;
+  display: grid;
+  place-items: center;
+  animation: burgerMenuOpen 0.3s ease;
+
+  &--close {
+    animation: burgerMenuClose 0.3s ease;
+  }
+
+  &__button {
+    background-image: url('/menu-hamburger.svg');
+    height: 19px;
+    width: 30px;
+    position: absolute;
+    inset: 22px auto auto 25px;
+    cursor: pointer;
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+  }
+
+  &__item {
+    height: 44px;
+    width: 250px;
+    display: flex;
+  }
+
+  &__link {
+    height: 24px;
+    width: 100%;
+    text-transform: uppercase;
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    text-justify: center;
+    padding: 10px 14px 10px 14px;
+    border-radius: 50px;
+    color: #fff;
+    text-decoration: none;
+    list-style: none;
+    align-self: center;
+    text-align: center;
+    transition: background-color 0.3s;
+
+    &--active {
+      text-decoration: underline;
+    }
+  }
+}
+
+@keyframes burgerMenuOpen {
+  from {
+    inset: -100dvh auto auto 0;
+  }
+}
+
+@keyframes burgerMenuClose {
+  to {
+    inset: -100dvh auto auto 0;
+  }
+}

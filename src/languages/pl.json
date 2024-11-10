@@ -1,0 +1,12 @@
+{
+  "MENU_OPTIONS": {
+    "MAIN_PAGE": "strona główna",
+    "REGISTRATION": "rejestracja",
+    "PLACE": "miejsce",
+    "PROGRAM": "program",
+    "AUCTION": "aukcja",
+    "CONTRIBUTORS": "dla darczyńców",
+    "GALLERY": "galeria",
+    "CONTACT": "kontakt"
+  }
+}
