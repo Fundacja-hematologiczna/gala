@@ -1,18 +1,26 @@
-.Gratulation {
-  background-color: #345b55;
-  border-radius: 20px;
-  position: absolute;
-  width: min(60dvw, 650px);
-  padding: 118px 48px;
+.acknowledgement {
+  background-color: #dfdfdf8e;
+  backdrop-filter: blur(4px);
+  position: fixed;
+  width: 100dvw;
+  height: 100dvh;
+  display: grid;
+  place-items: center;
   box-sizing: border-box;
   color: #fff;
+  inset: 0 auto auto 0;
+  z-index: 200;
 
   &__container {
+    background-color: #345b55;
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
     gap: 34px;
     justify-content: center;
     align-items: center;
+    width: min(650px, 100%);
+    padding: 118px 48px;
   }
 
   &__title {

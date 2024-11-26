@@ -48,7 +48,7 @@ const Header = () => {
                 </NavLink>
               </li>
             ))}
-            <HeaderLanguage className="nav-link" />
+            <HeaderLanguage className="nav-language" />
           </ul>
           <div
             className={`nav__burgerMenu ${isBurgerMenuActive ? 'nav__burgerMenu--active' : ''}`}

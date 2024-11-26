@@ -1,10 +1,13 @@
+import { useTranslation } from 'react-i18next';
 import { contactData } from './Contact.data';
 
 const ContactInfo = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="Contact__details">
       <div className="container">
-        <h2 className="Contact__details-title">Dane kontaktowe</h2>
+        <h2 className="Contact__details-title">{t('CONTACT.INFO_TITLE')}</h2>
         <div className="Contact__details-cardsWrapper">
           {contactData.map((info) => (
             <a

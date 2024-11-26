@@ -12,6 +12,7 @@ const Contact = () => {
     email: '',
     message: '',
   });
+  const [isAcknowledgementOpen, setIsAcknowledgementOpen] = useState(false);
 
   const handleChange = (e) => {
     setFormData({
@@ -29,6 +30,11 @@ const Contact = () => {
       email: '',
       message: '',
     });
+    setIsAcknowledgementOpen(true);
+  };
+
+  const handleClickCloseAccept = () => {
+    setIsAcknowledgementOpen(false);
   };
 
   return (
@@ -41,7 +47,9 @@ const Contact = () => {
           formData={formData}
         />
         <ContactInfo />
-        <ContactFormAccepted />
+        {isAcknowledgementOpen && (
+          <ContactFormAccepted onClick={handleClickCloseAccept} />
+        )}
       </main>
     </>
   );

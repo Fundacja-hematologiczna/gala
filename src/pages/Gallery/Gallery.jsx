@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import '../../styles/index.scss';
 import './gallery.scss';
 import { useState } from 'react';
@@ -8,35 +9,9 @@ const images = import.meta.glob('/src/assets/gallery/*/*.{png,jpg,jpeg,svg}', {
 //const images = import.meta.glob('/public/partners&contibutors/partnerzy/*.{png,jpg,jpeg,svg}', { eager: true });
 
 const Gallery = () => {
+  const { t } = useTranslation();
   const [isActive, setIsActive] = useState('2022');
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
   const [currentPage, setCurrentPage] = useState(1); // Numer aktualnej strony
   const imagesPerPage = 180; // Maksymalna liczba zdjęć na jednej stronie
 
@@ -104,16 +79,12 @@ const Gallery = () => {
         <div className="Gallery-container">
           <div className="Gallery__topContainer">
             <div className="Gallery__topContainer-content">
-              <h1 className="Gallery__topContainer-title">Galeria</h1>
+              <h1 className="Gallery__topContainer-title">
+                {t('GALLERY.HEADER_TITLE')}
+              </h1>
               <p className="Gallery__topContainer-description">
-                Gala Charytatywna w Walewicach to już tradycyjnie festiwal
-                pięknych serc. Każda odsłona gromadzi liczne grono osób
-                pragnących wspierać pacjentów chorób hematologicznych i ich
-                rodziny.
-                <p>
-                  Zajrzyj do fotorelacji, by poczuć tę moc dobra i wyjątkową
-                  atmosferę Gali.
-                </p>
+                {t('GALLERY.HEADER_BODY_1')}
+                <p>{t('GALLERY.HEADER_BODY_2')}</p>
               </p>
             </div>
           </div>
@@ -142,7 +113,6 @@ const Gallery = () => {
 
               <div className="Gallery__pictures__grid">
                 {currentImages.map((image) => (
-    
                   <div className="Gallery__pictures__grid-item " key={image}>
                     <img
                       src={image}

@@ -1,7 +1,10 @@
+import { useTranslation } from 'react-i18next';
 import '../../styles/index.scss';
 import './auction.scss';
 
 const Program = () => {
+  const { t } = useTranslation();
+
   return (
     <>
       <main className="Auction">
@@ -9,18 +12,14 @@ const Program = () => {
           <div className="Auction__topContainer">
             <div className="Auction__topContainer-greenLayer">
               <div className="Auction__topContainer-content">
-                <h1 className="Auction__topContainer-title">Aukcja</h1>
+                <h1 className="Auction__topContainer-title">
+                  {t('AUCTION.HEADER_TITLE')}
+                </h1>
                 <p className="Auction__topContainer-description">
-                  Nasza charytatywna Aukcja to festiwal dobroczynności i
-                  bezinteresowności. Wspaniali ludzie o wielkich sercach dzielą
-                  się z nami tym, co najlepsze. Wśród artefaktów wystawianych na
-                  Aukcję znaleźć można m.in. dzieła sztuki współczesnej,
-                  wzornictwo użytkowe, rękodzieło, przedmioty codziennego
-                  użytku, przedmioty kolekcjonerskie czy vouchery na
-                  niezapomniane przeżycia i relaksujące chwile.
+                  {t('AUCTION.HEADER_BODY')}
                 </p>
                 <div className="Auction__topContainer-bigText">
-                  Znajdź coś dla siebie!
+                  {t('AUCTION.HEADER_AWAITING')}
                 </div>
               </div>
             </div>
@@ -28,7 +27,10 @@ const Program = () => {
 
           <section className="Auction__agenda1">
             <div className="Auction__agenda-container">
-              <h2 className="Auction__agenda1-title">Agenda</h2>
+              <h2 className="Auction__agenda1-title">
+                {' '}
+                {t('AUCTION.ITEMS_TITLE')}
+              </h2>
 
               <div className="Auction__agenda1-grid">
                 <div className="Auction__agenda1-grid--item"></div>

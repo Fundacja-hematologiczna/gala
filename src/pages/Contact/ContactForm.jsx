@@ -1,15 +1,21 @@
 /* eslint-disable react/prop-types */
 
+import { useTranslation } from 'react-i18next';
+
 const ContactForm = ({ onChange, onSubmit, formData }) => {
+  const { t } = useTranslation();
+
   return (
     <section className="Contact__form">
       <div className="container">
-        <h2 className="Contact__form-title">Formularz kontaktowy</h2>
+        <h2 className="Contact__form-title">{t('CONTACT.FORM_TITLE')}</h2>
 
         <form onSubmit={onSubmit}>
           <div className="Contact__form__fieldsGrid">
             <div className="Contact__form-field Contact__form-field--1">
-              <label className="Contact__form-label">Imię i Nazwisko:</label>
+              <label className="Contact__form-label">
+                {t('CONTACT.FORM_NAME')}
+              </label>
               <input
                 className="Contact__form-input"
                 type="text"
@@ -21,7 +27,9 @@ const ContactForm = ({ onChange, onSubmit, formData }) => {
             </div>
 
             <div className="Contact__form-field Contact__form-field--2">
-              <label className="Contact__form-label">Adres e-mail:</label>
+              <label className="Contact__form-label">
+                {t('CONTACT.FORM_EMAIL')}
+              </label>
               <input
                 className="Contact__form-input"
                 type="email"
@@ -33,7 +41,9 @@ const ContactForm = ({ onChange, onSubmit, formData }) => {
             </div>
 
             <div className="Contact__form-field Contact__form-field--3">
-              <label className="Contact__form-label">Treść wiadomości:</label>
+              <label className="Contact__form-label">
+                {t('CONTACT.FORM_MESSAGE')}
+              </label>
               <textarea
                 className=" Contact__form-input Contact__form-input--big"
                 name="message"
@@ -44,11 +54,11 @@ const ContactForm = ({ onChange, onSubmit, formData }) => {
             </div>
           </div>
           <p className="Contact__form-description">
-            Kopia wysłanej wiadomości pojawi się w Twojej skrzynce email.
+            {t('CONTACT.FORM_WARNING')}
           </p>
 
           <button className="Contact__form-button" type="submit">
-            Wyślij wiadomość
+            {t('CONTACT.FORM_BUTTON')}
           </button>
         </form>
       </div>
