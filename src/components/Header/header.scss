@@ -43,8 +43,6 @@
   background-color: #f5f5f5;
   display: flex;
   align-items: center;
-  //padding-left: 200px;
-  //border : 2px solid yellow;
 
   @include device(tablet) {
     border-radius: 0;
