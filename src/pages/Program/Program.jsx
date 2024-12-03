@@ -8,24 +8,24 @@ const Program = () => {
       <main className="Program">
         <div className="Program-container">
           <div className="Program__topContainer">
-            <div className="Program__topContainer-content">
-              <h1 className="Program__topContainer-title">Program</h1>
-              <p className="Program__topContainer-description">
-                Trzecia gala charytatywna to bogaty program pełen różnorodnych
-                atrakcji, od uroczystego poloneza po koncert zespołu Heima.
-                Uczestnicy będą mogli wziąć udział w aukcjach, pokazach mody i
-                jazdy konnej, a także zwiedzać Pałac. Zarezerwuj swój udział już
-                teraz i dołącz do nas w tę niezapomnianą noc zakończoną grillem
-                i after party!
-              </p>
-              <div className="Program__topContainer-button">
-                <Button
-                  buttonLabel={'Zgłoś swój udział'}
-                  backgroundColor={'#B7C274'}
-                  navigateTo={'/about'}
-                />
-              </div>
+            <h1 className="Program__topContainer-title">Program</h1>
+            <p className="Program__topContainer-description">
+              Trzecia gala charytatywna to bogaty program pełen różnorodnych
+              atrakcji, od uroczystego poloneza po koncert zespołu Heima.
+              Uczestnicy będą mogli wziąć udział w aukcjach, pokazach mody i
+              jazdy konnej, a także zwiedzać Pałac. Zarezerwuj swój udział już
+              teraz i dołącz do nas w tę niezapomnianą noc zakończoną grillem i
+              after party!
+            </p>
+            <div className="Program__topContainer-button">
+              <Button
+                buttonLabel={'Zgłoś swój udział'}
+                backgroundColor={'#B7C274'}
+                navigateTo={'/about'}
+              />
             </div>
+
+            <div className="Program__topContainer-content"></div>
           </div>
 
           <section className="Program__agenda">
@@ -168,25 +168,6 @@ const Program = () => {
             </div>
           </section>
         </div>
-
-        <section className="Place__greenLabel">
-          <div className="Place__greenLabel-container">
-            <p className="Place__greenLabel-topText">
-              Chcesz do nas dołączyć,
-              <br /> ale nie wiesz jak?
-            </p>
-            <p className="Place__greenLabel-botText">
-              Formularz przeprowadzi Cię przez proces rejestracji.
-            </p>
-            <div className="Place__greenLabel-button">
-              <Button
-                buttonLabel={'Zgłoś swój udział'}
-                backgroundColor={'#FFFFFF'}
-                navigateTo={'/about'}
-              />
-            </div>
-          </div>
-        </section>
       </main>
     </>
   );

@@ -1,3 +1,5 @@
+@import '../../styles/mixins.scss';
+
 .Auction {
    
     display: flex;
@@ -7,13 +9,19 @@
     width: 100%;
    
     &-container {
-        padding: 14px 17px 0 
+        padding: 14px 17px 0;
     }
     
-    
+    &__sectionWelcome {
+        padding: 17px 17px 0;
+        
+        @include device(tablet, mobile) {
+            padding:  17px 0 ;
+        }
+    }
 
     &__topContainer {
-         background-image: url('/aukcje.jpg ');
+        background-image: url('/aukcje.jpg ');
         width: 100%;
         min-height: 475px;
         background-position: center;
@@ -21,18 +29,58 @@
         background-size: cover;
         max-width: 1406px;
         border-radius: 49px;
-        margin: 0 auto ;   
+        margin: 0 auto ;
         box-sizing: border-box;
+        padding: 96px 85px 52px;
+      //  padding: 14px 17px 0 ;
+
+      
+
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      margin-bottom: 95px;
+
+        @include device(tablet) {
+            border-radius: 22px;
+        }
+
+        @include device(mobile) {
+            border-radius: 0px;
+            padding: 82px 20px 20px;
+            min-height: 0px;
+            margin-bottom: 45px;
+            
+        }
 
         &-greenLayer {
             background: #345B55CC; ;
             width: 100%;
             height: 100%;
-            padding: 96px 85px 52px;  
+              
             box-sizing: border-box;
             border-radius: 49px;
+
+
+
+            position: absolute;
+            top: 0px;
+            left:0px;
+            z-index: 1;
+
+            @include device(tablet) {
+                border-radius: 22px;
+            }
+    
+            @include device(mobile) {
+                border-radius: 0px;
+                padding: 82px 20px 20px
+            }
+    
              
         }
+
+        
        
         &-title {
             font-family: Poppins;
@@ -43,7 +91,8 @@
             text-align: left;
             margin-bottom: 20px;
             color: white;
-            
+            z-index: 2;
+       
         }
 
         &-description {
@@ -55,6 +104,20 @@
             text-align: left;
             color: white;
             margin-bottom: 45px;
+            z-index: 2;
+
+            @include device(mobile) {
+               //styleName: WP_Small copy;
+                font-family: Poppins;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 21px;
+                text-align: left;
+
+                margin-bottom: 72px;
+
+
+            }
 
         }
 
@@ -65,6 +128,18 @@
             line-height: 60px;
             text-align: center;
             color: white;
+            z-index: 2;
+
+            @include device(mobile) {
+               //styleName: WP_H3;
+                font-family: Poppins;
+                font-size: 24px;
+                font-weight: 600;
+                line-height: 36px;
+                text-align: center;
+
+
+            }
 
         }
     }
@@ -74,7 +149,8 @@
         width: 100%;  
         max-width: 1440px;
         margin: 0 auto;
-        padding-bottom: 138px;
+       // padding-bottom: 138px;
+        padding: 0 17px 138px;
 
         &-container {
             max-width: 1240px;
@@ -87,78 +163,74 @@
             font-size: 40px;
             font-weight: 600;
             line-height: 60px;
-            text-align: left;
+            text-align: center;
             margin-bottom:  66px;
-            padding-top: 97px ;
+            
+            color:#345B55;
+
+            @include device(mobile) {
+                //styleName: WP_H3;
+                font-family: Poppins;
+                font-size: 24px;
+                font-weight: 600;
+                line-height: 36px;
+                text-align: left;
+                text-align: center;
+
+            }
+
             
         }
 
-        &-grid {
-            display: grid;
-            grid-auto-columns: 385px; 
-            grid-auto-rows: 385px;
-            grid-template-columns: repeat(auto-fill, 358px);
-            row-gap: 64px; 
-            column-gap: 81px;
-            justify-content: center;
+        // &-grid {
+        //     display: grid;
+        //     grid-auto-columns: 385px; 
+        //     grid-auto-rows: 385px;
+        //     grid-template-columns: repeat(auto-fill, 358px);
+        //     row-gap: 64px; 
+        //     column-gap: 81px;
+        //     justify-content: center;
   
  
-            &--item {
-                 background-color: #F5F5F5;
-                 border-radius: 10px;
-                 width: 100%;
-                 height: 100%;
+        //     &--item {
+        //          background-color: #F5F5F5;
+        //          border-radius: 10px;
+        //          width: 100%;
+        //          height: 100%;
                 
-            }
-        }
+        //     }
+        // }
 
-        &-row {
-            width: 100%;
-            border-bottom: 2px solid #345B55;
-            min-height: 82px;
-            display: flex;
-            align-items: center;
-            gap: 180px;
+        &__greenCard {
+            max-width: 420px;
+            margin: 0 auto;
+            border-radius: 30px;
+            padding: 15px 14px 28px;
+            box-shadow: 0px 4px 4px 0px #00000040;
 
-            &:first-child {
-                border-top: 2px solid #345B55;
-            }
-        }
-
-        &-time {
-            min-width: 179px;
-            height: 59px;
-            color: #FFFFFF;
-            font-family: Poppins;
-            font-size: 24px;
-            font-weight: 400;
-            line-height: 36px;
-            letter-spacing: -0.02em;
-            text-align: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 20px;
-            background-color: #345B55;
-            text-wrap: nowrap;
-            padding: 0 19px;
-            box-sizing: border-box;
-
-            &--gray {
-               opacity: 80%;
-            }
-        }
-
-        &-description {
-            //styleName: WP_H3;
-            font-family: Poppins;
-            font-size: 24px;
-            font-weight: 600;
-            line-height: 36px;
-            text-align: left;
-
-        }
+            &-title {
+                font-family: 'Poppins';
+                font-size: 24px;
+                font-weight: 500;
+                line-height: 36px;
+                letter-spacing: -0.02em;
+                text-align: center;
+                margin-bottom: 30px;
         
+                @include device(mobile) {
+                    font-size: 20px;
+                    font-weight: 400;
+        
+                }
+            }
+
+            &-buttonWrapper {
+                width: fit-content;
+                margin: 0 auto;
+            }
+        }
+
+       
     }
 
 }

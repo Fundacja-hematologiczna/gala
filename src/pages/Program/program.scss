@@ -1,3 +1,4 @@
+@import '../../styles/mixins.scss';
 
 .Program {
    
@@ -8,7 +9,22 @@
     width: 100%;
 
     &-container {
-        padding: 14px 17px 0 
+
+        @include device(desktop) {
+            padding: 14px 17px 71px ;
+        }
+
+        @include device(tablet) {
+            padding-top: 14px  ;
+            padding-bottom: 71px;
+        }
+
+        @include device(mobile) {
+            padding-top: 14px  ;
+            padding-bottom: 41px;
+        }
+        
+        
     }
     
     
@@ -24,7 +40,21 @@
         border-radius: 49px;
         margin: 0 auto ;       
         box-sizing: border-box;
-        padding: 96px 85px 52px;  
+        padding: 96px 85px 52px;
+        
+        @include device(tablet) {
+            border-radius: 22px;
+        }
+
+        @include device(mobile) {
+            border-radius: 0px;
+            padding: 91px 20px 24px;
+            justify-content: space-between;
+            display: flex;
+            flex-direction: column;
+            min-height: auto;
+            
+        }
        
 
         
@@ -38,6 +68,18 @@
             text-align: left;
             margin-bottom: 20px;
             color: white;
+
+            @include device(mobile) {
+                //styleName: WP_H2;
+                font-family: Poppins;
+                font-size: 40px;
+                font-weight: 700;
+                line-height: 60px;
+                letter-spacing: 0.01em;
+                text-align: left;
+                
+
+            }
             
         }
 
@@ -51,10 +93,24 @@
             color: white;
             margin-bottom: 45px;
 
+            @include device(mobile) {
+                //styleName: WP_Small copy;
+                font-family: Poppins;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 21px;
+                text-align: left;
+
+            }
+
         }
 
         &-button {
             max-width: 256px;
+
+            @include device(mobile) {
+                max-width: 171px;
+            }
         }
     }
 
@@ -69,6 +125,9 @@
         max-width: 1440px;
         margin: 0 auto;
         padding-bottom: 138px;
+
+
+        padding: 0 25px;
 
         &-container {
             max-width: 1240px;
@@ -86,10 +145,17 @@
             text-align: left;
             margin-bottom:  66px;
             padding-top: 97px ;
+
+            @include device(mobile) {
+                //styleName: WP_H3;
+                font-family: Poppins;
+                font-size: 24px;
+                font-weight: 600;
+                line-height: 36px;
+                text-align: left;
+
+            }
             
-
-
-
         }
 
 
@@ -102,7 +168,20 @@
             gap: 180px;
 
             &:first-child {
-                border-top: 2px solid #345B55;
+
+                @include device (desktop, tablet) {
+                    border-top: 2px solid #345B55;
+                }
+            }
+
+            @include device(mobile) {
+                flex-direction: column;
+                gap: 14px;
+                padding: 30px 0;
+
+                &:last-child {
+                    border-bottom: 0;
+                }
             }
         }
 
@@ -125,9 +204,7 @@
             padding: 0 19px;
             box-sizing: border-box;
 
-
             
-
             &--gray {
                opacity: 80%;
             }
@@ -140,6 +217,10 @@
             font-weight: 600;
             line-height: 36px;
             text-align: left;
+
+            @include device (mobile) {
+                text-align: center;
+            }
 
         }
         

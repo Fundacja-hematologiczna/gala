@@ -244,106 +244,104 @@
             margin: 0 auto;
 
             &:hover {
-                scale: 105%;
+                scale: 103%;
                 cursor: pointer;
+               
             }
         }
     }
 
 
+    &__donate {
+        color: #345B55;
+        padding: 0 20px;
+        margin-bottom: 72px;
 
-    &__details {
+        &-container {
+            border:  3px solid #345B55 ;
+            border-radius: 20px;
+            padding: 89px 84.5px 40px;
+
+            @include device(mobile) {
+                padding: 82px 27px 45px;
+            }
+        }
 
         &-title {
+            //styleName: WP_Title H1';
             font-family: Poppins;
-            font-size: 30px;
-            font-weight: 500;
-            line-height: 45px;
-            text-align: left;
-            color: #345B55;
-            margin-bottom: 62px;
-        }
-
-        &-cardsWrapper {
-            display: flex;
-            justify-content: space-between;
-            font-family: Poppins;
-            font-size: 20px;
-            font-weight: 400;
-            line-height: 30px;
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 72px;
+            letter-spacing: 0.01em;
             text-align: center;
-            margin-bottom: 101px;
-            gap: 44px;
+            margin-bottom: 16px;
 
+            @include device(mobile) {      
+                font-size: 32px;
+                font-weight: 700;
+                line-height: 48px;
+
+            }
+            
         }
 
-        &__phone {
-            box-shadow: 0px 4px 4px 0px #00000040;
-            border-radius: 20px;
-            background: #345B5540;
-            padding: 23px 25px 9px 25px;
-            display: flex;
-            box-sizing: border-box;
-            flex-direction: column;
-            gap: 60px;
-            width: 347px;
-            flex-grow: 1;
-            cursor: pointer;
-            color: black;
-            text-decoration: none;
+        &-description {
+            //styleName: WP_body copy;
+            font-family: Poppins;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 22.4px;
+            text-align: center;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+            margin-bottom: 51px;
             
-            &-icon {
-                width:90px;
-                height: 65px;
-                margin: 0 auto;
+        }
+
+        &__buttons {
+            display: flex;
+            gap: 34px;
+            width: 100%;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 62px;
+
+
+            &-button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 146px;
+                height: 71px;
+                border: 3px solid #345B55;
+                border-radius: 12px;
+                background-color: #FFFFFF;
+                color: #345B55;
+                //styleName: WP_H2';
+                font-family: Poppins;
+                font-size: 32px;
+                font-weight: 700;
+                line-height: 48px;
+                letter-spacing: 0.01em;
+                text-align: left;
+                text-underline-position: from-font;
+                text-decoration-skip-ink: none;
+                box-sizing: border-box;
+                cursor: pointer;
+
+                &--active {
+                    color: white;
+                    background-color: #345B55;
+                }
+
             }
+        }
+
+        
+    }
+
+
+
     
-        }
-
-        &__email {
-            box-shadow: 0px 4px 4px 0px #00000040;
-            border-radius: 20px;
-            background: #345B5580;
-            padding: 23px 32px 31px 32px;
-            display: flex;
-            box-sizing: border-box;
-            flex-direction: column;
-            gap: 60px;
-            color: black;
-            text-decoration: none;  
-            flex-grow: 2.4;
-            
-
-            &-icon {
-                width:90px;
-                height: 65px;
-                margin: 0 auto;
-            }
-            
-        }
-
-        &__place {
-            box-shadow: 0px 4px 4px 0px #00000040;
-            border-radius: 20px;
-            background: #345B55B2;
-            cursor: pointer;
-            padding: 23px 32px 31px 32px;
-            display: flex;
-            box-sizing: border-box;
-            flex-direction: column;
-            gap: 60px;
-            flex-grow: 2.4;
-            color: black;
-            text-decoration: none;
-            
-            &-icon {
-                width:90px;
-                height: 65px;
-                margin: 0 auto;
-            }
-            
-        }
-
-
-   }
 }

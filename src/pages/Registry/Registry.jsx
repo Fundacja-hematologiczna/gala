@@ -2,12 +2,17 @@ import '../../styles/index.scss';
 import './registry.scss';
 import { useState } from 'react';
 import Checkbox from '../../components/Checkbox/Checkbox';
+import { addUser } from '../../api/services';
 
 const Registry = () => {
+  const [donate, setDonate] = useState(10);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    message: '',
+    street: '',
+    buildingNumber: '',
+    zipCode: '',
+    city: '',
   });
 
   const handleChange = (e) => {
@@ -20,6 +25,11 @@ const Registry = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('x');
+    addUser(formData);
+  };
+
+  const handleClick = (pln) => {
+    setDonate(pln);
   };
 
   return (
@@ -77,9 +87,8 @@ const Registry = () => {
                   <label className="Contact__form-label">Ulica</label>
                   <input
                     className="Registry__form-input"
-                    type="email"
-                    name="email"
-                    value={formData.email}
+                    name="street"
+                    value={formData.street}
                     onChange={handleChange}
                     required
                   />
@@ -89,9 +98,8 @@ const Registry = () => {
                   <label className="Contact__form-label">Nr budynku</label>
                   <input
                     className="Registry__form-input"
-                    type="email"
-                    name="email"
-                    value={formData.email}
+                    name="buildingNumber"
+                    value={formData.buildingNumber}
                     onChange={handleChange}
                     required
                   />
@@ -101,9 +109,8 @@ const Registry = () => {
                   <label className="Contact__form-label">Kod pocztowy</label>
                   <input
                     className="Registry__form-input"
-                    type="email"
-                    name="email"
-                    value={formData.email}
+                    name="zipCode"
+                    value={formData.zipCode}
                     onChange={handleChange}
                     required
                   />
@@ -113,9 +120,8 @@ const Registry = () => {
                   <label className="Contact__form-label">Miasto</label>
                   <input
                     className="Registry__form-input"
-                    type="email"
-                    name="email"
-                    value={formData.email}
+                    name="city"
+                    value={formData.city}
                     onChange={handleChange}
                     required
                   />
@@ -165,96 +171,53 @@ const Registry = () => {
           </div>
         </section>
 
-        <section className="Registry__form">
-          <div className="container Registry__form-container">
-            <h2 className="Registry__form-title">Wesprzyj naszą inicjatywę</h2>
+        <section className="Registry__donate">
+          <div className="container Registry__donate-container">
+            <h2 className="Registry__donate-title">
+              Wesprzyj naszą inicjatywę
+            </h2>
+            <p className="Registry__donate-description">
+              Przekazując darowiznę, pomagasz w realizacji zadań statutowych
+              Fundacji.
+            </p>
 
-            <form onSubmit={handleSubmit}>
-              <div className="Registry__form__fieldsGrid">
-                <div className="Registry__form-field ">
-                  <label className="Registry__form-label">
-                    Imię i Nazwisko:
-                  </label>
-                  <input
-                    className="Registry__form-input"
-                    type="text"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                  />
-                </div>
-
-                <div className="Registry__form-field Contact__form-field--2">
-                  <label className="Registry__form-label">Adres e-mail</label>
-                  <input
-                    className="Registry__form-input"
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                  />
-                </div>
-
-                <div className="Registry__form-field ">
-                  <label className="Contact__form-label">Ulica</label>
-                  <input
-                    className="Registry__form-input"
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                  />
-                </div>
-
-                <div className="Registry__form-field ">
-                  <label className="Contact__form-label">Nr budynku</label>
-                  <input
-                    className="Registry__form-input"
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                  />
-                </div>
-
-                <div className="Registry__form-field ">
-                  <label className="Contact__form-label">Kod pocztowy</label>
-                  <input
-                    className="Registry__form-input"
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                  />
-                </div>
-
-                <div className="Registry__form-field ">
-                  <label className="Contact__form-label">Miasto</label>
-                  <input
-                    className="Registry__form-input"
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                  />
-                </div>
-              </div>
-
-              <div className="Registry__form__checkbox"></div>
-              <p className="Registry__form-description">
-                Kopia wysłanej wiadomości pojawi się w Twojej skrzynce email.
-              </p>
-
-              <button className="Registry__form-button" type="submit">
-                Wyślij wiadomość
+            <div className="Registry__donate__buttons">
+              <button
+                onClick={() => handleClick(10)}
+                className={`Registry__donate__buttons-button ${donate === 10 ? 'Registry__donate__buttons-button--active' : ''}`}>
+                10
               </button>
-            </form>
+              <button
+                onClick={() => handleClick(20)}
+                className={`Registry__donate__buttons-button ${donate === 20 ? 'Registry__donate__buttons-button--active' : ''}`}>
+                20
+              </button>
+              <button
+                onClick={() => handleClick(50)}
+                className={`Registry__donate__buttons-button ${donate === 50 ? 'Registry__donate__buttons-button--active' : ''}`}>
+                50
+              </button>
+
+              <button
+                onClick={() => handleClick(100)}
+                className={`Registry__donate__buttons-button ${donate === 100 ? 'Registry__donate__buttons-button--active' : ''}`}>
+                100
+              </button>
+              <button
+                onClick={() => handleClick(250)}
+                className={`Registry__donate__buttons-button ${donate === 250 ? 'Registry__donate__buttons-button--active' : ''}`}>
+                250
+              </button>
+              <button
+                onClick={() => handleClick(500)}
+                className={`Registry__donate__buttons-button ${donate === 500 ? 'Registry__donate__buttons-button--active' : ''}`}>
+                500
+              </button>
+            </div>
+
+            <button className="Registry__form-button" type="submit">
+              Przekaż darowiznę
+            </button>
           </div>
         </section>
       </main>
