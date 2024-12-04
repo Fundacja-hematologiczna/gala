@@ -25,7 +25,7 @@ i18n.use(initReactI18next).init({
     useSuspense: false,
   },
   interpolation: {
-    escapeValue: false,
+    escapeValue: true,
   },
 });
 
