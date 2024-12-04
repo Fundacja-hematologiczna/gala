@@ -1,12 +1,15 @@
 import '../../styles/index.scss';
 import './contributors.scss';
 import { Button } from '../../components/Button/Button.jsx';
+import { useTranslation } from 'react-i18next';
 
 const Contributors = () => {
+  const { t } = useTranslation();
   const patronHonorowy = Array.from({ length: 6 }, (_, i) => i + 1);
   const patronMedialny = Array.from({ length: 6 }, (_, i) => i + 1);
   const patron = Array.from({ length: 5 }, (_, i) => i + 1);
   const partnerzy = Array.from({ length: 83 }, (_, i) => i + 1);
+
   return (
     <>
       <main className="Contributors">
@@ -16,19 +19,12 @@ const Contributors = () => {
 
             <div className="Contributors__topContainer-content">
               <h1 className="Contributors__topContainer-title">
-                Dla Darczyńców
+                {t('CONTRIBUTORS.HEADER_TITLE')}
               </h1>
               <p className="Contributors__topContainer-description">
-                Organizacja Gali jest ambitnym i niezwykle doniosłym
-                przedsięwzięciem. Wydarzenie nie mogłoby się odbyć bez
-                nieocenionego wsparcia, zaangażowania i pomocy Darczyńców oraz
-                naszych Partnerów.
+                {t('CONTRIBUTORS.HEADER_BODY_1')}
                 <p>&nbsp;</p>
-                Jako Fundacja doceniamy Darczyńców i Partnerów poprzez
-                prezentowanie ich wsparcia w mediach społecznościowych oraz na
-                stronie internetowej. Istnieje również możliwość rozstawienia
-                materiałów promocyjnych podczas Gali oraz umieszczenia ich w
-                pakietach powitalnych dla uczestników.
+                {t('CONTRIBUTORS.HEADER_BODY_2')}
               </p>
             </div>
           </div>
@@ -98,16 +94,14 @@ const Contributors = () => {
         <section className="Contributors__greenLabel">
           <div className="Contributors__greenLabel-container">
             <p className="Contributors__greenLabel-topText">
-              Dołącz do grona naszych Darczyńców i Partnerów!
+              {t('CONTRIBUTORS.JOIN_TITLE')}
             </p>
             <p className="Contributors__greenLabel-botText">
-              Jeśli widzisz ze swojej strony możliwość udzielenia wsparcia
-              rzeczowego, finansowego lub organizacyjnego, zapraszamy -
-              Skontaktuj się z nami!
+              {t('CONTRIBUTORS.JOIN_BODY')}
             </p>
             <div className="Contributors__greenLabel-button">
               <Button
-                buttonLabel={'Zostań Darczyńcą'}
+                buttonLabel={t('CONTRIBUTORS.JOIN_BUTTON')}
                 backgroundColor={'#FFFFFF'}
                 navigateTo={'/about'}
               />

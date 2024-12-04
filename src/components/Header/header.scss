@@ -1,148 +1,139 @@
 @import '../../styles/mixins.scss';
 
 .header {
-    width: 100%;
-    //width: 1240px;
-    height: auto;
-    position:fixed;
-    top: 14px;
-    z-index: 99;
-    box-sizing: border-box;
-    margin: 0 auto;
-    left: 50%;
-    transform: translateX(-50%); 
-    // background-color: red;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 14px;
+  z-index: 99;
+  box-sizing: border-box;
+  margin: 0 auto;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0 7px;
 
-    @include device(tablet) {
-      
-      top:0;
-      
-    }
+  @include device(tablet, mobile) {
+    top: 0;
+    padding:0
+  }
 
-    @include device(mobile) {
-      
-      top:0;
-      
-
-    }
-   
-   
-    
-
-   // border : 1px solid red;
-
-    &-logo {
-        background-image: url('/logo3.png');
-        width: 51px;
-         height: 51px;
-  
-  background-size: cover; /* Dostosowuje obraz, aby wypełnił div */
-  background-position: center;
-  margin-top: 10px;
-    }
+  &-logo {
+    background-image: url('/logo3.png');
+    width: 51px;
+    height: 51px;
+    background-size: cover; 
+    background-position: center;
+    margin-top: 10px;
+  }
 }
 
 .nav {
-    max-width: 1240px;
-    height: 61px;
-    border-radius: 50px;
-    margin: 0 auto;
-    padding : 0 27px 0 27px !important;
-    // padding: 20px 0;
-    background-color:  #F5F5F5;
+  max-width: 1240px;
+  height: 61px;
+  border-radius: 50px;
+  margin: 0 auto;
+  padding: 0 27px 0 27px !important;
+  background-color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  
+  @include device(tablet) {
+    border-radius: 0;
+    justify-content: space-between;
+    padding: 0px 20px 0px 20px;
+  }
+
+  @include device(mobile) {
+    border-radius: 0;
+    justify-content: space-between;
+    padding: 0px 20px 0px 20px;
+  }
+
+  &__links {
+    list-style: none;
     display: flex;
-    align-items: center;
-   //padding-left: 200px;
-    //border : 2px solid yellow;
+    gap: 10px;
+    margin: 0 auto;
 
     @include device(tablet) {
-      border-radius: 0;
-      justify-content: space-between;
-      padding: 0px 20px 0px 20px;
-      
-
+      display: none;
     }
 
     @include device(mobile) {
-      border-radius: 0;
-      justify-content: space-between;
-      padding: 0px 20px 0px 20px;
-      
-
+      display: none;
     }
-    
-    
+  }
 
-    &__links {
-        list-style: none;
-        display: flex;
-        gap: 10px;
-        margin: 0 auto;
+  &__item {
+    height: 44px;
+    display: flex;
+  }
 
-        @include device(tablet) {
-          display: none;
-        }
+  &-link {
+    height: 24px;
+    text-transform: uppercase;
+    font-family: 'Poppins';
+    font-weight: 400;
+    size: 16px;
+    line-height: 24px;
+    text-align: center;
+    text-justify: center;
+    padding: 10px 14px 10px 14px;
+    border-radius: 50px;
+    color: #000000;
+    text-decoration: none;
+    list-style: none;
+    align-self: center;
+    text-align: center;
+    transition: background-color 0.3s;
 
-        @include device(mobile) {
-          display: none;
-        }
-        
-
-      //  justify-content: center;
-    }
-
-    &__item {
-        height: 44px;
-      //  border: 10px solid red;
-        // align-items: center;
-        // justify-content: center;
-        display: flex;
-       // padding-top:5px;
+    &--active {
+      background-color: #b7c274;
+      font-weight: 600;
     }
 
-    &-link {
-        height: 24px;
-        text-transform: uppercase;
-        font-family:'Poppins';
-        font-weight: 400;
-        size: 16px;
-        line-height: 24px;
-        text-align: center;
-        text-justify: center;
-        padding: 10px 14px 10px 14px;
-       border-radius: 50px;
-       color: #000000;
-       text-decoration: none;
-        list-style: none;
-        align-self: center;
-       text-align: center;
 
-       &--active {
-        background-color: #B7C274;
-        font-weight: 600;
-       }
+    &:active {
+      color: #345b55;
+    }
+  }
 
-       &:hover {
-        //text-decoration: underline; 
-       }
+  &-language {
+    height: 24px;
+    text-transform: uppercase;
+    font-family: 'Poppins';
+    font-weight: 400;
+    size: 16px;
+    line-height: 24px;
+    text-align: center;
+    text-justify: center;
+    padding: 10px 14px 10px 14px;
+    border-radius: 50px;
+    color: #000000;
+    text-decoration: none;
+    list-style: none;
+    align-self: center;
+    text-align: center;
+    transition: background-color 0.3s;
+    cursor: pointer;
+  }
 
-       &:active {
-        color: #345B55;
-       }
-        
-        
+  &__burgerMenu {
+    background-image: url('/menu-burger.svg');
+    height: 19px;
+    width: 30px;
+    cursor: pointer;
+
+    &--active {
+      background-image: url('/menu-hamburger.svg');
     }
 
+    @include device(desktop) {
+      display: none;
+    }
+  }
 }
 
-
-.burger-menu {
-  background-image: url('/menu-burger.svg');
-  height: 19px;
-  width: 30px;
-  color: red;
-
-  @include device(desktop) {
-    display: none;
-  }
+.bold {
+  font-weight: 700;
 }

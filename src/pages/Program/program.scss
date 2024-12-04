@@ -7,24 +7,22 @@
     flex-direction: column;
     box-sizing: border-box;
     width: 100%;
+    
 
     &-container {
 
         @include device(desktop) {
-            padding: 14px 17px 71px ;
+            padding: 14px 17px 0 ;
         }
 
         @include device(tablet) {
-            padding-top: 14px  ;
-            padding-bottom: 71px;
+            padding: 14px 5px 0  ;         
         }
 
         @include device(mobile) {
-            padding-top: 14px  ;
-            padding-bottom: 41px;
+            padding-top: 14px  ;        
         }
-        
-        
+           
     }
     
     
@@ -56,8 +54,6 @@
             
         }
        
-
-        
 
         &-title {
             font-family: Poppins;
@@ -127,7 +123,17 @@
         padding-bottom: 138px;
 
 
-        padding: 0 25px;
+        padding: 71px 25px 0;
+
+        @include device(tablet) {
+            
+            padding-top: 71px;
+        }
+
+        @include device(mobile) {
+            
+            padding-top: 41px;
+        }
 
         &-container {
             max-width: 1240px;
@@ -144,7 +150,7 @@
             line-height: 60px;
             text-align: left;
             margin-bottom:  66px;
-            padding-top: 97px ;
+            padding-top: 20px ;
 
             @include device(mobile) {
                 //styleName: WP_H3;
@@ -153,6 +159,7 @@
                 font-weight: 600;
                 line-height: 36px;
                 text-align: left;
+                padding-top: 0;
 
             }
             

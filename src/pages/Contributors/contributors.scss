@@ -10,7 +10,12 @@
     &-container {
         padding: 14px 17px 0;
 
-        @include device(tablet, mobile) {
+        @include device(tablet) {
+            padding: 14px 5px 0;
+        
+        }
+
+        @include device( mobile) {
             padding: 14px 0 0;
         
         }
@@ -117,9 +122,9 @@
         &-grid {
            
             display: grid;
-            grid-auto-columns: 250px; 
-            grid-auto-rows: 250px; 
-            grid-template-columns: repeat(auto-fill, minmax(280px, 300px));
+            grid-auto-columns: 200px; 
+            grid-auto-rows: 200px; 
+            grid-template-columns: repeat(auto-fill, 200px);
             row-gap: 31px; 
             column-gap: 10px;
             justify-content: center; 

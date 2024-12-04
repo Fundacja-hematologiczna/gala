@@ -15,7 +15,11 @@
     &__sectionWelcome {
         padding: 17px 17px 0;
         
-        @include device(tablet, mobile) {
+        @include device(tablet) {
+            padding:  17px 5px 0 ;
+        }
+
+        @include device(mobile) {
             padding:  17px 0 ;
         }
     }

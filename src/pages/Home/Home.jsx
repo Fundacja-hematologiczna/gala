@@ -1,11 +1,13 @@
 import { Card } from '../../components/Card/Card.jsx';
-import { Button } from '../../components/Button/Button.jsx';
+import { Button } from '../../components/Button/Button';
 import './home.scss';
 import { useNavigate } from 'react-router-dom';
 import '../../index.css';
 import { Slider } from '../../components/Slider/Slider.jsx';
+import { useTranslation } from 'react-i18next';
 
 const Home = () => {
+  const { t } = useTranslation();
   const navigate = useNavigate();
 
   const handleClick = (navigateTo) => {
@@ -20,20 +22,19 @@ const Home = () => {
             <div className="greenLabel"></div>
             <div className=" sectionWelcome__textComntainer">
               <h1 className="sectionWelcome-title">
-                III Gala <br />
-                Charytatywna <br /> w Walewicach
+                {t('MAIN_PAGE.HEADER_TITLE')}
               </h1>
-              <p className="sectionWelcome-date">Sobota, 14 września 2024</p>
+              <p className="sectionWelcome-date">
+                {t('MAIN_PAGE.HEADER_DATE')}
+              </p>
 
               <p className="sectionWelcome-description">
-                Serdecznie zapraszamy na trzecią <br /> edycję Gali
-                Charytatywnej <br />
-                organizowanej w malowniczych <br /> Walewicach.
+                {t('MAIN_PAGE.HEADER_BODY')}
               </p>
 
               <div className="Home__sectionWelcome-button">
                 <Button
-                  buttonLabel={'Zgłoś swój udział'}
+                  buttonLabel={t('MAIN_PAGE.HEADER_BUTTON')}
                   backgroundColor={'#B7C274'}
                   navigateTo={'/about'}
                   arrow={'true'}
@@ -46,12 +47,12 @@ const Home = () => {
         <section className="home__sectionWelcomeMobile">
           <div className="home__sectionWelcomeMobile__buttons">
             <Button
-              buttonLabel={'Zgłoś swój udział'}
+              buttonLabel={t('MAIN_PAGE.MOBILE_BUTTON_1')}
               backgroundColor={'#B7C274'}
               navigateTo={'/about'}
             />
             <Button
-              buttonLabel={'Przekaż darowiznę'}
+              buttonLabel={t('MAIN_PAGE.MOBILE_BUTTON_2')}
               backgroundColor={'#FFFFFF'}
               navigateTo={'/about'}
               border={'1px solid #000000'}
@@ -59,11 +60,10 @@ const Home = () => {
           </div>
           <div className="home__sectionWelcomeMobile__titleContainer">
             <h1 className="home__sectionWelcomeMobile__titleContainer-title">
-              III Gala
-              <br /> Charytatywna <br /> w Walewicach
+              {t('MAIN_PAGE.HEADER_TITLE')}
             </h1>
             <p className="home__sectionWelcomeMobile__titleContainer-description">
-              Sobota, 14 września 2024
+              {t('MAIN_PAGE.HEADER_DATE')}
             </p>
           </div>
           <div className="home__sectionWelcomeMobile-video"></div>
@@ -78,7 +78,7 @@ const Home = () => {
                 dr Michał Witkowski{' '}
               </p>
               <p className="Home__section2__personCard-description">
-                Prezes Fundacji
+                {t('MAIN_PAGE.CEO_POSITION')}
               </p>
             </div>
 
@@ -94,24 +94,16 @@ const Home = () => {
                 alt=""
               />
               <h2 className="Home__section2__grayCard-title">
-                Dołącz do nas i podaruj innym moc!
+                {t('MAIN_PAGE.CEO_TITLE')}
                 <p className="Home__section2__grayCard-smallDesctription">
                   <p>&nbsp;</p>
-                  Serdecznie zapraszamy na trzecią już w historii naszej
-                  Fundacji Galę Charytatywną organizowaną w malowniczych
-                  Walewicach.
+                  {t('MAIN_PAGE.CEO_BODY.1')}
                   <p>&nbsp;</p>
-                  Ten wyjątkowy dzień pełen atrakcji będzie niepowtarzalną
-                  okazją do wsparcia naszych działań na rzecz pacjentów
-                  hematologicznych i ich rodzin. Wierzymy, że każdy zasługuje na
-                  szansę na zdrowie i życie bez cierpienia. To dzięki Państwa
-                  obecności i wsparciu możemy kontynuować naszą misję niesienia
-                  pomocy potrzebującym.
+                  {t('MAIN_PAGE.CEO_BODY.2')}
                   <p>&nbsp;</p>
                 </p>
                 <p className="Home__section2__grayCard-smallDesctription--bold">
-                  Dołączcie do nas, aby wspólnie celebrować życie, wspólnotę i
-                  siłę ludzkiej dobroci!
+                  {t('MAIN_PAGE.CEO_BODY.3')}
                 </p>
               </h2>
 
@@ -121,7 +113,7 @@ const Home = () => {
                   <p className=" Home__section2__grayCard__personCard-text--bold">
                     dr Michał Witkowski
                   </p>
-                  <p>Prezes Fundacji</p>
+                  <p>{t('MAIN_PAGE.CEO_POSITION')}</p>
                 </div>
               </div>
             </div>
@@ -130,31 +122,26 @@ const Home = () => {
           <div className="Home__section2__cards">
             <Card
               iconLink={'card1-icon.svg'}
-              title={'Aukcja Charytatywna'}
-              description={`To główny punkt programu Gali. Środki pozyskane z licytacji
-                przedmiotów ofiarowanych przez Darczyńców zostaną przeznaczone na
-                pomoc pacjentom z chorobami hematologicznymi, podopiecznym Fundacji.`}
-              buttonLabel={'Katalog Aukcji'}
+              title={t('MAIN_PAGE.CHARITY_AUCTION_BODY')}
+              description={t('MAIN_PAGE.CHARITY_AUCTION_TITLE')}
+              buttonLabel={t('MAIN_PAGE.CHARITY_AUCTION_BUTTON')}
               navigateTo={'/about'}
               backgroundColor={'#B7C274'}
             />
             <Card
               iconLink={'Card2-icon.png'}
-              title={'Dla Darczyńców'}
-              description={`To wspaniałe wydarzenie nie odbyłoby się bez wsparcia i zaangażowania 
-                Darczyńców oraz naszych Partnerów. Jeżeli widzisz tu dla siebie przestrzeń, 
-                masz pomysł na udział w Gali lub po prostu chcesz podzielić się tym, 
-                co najlepsze - zapraszamy do kontaktu.`}
-              buttonLabel={'Zostań darczyńcą'}
+              title={t('MAIN_PAGE.DONORS_BODY')}
+              description={t('MAIN_PAGE.DONORS_TITLE')}
+              buttonLabel={t('MAIN_PAGE.DONORS_BUTTON')}
               navigateTo={'/about'}
               backgroundColor={'#E5E9CD'}
               scale={'160%'}
             />
             <Card
               iconLink={'card3-icon.svg'}
-              title={'Dla Wolontariuszy'}
-              description={`Gala Charytatywna to przedsięwzięcie na dużą skalę. To wydarzenie, które wymaga ciągłego wsparcia przez cały rok. Jednak największy wysiłek organizacyjny przypada na czas jej trwania. Może zechcesz wesprzeć nas w tych działaniach?`}
-              buttonLabel={'Zostań Wolontariuszem'}
+              title={t('MAIN_PAGE.VOLUNTEERS_BODY')}
+              description={t('MAIN_PAGE.VOLUNTEERS_TITLE')}
+              buttonLabel={t('MAIN_PAGE.VOLUNTEERS_BUTTON')}
               navigateTo={'/about'}
               backgroundColor={'#99ADAA'}
             />
@@ -166,29 +153,24 @@ const Home = () => {
             <div className="Home__donateItem-image"></div>
             <div className="Home__donateItem__contentWrapper">
               <h2 className="Home__donateItem-title">
-                Przekaż przedmiot na Aukcję!
+                {t('MAIN_PAGE.AUCTION_ITEM_TITLE')}
               </h2>
               <p className="Home__donateItem-description">
-                Zebrane fundusze zostaną przeznaczone na pomoc pacjentom z
-                chorobami hematologicznymi, podopiecznym Fundacji Na Rzecz
-                Pomocy Chorym Na Białaczki. Nasza pomoc obejmuje m.in. wsparcie
-                finansowe w kosztownej terapii, poprawę warunków hospitalizacji
-                czy wdrażanie nowoczesnych metod leczenia. Pomóż nam w
-                realizacji tej misji.
+                {t('MAIN_PAGE.AUCTION_ITEM_BODY')}
               </p>
 
               <div className="Home__donateItem__buttons">
                 <button
                   className="Home__donateItem__buttons-button"
                   onClick={handleClick}>
-                  Zostań darczyńcą
+                  {t('MAIN_PAGE.AUCTION_ITEM_BUTTON_1')}
                 </button>
                 <button
                   className="Home__donateItem__buttons-button"
                   onClick={() => {
                     handleClick('/about');
                   }}>
-                  Wpłać darowiznę
+                  {t('MAIN_PAGE.AUCTION_ITEM_BUTTON_2')}
                 </button>
               </div>
             </div>
@@ -198,32 +180,25 @@ const Home = () => {
           <div className="Home__cards-container">
             <Card
               iconLink={'card4-icon.svg'}
-              title={'Atrakcje Gali'}
-              description={`Pokaz jazdy konnej, degustacja regionalnych produktów, 
-              pokaz mody, wspólne rozkoszowanie się muzyką - a to wciąż nie wszystko. 
-              Na uczestników Gali czekają liczne atrakcje.`}
-              buttonLabel={'Poznaj program'}
+              title={t('MAIN_PAGE.ATTRACTIONS_BODY')}
+              description={t('MAIN_PAGE.ATTRACTIONS_TITLE')}
+              buttonLabel={t('MAIN_PAGE.ATTRACTIONS_BUTTON')}
               navigateTo={'/about'}
               backgroundColor={'#E5E9CD'}
             />
             <Card
               iconLink={'card5-icon.svg'}
-              title={'Pałac i stadnina'}
-              description={`Pałac Walewice wraz z otaczającym go parkiem, 
-              to jedna z najcenniejszych siedzib magnackich w środkowej Polsce. 
-              To niezwykle czarujące miejsce nadaje Gali niepowtarzalnego uroku. 
-              Jeśli chcesz nieco dłużej cieszyć się pięknem okolic, możesz zarezerwować nocleg w Pałacu.`}
-              buttonLabel={'Zarezerwuj nocleg'}
+              title={t('MAIN_PAGE.PALACE_BODY')}
+              description={t('MAIN_PAGE.PALACE_TITLE')}
+              buttonLabel={t('MAIN_PAGE.PALACE_BUTTON')}
               navigateTo={'/about'}
               backgroundColor={'#99ADAA'}
             />
             <Card
               iconLink={'card6-icon.svg'}
-              title={'Miejsce'}
-              description={`Pałac został zbudowany w stylu klasycystycznym pod koniec XVIII wieku. 
-              Był świadkiem romansu Marii Walewskiej z Napoleonem Bonaparte, 
-              którego owoc - syn - przyszedł tu na świat w 1810 roku.`}
-              buttonLabel={'Sprawdź dojazd'}
+              title={t('MAIN_PAGE.PLACE_BODY')}
+              description={t('MAIN_PAGE.PLACE_TITLE')}
+              buttonLabel={t('MAIN_PAGE.PLACE_BUTTON')}
               navigateTo={'/about'}
               backgroundColor={'#F3F2F2'}
             />
@@ -237,12 +212,12 @@ const Home = () => {
           <div className="Home__partners-Backgroundimg">
             <div className="Home__partners-container">
               <p className="Home__partners-description">
-                Czekamy na Ciebie!
-                <br /> Dołącz do nas!
+                {t('MAIN_PAGE.WAITING_TITLE_1')}
+                <br /> {t('MAIN_PAGE.WAITING_TITLE_2')}
               </p>
               <div className="Home__partners-buttonWrapper">
                 <Button
-                  buttonLabel={'Zgłoś swój udział'}
+                  buttonLabel={t('MAIN_PAGE.WAITING_BUTTON')}
                   backgroundColor={'#B7C274'}
                   navigateTo={'/about'}
                   arrow={true}
@@ -251,7 +226,9 @@ const Home = () => {
             </div>
           </div>
 
-          <h2 className="Home__partners-title">Darczyńcy & Partnerzy</h2>
+          <h2 className="Home__partners-title">
+            {t('MAIN_PAGE.DONORS_PARTNERS')}
+          </h2>
           <div className="Home__partners-slider">
             <Slider />
           </div>

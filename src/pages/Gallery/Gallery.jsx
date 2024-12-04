@@ -1,9 +1,11 @@
+import { useTranslation } from 'react-i18next';
 import '../../styles/index.scss';
 import './gallery.scss';
 import { useState, useEffect } from 'react';
 import { getImages } from '../../api/services';
 
 const Gallery = () => {
+  const { t } = useTranslation();
   const [isActive, setIsActive] = useState('2022');
   const [images, setImages] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -32,15 +34,12 @@ const Gallery = () => {
           <div className="Gallery__topContainer">
             <div className="Gallery__topContainer-greenLayer"></div>
 
-            <h1 className="Gallery__topContainer-title">Galeria</h1>
+            <h1 className="Gallery__topContainer-title">
+              {t('GALLERY.HEADER_TITLE')}
+            </h1>
             <p className="Gallery__topContainer-description">
-              Gala Charytatywna w Walewicach to już tradycyjnie festiwal
-              pięknych serc. Każda odsłona gromadzi liczne grono osób pragnących
-              wspierać pacjentów chorób hematologicznych i ich rodziny.
-              <p>
-                Zajrzyj do fotorelacji, by poczuć tę moc dobra i wyjątkową
-                atmosferę Gali.
-              </p>
+              {t('GALLERY.HEADER_BODY_1')}
+              <p>{t('GALLERY.HEADER_BODY_2')}</p>
             </p>
             <div className="Gallery__topContainer-content"></div>
           </div>
@@ -68,12 +67,12 @@ const Gallery = () => {
 
             <div className="Gallery__pictures__grid">
               {!loading &&
-                images[isActive].map((image) => (
+                images[isActive].map((image, i) => (
                   <div className="Gallery__pictures__grid-item " key={image}>
                     <img
                       src={image}
-                      alt={`image-${image.id}`}
-                      className="itemek"
+                      alt={`image-${i}`}
+                      className="Gallery__pictures__grid-item--img"
                     />
                   </div>
                 ))}
