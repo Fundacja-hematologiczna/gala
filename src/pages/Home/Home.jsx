@@ -21,14 +21,18 @@ const Home = () => {
           <div className="sectionWelcome__container">
             <div className="greenLabel"></div>
             <div className=" sectionWelcome__textComntainer">
-              <h1 className="sectionWelcome-title">
+              <h1
+                className="sectionWelcome-title"
+                style={{ whiteSpace: 'pre-line' }}>
                 {t('MAIN_PAGE.HEADER_TITLE')}
               </h1>
               <p className="sectionWelcome-date">
                 {t('MAIN_PAGE.HEADER_DATE')}
               </p>
 
-              <p className="sectionWelcome-description">
+              <p
+                className="sectionWelcome-description"
+                style={{ whiteSpace: 'pre-line' }}>
                 {t('MAIN_PAGE.HEADER_BODY')}
               </p>
 
