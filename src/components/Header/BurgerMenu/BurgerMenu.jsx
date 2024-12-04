@@ -4,9 +4,11 @@ import { menuOptions } from '../header.data';
 import './burgerMenu.scss';
 import { useRef } from 'react';
 import HeaderLanguage from '../HeaderLanguage';
+import { useTranslation } from 'react-i18next';
 
 const BurgerMenu = ({ onClickOption, isActive, onClickButton }) => {
   const burgerMenu = useRef();
+  const { t } = useTranslation();
 
   const handleClickCloseMenu = () => {
     burgerMenu.current.classList.add('burgerMenu--close');
@@ -29,7 +31,7 @@ const BurgerMenu = ({ onClickOption, isActive, onClickButton }) => {
               onClick={() => onClickOption(option.name)}
               className={`burgerMenu__link ${isActive === option.name ? 'burgerMenu__link--active' : ''}`}
               to={option.to}>
-              {option.title}
+              {t(option.title)}
             </NavLink>
           </li>
         ))}
