@@ -1,9 +1,12 @@
 /* eslint-disable react/no-unescaped-entities */
+import { useTranslation } from 'react-i18next';
 import '../../styles/index.scss';
 import './footer.scss';
 import { NavLink } from 'react-router-dom';
 
 const Footer = () => {
+  const { t } = useTranslation();
+
   return (
     <>
       <section className="Footer">
@@ -14,7 +17,9 @@ const Footer = () => {
 
           <div className="Footer__content">
             <div className="Footer__content-contact">
-              <p className="Footer__content-contact-title">Kontakt</p>
+              <p className="Footer__content-contact-title">
+                {t('FOOTER.CONTACT')}
+              </p>
               <p className="Footer__content-contact-description">
                 93-513 Łódź, ul. Pabianicka 62
               </p>
@@ -25,16 +30,17 @@ const Footer = () => {
             </div>
 
             <div className="Footer__content-donate">
-              <p className="Footer__content-donate-title">Wesprzyj</p>
+              <p className="Footer__content-donate-title">
+                {t('FOOTER.SUPPORT_TITLE')}
+              </p>
               <p className="Footer__content-donate-description">
-                Konto bankowe PKO BP:{' '}
+                {t('FOOTER.SUPPORT_BANK')}
                 <span className="Footer__content-donate-description--noWrap">
                   31 1020 3352 0000 1202 0241 5990
                 </span>
               </p>
               <p className="Footer__content-donate-description">
-                {' '}
-                Dopisek: "Darowizna na cele statutowe"
+                {t('FOOTER.SUPPORT_NOTE')}
               </p>
 
               <p className="Footer__content-donate-description">
@@ -75,16 +81,14 @@ const Footer = () => {
             <NavLink
               className="Footer__links-link"
               to={'/klauzula-informacyjna'}>
-              Klauzula informacyjna
+              {t('FOOTER.MENU_OPTIONS.CLAUSE')}
             </NavLink>
 
             <NavLink className="Footer__links-link" to={'/regulamin'}>
-              Regulamin
+              {t('FOOTER.MENU_OPTIONS.STATUTE')}
             </NavLink>
 
-            <NavLink className="Footer__links-link" to={'/'}>
-              Wszelkie prawa zastrzeżone
-            </NavLink>
+            <p>{t('FOOTER.MENU_OPTIONS.RIGHTS')}</p>
           </div>
         </div>
       </section>

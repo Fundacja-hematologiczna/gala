@@ -1,0 +1,347 @@
+{
+  "MENU_OPTIONS": {
+    "MAIN_PAGE": "HOME",
+    "REGISTRATION": "registration",
+    "PLACE": "place",
+    "PROGRAM": "program",
+    "AUCTION": "auction",
+    "CONTRIBUTORS": "contributors",
+    "GALLERY": "gallery",
+    "CONTACT": "contact"
+  },
+  "MAIN_PAGE": {
+    "HEADER_TITLE": "III Charity Gala in Walewice",
+    "HEADER_DATE": "Saturday, September 14, 2024",
+    "HEADER_BODY": "We cordially invite you to the third edition of the Charity Gala organized in picturesque Walewice.",
+    "HEADER_BUTTON": "Participate",
+    "CEO_POSITION": "Foundation President",
+    "CEO_TITLE": "Join us and give others the power!",
+    "CEO_BODY": {
+      "1": "We warmly invite you to the third Charity Gala in our Foundation's history, organized in picturesque Walewice.",
+      "2": "This special day filled with attractions will be a unique opportunity to support our efforts for hematology patients and their families. We believe everyone deserves a chance for health and a life without suffering. Thanks to your presence and support, we can continue our mission to help those in need.",
+      "3": "Join us to celebrate life, community, and the strength of human kindness together!"
+    },
+    "CHARITY_AUCTION_BODY": "Charity Auction",
+    "CHARITY_AUCTION_TITLE": "This is the main event of the Gala. Funds raised from the auction of items donated by Benefactors will be used to help patients with hematologic diseases, supported by the Foundation.",
+    "CHARITY_AUCTION_BUTTON": "Auction Catalog",
+    "DONORS_BODY": "For Benefactors",
+    "DONORS_TITLE": "This wonderful event would not take place without the support and commitment of our Benefactors and Partners. If you see a role for yourself here, have an idea for participating in the Gala, or simply want to share your best, we invite you to get in touch.",
+    "DONORS_BUTTON": "Become a Benefactor",
+    "VOLUNTEERS_BODY": "For Volunteers",
+    "VOLUNTEERS_TITLE": "The Charity Gala is a large-scale endeavor. It’s an event that requires continuous support throughout the year, with the most significant organizational effort during the event. Would you like to support us in these activities?",
+    "VOLUNTEERS_BUTTON": "Become a Volunteer",
+    "AUCTION_ITEM_TITLE": "Donate an Item for the Auction!",
+    "AUCTION_ITEM_BODY": "The funds collected will be used to help patients with hematologic diseases, supported by the Foundation for Helping Leukemia Patients. Our assistance includes, among other things, financial support for expensive therapies, improving hospitalization conditions, and implementing modern treatment methods. Help us realize this mission.",
+    "AUCTION_ITEM_BUTTON_1": "Become a Benefactor",
+    "AUCTION_ITEM_BUTTON_2": "Donate",
+    "ATTRACTIONS_BODY": "Gala Attractions",
+    "ATTRACTIONS_TITLE": "Horse riding show, regional product tasting, fashion show, enjoying music together – and that’s not all. Numerous attractions await the Gala participants.",
+    "ATTRACTIONS_BUTTON": "Explore the Program",
+    "PALACE_BODY": "Palace and Stud Farm",
+    "PALACE_TITLE": "Walewice Palace, along with the surrounding park, is one of the most valuable magnate residences in central Poland. This incredibly charming place adds a unique charm to the Gala. If you want to enjoy the beauty of the surroundings a bit longer, you can book a stay at the Palace.",
+    "PALACE_BUTTON": "Book Accommodation",
+    "PLACE_BODY": "Location",
+    "PLACE_TITLE": "The palace was built in the Classicist style at the end of the 18th century. It witnessed the romance between Maria Walewska and Napoleon Bonaparte, whose son was born here in 1810.",
+    "PLACE_BUTTON": "Check Directions",
+    "WAITING_TITLE_1": "We are waiting for you!",
+    "WAITING_TITLE_2": "Join us!",
+    "WAITING_BUTTON": "Participate",
+    "DONORS_PARTNERS": "Benefactors & Partners",
+    "MOBILE_BUTTON_1": "Participate",
+    "MOBILE_BUTTON_2": "Donate"
+  },
+  "REGISTRATION": {
+    "HEADER_TITLE": "Registration",
+    "HEADER_BODY": "Fill out the form to register your participation. After submitting it, you will be redirected to the donation option (a symbolic amount of 100 PLN) via bank transfer or online (below), which will enable your participation in the Gala.",
+    "FORM_TITLE": "Registration Form",
+    "FORM_FULLNAME": "Full Name",
+    "FORM_EMAIL": "Email Address",
+    "FORM_STREET": "Street",
+    "FORM_BUILDING": "Building Number",
+    "FORM_INDEX": "Postal Code",
+    "FORM_CITY": "City",
+    "FORM_RIGHTS": {
+      "1": "I accept the provisions of the Privacy Policy and Event Regulations.",
+      "2": "I consent to the processing of my personal data in the scope of my image captured during the Charity Gala for internal and external communication and marketing activities carried out by the Foundation.",
+      "3": "I consent to the processing of my personal data in the scope of contact details for the purpose of informing about future events and statutory activities of the Foundation."
+    },
+    "SUPPORT_TITLE": "Support Our Initiative",
+    "SUPPORT_FULLNAME": "Full Name",
+    "SUPPORT_EMAIL": "Email Address",
+    "SUPPORT_STREET": "Street",
+    "SUPPORT_BUILDING": "Building Number",
+    "SUPPORT_INDEX": "Postal Code",
+    "SUPPORT_CITY": "City",
+    "MESSAGE_TEXT": "A copy of the sent message will appear in your email inbox.",
+    "FORMS_BUTTON": "Send Message"
+  },
+  "PLACE": {
+    "HEADER_TITLE": "Event Venue",
+    "HEADER_BODY": "The palace and stable are located in the picturesque village of Walewice, situated in central Poland, in the Łódź Voivodeship. This historic place is approximately 50 km northeast of Łódź - about an hour's drive by car. From the center of Łódź, you can also reach Walewice by taking a train to Łowicz and then a taxi to the palace.",
+    "MAP_TITLE": "The 3rd Charity Gala will take place at the Walewski Palace in Walewice",
+    "MAP_PLACE": "Location:",
+    "MAP_PLACE_NAME": "Palace and stable in Walewice",
+    "MAP_ADDRESS": "Address:",
+    "MAP_TELEPHONE": "Phone:",
+    "JOIN_TITLE": "Want to join us but don't know how?",
+    "JOIN_BODY": "The form will guide you through the registration process.",
+    "JOIN_BUTTON": "Participate"
+  },
+  "PROGRAM": {
+    "HEADER_TITLE": "Program",
+    "HEADER_BODY": "The third charity gala offers a rich program full of diverse attractions, from a ceremonial polonaise to a concert by the band Heima. Participants will have the chance to take part in auctions, fashion and horseback riding shows, as well as explore the Palace. Reserve your spot now and join us for an unforgettable night ending with a barbecue and after-party!",
+    "HEADER_BUTTON": "Participate",
+    "AGENDA_TITLE": "Agenda",
+    "SCHEDULE": {
+      "1": "Guest Registration",
+      "2": "Gala Opening",
+      "3": "Alicja Borkowska's Recital",
+      "4": "Michał Borkowski's Concert",
+      "5": "Lunch",
+      "6": "Auction Items Exhibition in the Palace Cellars with Wine Tasting",
+      "7": "Tour of Napoleon's Apartments",
+      "8": "Charity Auction Part 1",
+      "9": "Horse Show",
+      "10": "Fashion Show",
+      "11": "Charity Auction Part 2",
+      "12": "Charity Auction Part 3",
+      "13": "Nomination of Foundation Ambassadors",
+      "14": "Gala Summary",
+      "15": "Eni's Concert",
+      "16": "Kapela Szymon's Concert",
+      "17": "Barbecue",
+      "18": "After Party in the Palace Cellars"
+    },
+    "JOIN_TITLE": "Want to join us but don't know how?",
+    "JOIN_BODY": "The form will guide you through the registration process.",
+    "JOIN_BUTTON": "Participate"
+  },
+  "AUCTION": {
+    "HEADER_TITLE": "Auction",
+    "HEADER_BODY": "Our charity Auction is a festival of generosity and selflessness. Wonderful people with big hearts share the best they have with us. Among the artifacts presented at the Auction, you can find contemporary art, utility design, handicrafts, everyday items, collectibles, and vouchers for unforgettable experiences and relaxing moments.",
+    "HEADER_AWAITING": "Find something for yourself!",
+    "ITEMS_TITLE": "List of Items"
+  },
+  "CONTRIBUTORS": {
+    "HEADER_TITLE": "For Contributors",
+    "HEADER_BODY_1": "Organizing the Gala is an ambitious and profoundly significant endeavor. The event could not take place without the invaluable support, commitment, and assistance of Donors and our Partners.",
+    "HEADER_BODY_2": "As a Foundation, we appreciate Donors and Partners by showcasing their support on social media and our website. There is also an opportunity to display promotional materials during the Gala and include them in welcome packages for participants.",
+    "JOIN_TITLE": "Join our Contributors and Partners!",
+    "JOIN_BODY": "If you see the possibility of providing material, financial, or organizational support, we invite you to reach out - Contact us!",
+    "JOIN_BUTTON": "Become a contributor"
+  },
+  "GALLERY": {
+    "HEADER_TITLE": "Gallery",
+    "HEADER_BODY_1": "The Charity Gala in Walewice has traditionally been a festival of beautiful hearts. Each edition gathers a large group of people eager to support patients with hematological diseases and their families.",
+    "HEADER_BODY_2": "Take a look at the photo gallery to feel the power of kindness and the unique atmosphere of the Gala."
+  },
+  "CONTACT": {
+    "HEADER_TITLE": "Contact",
+    "HEADER_BODY": "If you want to donate an item and become a Benefactor, or are considering a partnership as a Partner, contact us for more information. We will be happy to answer your questions and help you fulfill your intentions.",
+    "HEADER_AWAITING": "We’re waiting for you!",
+    "FORM_TITLE": "Contact Form",
+    "FORM_NAME": "Full Name:",
+    "FORM_EMAIL": "Email Address:",
+    "FORM_MESSAGE": "Message:",
+    "FORM_WARNING": "A copy of the sent message will appear in your email inbox.",
+    "FORM_BUTTON": "Send Message",
+    "INFO_TITLE": "Contact Information",
+    "ACCEPT_TITLE": "Thank you!",
+    "ACCEPT_BODY": "Your message has been sent. Expect a confirmation email from us.",
+    "ACCEPT_BUTTON": "Return to form"
+  },
+  "FOOTER": {
+    "CONTACT": "Contact",
+    "SUPPORT_TITLE": "Support",
+    "SUPPORT_BANK": "Bank account (PKO BP): PL ",
+    "SUPPORT_NOTE": "Note: \"Donation for statutory purposes\"",
+    "MENU_OPTIONS": {
+      "CLAUSE": "Information Clause",
+      "STATUTE": "Terms of Service",
+      "RIGHTS": "All rights reserved"
+    }
+  },
+  "CLAUSE": {
+    "TITLE": "Information Clause",
+    "HEAD": "INFORMATION CLAUSE REGARDING THE CHARITY AUCTION HELD DURING THE 3RD CHARITY GALA ORGANIZED BY THE FOUNDATION FOR SUPPORTING PATIENTS WITH LEUKEMIA",
+    "HEAD_PART_1": "Pursuant to Article 13 of Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of natural persons with regard to the processing of personal data",
+    "HEAD_PART_2": "and on the free movement of such data, repealing Directive 95/46/EC (General Data Protection Regulation, GDPR), below we provide information on the processing of personal data of Participants, particularly winners of the Charity Auction organized by the Foundation:",
+    "SECTION_1": "The Data Controller (hereinafter: DC) is the Foundation for Supporting Patients with Leukemia, with its registered office in Łódź, ul. Pabianicka 62, KRS 0000069531, e-mail: kontakt@fundacja.hematologiczna.org",
+    "SECTION_2": "The DC processes personal data for the following purposes:",
+    "SECTION_2_SUBSECTIONS": {
+      "SUBSECTION_1": "Organizing the 3rd CHARITY GALA and activities undertaken in connection with its organization, including the proper execution of the charity auction (pursuant to Article 6(1)(b) of the GDPR),",
+      "SUBSECTION_2": "Fulfilling obligations related to compliance with applicable legal provisions, particularly arising from tax regulations, including issuing certificates for tax purposes, maintaining accounting records, and tax documentation (pursuant to Article 6(1)(c) of the GDPR),",
+      "SUBSECTION_3": "Sending marketing information electronically to the provided email address, including newsletters, updates on campaigns, offers, and messages aimed at promoting specific attitudes, behaviors, and the Foundation's image, as well as using telecommunication end devices for direct marketing purposes (e.g., phone or SMS), such as sending thank-you notes for support, providing updates on the Foundation's statutory goals, information on social campaigns, and opportunities for further support of the organization. This also includes gathering feedback from donors (e.g., through surveys) based on voluntary consent to conduct such activities (pursuant to Article 6(1)(a) of the GDPR).",
+      "SUBSECTION_4": "Pursuing the legitimate interests of the DC, including establishing, defending, or enforcing claims, as well as creating internal analyses, statistics, and reports to optimize the DC's services (e.g., websites), ensuring their security, continuously improving them, and handling inquiries and complaints related to the DC’s products and services. This also includes traditional direct marketing (e.g., postal letters) (pursuant to Article 6(1)(f) of the GDPR)."
+    },
+    "SECTION_3": "Recipients of personal data may include external companies co-organizing the event, as well as other entities preparing communication and marketing materials or insurance and banking services on behalf of the Foundation.",
+    "SECTION_4": "The DC does not transfer personal data outside the European Economic Area.",
+    "SECTION_5": "Personal data will be stored for the period necessary for internal and external communication and marketing activities, as well as the organization of the event.",
+    "SECTION_6": "Individuals whose data is processed have the right to access their data and receive a copy, the right to rectify (correct) their data, the right to restrict processing, the right to be forgotten, the right to object, the right to data portability, the right to withdraw consent at any time, and the right to lodge a complaint with the Data Protection Authority.",
+    "SECTION_7": "Providing personal data within the scope of this clause is entirely voluntary.",
+    "SECTION_8": "The DC does not engage in automated decision-making, including profiling, using the collected personal data."
+  },
+
+  "TERMS": {
+    "TITLE": "Event Regulations",
+    "HEAD": "REGULATIONS OF THE CHARITY AUCTION HELD DURING THE THIRD CHARITY GALA ORGANIZED BY THE FOUNDATION FOR HELPING LEUKEMIA PATIENTS",
+    "PARAGRAPH_1": {
+      "TITLE": "§1. CHARITY AUCTION",
+      "PARAGRAPH_SECTIONS": {
+        "SECTION_1": "The organizer of the charity auction during the Third Charity Gala (hereinafter referred to as the 'Gala') is the FOUNDATION FOR HELPING LEUKEMIA PATIENTS, based in Łódź, at ul. Pabianicka 62, 93-513 Łódź, registered in the register of associations, other social and professional organizations, foundations, and independent public healthcare establishments under KRS number 0000069531, NIP: 7292325734 (hereinafter referred to as the 'Organizer').",
+        "SECTION_2": "The Organizer is also the beneficiary of the charity auction (hereinafter referred to as the 'Auction'), which, according to these regulations (hereinafter referred to as the 'Regulations'), will take the form of a series of bids (hereinafter referred to as 'Biddings').",
+        "SECTION_3": "The subject of the Auction comprises items owned by the Organizer or third parties who have donated specific items to the Organizer for the purpose of sale, with proceeds allocated to the purposes specified in Article 4 of the Public Benefit and Volunteer Work Act.",
+        "SECTION_4": "The total revenue from the charity auction will be allocated for public benefit activities and any potential costs associated with shipping the auctioned item.",
+        "SECTION_5": "The Organizer assures that every effort will be made to ensure that the Gala takes place as described."
+      }
+    },
+    "PARAGRAPH_2": {
+      "TITLE": "§2. CONDITIONS FOR PARTICIPATION IN THE CHARITY AUCTION",
+      "PARAGRAPH_SECTIONS": {
+        "SECTION_1": {
+          "TITLE": "Participants of the Auction may include:",
+          "PARAGRAPH_SECTIONS": {
+            "SECTION_1": "a natural person who has reached the age of 18 and possesses full legal capacity (consumer),",
+            "SECTION_2": "a natural person, legal entity, or organizational unit without legal personality, which has legal capacity under the law and operates a business in its own name, who is also a Guest (hereinafter referred to as the 'Participant')."
+          }
+        },
+        "SECTION_2": "A person who has paid for participation in the Gala (hereinafter referred to as the 'Guest') may be present during the Auction.",
+        "SECTION_3": "Actions that may hinder, destabilize, or prevent the Auction from being conducted are not acceptable to the Organizer. Should such actions be identified, the Organizer is authorized to exclude the Participant or Guest from further participation in the Auction.",
+        "SECTION_4": "The Auction is open, meaning the prices of specific Items are visible and accessible throughout the Auction.",
+        "SECTION_5": {
+          "TITLE": "To purchase an auctioned Item during the Auction, the following conditions must be met:",
+          "PARAGRAPH_SECTIONS": {
+            "SECTION_1": "providing the necessary details of the Participant or their representative, including: full name, address, email address, phone number,",
+            "SECTION_2": "acceptance of the Regulations,",
+            "SECTION_3": "registration for the Auction by submitting a price offer (hereinafter referred to as the 'Bid')."
+          }
+        }
+      }
+    },
+    "PARAGRAPH_3": {
+      "TITLE": "§3. ADDITIONAL CONDITIONS FOR PARTICIPATION IN THE EVENT",
+      "PARAGRAPH_SECTIONS": {
+        "SECTION_1": "The Third Charity Gala and the Auction take place at the Palace in Walewice. Participants present at the venue must adhere to the rules in place at this location as well as the provisions of these Regulations.",
+        "SECTION_2": "The Organizer is not liable for damages caused by Participants who do not comply with the provisions of the Regulations.",
+        "SECTION_3": "Minors may participate in the Event under the supervision of a parent or legal guardian. Minors attend the Gala under the sole responsibility of those supervising them.",
+        "SECTION_4": "Participants of the Gala and all persons on the premises are required to behave in a manner that does not endanger the safety of others present at the Event, specifically complying with the provisions of the Regulations and following the instructions of the Organizer’s representatives aimed at ensuring their safety and order.",
+        "SECTION_5": {
+          "TITLE": "The following are prohibited:",
+          "PARAGRAPH_SECTIONS": {
+            "SECTION_1": "damaging signs, informational boards, advertising materials, devices, and equipment located at the event site,",
+            "SECTION_2": "any actions, particularly throwing objects, that could pose a threat to the life, health, or safety of individuals at the Event,",
+            "SECTION_3": "damaging lawns, shrubs, and trees at the event site,",
+            "SECTION_4": "tampering with any electrical devices, distribution boards, or rotating elements."
+          }
+        },
+        "SECTION_6": "Participants must use sanitary facilities appropriately.",
+        "SECTION_7": {
+          "TITLE": "It is forbidden to bring or possess during the Event:",
+          "PARAGRAPH_SECTIONS": {
+            "SECTION_1": "weapons or other dangerous items,",
+            "SECTION_2": "explosives,",
+            "SECTION_3": "pyrotechnic products,",
+            "SECTION_4": "flammable materials,",
+            "SECTION_5": "narcotics or psychotropic substances."
+          }
+        },
+        "SECTION_8": "Bringing dogs without a muzzle is prohibited.",
+        "SECTION_9": "Event participants or other persons present may be exposed to continuous sound levels that could damage hearing.",
+        "SECTION_10": "Event attendees using vehicles must park in designated areas and strictly follow the instructions of the Organizer’s appointed staff."
+      }
+    },
+    "PARAGRAPH_4": {
+      "TITLE": "§4. CHARITY AUCTION COURSE",
+      "PARAGRAPH_SECTIONS": {
+        "SECTION_1": "The auction will take place on September 14, 2024, in Walewice during the Gala.",
+        "SECTION_2": "The auction will be preceded by a presentation of the items being auctioned.",
+        "SECTION_3": "The auction will be held in person unless, due to force majeure, the organizer decides to hold the auction using electronic communication methods.",
+        "SECTION_4": "A minimum price (starting bid) will be set for all items listed in the auction.",
+        "SECTION_5": "Each new bid must be at least 10 PLN higher than the previous one.",
+        "SECTION_6": "The bid declared by a participant will be visible to all other participants and guests.",
+        "SECTION_7": "The first and any subsequent bid declared by a participant will be legally binding and cannot be withdrawn.",
+        "SECTION_8": "A bid made during the auction will no longer be binding only if another participant places a more advantageous offer.",
+        "SECTION_9": "The auction for a specific item will be won by the participant who places the highest bid before the auction for that item ends (hereafter referred to as the \"Winner\").",
+        "SECTION_10": "The Winner is obliged to pay the declared amount within a non-extendable period of 7 days from the closing of the auction, to the organizer's bank account: 31 1020 3352 0000 1202 0241 5990.",
+        "SECTION_11": "The payment date is the day the organizer's bank account is credited.",
+        "SECTION_12": "In case of delay in payment by the Winner, the bid will no longer be valid. The winning decision will be reconsidered after contacting those who declared the next highest bids.",
+        "SECTION_13": "The participant takes responsibility for any bids placed in a careless, mistaken manner, or without understanding the consequences as outlined in this Regulation and applicable Polish law.",
+        "SECTION_14": "The transfer of ownership and associated risks occurs when the item is collected by the Winner, who is also the participant referred to in §2, point 1, letter a of the Regulation.",
+        "SECTION_15": "The auctioned item will be sent to the Winner at the address provided by them during registration."
+      }
+    },
+    "PARAGRAPH_5": {
+      "TITLE": "§5. PERSONAL DATA",
+      "PARAGRAPH_SECTIONS": {
+        "SECTION_1": "In accordance with Article 13, Section 1 and 2 of the GDPR, the Organizer informs about the method and purpose of processing the personal data of Guests, Participants, and Winners, as well as their rights under personal data protection regulations.",
+        "SECTION_2": "The Administrator of personal data of Guests, Participants, and Winners is the **FOUNDATION FOR SUPPORTING PATIENTS WITH LEUKEMIA**, located in Łódź, at ul. Pabianicka 62, 93-513 Łódź, KRS 0000069531, hereafter referred to as the Administrator.",
+        "SECTION_3": "The Administrator can be contacted via email: kontakt@fundacja.hematologiczna.org.",
+        "SECTION_4": "Personal data of Guests, Participants, and Winners are made available to the Administrator by entities recording the course of the Gala or Auction on behalf of the Administrator. In such cases, the following categories of data are processed: first name, last name, phone number, email address, and image if captured during the Gala or Auction.",
+        "SECTION_5": {
+          "TITLE": "The personal data of Guests, Participants, and Winners are processed for the following purposes:",
+          "PARAGRAPH_SECTIONS": {
+            "SECTION_1": "to perform the contract involving participation of Guests, Participants, and Winners in the Gala and Auction organized by the Administrator and to ensure contact with Guests, Participants, and Winners (Article 6(1)(b) of the GDPR),",
+            "SECTION_2": "to fulfill rights and obligations arising from the contract involving participation of Guests, Participants, and Winners in the Gala and Auction organized by the Administrator (Article 6(1)(f) of the GDPR),",
+            "SECTION_3": "for the realization of potential marketing goals of the Administrator (Article 6(1)(f) of the GDPR),",
+            "SECTION_4": "for handling complaints, pursuing claims and rights (Article 6(1)(f) of the GDPR),",
+            "SECTION_5": "to comply with legal obligations on the Administrator arising from tax and accounting laws (Article 6(1)(c) of the GDPR)."
+          }
+        },
+        "SECTION_6": {
+          "TITLE": "Personal data will be stored by the Administrator for the following periods:",
+          "PARAGRAPH_SECTIONS": {
+            "SECTION_1": "in relation to data processed based on Article 6(1)(b), (c), and (f) of the GDPR - for the duration of the contract, and after its expiration, for the time required by applicable laws, particularly in regard to pursuing claims,",
+            "SECTION_2": "in relation to data processed based on consent - until the consent is withdrawn."
+          }
+        },
+        "SECTION_7": "The Administrator informs that the personal data of Guests, Participants, and Winners may be provided to public authorities and entities carrying out public tasks or acting on behalf of public authorities, to the extent and for purposes arising from applicable laws, as well as to other entities that process personal data as processors and provide services to the Administrator (e.g., consulting, accounting, IT), with the condition that these entities will not have access to health data.",
+        "SECTION_8": "The personal data of Guests, Participants, and Winners will not be processed automatically or subject to profiling. Data will not be transferred outside the European Economic Area (EEA).",
+        "SECTION_9": "The individual whose data is processed has the right to access their data and receive a copy, the right to rectify (correct) their data, the right to restrict processing, the right to erasure, the right to object, the right to data portability, the right to lodge a complaint with the Personal Data Protection Office.",
+        "SECTION_10": "In relation to data provided based on consent - the individual whose data is processed has the right to withdraw consent at any time, with the understanding that the withdrawal of consent does not affect the processing of personal data for purposes before the consent withdrawal.",
+        "SECTION_11": "Providing personal data is voluntary, but necessary to participate in the Gala or Auction organized by the Administrator.",
+        "SECTION_12": "Attachment 1 to the Regulation is the information on personal data processing in the form of an image consent form."
+      }
+    },
+    "PARAGRAPH_6": {
+      "TITLE": "§6. FINAL PROVISIONS",
+      "PARAGRAPH_SECTIONS": {
+        "SECTION_1": "By participating in the Gala and joining the Auction, the Guest, Participant, and Winner accept the provisions of the Regulation.",
+        "SECTION_2": "The Organizer reserves the right to change the Regulation and to suspend the auction due to technical reasons or force majeure.",
+        "SECTION_3": "Any disputes will be resolved amicably. The court with jurisdiction in case of any dispute will be the court having jurisdiction over the defendant's registered office.",
+        "SECTION_4": "In matters not regulated in the Regulation, the generally applicable provisions of Polish law shall apply."
+      }
+    },
+    "ATTACHMENT": {
+      "TITLE": "Attachment No. 1",
+      "INFO_TITLE": "INFORMATION ON PERSONAL DATA PROCESSING",
+      "INFO_BODY": "THE FOUNDATION FOR SUPPORTING PATIENTS WITH LEUKEMIA (hereinafter: 'Foundation'), in cooperation with external companies, organizes the III CHARITY GALA. The event will take place in person on September 14, 2024. During the event, there will be an opportunity to take photos of Guests, Participants, and especially Winners, in a way that allows their identification. These photos may later be used for internal and external communication and marketing purposes. Based on Article 6(1)(a) GDPR, processing of the image of Guests, Participants, and especially Winners by the Foundation for the described purposes requires consent from the individuals whose data are being processed.",
+      "CLAUSE": {
+        "TITLE": "INFORMATION CLAUSE OF THE FOUNDATION",
+        "BODY": "Based on Article 13 of Regulation (EU) 2016/679 of the European Parliament and Council of April 27, 2016, on the protection of individuals in relation to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (General Data Protection Regulation), hereinafter GDPR, the following information is provided regarding the processing of personal data in the form of the image of Guests, Participants, and especially Winners during the Gala by the Foundation (hereinafter ADO):",
+        "SECTIONS": {
+          "SECTION_1": "The Administrator of Personal Data is THE FOUNDATION FOR SUPPORTING PATIENTS WITH LEUKEMIA, located at ul. Pabianicka 62, 93-513 Łódź, Poland, KRS 0000069531, email: kontakt@fundacja.hematologiczna.org.",
+          "SECTION_2": "ADO processes personal data for internal and external communication and marketing purposes (Article 6(1)(a) GDPR).",
+          "SECTION_3": "Recipients of personal data may include external companies co-organizing the Gala and other companies that, at the Foundation's request, will prepare materials for communication and marketing purposes.",
+          "SECTION_4": "ADO does not transfer personal data outside the European Economic Area.",
+          "SECTION_5": "Personal data will be stored for the period necessary for internal and external communication and marketing purposes.",
+          "SECTION_6": "The individual whose data are processed has the right to access their data and receive a copy, the right to rectify (correct) their data, the right to restrict processing, the right to erasure, the right to object, the right to data portability, the right to withdraw consent at any time, and the right to file a complaint with the Personal Data Protection Office.",
+          "SECTION_7": "Providing personal data within the scope of this clause is entirely voluntary.",
+          "SECTION_8": "In the activities of ADO, no automated decision-making, including profiling, occurs using the collected personal data."
+        }
+      },
+      "EXAMPLE": {
+        "TITLE": "GUEST/PARTICIPANT/WINNER STATEMENT OF CONSENT TO THE PROCESSING OF PERSONAL DATA IN THE FORM OF IMAGE",
+        "BODY": "I ……………………………………………………………………………………………………………….……………… declare that:",
+        "SECTIONS": {
+          "SECTION_1": "I have read the Information on personal data processing and the Information Clause, and I accept it.",
+          "SECTION_2": "The content of the Information and the Clause is clear and understandable to me, and all doubts have been clarified by an authorized person from the Foundation.",
+          "SECTION_3": "I voluntarily give my consent to the processing of my personal data in the form of my image taken during the event for internal and external communication and marketing purposes by the Foundation.",
+          "SECTION_4": "I have been informed that my personal data is processed based on my voluntary consent, and I have the right to withdraw it at any time. Withdrawal of consent will have legal effects from the moment it is submitted and will not affect the processing of my personal data for internal and external communication and marketing purposes before the withdrawal statement.",
+          "SECTION_5": "In accordance with Article 81(1) of the Copyright and Related Rights Act, I consent to the dissemination of my image by the Foundation, captured during the Gala, for internal and external communication and marketing purposes.",
+          "SECTION_6": "I voluntarily give my consent to the processing of my contact data for the purpose of informing me about future events and the statutory activities of the Foundation."
+        },
+        "SIGN": "Signature of the Guest/Participant/Winner"
+      }
+    }
+  }
+}

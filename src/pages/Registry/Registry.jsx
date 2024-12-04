@@ -3,9 +3,12 @@ import './registry.scss';
 import { useState } from 'react';
 import Checkbox from '../../components/Checkbox/Checkbox';
 import { addUser } from '../../api/services';
+import { useTranslation } from 'react-i18next';
 
 const Registry = () => {
   const [donate, setDonate] = useState(10);
+  const { t } = useTranslation();
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -40,12 +43,11 @@ const Registry = () => {
             <div className="Registry__topContainer-img"></div>
 
             <div className="Registry__topContainer-content">
-              <h1 className="Registry__topContainer-title">Rejestracja</h1>
+              <h1 className="Registry__topContainer-title">
+                {t('REGISTRATION.HEADER_TITLE')}
+              </h1>
               <p className="Registry__topContainer-description">
-                Wypełnij formularz, aby zgłosić swoje uczestnictwo. Po jego
-                wysłaniu zostaniesz przekierowany do opcji dokonania darowizny
-                (cegiełki o kwocie 100 zł) poprzez przelew bankowy lub online
-                (poniżej), co umożliwi Ci udział w Galii.
+                {t('REGISTRATION.HEADER_BODY')}
               </p>
             </div>
           </div>
@@ -53,13 +55,15 @@ const Registry = () => {
 
         <section className="Registry__form">
           <div className="container Registry__form-container">
-            <h2 className="Registry__form-title">Formularz zgłoszeniowy</h2>
+            <h2 className="Registry__form-title">
+              {t('REGISTRATION.FORM_TITLE')}
+            </h2>
 
             <form onSubmit={handleSubmit}>
               <div className="Registry__form__fieldsGrid">
                 <div className="Registry__form-field ">
                   <label className="Registry__form-label">
-                    Imię i Nazwisko:
+                    {t('REGISTRATION.FORM_FULLNAME')}
                   </label>
                   <input
                     className="Registry__form-input"
@@ -72,7 +76,9 @@ const Registry = () => {
                 </div>
 
                 <div className="Registry__form-field Contact__form-field--2">
-                  <label className="Registry__form-label">Adres e-mail</label>
+                  <label className="Registry__form-label">
+                    {t('REGISTRATION.FORM_EMAIL')}
+                  </label>
                   <input
                     className="Registry__form-input"
                     type="email"
@@ -84,7 +90,9 @@ const Registry = () => {
                 </div>
 
                 <div className="Registry__form-field ">
-                  <label className="Contact__form-label">Ulica</label>
+                  <label className="Contact__form-label">
+                    {t('REGISTRATION.FORM_STREET')}
+                  </label>
                   <input
                     className="Registry__form-input"
                     name="street"
@@ -95,7 +103,9 @@ const Registry = () => {
                 </div>
 
                 <div className="Registry__form-field ">
-                  <label className="Contact__form-label">Nr budynku</label>
+                  <label className="Contact__form-label">
+                    {t('REGISTRATION.FORM_BUILDING')}
+                  </label>
                   <input
                     className="Registry__form-input"
                     name="buildingNumber"
@@ -106,7 +116,9 @@ const Registry = () => {
                 </div>
 
                 <div className="Registry__form-field ">
-                  <label className="Contact__form-label">Kod pocztowy</label>
+                  <label className="Contact__form-label">
+                    {t('REGISTRATION.FORM_INDEX')}
+                  </label>
                   <input
                     className="Registry__form-input"
                     name="zipCode"
@@ -117,7 +129,9 @@ const Registry = () => {
                 </div>
 
                 <div className="Registry__form-field ">
-                  <label className="Contact__form-label">Miasto</label>
+                  <label className="Contact__form-label">
+                    {t('REGISTRATION.FORM_CITY')}
+                  </label>
                   <input
                     className="Registry__form-input"
                     name="city"
@@ -131,41 +145,34 @@ const Registry = () => {
               <div className="Registry__form__checkbox">
                 <Checkbox />
                 <p className="Registry__form__checkbox-description">
-                  Akceptuję postanowienia Regulaminu prywatności{' '}
+                  {t('REGISTRATION.FORM_RIGHTS.1')}
                   <a
                     className="Registry__form__checkbox-description--link"
                     href="">
                     (link)
-                  </a>{' '}
-                  i Regulaminu imprezy (link).
+                  </a>
                 </p>
               </div>
               <div className="Registry__form__checkbox">
                 <Checkbox />
                 <p className="Registry__form__checkbox-description">
-                  Wyrażam zgodę na przetwarzanie moich danych osobowych w
-                  zakresie mojego wizerunku utrwalonego podczas Gali
-                  Charytatywnej dla celów prowadzonych przez Fundację
-                  wewnętrznych i zewnętrznych działań komunikacyjnych i
-                  marketingowych.
+                  {t('REGISTRATION.FORM_RIGHTS.2')}
                 </p>
               </div>
               <div className="Registry__form__checkbox">
                 <Checkbox />
                 <p className="Registry__form__checkbox-description">
-                  Wyrażam zgodę na przetwarzanie moich danych osobowych w
-                  zakresie danych kontaktowych w celu informowania o przyszłych
-                  wydarzeniach oraz działalności statutowej Fundacji.
+                  {t('REGISTRATION.FORM_RIGHTS.3')}
                 </p>
               </div>
 
               <div className="Registry__form__checkbox"></div>
               <p className="Registry__form-description">
-                Kopia wysłanej wiadomości pojawi się w Twojej skrzynce email.
+                {t('REGISTRATION.MESSAGE_TEXT')}
               </p>
 
               <button className="Registry__form-button" type="submit">
-                Wyślij wiadomość
+                {t('REGISTRATION.FORMS_BUTTON')}
               </button>
             </form>
           </div>

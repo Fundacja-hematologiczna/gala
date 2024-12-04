@@ -8,7 +8,11 @@
     width: 100%;
     padding: 14px 17px 0 ;
 
-    @include device (mobile, tablet) {
+    @include device (tablet) {
+        padding: 14px 5px;
+    }
+
+    @include device (mobile) {
         padding: 14px 0;
     }
 
