@@ -24,9 +24,9 @@
     "CHARITY_AUCTION_BODY": "Charity Auction",
     "CHARITY_AUCTION_TITLE": "This is the main event of the Gala. Funds raised from the auction of items donated by Benefactors will be used to help patients with hematologic diseases, supported by the Foundation.",
     "CHARITY_AUCTION_BUTTON": "Auction catalog",
-    "Benefactors_BODY": "For Benefactors",
-    "Benefactors_TITLE": "This wonderful event would not take place without the support and commitment of our Benefactors and Partners. If you see a role for yourself here, have an idea for participating in the Gala, or simply want to share your best, we invite you to get in touch.",
-    "Benefactors_BUTTON": "Become a Benefactor",
+    "BENEFACTORS_BODY": "For Benefactors",
+    "BENEFACTORS_TITLE": "This wonderful event would not take place without the support and commitment of our Benefactors and Partners. If you see a role for yourself here, have an idea for participating in the Gala, or simply want to share your best, we invite you to get in touch.",
+    "BENEFACTORS_BUTTON": "Become a Benefactor",
     "VOLUNTEERS_BODY": "For Volunteers",
     "VOLUNTEERS_TITLE": "The Charity Gala is a large-scale endeavor. It’s an event that requires continuous support throughout the year, with the most significant organizational effort during the event. Would you like to support us in these activities?",
     "VOLUNTEERS_BUTTON": "Become a Volunteer",
@@ -46,9 +46,13 @@
     "WAITING_TITLE_1": "We are waiting for you!",
     "WAITING_TITLE_2": "Join us!",
     "WAITING_BUTTON": "Register",
-    "Benefactors_PARTNERS": "Benefactors & Partners",
+    "BENEFACTORS_PARTNERS": "Benefactors & Partners",
     "MOBILE_BUTTON_1": "Register",
-    "MOBILE_BUTTON_2": "Donate"
+    "MOBILE_BUTTON_2": "Donate",
+    "DONORS_BODY": "For benefactors",
+    "DONORS_TITLE": "This wonderful event would not have been possible without the support and commitment of our Benefactors and Partners. If you see an opportunity to contribute, have an idea for participating in the Gala, or simply wish to share the best you have to offer – we warmly invite you to get in touch.",
+    "DONORS_BUTTON": "Stay the benefactor",
+    "DONORS_PARTNERS": "Sponsors and partners"
   },
   "REGISTRATION": {
     "HEADER_TITLE": "Registration",

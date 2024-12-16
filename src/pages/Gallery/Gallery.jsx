@@ -1,29 +1,30 @@
 import { useTranslation } from 'react-i18next';
 import '../../styles/index.scss';
 import './gallery.scss';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import ReactPaginate from 'react-paginate';
+import { GalleryZoomed } from './GalleryZoomed';
+import useScrollLock from '../../hooks/useScrollLock.hook';
 const images = import.meta.glob('/src/assets/gallery/*/*.{png,jpg,jpeg,svg}', {
   eager: true,
 });
-//const images = import.meta.glob('/public/partners&contibutors/partnerzy/*.{png,jpg,jpeg,svg}', { eager: true });
 
 const Gallery = () => {
   const { t } = useTranslation();
   const [isActive, setIsActive] = useState('2022');
+  const dialogRef = useRef(null);
+  const [chosenImage, setChosenImage] = useState('');
+  const [isGalleryOpened, setIsGalleryOpened] = useState(false);
+
+  useScrollLock(isGalleryOpened);
 
   const [currentPage, setCurrentPage] = useState(1); // Numer aktualnej strony
   const imagesPerPage = 180; // Maksymalna liczba zdjęć na jednej stronie
 
   const [itemOffset, setItemOffset] = useState(6);
 
-  // Simulate fetching items from another resources.
-  // (This could be items from props; or items loaded in a local state
-  // from an API endpoint with useEffect and useState)
   const endOffset = itemOffset + imagesPerPage;
   console.log(`Loading items from ${itemOffset} to ${endOffset}`);
-  // const currentItems = images.slice(itemOffset, endOffset);
-  const pageCount = Math.ceil(images.length / imagesPerPage);
 
   // Invoke when user click to request another page.
   const handlePageClick = (event) => {
@@ -43,24 +44,10 @@ const Gallery = () => {
   // Wyciągnięcie zdjęć dla aktualnej strony
   const currentImages = imageList.slice(indexOfFirstImage, indexOfLastImage);
 
-  // Obliczanie całkowitej liczby stron
-  const totalPages = Math.ceil(images.length / imagesPerPage);
-
-  // Funkcja zmieniająca stronę
-  const paginate = (pageNumber) => setCurrentPage(pageNumber);
-
-  // const images = import.meta.glob('/src/assets/gallery/*.{png,jpg,jpeg,svg}', {
-  //   eager: true,
-  // });
-
   console.log(currentImages);
   console.log(imageList);
   const handleClick = (date) => {
     setIsActive(date);
-  };
-
-  const doUsuniecia = () => {
-    console.log(images.length);
   };
 
   const left = () => {
@@ -71,6 +58,46 @@ const Gallery = () => {
   const right = () => {
     const newPage = currentPage + 1;
     setCurrentPage(newPage);
+  };
+
+  const handleClickShowGallery = (img) => {
+    dialogRef.current?.showModal();
+    setIsGalleryOpened(true);
+    const image = imageList[img];
+    setChosenImage(image);
+  };
+
+  const handleClickCloseGallery = () => {
+    dialogRef.current?.setAttribute('closing', '');
+    dialogRef.current?.addEventListener(
+      'animationend',
+      () => {
+        dialogRef.current?.removeAttribute('closing');
+        dialogRef.current?.close();
+        setIsGalleryOpened(false);
+      },
+      { once: true },
+    );
+  };
+
+  const handleClickNextPhoto = () => {
+    const imgIndex = imageList.indexOf(chosenImage) + 1;
+
+    if (imgIndex > imageList.length - 1) {
+      return setChosenImage(imageList[0]);
+    }
+
+    setChosenImage(imageList[imgIndex]);
+  };
+
+  const handleClickPrevImg = () => {
+    const imgIndex = imageList.indexOf(chosenImage) - 1;
+
+    if (imgIndex < 0) {
+      return setChosenImage(imageList[imageList.length - 1]);
+    }
+
+    setChosenImage(imageList[imgIndex]);
   };
 
   return (
@@ -112,8 +139,11 @@ const Gallery = () => {
               <div>{images.length}</div>
 
               <div className="Gallery__pictures__grid">
-                {currentImages.map((image) => (
-                  <div className="Gallery__pictures__grid-item " key={image}>
+                {currentImages.map((image, index) => (
+                  <div
+                    className="Gallery__pictures__grid-item"
+                    key={image}
+                    onClick={() => handleClickShowGallery(index)}>
                     <img
                       src={image}
                       alt={`image-${image.id}`}
@@ -138,6 +168,14 @@ const Gallery = () => {
             <button onClick={right}>right</button>
           </section>
         </div>
+
+        <GalleryZoomed
+          dialogRef={dialogRef}
+          onClickClose={handleClickCloseGallery}
+          chosenImage={chosenImage}
+          onClickNextImage={handleClickNextPhoto}
+          onClickNextPrev={handleClickPrevImg}
+        />
       </main>
     </>
   );
