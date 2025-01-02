@@ -6,10 +6,11 @@ import BurgerMenu from './BurgerMenu/BurgerMenu';
 import useWindowSize from '../../hooks/useWindowSize.hook';
 import HeaderLanguage from './HeaderLanguage';
 import { useTranslation } from 'react-i18next';
+import useLocalStorage from '../../hooks/useLocaleStorage.hook';
 
 const Header = () => {
   const { width } = useWindowSize();
-  const [isActive, setIsActive] = useState('home');
+  const [isActive, setIsActive] = useLocalStorage('navigation', 'home');
   const [isBurgerMenuActive, setIsBurgerMenuActive] = useState(false);
   const { t } = useTranslation();
 
