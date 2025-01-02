@@ -153,19 +153,6 @@ const Gallery = () => {
                 ))}
               </div>
             </div>
-            <div className="Gallery__pictures__pagination">
-              <ReactPaginate
-                breakLabel="..."
-                nextLabel=">"
-                onPageChange={handlePageClick}
-                pageRangeDisplayed={1}
-                pageCount={18}
-                previousLabel="<"
-                renderOnZeroPageCount={null}
-              />
-            </div>
-            <button onClick={left}>left</button>
-            <button onClick={right}>right</button>
           </section>
         </div>
 
