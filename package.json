@@ -2,7 +2,7 @@
   "name": "react-eslint-prettier",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://Fundacja-hematologiczna.github.io",
+  "homepage": "https://Fundacja-hematologiczna.github.io/gala",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
