@@ -2,8 +2,9 @@ import '../../styles/index.scss';
 import './registry.scss';
 import { useState } from 'react';
 import Checkbox from '../../components/Checkbox/Checkbox';
-import { addUser } from '../../api/services';
+// import { addUser } from '../../api/services';
 import { useTranslation } from 'react-i18next';
+import { addUser } from '../../api/services';
 
 const Registry = () => {
   const [donate, setDonate] = useState(10);
@@ -27,8 +28,50 @@ const Registry = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('x');
-    addUser(formData);
+
+    grecaptcha.enterprise.ready(async () => {
+      try {
+        const token = await grecaptcha.enterprise.execute(
+          '6LclCa0qAAAAAE1ZCWmGEWvWl6mkwaDOdBZgeLE0',
+          { action: 'signup' },
+        );
+
+        const request = {
+          event: {
+            token: token,
+            expectedAction: 'signup',
+            siteKey: '6LclCa0qAAAAAE1ZCWmGEWvWl6mkwaDOdBZgeLE0',
+          },
+        };
+
+        console.log('request', request);
+
+        const response = await fetch(
+          'https://recaptchaenterprise.googleapis.com/v1/projects/fundacja-hematol-1735910697936/assessments?key=AIzaSyBO3mzdLrBmzn2jS2EYoY76oHsGEV3UVh0',
+          {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(request),
+          },
+        );
+
+        const result = await response.json();
+        console.log('Backend response:', result);
+
+        if (result.riskAnalysis.score > 0.5 && result.tokenProperties.valid) {
+          console.log('Token zweryfikowany pomyślnie');
+          // addUser(formData);
+        } else {
+          console.error('Nieudana weryfikacja tokena');
+        }
+      } catch (error) {
+        console.error('Błąd podczas przetwarzania reCAPTCHA:', error);
+      }
+    });
+
+    console.log('siema');
   };
 
   const handleClick = (pln) => {
