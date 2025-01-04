@@ -41,7 +41,7 @@ const Registry = () => {
     e.preventDefault();
 
     if (!isVerified) {
-      alert('Proszę potwierdzić, że jesteś człowiekiem.');
+      return alert('Proszę potwierdzić, że jesteś człowiekiem.');
     }
 
     addUser(formData);
