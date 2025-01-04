@@ -17,8 +17,10 @@
     "server": "json-server db.json --delay 500"
   },
   "dependencies": {
+    "@hcaptcha/react-hcaptcha": "^1.11.0",
     "axios": "^1.6.8",
     "bootstrap": "^5.3.3",
+    "hcaptcha": "^0.2.0",
     "i18next": "^23.16.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

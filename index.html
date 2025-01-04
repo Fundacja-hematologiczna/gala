@@ -11,68 +11,6 @@
 <body>
   <div id="root"></div>
   <script defer type="module" src="/src/main.jsx"></script>
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-  <!-- <script defer src="https://www.google.com/recaptcha/enterprise.js?render=6LclCa0qAAAAAE1ZCWmGEWvWl6mkwaDOdBZgeLE0"></script> -->
+  <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
 </body>
-
 </html>
-
-<!-- <!DOCTYPE html>
-<html lang="pl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>reCAPTCHA Demo</title>
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-</head>
-<body>
-  <h1>Formularz z reCAPTCHA</h1>
-  <form action="/verify-captcha" method="POST">
-     Widżet reCAPTCHA
-    <div class="g-recaptcha" data-sitekey="6Lf13a0qAAAAAGzCMDkDzcjNX8IfQmHbKsERYKNz"></div>
-    <br />
-    <button type="submit">Wyślij</button>
-  </form>
-</body>
-</html> -->
-
-<!-- be -->
-
-<!-- const express = require('express');
-const bodyParser = require('body-parser');
-const axios = require('axios');
-
-const app = express();
-app.use(bodyParser.urlencoded({ extended: true }));
-
-app.post('/verify-captcha', async (req, res) => {
-  const secretKey = '6Lf13a0qAAAAACC-3FeFb_WBc33wqxQiCELpaV1h';
-  const token = req.body['g-recaptcha-response'];
-
-  if (!token) {
-    return res.status(400).send('Weryfikacja CAPTCHA nieudana. Spróbuj ponownie.');
-  }
-
-  try {
-    // Weryfikacja tokenu
-    const response = await axios.post(`https://www.google.com/recaptcha/api/siteverify`, null, {
-      params: {
-        secret: secretKey,
-        response: token,
-      },
-    });
-
-    if (response.data.success) {
-      return res.send('Weryfikacja CAPTCHA zakończona sukcesem.');
-    } else {
-      return res.status(400).send('Nieudana weryfikacja CAPTCHA.');
-    }
-  } catch (error) {
-    console.error('Błąd weryfikacji CAPTCHA:', error);
-    res.status(500).send('Błąd serwera.');
-  }
-});
-
-app.listen(3000, () => {
-  console.log('Serwer działa na porcie 3000.');
-}); -->
