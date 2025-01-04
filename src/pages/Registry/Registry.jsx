@@ -1,14 +1,16 @@
 import '../../styles/index.scss';
 import './registry.scss';
-import { useState } from 'react';
+import HCaptcha from '@hcaptcha/react-hcaptcha';
+import { useState, useRef } from 'react';
 import Checkbox from '../../components/Checkbox/Checkbox';
-// import { addUser } from '../../api/services';
 import { useTranslation } from 'react-i18next';
 import { addUser } from '../../api/services';
 
 const Registry = () => {
   const [donate, setDonate] = useState(10);
   const { t } = useTranslation();
+  const hcaptchaRef = useRef(null);
+  const [isVerified, setIsVerified] = useState(false);
 
   const [formData, setFormData] = useState({
     name: '',
@@ -19,259 +21,163 @@ const Registry = () => {
     city: '',
   });
 
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
+  const handleHCaptcha = () => {
+    const res = hcaptchaRef.current.getResponse();
+
+    if (res) {
+      setIsVerified(true);
+    }
   };
 
-  const handleSubmit = (e) => {
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    grecaptcha.enterprise.ready(async () => {
-      try {
-        const token = await grecaptcha.enterprise.execute(
-          '6LclCa0qAAAAAE1ZCWmGEWvWl6mkwaDOdBZgeLE0',
-          { action: 'signup' },
-        );
+    if (!isVerified) {
+      alert('Proszę potwierdzić, że jesteś człowiekiem.');
+    }
 
-        const request = {
-          event: {
-            token: token,
-            expectedAction: 'signup',
-            siteKey: '6LclCa0qAAAAAE1ZCWmGEWvWl6mkwaDOdBZgeLE0',
-          },
-        };
-
-        console.log('request', request);
-
-        const response = await fetch(
-          'https://recaptchaenterprise.googleapis.com/v1/projects/fundacja-hematol-1735910697936/assessments?key=AIzaSyBO3mzdLrBmzn2jS2EYoY76oHsGEV3UVh0',
-          {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(request),
-          },
-        );
-
-        const result = await response.json();
-        console.log('Backend response:', result);
-
-        if (result.riskAnalysis.score > 0.5 && result.tokenProperties.valid) {
-          console.log('Token zweryfikowany pomyślnie');
-          // addUser(formData);
-        } else {
-          console.error('Nieudana weryfikacja tokena');
-        }
-      } catch (error) {
-        console.error('Błąd podczas przetwarzania reCAPTCHA:', error);
-      }
-    });
+    addUser(formData);
 
     console.log('siema');
   };
 
-  const handleClick = (pln) => {
-    setDonate(pln);
-  };
+  const handleClick = (pln) => setDonate(pln);
 
   return (
-    <>
-      <main className="Registry">
-        <div className="Registry-container">
-          <div className="Registry__topContainer">
-            <div className="Registry__topContainer-img"></div>
+    <main className="Registry">
+      <div className="Registry-container">
+        <div className="Registry__topContainer">
+          <div className="Registry__topContainer-img" />
 
-            <div className="Registry__topContainer-content">
-              <h1 className="Registry__topContainer-title">
-                {t('REGISTRATION.HEADER_TITLE')}
-              </h1>
-              <p className="Registry__topContainer-description">
-                {t('REGISTRATION.HEADER_BODY')}
-              </p>
-            </div>
+          <div className="Registry__topContainer-content">
+            <h1 className="Registry__topContainer-title">
+              {t('REGISTRATION.HEADER_TITLE')}
+            </h1>
+            <p className="Registry__topContainer-description">
+              {t('REGISTRATION.HEADER_BODY')}
+            </p>
           </div>
         </div>
+      </div>
 
-        <section className="Registry__form">
-          <div className="container Registry__form-container">
-            <h2 className="Registry__form-title">
-              {t('REGISTRATION.FORM_TITLE')}
-            </h2>
+      <section className="Registry__form">
+        <div className="container Registry__form-container">
+          <h2 className="Registry__form-title">
+            {t('REGISTRATION.FORM_TITLE')}
+          </h2>
 
-            <form onSubmit={handleSubmit}>
-              <div className="Registry__form__fieldsGrid">
-                <div className="Registry__form-field ">
-                  <label className="Registry__form-label">
-                    {t('REGISTRATION.FORM_FULLNAME')}
-                  </label>
+          <form onSubmit={handleSubmit}>
+            <div className="Registry__form__fieldsGrid">
+              {[
+                {
+                  label: t('REGISTRATION.FORM_FULLNAME'),
+                  name: 'name',
+                  type: 'text',
+                },
+                {
+                  label: t('REGISTRATION.FORM_EMAIL'),
+                  name: 'email',
+                  type: 'email',
+                },
+                {
+                  label: t('REGISTRATION.FORM_STREET'),
+                  name: 'street',
+                  type: 'text',
+                },
+                {
+                  label: t('REGISTRATION.FORM_BUILDING'),
+                  name: 'buildingNumber',
+                  type: 'text',
+                },
+                {
+                  label: t('REGISTRATION.FORM_INDEX'),
+                  name: 'zipCode',
+                  type: 'text',
+                },
+                {
+                  label: t('REGISTRATION.FORM_CITY'),
+                  name: 'city',
+                  type: 'text',
+                },
+              ].map(({ label, name, type }) => (
+                <div className="Registry__form-field" key={name}>
+                  <label className="Registry__form-label">{label}</label>
                   <input
                     className="Registry__form-input"
-                    type="text"
-                    name="name"
-                    value={formData.name}
+                    type={type}
+                    name={name}
+                    value={formData[name]}
                     onChange={handleChange}
                     required
                   />
                 </div>
-
-                <div className="Registry__form-field Contact__form-field--2">
-                  <label className="Registry__form-label">
-                    {t('REGISTRATION.FORM_EMAIL')}
-                  </label>
-                  <input
-                    className="Registry__form-input"
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                  />
-                </div>
-
-                <div className="Registry__form-field ">
-                  <label className="Contact__form-label">
-                    {t('REGISTRATION.FORM_STREET')}
-                  </label>
-                  <input
-                    className="Registry__form-input"
-                    name="street"
-                    value={formData.street}
-                    onChange={handleChange}
-                    required
-                  />
-                </div>
-
-                <div className="Registry__form-field ">
-                  <label className="Contact__form-label">
-                    {t('REGISTRATION.FORM_BUILDING')}
-                  </label>
-                  <input
-                    className="Registry__form-input"
-                    name="buildingNumber"
-                    value={formData.buildingNumber}
-                    onChange={handleChange}
-                    required
-                  />
-                </div>
-
-                <div className="Registry__form-field ">
-                  <label className="Contact__form-label">
-                    {t('REGISTRATION.FORM_INDEX')}
-                  </label>
-                  <input
-                    className="Registry__form-input"
-                    name="zipCode"
-                    value={formData.zipCode}
-                    onChange={handleChange}
-                    required
-                  />
-                </div>
-
-                <div className="Registry__form-field ">
-                  <label className="Contact__form-label">
-                    {t('REGISTRATION.FORM_CITY')}
-                  </label>
-                  <input
-                    className="Registry__form-input"
-                    name="city"
-                    value={formData.city}
-                    onChange={handleChange}
-                    required
-                  />
-                </div>
-              </div>
-
-              <div className="Registry__form__checkbox">
-                <Checkbox />
-                <p className="Registry__form__checkbox-description">
-                  {t('REGISTRATION.FORM_RIGHTS.1')}
-                  <a
-                    className="Registry__form__checkbox-description--link"
-                    href="">
-                    (link)
-                  </a>
-                </p>
-              </div>
-              <div className="Registry__form__checkbox">
-                <Checkbox />
-                <p className="Registry__form__checkbox-description">
-                  {t('REGISTRATION.FORM_RIGHTS.2')}
-                </p>
-              </div>
-              <div className="Registry__form__checkbox">
-                <Checkbox />
-                <p className="Registry__form__checkbox-description">
-                  {t('REGISTRATION.FORM_RIGHTS.3')}
-                </p>
-              </div>
-
-              <div className="Registry__form__checkbox"></div>
-              <p className="Registry__form-description">
-                {t('REGISTRATION.MESSAGE_TEXT')}
-              </p>
-
-              <button className="Registry__form-button" type="submit">
-                {t('REGISTRATION.FORMS_BUTTON')}
-              </button>
-            </form>
-          </div>
-        </section>
-
-        <section className="Registry__donate">
-          <div className="container Registry__donate-container">
-            <h2 className="Registry__donate-title">
-              Wesprzyj naszą inicjatywę
-            </h2>
-            <p className="Registry__donate-description">
-              Przekazując darowiznę, pomagasz w realizacji zadań statutowych
-              Fundacji.
-            </p>
-
-            <div className="Registry__donate__buttons">
-              <button
-                onClick={() => handleClick(10)}
-                className={`Registry__donate__buttons-button ${donate === 10 ? 'Registry__donate__buttons-button--active' : ''}`}>
-                10
-              </button>
-              <button
-                onClick={() => handleClick(20)}
-                className={`Registry__donate__buttons-button ${donate === 20 ? 'Registry__donate__buttons-button--active' : ''}`}>
-                20
-              </button>
-              <button
-                onClick={() => handleClick(50)}
-                className={`Registry__donate__buttons-button ${donate === 50 ? 'Registry__donate__buttons-button--active' : ''}`}>
-                50
-              </button>
-
-              <button
-                onClick={() => handleClick(100)}
-                className={`Registry__donate__buttons-button ${donate === 100 ? 'Registry__donate__buttons-button--active' : ''}`}>
-                100
-              </button>
-              <button
-                onClick={() => handleClick(250)}
-                className={`Registry__donate__buttons-button ${donate === 250 ? 'Registry__donate__buttons-button--active' : ''}`}>
-                250
-              </button>
-              <button
-                onClick={() => handleClick(500)}
-                className={`Registry__donate__buttons-button ${donate === 500 ? 'Registry__donate__buttons-button--active' : ''}`}>
-                500
-              </button>
+              ))}
             </div>
 
+            {[1, 2, 3].map((item) => (
+              <div className="Registry__form__checkbox" key={item}>
+                <Checkbox />
+                <p className="Registry__form__checkbox-description">
+                  {t(`REGISTRATION.FORM_RIGHTS.${item}`)}
+                </p>
+              </div>
+            ))}
+
+            <p className="Registry__form-description">
+              {t('REGISTRATION.MESSAGE_TEXT')}
+            </p>
+
+            <HCaptcha
+              className="h-captcha"
+              sitekey="dfd4a7f6-1c36-4914-b44c-0b9220d2059a" // trzeba założyc konto fundacyjne na hcaptcha.com i pobrac sitekey
+              ref={hcaptchaRef}
+              onVerify={handleHCaptcha}
+            />
+
             <button className="Registry__form-button" type="submit">
-              Przekaż darowiznę
+              {t('REGISTRATION.FORMS_BUTTON')}
             </button>
+          </form>
+        </div>
+      </section>
+
+      <section className="Registry__donate">
+        <div className="container Registry__donate-container">
+          <h2 className="Registry__donate-title">Wesprzyj naszą inicjatywę</h2>
+          <p className="Registry__donate-description">
+            Przekazując darowiznę, pomagasz w realizacji zadań statutowych
+            Fundacji.
+          </p>
+
+          <div className="Registry__donate__buttons">
+            {[10, 20, 50, 100, 250, 500].map((amount) => (
+              <button
+                key={amount}
+                onClick={() => handleClick(amount)}
+                className={`Registry__donate__buttons-button ${
+                  donate === amount
+                    ? 'Registry__donate__buttons-button--active'
+                    : ''
+                }`}>
+                {amount}
+              </button>
+            ))}
           </div>
-        </section>
-      </main>
-    </>
+
+          <button className="Registry__form-button" type="button">
+            Przekaż darowiznę
+          </button>
+        </div>
+      </section>
+    </main>
   );
 };
 
