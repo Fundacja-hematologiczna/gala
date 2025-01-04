@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>reCAPTCHA Demo</title>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+  <h1>Formularz z reCAPTCHA</h1>
+  <form action="/verify-captcha" method="POST">
+    <!-- Widżet reCAPTCHA -->
+    <div class="g-recaptcha" data-sitekey="6Lf13a0qAAAAAGzCMDkDzcjNX8IfQmHbKsERYKNz"></div>
+    <br />
+    <button type="submit">Wyślij</button>
+  </form>
+</body>
+</html>

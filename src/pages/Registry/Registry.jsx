@@ -1,14 +1,22 @@
 import '../../styles/index.scss';
 import './registry.scss';
+import { useEffect } from 'react';
 import { useState } from 'react';
 import Checkbox from '../../components/Checkbox/Checkbox';
 // import { addUser } from '../../api/services';
 import { useTranslation } from 'react-i18next';
-import { addUser } from '../../api/services';
 
 const Registry = () => {
   const [donate, setDonate] = useState(10);
   const { t } = useTranslation();
+
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://www.google.com/recaptcha/api.js';
+    script.async = true;
+    script.defer = true;
+    document.body.appendChild(script);
+  }, []);
 
   const [formData, setFormData] = useState({
     name: '',
@@ -29,47 +37,47 @@ const Registry = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    grecaptcha.enterprise.ready(async () => {
-      try {
-        const token = await grecaptcha.enterprise.execute(
-          '6LclCa0qAAAAAE1ZCWmGEWvWl6mkwaDOdBZgeLE0',
-          { action: 'signup' },
-        );
+    // grecaptcha.enterprise.ready(async () => {
+    //   try {
+    //     const token = await grecaptcha.enterprise.execute(
+    //       '6LclCa0qAAAAAE1ZCWmGEWvWl6mkwaDOdBZgeLE0',
+    //       { action: 'signup' },
+    //     );
 
-        const request = {
-          event: {
-            token: token,
-            expectedAction: 'signup',
-            siteKey: '6LclCa0qAAAAAE1ZCWmGEWvWl6mkwaDOdBZgeLE0',
-          },
-        };
+    //     const request = {
+    //       event: {
+    //         token: token,
+    //         expectedAction: 'signup',
+    //         siteKey: '6LclCa0qAAAAAE1ZCWmGEWvWl6mkwaDOdBZgeLE0',
+    //       },
+    //     };
 
-        console.log('request', request);
+    //     console.log('request', request);
 
-        const response = await fetch(
-          'https://recaptchaenterprise.googleapis.com/v1/projects/fundacja-hematol-1735910697936/assessments?key=AIzaSyBO3mzdLrBmzn2jS2EYoY76oHsGEV3UVh0',
-          {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(request),
-          },
-        );
+    //     const response = await fetch(
+    //       'https://recaptchaenterprise.googleapis.com/v1/projects/fundacja-hematol-1735910697936/assessments?key=AIzaSyBO3mzdLrBmzn2jS2EYoY76oHsGEV3UVh0',
+    //       {
+    //         method: 'POST',
+    //         headers: {
+    //           'Content-Type': 'application/json',
+    //         },
+    //         body: JSON.stringify(request),
+    //       },
+    //     );
 
-        const result = await response.json();
-        console.log('Backend response:', result);
+    //     const result = await response.json();
+    //     console.log('Backend response:', result);
 
-        if (result.riskAnalysis.score > 0.5 && result.tokenProperties.valid) {
-          console.log('Token zweryfikowany pomyślnie');
-          // addUser(formData);
-        } else {
-          console.error('Nieudana weryfikacja tokena');
-        }
-      } catch (error) {
-        console.error('Błąd podczas przetwarzania reCAPTCHA:', error);
-      }
-    });
+    //     if (result.riskAnalysis.score > 0.5 && result.tokenProperties.valid) {
+    //       console.log('Token zweryfikowany pomyślnie');
+    //       // addUser(formData);
+    //     } else {
+    //       console.error('Nieudana weryfikacja tokena');
+    //     }
+    //   } catch (error) {
+    //     console.error('Błąd podczas przetwarzania reCAPTCHA:', error);
+    //   }
+    // });
 
     console.log('siema');
   };
@@ -77,6 +85,8 @@ const Registry = () => {
   const handleClick = (pln) => {
     setDonate(pln);
   };
+
+  console.log('c', grecaptcha);
 
   return (
     <>
@@ -102,7 +112,10 @@ const Registry = () => {
               {t('REGISTRATION.FORM_TITLE')}
             </h2>
 
-            <form onSubmit={handleSubmit}>
+            <form
+              onSubmit={handleSubmit}
+              action="/verify-captcha"
+              method="POST">
               <div className="Registry__form__fieldsGrid">
                 <div className="Registry__form-field ">
                   <label className="Registry__form-label">
@@ -184,7 +197,6 @@ const Registry = () => {
                   />
                 </div>
               </div>
-
               <div className="Registry__form__checkbox">
                 <Checkbox />
                 <p className="Registry__form__checkbox-description">
@@ -208,12 +220,14 @@ const Registry = () => {
                   {t('REGISTRATION.FORM_RIGHTS.3')}
                 </p>
               </div>
-
               <div className="Registry__form__checkbox"></div>
               <p className="Registry__form-description">
                 {t('REGISTRATION.MESSAGE_TEXT')}
               </p>
-
+              Widżet reCAPTCHA
+              <div
+                className="g-recaptcha"
+                data-sitekey="6Lf13a0qAAAAAGzCMDkDzcjNX8IfQmHbKsERYKNz"></div>
               <button className="Registry__form-button" type="submit">
                 {t('REGISTRATION.FORMS_BUTTON')}
               </button>
