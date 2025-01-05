@@ -1,16 +1,38 @@
 /* eslint-disable react/prop-types */
 
 import { useTranslation } from 'react-i18next';
+import HCaptcha from '@hcaptcha/react-hcaptcha';
+import { useRef, useState } from 'react';
 
 const ContactForm = ({ onChange, onSubmit, formData }) => {
   const { t } = useTranslation();
+  const hCaptchaSiteKey = import.meta.env.VITE_HCAPTCHA_SITE_KEY;
+  const hcaptchaRef = useRef(null);
+  const [isVerified, setIsVerified] = useState(false);
+
+  const handlerCheckVerified = (e) => {
+    e.preventDefault();
+
+    if (!isVerified) {
+      return alert('Proszę potwierdzić, że jesteś człowiekiem.');
+    } else {
+      onSubmit(e);
+    }
+  };
+
+  const handleHCaptcha = () => {
+    const res = hcaptchaRef.current.getResponse();
+
+    if (res) {
+      setIsVerified(true);
+    }
+  };
 
   return (
     <section className="Contact__form">
       <div className="container">
         <h2 className="Contact__form-title">{t('CONTACT.FORM_TITLE')}</h2>
-
-        <form onSubmit={onSubmit}>
+        <form onSubmit={(e) => handlerCheckVerified(e)}>
           <div className="Contact__form__fieldsGrid">
             <div className="Contact__form-field Contact__form-field--1">
               <label className="Contact__form-label">
@@ -56,6 +78,13 @@ const ContactForm = ({ onChange, onSubmit, formData }) => {
           <p className="Contact__form-description">
             {t('CONTACT.FORM_WARNING')}
           </p>
+
+          <HCaptcha
+            className="h-captcha"
+            sitekey={hCaptchaSiteKey} // trzeba założyc konto fundacyjne na hcaptcha.com i pobrac sitekey
+            ref={hcaptchaRef}
+            onVerify={handleHCaptcha}
+          />
 
           <button className="Contact__form-button" type="submit">
             {t('CONTACT.FORM_BUTTON')}

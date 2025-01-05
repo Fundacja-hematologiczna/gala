@@ -35,6 +35,7 @@ const Contact = () => {
 
   const handleClickCloseAccept = () => {
     setIsAcknowledgementOpen(false);
+    window.location.reload();
   };
 
   return (

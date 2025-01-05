@@ -11,7 +11,7 @@ const ContactFormAccepted = ({ onClick }) => {
       <div className="acknowledgement__container">
         <h2 className="acknowledgement__title">{t('CONTACT.ACCEPT_TITLE')}</h2>
         <img
-          src="/envelope.svg"
+          src="./envelope.svg"
           alt="Wysłane poprrawnie"
           className="acknowledgement__image"
         />

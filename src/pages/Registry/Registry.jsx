@@ -9,7 +9,6 @@ import { addUser } from '../../api/services';
 const Registry = () => {
   const [donate, setDonate] = useState(10);
   const { t } = useTranslation();
-  const hcaptchaRef = useRef(null);
   const [isVerified, setIsVerified] = useState(false);
   const hCaptchaSiteKey = import.meta.env.VITE_HCAPTCHA_SITE_KEY;
 
@@ -37,6 +36,8 @@ const Registry = () => {
       [name]: value,
     }));
   };
+
+  const hcaptchaRef = useRef(null);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
