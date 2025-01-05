@@ -5,12 +5,15 @@ import { useState, useRef } from 'react';
 import Checkbox from '../../components/Checkbox/Checkbox';
 import { useTranslation } from 'react-i18next';
 import { addUser } from '../../api/services';
+// import dotenv from 'dotenv';
+// dotenv.config();
 
 const Registry = () => {
   const [donate, setDonate] = useState(10);
   const { t } = useTranslation();
   const hcaptchaRef = useRef(null);
   const [isVerified, setIsVerified] = useState(false);
+  const hCaptchaSiteKey = import.meta.env.VITE_HCAPTCHA_SITE_KEY;
 
   const [formData, setFormData] = useState({
     name: '',
@@ -137,7 +140,7 @@ const Registry = () => {
 
             <HCaptcha
               className="h-captcha"
-              sitekey="dfd4a7f6-1c36-4914-b44c-0b9220d2059a" // trzeba założyc konto fundacyjne na hcaptcha.com i pobrac sitekey
+              sitekey={hCaptchaSiteKey} // trzeba założyc konto fundacyjne na hcaptcha.com i pobrac sitekey
               ref={hcaptchaRef}
               onVerify={handleHCaptcha}
             />
