@@ -30,7 +30,7 @@ const Gallery = () => {
         window.innerHeight + window.scrollY >= document.body.offsetHeight - 800;
 
       if (bottom && !loading && images[isActive]?.length > visibleImages) {
-        setVisibleImages((prev) => prev + 10);
+        setVisibleImages((prev) => prev + 6);
       }
     };
 
@@ -43,7 +43,7 @@ const Gallery = () => {
 
   const handleClick = (year) => {
     setIsActive(year);
-    setVisibleImages(10); // Zresetuj widoczne obrazy po zmianie roku
+    setVisibleImages(10);
   };
 
   return (
