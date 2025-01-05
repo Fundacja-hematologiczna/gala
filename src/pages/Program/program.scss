@@ -111,17 +111,17 @@
 
     &__agenda {
         width: 100%;
-        background-image: url('./program-latki.svg');
+        background-image: url('/program-latki.svg');
         background-position: center -200px;
         background-repeat: no-repeat;
         background-size: cover;
         
         max-width: 1440px;
         margin: 0 auto;
-        padding-bottom: 138px;
+        
 
 
-        padding: 71px 25px 0;
+        padding: 71px 25px 130px;
 
         @include device(tablet) {
             
@@ -131,6 +131,7 @@
         @include device(mobile) {
             
             padding-top: 41px;
+            padding-bottom: 71px;
         }
 
         &-container {
