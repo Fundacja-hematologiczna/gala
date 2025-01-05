@@ -1,9 +1,14 @@
 /* eslint-disable react/prop-types */
 
 import { useTranslation } from 'react-i18next';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 const ContactForm = ({ onChange, onSubmit, formData }) => {
   const { t } = useTranslation();
+
+  function onChange(value) {
+    console.log("Captcha value:", value);
+  }
 
   return (
     <section className="Contact__form">
@@ -56,7 +61,7 @@ const ContactForm = ({ onChange, onSubmit, formData }) => {
           <p className="Contact__form-description">
             {t('CONTACT.FORM_WARNING')}
           </p>
-
+          <ReCAPTCHA sitekey="Your client site key" onChange={onChange} />,
           <button className="Contact__form-button" type="submit">
             {t('CONTACT.FORM_BUTTON')}
           </button>
