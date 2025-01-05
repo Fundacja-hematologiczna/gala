@@ -17,12 +17,13 @@ import {
   Routes,
   Route,
   Outlet,
+  HashRouter,
 } from 'react-router-dom';
 
 function App() {
   return (
     <>
-      <Router>
+      <HashRouter>
         <Header />
         <Routes>
           <Route path="/" element={<Outlet />}>
@@ -41,7 +42,7 @@ function App() {
         </Routes>
 
         <Footer />
-      </Router>
+      </HashRouter>
     </>
   );
 }

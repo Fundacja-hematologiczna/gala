@@ -89,12 +89,12 @@ const Home = () => {
             <div className="Home__section2__grayCard">
               <img
                 className="Home__section2__grayCard-item Home__section2__grayCard-item--1"
-                src="./gala/home-GrayCard-item.svg"
+                src="/gala/home-GrayCard-item.svg"
                 alt=""
               />
               <img
                 className="Home__section2__grayCard-item Home__section2__grayCard-item--2"
-                src="/home-GrayCard-item.svg"
+                src="/gala/home-GrayCard-item.svg"
                 alt=""
               />
               <h2 className="Home__section2__grayCard-title">
