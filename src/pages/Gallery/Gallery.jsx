@@ -27,7 +27,7 @@ const Gallery = () => {
   useEffect(() => {
     const handleScroll = () => {
       const bottom =
-        window.innerHeight + window.scrollY >= document.body.offsetHeight - 800;
+        window.innerHeight + window.scrollY >= document.body.offsetHeight - 1000;
 
       if (bottom && !loading && images[isActive]?.length > visibleImages) {
         setVisibleImages((prev) => prev + 6);
