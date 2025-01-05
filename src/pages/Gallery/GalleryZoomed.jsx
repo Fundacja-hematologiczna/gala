@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types';
 import './galleryZoomed.scss';
+import { useSwipeable } from 'react-swipeable';
 
 const propTypes = {
   chosenImage: PropTypes.string,
   onClickClose: PropTypes.func,
   onClickNextImage: PropTypes.func,
-  onClickNextPrev: PropTypes.func,
+  onClickPrevImage: PropTypes.func,
   dialogRef: PropTypes.MutableRefObject,
 };
 
@@ -14,10 +15,17 @@ export const GalleryZoomed = ({
   chosenImage,
   onClickClose,
   onClickNextImage,
-  onClickNextPrev,
+  onClickPrevImage,
 }) => {
+  const handlers = useSwipeable({
+    onSwipedLeft: onClickNextImage,
+    onSwipedRight: onClickPrevImage,
+    preventScrollOnSwipe: true,
+    trackMouse: false,
+  });
+
   return (
-    <dialog id="galleryZoom" ref={dialogRef}>
+    <dialog id="galleryZoom" ref={dialogRef} {...handlers}>
       <button id="closeButton" onClick={onClickClose}>
         <img src="/gala/menu-hamburger.svg" alt="Close button" />
       </button>
@@ -28,7 +36,7 @@ export const GalleryZoomed = ({
       </button>
       <button
         className="galleryArrow galleryArrow--right"
-        onClick={onClickNextPrev}>
+        onClick={onClickPrevImage}>
         {'>'}
       </button>
       <img className="galleryPhoto" src={chosenImage} alt={chosenImage} />

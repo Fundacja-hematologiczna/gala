@@ -41,7 +41,7 @@ const Gallery = () => {
   const handleClickNextPhoto = () => {
     const imgIndex = images[isActive].indexOf(chosenImage) + 1;
 
-    if (imgIndex > images.length - 1) {
+    if (imgIndex > images[isActive].length - 1) {
       return setChosenImage(images[isActive][0]);
     }
 
@@ -149,7 +149,7 @@ const Gallery = () => {
             onClickClose={handleClickCloseGallery}
             chosenImage={chosenImage}
             onClickNextImage={handleClickNextPhoto}
-            onClickNextPrev={handleClickPrevImg}
+            onClickPrevImage={handleClickPrevImg}
           />
         </div>
       </section>

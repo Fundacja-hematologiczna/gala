@@ -38,7 +38,7 @@
     &--left {
       left: 3rem;
 
-      @media (width < 640px) {
+      @media (width < 730px) {
         left: 1.25rem;
       }
     }
@@ -46,7 +46,7 @@
     &--right {
       right: 3rem;
 
-      @media (width < 640px) {
+      @media (width < 730px) {
         right: 1.25rem;
       }
     }
@@ -67,7 +67,7 @@
   .galleryPhoto {
     height: 80dvh;
 
-    @media (width < 640px) {
+    @media (width < 730px) {
       width: 100dvw;
       height: auto;
     }
