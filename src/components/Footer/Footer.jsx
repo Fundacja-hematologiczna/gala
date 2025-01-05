@@ -59,21 +59,21 @@ const Footer = () => {
                 href="https://www.example1.com"
                 target="_blank"
                 rel="noopener noreferrer">
-                <img src="/footer-icon-fb.svg" alt="facebook" />
+                <img src="./footer-icon-fb.svg" alt="facebook" />
               </a>
 
               <a
                 href="https://www.example1.com"
                 target="_blank"
                 rel="noopener noreferrer">
-                <img src="/footer-icon-yt.svg" alt="youtube" />
+                <img src="./footer-icon-yt.svg" alt="youtube" />
               </a>
 
               <a
                 href="https://www.example1.com"
                 target="_blank"
                 rel="noopener noreferrer">
-                <img src="/footer-icon-in.svg" alt="linkedin" />
+                <img src="./footer-icon-in.svg" alt="linkedin" />
               </a>
             </div>
           </div>

@@ -39,7 +39,7 @@ const Contributors = () => {
                   key={`patronHonorowy ${i}`}>
                   <img
                     className="Contributors__partners-grid--item--img"
-                    src={`/partners&contibutors/patroniHonorowi/patron-${i}.png`}
+                    src={`./partners&contibutors/patroniHonorowi/patron-${i}.png`}
                     alt={`Obrazek ${i}`}
                     loading="lazy"
                   />
@@ -53,7 +53,7 @@ const Contributors = () => {
                   <img
                     className="Contributors__partners-grid--item--img"
                     key={i}
-                    src={`/partners&contibutors/patronMedialny/patron-${i}.jpg`}
+                    src={`./partners&contibutors/patronMedialny/patron-${i}.jpg`}
                     alt={`Obrazek ${i}`}
                     loading="lazy"
                   />
@@ -67,7 +67,7 @@ const Contributors = () => {
                   <img
                     className="Contributors__partners-grid--item--img"
                     key={i}
-                    src={`/partners&contibutors/patron/patron-${i}.jpg`}
+                    src={`./partners&contibutors/patron/patron-${i}.jpg`}
                     alt={`Obrazek ${i}`}
                     loading="lazy"
                   />
@@ -81,7 +81,7 @@ const Contributors = () => {
                   <img
                     className="Contributors__partners-grid--item--img"
                     key={i}
-                    src={`/partners&contibutors/partnerzy/patron-${i}.jpg`}
+                    src={`./partners&contibutors/partnerzy/patron-${i}.jpg`}
                     alt={`Obrazek ${i}`}
                     loading="lazy"
                   />

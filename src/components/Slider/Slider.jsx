@@ -47,7 +47,7 @@ export const Slider = () => {
             <SwiperSlide key={`patronHonorowy-${i}`}>
               <img
                 className="Slider-img"
-                src={`/partners&contibutors/patroniHonorowi/patron-${i}.png`}
+                src={`./partners&contibutors/patroniHonorowi/patron-${i}.png`}
                 alt={`patronHonorowy-${i}`}
                 loading="lazy"
               />
@@ -101,7 +101,7 @@ export const Slider = () => {
               <img
                 className="Slider-img"
                 key={i}
-                src={`/partners&contibutors/patron/patron-${i}.jpg`}
+                src={`./partners&contibutors/patron/patron-${i}.jpg`}
                 alt={`Patron ${i}`}
                 loading="lazy"
               />
@@ -113,7 +113,7 @@ export const Slider = () => {
               <img
                 className="Slider-img"
                 key={i}
-                src={`/partners&contibutors/partnerzy/patron-${i}.jpg`}
+                src={`./partners&contibutors/partnerzy/patron-${i}.jpg`}
                 alt={`partner ${i}`}
                 loading="lazy"
               />
