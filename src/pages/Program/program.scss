@@ -28,7 +28,7 @@
     
 
     &__topContainer {
-        background-image: url('/program-bg.jpg ');
+        background-image: url('./program-bg.jpg ');
         width: 100%;
         min-height: 475px;
         background-position: center;
@@ -113,7 +113,7 @@
 
     &__agenda {
         width: 100%;
-        background-image: url('/program-latki.svg');
+        background-image: url('./program-latki.svg');
         background-position: center -200px;
         background-repeat: no-repeat;
         background-size: cover;

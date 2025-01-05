@@ -89,7 +89,7 @@ export const Slider = () => {
               <img
                 className="Slider-img"
                 key={i}
-                src={`/partners&contibutors/patronMedialny/patron-${i}.jpg`}
+                src={`./partners&contibutors/patronMedialny/patron-${i}.jpg`}
                 alt={`Patron medialny ${i}`}
                 loading="lazy"
               />
