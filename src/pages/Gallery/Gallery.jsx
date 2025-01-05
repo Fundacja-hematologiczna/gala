@@ -1,8 +1,10 @@
 import { useTranslation } from 'react-i18next';
 import '../../styles/index.scss';
 import './gallery.scss';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { getImages } from '../../api/services';
+import useScrollLock from '../../hooks/useScrollLock.hook';
+import { GalleryZoomed } from './GalleryZoomed';
 
 const Gallery = () => {
   const { t } = useTranslation();
@@ -11,6 +13,52 @@ const Gallery = () => {
   const [loading, setLoading] = useState(true);
   const [visibleImages, setVisibleImages] = useState(15);
   const years = ['2022', '2023', '2024'];
+
+  const dialogRef = useRef(null);
+  const [chosenImage, setChosenImage] = useState('');
+  const [isGalleryOpened, setIsGalleryOpened] = useState(false);
+
+  const handleClickShowGallery = (img) => {
+    dialogRef.current?.showModal();
+    setIsGalleryOpened(true);
+    const image = images[isActive][img];
+    setChosenImage(image);
+  };
+
+  const handleClickCloseGallery = () => {
+    dialogRef.current?.setAttribute('closing', '');
+    dialogRef.current?.addEventListener(
+      'animationend',
+      () => {
+        dialogRef.current?.removeAttribute('closing');
+        dialogRef.current?.close();
+        setIsGalleryOpened(false);
+      },
+      { once: true },
+    );
+  };
+
+  const handleClickNextPhoto = () => {
+    const imgIndex = images[isActive].indexOf(chosenImage) + 1;
+
+    if (imgIndex > images[isActive].length - 1) {
+      return setChosenImage(images[isActive][0]);
+    }
+
+    setChosenImage(images[isActive][imgIndex]);
+  };
+
+  const handleClickPrevImg = () => {
+    const imgIndex = images[isActive].indexOf(chosenImage) - 1;
+
+    if (imgIndex < 0) {
+      return setChosenImage(images[isActive][images[isActive].length - 1]);
+    }
+
+    setChosenImage(images[isActive][imgIndex]);
+  };
+
+  useScrollLock(isGalleryOpened);
 
   useEffect(() => {
     getImages()
@@ -27,7 +75,8 @@ const Gallery = () => {
   useEffect(() => {
     const handleScroll = () => {
       const bottom =
-        window.innerHeight + window.scrollY >= document.body.offsetHeight - 1000;
+        window.innerHeight + window.scrollY >=
+        document.body.offsetHeight - 1000;
 
       if (bottom && !loading && images[isActive]?.length > visibleImages) {
         setVisibleImages((prev) => prev + 6);
@@ -86,6 +135,7 @@ const Gallery = () => {
                   <div className="Gallery__pictures__grid-item" key={image}>
                     <img
                       src={image}
+                      onClick={() => handleClickShowGallery(i)}
                       alt={`image-${i}`}
                       className="Gallery__pictures__grid-item--img"
                       loading="lazy" // Lazy loading
@@ -93,6 +143,14 @@ const Gallery = () => {
                   </div>
                 ))}
           </div>
+
+          <GalleryZoomed
+            dialogRef={dialogRef}
+            onClickClose={handleClickCloseGallery}
+            chosenImage={chosenImage}
+            onClickNextImage={handleClickNextPhoto}
+            onClickPrevImage={handleClickPrevImg}
+          />
         </div>
       </section>
     </main>
