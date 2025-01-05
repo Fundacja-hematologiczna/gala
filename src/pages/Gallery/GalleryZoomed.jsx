@@ -7,7 +7,10 @@ const propTypes = {
   onClickClose: PropTypes.func,
   onClickNextImage: PropTypes.func,
   onClickPrevImage: PropTypes.func,
-  dialogRef: PropTypes.MutableRefObject,
+  dialogRef: PropTypes.oneOfType([
+    PropTypes.func,
+    PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
+  ]),
 };
 
 export const GalleryZoomed = ({
@@ -25,7 +28,7 @@ export const GalleryZoomed = ({
   });
 
   return (
-    <dialog id="galleryZoom" ref={dialogRef} {...handlers}>
+    <dialog {...handlers} id="galleryZoom" ref={dialogRef}>
       <button id="closeButton" onClick={onClickClose}>
         <img src="/gala/menu-hamburger.svg" alt="Close button" />
       </button>
