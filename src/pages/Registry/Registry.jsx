@@ -5,8 +5,6 @@ import { useState, useRef } from 'react';
 import Checkbox from '../../components/Checkbox/Checkbox';
 import { useTranslation } from 'react-i18next';
 import { addUser } from '../../api/services';
-// import dotenv from 'dotenv';
-// dotenv.config();
 
 const Registry = () => {
   const [donate, setDonate] = useState(10);
