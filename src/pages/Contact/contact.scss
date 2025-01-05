@@ -104,6 +104,13 @@
       margin-bottom: 60px;
     }
 
+    &__captcha {
+      @include device(mobile) {
+        width: 180px
+
+    }
+    }
+
     &-title {
       font-family: Poppins;
       font-size: 30px;

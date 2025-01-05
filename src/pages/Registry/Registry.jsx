@@ -1,7 +1,7 @@
 import '../../styles/index.scss';
 import './registry.scss';
 import HCaptcha from '@hcaptcha/react-hcaptcha';
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import Checkbox from '../../components/Checkbox/Checkbox';
 import { useTranslation } from 'react-i18next';
 import { addUser } from '../../api/services';
@@ -10,6 +10,7 @@ const Registry = () => {
   const [donate, setDonate] = useState(10);
   const { t } = useTranslation();
   const [isVerified, setIsVerified] = useState(false);
+  const [captchaSize, setCaptchaSize] = useState('normal');
   const hCaptchaSiteKey = import.meta.env.VITE_HCAPTCHA_SITE_KEY;
 
   const [formData, setFormData] = useState({
@@ -52,6 +53,20 @@ const Registry = () => {
   };
 
   const handleClick = (pln) => setDonate(pln);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setCaptchaSize(window.innerWidth < 1200 ? 'compact' : 'normal');
+    };
+
+    handleResize();
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   return (
     <main className="Registry">
@@ -142,6 +157,7 @@ const Registry = () => {
               sitekey={hCaptchaSiteKey} // trzeba założyc konto fundacyjne na hcaptcha.com i pobrac sitekey
               ref={hcaptchaRef}
               onVerify={handleHCaptcha}
+              size={captchaSize}
             />
 
             <button className="Registry__form-button" type="submit">

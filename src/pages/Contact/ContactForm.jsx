@@ -2,13 +2,14 @@
 
 import { useTranslation } from 'react-i18next';
 import HCaptcha from '@hcaptcha/react-hcaptcha';
-import { useRef, useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
 
 const ContactForm = ({ onChange, onSubmit, formData }) => {
   const { t } = useTranslation();
   const hCaptchaSiteKey = import.meta.env.VITE_HCAPTCHA_SITE_KEY;
   const hcaptchaRef = useRef(null);
   const [isVerified, setIsVerified] = useState(false);
+  const [captchaSize, setCaptchaSize] = useState('normal');
 
   const handlerCheckVerified = (e) => {
     e.preventDefault();
@@ -27,6 +28,20 @@ const ContactForm = ({ onChange, onSubmit, formData }) => {
       setIsVerified(true);
     }
   };
+
+  useEffect(() => {
+    const handleResize = () => {
+      setCaptchaSize(window.innerWidth < 1200 ? 'compact' : 'normal');
+    };
+
+    handleResize();
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   return (
     <section className="Contact__form">
@@ -84,6 +99,7 @@ const ContactForm = ({ onChange, onSubmit, formData }) => {
             sitekey={hCaptchaSiteKey} // trzeba założyc konto fundacyjne na hcaptcha.com i pobrac sitekey
             ref={hcaptchaRef}
             onVerify={handleHCaptcha}
+            size={captchaSize}
           />
 
           <button className="Contact__form-button" type="submit">
