@@ -30,7 +30,6 @@ const Home = () => {
   useEffect(() => {
     const changePhoto = setInterval(() => {
       setPhotoChanging((prev) => !prev);
-      console.log(photoChanging);
 
       setTimeout(() => {
         photoChanging
