@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { Card } from '../../components/Card/Card.jsx';
 import { Button } from '../../components/Button/Button';
 import './home.scss';
@@ -5,6 +6,8 @@ import { useNavigate } from 'react-router-dom';
 import '../../index.css';
 import { Slider } from '../../components/Slider/Slider.jsx';
 import { useTranslation } from 'react-i18next';
+import { useEffect, useState } from 'react';
+import classNames from 'classnames';
 
 const Home = () => {
   const { t } = useTranslation();
@@ -14,12 +17,54 @@ const Home = () => {
     navigate(navigateTo);
   };
 
+  const welcomeSectionPhotos = [
+    '/gala/VIDEO.png',
+    '/gala/aukcje.jpg',
+    '/gala/place.jpg',
+    '/gala/program.jpg',
+  ];
+  const [photoChanging, setPhotoChanging] = useState(true);
+  const [welcomeSectionImage1, setWelcomeSectionImage1] = useState(0);
+  const [welcomeSectionImage2, setWelcomeSectionImage2] = useState(1);
+
+  useEffect(() => {
+    const changePhoto = setInterval(() => {
+      setPhotoChanging((prev) => !prev);
+
+      setTimeout(() => {
+        photoChanging
+          ? setWelcomeSectionImage1(
+              (prev) => (prev + 2) % welcomeSectionPhotos.length,
+            )
+          : setWelcomeSectionImage2(
+              (prev) => (prev + 2) % welcomeSectionPhotos.length,
+            );
+      }, 3000);
+    }, 10000);
+
+    return () => clearInterval(changePhoto);
+  }, [photoChanging]);
+
   return (
     <>
       <main className="Home">
         <section className="home__sectionWelcome">
           <div className="sectionWelcome__container">
             <div className="greenLabel"></div>
+            <img
+              className={classNames(
+                'sectionWelcome__container__image sectionWelcome__container__image--1',
+                { seen: photoChanging },
+              )}
+              src={welcomeSectionPhotos[welcomeSectionImage1]}
+            />
+            <img
+              className={classNames(
+                'sectionWelcome__container__image sectionWelcome__container__image--2',
+                { seen: !photoChanging },
+              )}
+              src={welcomeSectionPhotos[welcomeSectionImage2]}
+            />
             <div className=" sectionWelcome__textComntainer">
               <h1
                 className="sectionWelcome-title"

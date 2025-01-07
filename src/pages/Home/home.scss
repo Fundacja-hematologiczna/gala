@@ -6,7 +6,7 @@
 
 .home__sectionWelcome {
   width: 100%;
-  padding:0 16px;
+  padding: 0 16px;
   height: 867px;
   margin-bottom: 42px;
 
@@ -18,342 +18,149 @@
   @include device(mobile) {
     display: none;
   }
-  
 }
 
 .greenLabel {
-  position:absolute;
-   top:0px;
-   left:0px;
-   bottom: 0px;
-   width: 502px;
-   background: #345B5599;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  width: 502px;
+  background: #345b5599;
 
-   border-radius: 49px 0px 0px 49px;
-   z-index: 1;
+  border-radius: 49px 0px 0px 49px;
+  z-index: 1;
 
-   @include device(tablet) {
+  @include device(tablet) {
     border-radius: 0%;
     width: 453px;
-    
-   }
+  }
 
-   @include device(mobile) {
+  @include device(mobile) {
     display: none;
-   }
+  }
 }
 
 .sectionWelcome__container {
-   margin: 0 auto;
-   border-radius: 50px;
-   max-width: 1407px ;
-   height: 867px;
-   border: 1px solid white;
-   box-sizing: border-box;
-   background-image: url('/VIDEO.png');
+  overflow: hidden;
+  margin: 0 auto;
+  border-radius: 50px;
+  max-width: 1407px;
+  height: 867px;
+  border: 1px solid white;
+  box-sizing: border-box;
+  // background-image: url('/VIDEO.png');
   // background-image: url('/test.jpg');
-   background-size: cover; 
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-    z-index: 0;
-    padding: 92px 10px  72px 80px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 0;
+  padding: 92px 10px 72px 80px;
 
- @include device(tablet, mobile) {
-  border-radius: 0;
-  padding: 92px 10px  72px 31px;
- }
+  &__image {
+    position: absolute;
+    object-fit: cover;
+    inset: 0 auto auto 0;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    animation: animateImg 45s ease infinite;
+    transition: opacity 1s ease;
 
- @include device(mobile) {
+    &.seen {
+      opacity: 1;
+    }
 
- }
- 
+    &--1 {
+      z-index: -1;
+    }
+  }
 
+  @include device(tablet, mobile) {
+    border-radius: 0;
+    padding: 92px 10px 72px 31px;
+  }
+
+  @include device(mobile) {
+  }
 }
-
 
 .sectionWelcome__textComntainer {
-   margin: 0;
-   color: #FFFFFF;
-   position: relative;
-   z-index: 1;
-   
- }
-
- .sectionWelcome-title {
-   //styleName: WP_Title H1;
-    font-family: Poppins;
-    font-size: 80px;
-    font-weight: 700;
-    line-height: 108px;
-    letter-spacing: 0.01em;
-    text-align: left;
-    color: #FFFFFF;
-    margin-bottom: 40px;
-
-@include device(tablet) {
-  font-size: 67px;
+  margin: 0;
+  color: #ffffff;
+  position: relative;
+  z-index: 1;
 }
 
+.sectionWelcome-title {
+  //styleName: WP_Title H1;
+  font-family: Poppins;
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 108px;
+  letter-spacing: 0.01em;
+  text-align: left;
+  color: #ffffff;
+  margin-bottom: 40px;
 
- }
+  @include device(tablet) {
+    font-size: 67px;
+  }
+}
 
- .sectionWelcome-date {
-   //styleName: WP_H2;
-    font-family: Poppins;
-    font-size: 40px;
-    font-weight: 700;
-    line-height: 60px;
-    letter-spacing: 0.01em;
-    text-align: left;
-    margin-bottom: 48px;
+.sectionWelcome-date {
+  //styleName: WP_H2;
+  font-family: Poppins;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 60px;
+  letter-spacing: 0.01em;
+  text-align: left;
+  margin-bottom: 48px;
 
-    @include device(tablet) {
-      font-size: 31px;
-    }
+  @include device(tablet) {
+    font-size: 31px;
+  }
+}
 
- }
+.sectionWelcome-description {
+  //styleName: WP_Subtitle (big copy);
+  font-family: Poppins;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 36px;
+  letter-spacing: -0.02em;
+  text-align: left;
+  margin-bottom: 36px;
+}
 
-
-
- .sectionWelcome-description {
-   //styleName: WP_Subtitle (big copy);
-    font-family: Poppins;
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 36px;
-    letter-spacing: -0.02em;
-    text-align: left;
-    margin-bottom: 36px;
-
- }
-
- 
-
- .Home__sectionWelcome-button {
+.Home__sectionWelcome-button {
   width: 246px;
- }
-
-
-
-
-
- .home__sectionWelcomeMobile {
-    margin-top: 51px;
-
-    @include device(desktop, tablet) {
-      display: none;
-    }
-
-    &__buttons {
-      display: flex;
-      height: 64px;
-      align-items: center;
-      justify-content: center;
-      padding: 0 20px;
-      gap: 8px;
-      
-    }
-
-    &__titleContainer {
-      padding: 10px 20px 15px;
-      background-color: #F3F2F2;
-      height: 210px;
-      box-sizing: border-box;
-     
-      
-      &-title {
-        //styleName: WP_H2';
-        font-family: Poppins;
-        font-size: 32px;
-        font-weight: 700;
-        line-height: 48px;
-        letter-spacing: 0.01em;
-        text-align: center;
-        margin-bottom: 20px;
-
-      }
-
-      &-description {
-        //styleName: WP_Small copy;
-        font-family: Poppins;
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 21px;
-        text-align: center;
-       
-
-      }
-
-     
-    }
-
-    &-video {
-      background-image: url('/VIDEO-mobile.png');
-      background-position: center;
-      width: 100%;
-      aspect-ratio: 390/223;
-      background-size: cover;
-      background-position: center;
-      margin-bottom: 24px;
-      
-    }
-
-
-  }
-
-
-
-.Home__section2 {
-   
-   width:100%;
-   box-sizing: border-box;
-   padding: 0 17px;
-   margin-bottom: 127px;
-
-   @include device(tablet) {
-    margin-bottom: 70px;
-    padding: 0 65px;
-   }
-
-   @include device(mobile) {
-    margin-bottom: 29px;
-   }
-
-  &-container {
-    display: flex;
-    justify-content: space-between;
-  
-    margin: 0 auto;
-    gap: 99px;
-    
-  } 
-
-  &__personCard {
-  
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-     display: none;
-     height: fit-content;
- 
-     @include device(desktop) {
-       display: initial;
-     }
-
-     
- 
-     
- 
-    
-    &-image {
-      background-image: url('/person.jpg');
-      width: 250px;
-      height: 250px;
-      background-size: cover; 
-      background-position: center;
-      background-repeat: no-repeat;
-      border-radius: 100%;
-      margin-bottom: 42px;
-   
-   }
- 
-   &-name {
-     //styleName: WP_Bold;
-     font-family: Poppins;
-     font-size: 16px;
-     font-weight: 700;
-     line-height: 24px;
-     text-align: center;
-  
-  
-   }
- 
-   &-description {
-     //styleName: WP_Bold;
-     font-family: Poppins;
-     font-size: 16px;
-     font-weight: 500;
-     line-height: 24px;
-     text-align: center;
-  
-    }
- 
-  }
 }
 
+.home__sectionWelcomeMobile {
+  margin-top: 51px;
 
- 
+  @include device(desktop, tablet) {
+    display: none;
+  }
 
+  &__buttons {
+    display: flex;
+    height: 64px;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    gap: 8px;
+  }
 
-
- 
-
-
-
-
-
- 
-  .Home__section2__grayCard {
-    width: 820px;
-    position: relative;
-
-    border-radius: 48px;
-    background: #F5F5F5;
-    padding: 20px 116px 22px 103px;
+  &__titleContainer {
+    padding: 10px 20px 15px;
+    background-color: #f3f2f2;
+    height: 210px;
     box-sizing: border-box;
-    margin-bottom: 156px;
-
-    @include device(tablet) {
-      margin: 0 auto 156px;
-      padding: 20px 96px 22px 83px;
-      border-radius: 30px;
-      margin-bottom: 123px;
-      padding: 20px 71px 22px 60px;
-    }
-
-    @include device(mobile) {
-      margin: 0 auto 29px;
-      padding: 18px 10px 24px ;
-      border-radius: 30px;
-      
-    }
-
-    &-item {
-      width: 78px;
-      height: 56px;
-      position: absolute;
-
-      @include device(tablet) {
-        width: 70px;
-        height: 50px;
-      }
-
-      @include device(mobile) {
-        display: none;
-      }
-
-      &--1 {
-        left: -44px;
-        top:37px;
-
-        @include device(tablet) {
-          left: -40px;
-        }
-      }
-
-      &--2 {
-        bottom: 31px;
-        right: -44px;
-        transform: rotate(180deg);
-
-        @include device(tablet) {
-        right: -40px;
-        }
-      }
-    }
-
-
 
     &-title {
       //styleName: WP_H2';
@@ -362,38 +169,230 @@
       font-weight: 700;
       line-height: 48px;
       letter-spacing: 0.01em;
-      text-align: left;
-
-      @include device(mobile, tablet) {
-        text-align: center;
-        
-      }
-
-      @include device(mobile) {
-        //styleName: WP_H3;
-        font-family: Poppins;
-        font-size: 24px;
-        font-weight: 600;
-        line-height: 36px;
-        text-align: center;
-
-      }
-      
-   
+      text-align: center;
+      margin-bottom: 20px;
     }
 
-    &-smallDesctription {
-      //styleName: WP_body copy;
+    &-description {
+      //styleName: WP_Small copy;
+      font-family: Poppins;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 21px;
+      text-align: center;
+    }
+  }
+
+  &-video {
+    background-image: url('/VIDEO-mobile.png');
+    background-position: center;
+    width: 100%;
+    aspect-ratio: 390/223;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 24px;
+  }
+}
+
+.Home__section2 {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 17px;
+  margin-bottom: 127px;
+
+  @include device(tablet) {
+    margin-bottom: 70px;
+    padding: 0 65px;
+  }
+
+  @include device(mobile) {
+    margin-bottom: 29px;
+  }
+
+  &-container {
+    display: flex;
+    justify-content: space-between;
+
+    margin: 0 auto;
+    gap: 99px;
+  }
+
+  &__personCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    display: none;
+    height: fit-content;
+
+    @include device(desktop) {
+      display: initial;
+    }
+
+    &-image {
+      background-image: url('/person.jpg');
+      width: 250px;
+      height: 250px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-radius: 100%;
+      margin-bottom: 42px;
+    }
+
+    &-name {
+      //styleName: WP_Bold;
       font-family: Poppins;
       font-size: 16px;
+      font-weight: 700;
+      line-height: 24px;
+      text-align: center;
+    }
+
+    &-description {
+      //styleName: WP_Bold;
+      font-family: Poppins;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+      text-align: center;
+    }
+  }
+}
+
+.Home__section2__grayCard {
+  width: 820px;
+  position: relative;
+
+  border-radius: 48px;
+  background: #f5f5f5;
+  padding: 20px 116px 22px 103px;
+  box-sizing: border-box;
+  margin-bottom: 156px;
+
+  @include device(tablet) {
+    margin: 0 auto 156px;
+    padding: 20px 96px 22px 83px;
+    border-radius: 30px;
+    margin-bottom: 123px;
+    padding: 20px 71px 22px 60px;
+  }
+
+  @include device(mobile) {
+    margin: 0 auto 29px;
+    padding: 18px 10px 24px;
+    border-radius: 30px;
+  }
+
+  &-item {
+    width: 78px;
+    height: 56px;
+    position: absolute;
+
+    @include device(tablet) {
+      width: 70px;
+      height: 50px;
+    }
+
+    @include device(mobile) {
+      display: none;
+    }
+
+    &--1 {
+      left: -44px;
+      top: 37px;
+
+      @include device(tablet) {
+        left: -40px;
+      }
+    }
+
+    &--2 {
+      bottom: 31px;
+      right: -44px;
+      transform: rotate(180deg);
+
+      @include device(tablet) {
+        right: -40px;
+      }
+    }
+  }
+
+  &-title {
+    //styleName: WP_H2';
+    font-family: Poppins;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: 0.01em;
+    text-align: left;
+
+    @include device(mobile, tablet) {
+      text-align: center;
+    }
+
+    @include device(mobile) {
+      //styleName: WP_H3;
+      font-family: Poppins;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 36px;
+      text-align: center;
+    }
+  }
+
+  &-smallDesctription {
+    //styleName: WP_body copy;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22.4px;
+    text-align: left;
+
+    @include device(mobile, tablet) {
+      text-align: center;
+    }
+
+    @include device(mobile) {
+      //styleName: WP_Small copy;
+      font-family: Poppins;
+      font-size: 14px;
       font-weight: 400;
-      line-height: 22.4px;
+      line-height: 21px;
+      text-align: center;
+    }
+
+    &--bold {
+      //styleName: WP_M_text bold;
+      font-family: Poppins;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 21px;
       text-align: left;
 
       @include device(mobile, tablet) {
         text-align: center;
-        
       }
+    }
+  }
+
+  &__personCard {
+    display: flex;
+    flex-direction: row-reverse;
+
+    @include device(desktop) {
+      display: none;
+    }
+
+    &-text {
+      //styleName: WP_Bold;
+      font-family: Poppins;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+      text-align: center;
+      height: fit-content;
+      align-self: self-end;
+      margin-bottom: 10px;
 
       @include device(mobile) {
         //styleName: WP_Small copy;
@@ -402,300 +401,213 @@
         font-weight: 400;
         line-height: 21px;
         text-align: center;
-
       }
-   
+
+      // border: 1px solid yellow;
+
       &--bold {
-          //styleName: WP_M_text bold;
-          font-family: Poppins;
-          font-size: 14px;
-          font-weight: 600;
-          line-height: 21px;
-          text-align: left;
-
-
-          @include device(mobile, tablet) {
-            text-align: center;
-            
-          }
-        }
-    }
-
-    &__personCard {
-
-      display: flex;
-      flex-direction: row-reverse;
-      
-      @include device(desktop) {
-        display: none;
-      }
-    
-      &-text {
-         //styleName: WP_Bold;
-        font-family: Poppins;
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 24px;
-        text-align: center;
-        height: fit-content;
-        align-self: self-end;
-        margin-bottom: 10px;
+        font-weight: 700;
 
         @include device(mobile) {
-          //styleName: WP_Small copy;
-          font-family: Poppins;
-          font-size: 14px;
-          font-weight: 400;
-          line-height: 21px;
-          text-align: center;
-
+          font-weight: 600;
         }
-
-
-       // border: 1px solid yellow;
-
-        &--bold {
-          font-weight: 700;
-
-          @include device(mobile) {
-            font-weight: 600;
-          }
-        }
-      }
-
-      &-image {
-          background-image: url('/person.jpg');
-          width: 130px;
-          height: 130px;
-          background-size: cover; 
-          background-position: center;
-          background-repeat: no-repeat;
-          border-radius: 100%;
-          margin-left: 20px;
-          margin-top: 40px;
-
-          @include device(mobile) {
-            width: 100px;
-            height: 100px;
-          }
-          
       }
     }
 
+    &-image {
+      background-image: url('/person.jpg');
+      width: 130px;
+      height: 130px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-radius: 100%;
+      margin-left: 20px;
+      margin-top: 40px;
+
+      @include device(mobile) {
+        width: 100px;
+        height: 100px;
+      }
+    }
   }
-
- 
-
-
-
+}
 
 .Home__section2__cards {
-   max-width: 1032px ;
-   margin: 0 auto;
-   display: flex;
-   height: 460px;
+  max-width: 1032px;
+  margin: 0 auto;
+  display: flex;
+  height: 460px;
   // margin-top: 156px;
-   justify-content: space-between;
-   gap:20px;
-   
+  justify-content: space-between;
+  gap: 20px;
 
-   @include device(tablet) {
-   //flex-direction: column;
-   flex-wrap: wrap;
-   justify-content: center;
-   height: auto;
-   align-items: center;
-   gap: 43px;
-   }
+  @include device(tablet) {
+    //flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: auto;
+    align-items: center;
+    gap: 43px;
+  }
 
-   @include device (mobile) {
+  @include device(mobile) {
     flex-direction: column;
     align-items: center;
     height: auto;
-   }
+  }
 }
 
-
-
-
-
-
-
 .Home__donateItem {
- background-color: #B7C274;
-                                      //    height: 900px;
- //padding: 221px 17px 263px;
- padding: 126px 17px;
- margin-bottom: 156px;            
- 
+  background-color: #b7c274;
+  //    height: 900px;
+  //padding: 221px 17px 263px;
+  padding: 126px 17px;
+  margin-bottom: 156px;
+
   @include device(tablet) {
     height: auto;
-    padding: 60px 17px ;
+    padding: 60px 17px;
     margin-bottom: 72px;
   }
 
   @include device(mobile) {
     height: auto;
-    padding: 23px 20px 25px ;
+    padding: 23px 20px 25px;
     margin-bottom: 25px;
   }
 
- 
-
-
-
- &-container {
-   max-width: 1240px;
-   display: flex;
-   margin: 0 auto;
-   gap: 115px;
-   width: 100%;
-   height: 100%;
-   
-
-   @include device(tablet, mobile) {
-    flex-direction: column;
-    align-items: center;
-    gap:50px
-
-   }
- }
- 
- &-image {
-   background-image: url('/spotkanieLudowe.jpg');
-   background-position: center;
-   background-repeat: no-repeat;
-   background-size: cover;
-   height: 100%;
-   width: 615px;
-   border-radius: 50px;
-
-   height: 400px;
-
-
-
-   @include device(tablet) {
-    height: 320px; 
+  &-container {
+    max-width: 1240px;
+    display: flex;
+    margin: 0 auto;
+    gap: 115px;
     width: 100%;
-    max-width: 511px;
+    height: 100%;
 
-    border-radius: 30px;
-   }
-
-   @include device(mobile) {
-    height: 233px; 
-    width: 100%;
-    max-width: 600px;
-    border-radius: 20px;
-   }
-
-
- }
-
- &__contentWrapper {
-   width: 511px;
-   display: flex;
-   flex-direction: column;
-   justify-content: space-between;
-
-   @include device(mobile) {
-     width:auto;
-  
+    @include device(tablet, mobile) {
+      flex-direction: column;
+      align-items: center;
+      gap: 50px;
+    }
   }
 
+  &-image {
+    background-image: url('/spotkanieLudowe.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 615px;
+    border-radius: 50px;
 
- }
+    height: 400px;
 
- &-title{
-//styleName: WP_Title H1';
-  font-family: Poppins;
-  font-size: 48px;
-  font-weight: 700;
-  line-height: 72px;
-  letter-spacing: 0.01em;
-  text-align: left;
-  margin-bottom: 15px;
+    @include device(tablet) {
+      height: 320px;
+      width: 100%;
+      max-width: 511px;
 
-  
+      border-radius: 30px;
+    }
+
+    @include device(mobile) {
+      height: 233px;
+      width: 100%;
+      max-width: 600px;
+      border-radius: 20px;
+    }
+  }
+
+  &__contentWrapper {
+    width: 511px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include device(mobile) {
+      width: auto;
+    }
+  }
+
+  &-title {
+    //styleName: WP_Title H1';
+    font-family: Poppins;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 72px;
+    letter-spacing: 0.01em;
+    text-align: left;
+    margin-bottom: 15px;
 
     @include device(mobile) {
       //styleName: WP_H2';
-      
+
       font-size: 32px;
       line-height: 48px;
       letter-spacing: 0.01em;
       text-align: center;
-
     }
 
     @include device(tablet) {
       text-align: center;
     }
+  }
 
-
-
- }
-
- &-description {
-  //styleName: WP_body copy;
-  font-family: Poppins;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 22.4px;
-  text-align: left;
-  margin-bottom: 33px;
-
-  @include device(mobile) {
-    //styleName: WP_Small copy;
-
-    font-size: 14px;
+  &-description {
+    //styleName: WP_body copy;
+    font-family: Poppins;
+    font-size: 16px;
     font-weight: 400;
-    line-height: 21px;
-    text-align: center;
+    line-height: 22.4px;
+    text-align: left;
+    margin-bottom: 33px;
 
+    @include device(mobile) {
+      //styleName: WP_Small copy;
 
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 21px;
+      text-align: center;
+    }
+
+    @include device(tablet) {
+      text-align: center;
+    }
   }
 
-  @include device(tablet) {
-    text-align: center;
-  }
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
 
+    @include device(mobile) {
+      justify-content: center;
+      gap: 8px;
+    }
 
- }
+    &-button {
+      all: unset; /* Resetuje wszystkie style */
+      cursor: pointer;
+      min-width: 246px;
+      height: 47px;
+      background-color: #ffffff;
+      box-sizing: border-box;
 
- &__buttons {
-   display:flex;
-   justify-content: space-between;
+      padding: 8px 32px 8px 32px;
+      gap: 10px;
+      border-radius: 30px;
+      opacity: 0px;
 
-   @include device(mobile) {
-    justify-content: center;
-    gap: 8px;
-   }
+      font-family: Poppins;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 24px;
+      text-align: center;
 
-   &-button {
-     
-       all: unset; /* Resetuje wszystkie style */
-       cursor: pointer;
-       min-width: 246px;
-       height: 47px;
-       background-color: #FFFFFF;
-       box-sizing: border-box;
-   
-   
-       padding: 8px 32px 8px 32px;
-       gap: 10px;
-       border-radius: 30px ;
-       opacity: 0px;
-   
-       font-family: Poppins;
-       font-size: 16px;
-       font-weight: 700;
-       line-height: 24px;
-       text-align: center;
-   
-       transition: 0.2s;
+      transition: 0.2s;
 
-       @include device(mobile) {
+      @include device(mobile) {
         //styleName: WP_M_Button;
 
         font-size: 12px;
@@ -704,21 +616,14 @@
         padding: 8px 32px;
         min-width: fit-content;
         width: 171px;
+      }
 
-
-       }
-   
-   
-       &:hover {
-           scale: 105%;
-       }
-   
-   
-    
-   }
- }
+      &:hover {
+        scale: 105%;
+      }
+    }
+  }
 }
-
 
 .Home__cards {
   padding: 0 17px;
@@ -727,83 +632,73 @@
   }
 }
 
-
 .Home__cards-container {
- max-width: 1032px ;
- margin: 0 auto;
- display: flex;
- height: 460px;
- justify-content: space-between;
- gap:20px;
- margin-bottom: 107px;
+  max-width: 1032px;
+  margin: 0 auto;
+  display: flex;
+  height: 460px;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 107px;
 
+  @include device(tablet) {
+    // flex-direction: column;
+    align-items: center;
+    height: auto;
+    gap: 43px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
- @include device (tablet) {
- // flex-direction: column;
-  align-items: center;
-  height: auto;
-  gap: 43px;
-  flex-wrap: wrap;
-   justify-content: center;
- }
-
- @include device (mobile) {
-  flex-direction: column;
-  align-items: center;
-  height: auto;
-  gap: 25px;
-  margin-bottom: 25px;
- }
+  @include device(mobile) {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    gap: 25px;
+    margin-bottom: 25px;
+  }
 }
-
-
-
 
 .Home-atrakcje {
- 
- &-img {
-   width: 100%;
-   background-image: url('/atrakcjeDlaUczestnikow.png');
-   background-position: center;
-   background-repeat: no-repeat;
-   background-size: cover;
-   aspect-ratio: 1440 / 1211;
-   margin: 0 auto;
-   max-width: 1440px;
- }
+  &-img {
+    width: 100%;
+    background-image: url('/atrakcjeDlaUczestnikow.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    aspect-ratio: 1440 / 1211;
+    margin: 0 auto;
+    max-width: 1440px;
+  }
 }
 
+.Home__partners {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #345b55;
+  height: min-content;
+  &-Backgroundimg {
+    max-width: 1440px;
+    width: 100%;
+    background-image: url('/czekamyNaCiebie.jpg');
+    height: 470px;
+    margin: 0 auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
+  &-container {
+    width: 658px;
 
-.Home__partners{
- width: 100%;
- box-sizing: border-box;
- background-color: #345B55;
- height: min-content;
- &-Backgroundimg {
-   max-width: 1440px;
-   width: 100%;
-   background-image: url('/czekamyNaCiebie.jpg');
-   height: 470px;
-   margin: 0 auto;
-   background-position: center;
-   background-repeat: no-repeat;
-   background-size: cover;
-   display: flex;
-   align-items: center;
-   justify-content: center;
- }
+    display: flex;
+    flex-direction: column;
+  }
 
- &-container {
-   width: 658px;
-   
-   display: flex;
-   flex-direction: column;
-
-   
- }
-
- &-description {
+  &-description {
     margin-bottom: 57px;
     font-family: Poppins;
     font-size: 40px;
@@ -821,23 +716,19 @@
       letter-spacing: 0.01em;
       text-align: center;
       margin-bottom: 16px;
-
     }
-
-
   }
 
- &-buttonWrapper {
-   min-width: 246px;
-   margin: 0 auto;
+  &-buttonWrapper {
+    min-width: 246px;
+    margin: 0 auto;
 
-   @include device(mobile) {
-    min-width: 171px;
-   }
-   
- }
+    @include device(mobile) {
+      min-width: 171px;
+    }
+  }
 
- &-title {
+  &-title {
     font-family: Poppins;
     font-size: 40px;
     font-weight: 600;
@@ -847,7 +738,7 @@
     width: 100%;
     margin: 0 auto;
     padding: 27.5px 0;
-    color: #FFFFFF;
+    color: #ffffff;
     background-color: rgb(93, 124, 119);
 
     @include device(mobile) {
@@ -858,9 +749,17 @@
       line-height: 36px;
       text-align: center;
       padding: 10px 0;
-
     }
   }
+}
 
- 
+@keyframes animateImg {
+  0%,
+  100% {
+    object-position: 0% 0%;
+  }
+
+  50% {
+    object-position: 25% 75%;
+  }
 }
