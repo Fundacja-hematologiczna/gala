@@ -66,6 +66,9 @@
 
   .galleryPhoto {
     height: 80dvh;
+    max-width: 100%;
+    height: auto;
+    max-height: 80dvh;
 
     @media (width < 730px) {
       width: 100dvw;
