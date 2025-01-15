@@ -78,12 +78,12 @@
   },
   "PLACE": {
     "HEADER_TITLE": "Miejsce wydarzenia",
-    "HEADER_BODY": "Pałac i stadnina znajdują się w malowniczej miejscowości Walewice, położonej w centralnej Polsce,\n w województwie łódzkim. To historyczne miejsce jest oddalone około 50 km na północny wschód od Łodzi - to około godzinna podróż autem.\n Z centrum Łodzi można także dotrzeć do Walewic podróżując początkowo pociągiem do Łowicza, a stamtąd taksówką do Pałacu.",
-    "MAP_TITLE": "III Gala Charytatywna odbędzie się w Pałacu Walewskich w Walewicach",
+    "HEADER_BODY": "Pałac i stadnina znajdują się w malowniczej miejscowości Walewice, położonej w centralnej Polsce,\n w województwie łódzkim. To historyczne miejsce jest oddalone około 50 km na północny wschód od Łodzi - to około godzinna podróż autem.\n Z centrum Łodzi można także dotrzeć do Walewic podróżując początkowo pociągiem do Łowicza,\n a stamtąd taksówką do Pałacu.",
+    "MAP_TITLE": "IV Gala Charytatywna odbędzie się w Pałacu Radziwiłłów w Nieborowie",
     "MAP_PLACE": "Miejsce:",
-    "MAP_PLACE_NAME": "Pałac i Stadnina Koni w Walewicach",
-    "MAP_ADDRESS": "Adres:",
-    "MAP_TELEPHONE": "Adres:",
+    "MAP_PLACE_NAME": "Muzeum w Nieborowie i Arkadii",
+    "MAP_ADDRESS": "Adres:\n Aleja Lipowa 35 99-416 Nieborów",
+    "MAP_TELEPHONE": "Telefon: ",
     "JOIN_TITLE": "Chcesz do nas dołączyć, ale nie wiesz jak?",
     "JOIN_BODY": "Formularz przeprowadzi Cię przez proces rejestracji.",
     "JOIN_BUTTON": "Zgłoś swój udział"
