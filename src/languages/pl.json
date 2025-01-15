@@ -54,7 +54,7 @@
     "HEADER_TITLE": "Rejestracja",
     "HEADER_BODY": "Wypełnij formularz, aby zgłosić swoje uczestnictwo. Po jego wysłaniu zostaniesz przekierowany do opcji dokonania darowizny (cegiełki o kwocie 100 zł) poprzez przelew bankowy lub online (poniżej), co umożliwi Ci udział w Galii.",
     "FORM_TITLE": "Formularz zgłoszeniowy",
-    "FORM_FULLNAME": "Imię i Nazwisko *",
+    "FORM_FULLNAME": "Imię i nazwisko *",
     "FORM_EMAIL": "Adres e-mail *",
     "FORM_STREET": "Ulica *",
     "FORM_BUILDING": "Nr budynku *",
