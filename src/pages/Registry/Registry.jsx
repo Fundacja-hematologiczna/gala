@@ -152,6 +152,10 @@ const Registry = () => {
               {t('REGISTRATION.MESSAGE_TEXT')}
             </p>
 
+            <p className="Registry__form-required">
+              {t('REGISTRATION.MESSAGE_REQUIRED')}
+            </p>
+
             <HCaptcha
               className="h-captcha"
               sitekey={hCaptchaSiteKey} // trzeba założyc konto fundacyjne na hcaptcha.com i pobrac sitekey
