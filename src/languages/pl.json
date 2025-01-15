@@ -62,7 +62,7 @@
     "FORM_CITY": "Miasto *",
     "FORM_RIGHTS": {
       "1": "Akceptuję postanowienia Regulaminu prywatności i Regulaminu imprezy. *",
-      "2": "Wyrażam zgodę na przetwarzanie moich danych osobowych w zakresie mojego wizerunku utrwalonego podczas Gali Charytatywnej dla celów prowadzonych przez Fundację wewnętrznych i zewnętrznych działań komunikacyjnych i marketingowych.",
+      "2": "Wyrażam zgodę na przetwarzanie moich danych osobowych w zakresie mojego wizerunku utrwalonego podczas Gali Charytatywnej dla celów prowadzonych przez Fundację wewnętrznych i zewnętrznych działań komunikacyjnych i marketingowych. *",
       "3": "Wyrażam zgodę na przetwarzanie moich danych osobowych w zakresie danych kontaktowych w celu informowania o przyszłych wydarzeniach oraz działalności statutowej Fundacji."
     },
     "SUPPORT_TITLE": "Wesprzyj naszą inicjatywę",
