@@ -189,7 +189,7 @@ const Registry = () => {
                     ? 'Registry__donate__buttons-button--active'
                     : ''
                 }`}>
-                {amount}
+                {`${amount} zł`}
               </button>
             ))}
           </div>
