@@ -54,14 +54,14 @@
     "HEADER_TITLE": "Rejestracja",
     "HEADER_BODY": "Wypełnij formularz, aby zgłosić swoje uczestnictwo. Po jego wysłaniu zostaniesz przekierowany do opcji dokonania darowizny (cegiełki o kwocie 100 zł) poprzez przelew bankowy lub online (poniżej), co umożliwi Ci udział w Galii.",
     "FORM_TITLE": "Formularz zgłoszeniowy",
-    "FORM_FULLNAME": "Imię i Nazwisko",
-    "FORM_EMAIL": "Adres e-mail",
-    "FORM_STREET": "Ulica",
-    "FORM_BUILDING": "Nr budynku",
-    "FORM_INDEX": "Kod pocztowy",
-    "FORM_CITY": "Miasto",
+    "FORM_FULLNAME": "Imię i Nazwisko *",
+    "FORM_EMAIL": "Adres e-mail *",
+    "FORM_STREET": "Ulica *",
+    "FORM_BUILDING": "Nr budynku *",
+    "FORM_INDEX": "Kod pocztowy *",
+    "FORM_CITY": "Miasto *",
     "FORM_RIGHTS": {
-      "1": "Akceptuję postanowienia Regulaminu prywatności i Regulaminu imprezy.",
+      "1": "Akceptuję postanowienia Regulaminu prywatności i Regulaminu imprezy. *",
       "2": "Wyrażam zgodę na przetwarzanie moich danych osobowych w zakresie mojego wizerunku utrwalonego podczas Gali Charytatywnej dla celów prowadzonych przez Fundację wewnętrznych i zewnętrznych działań komunikacyjnych i marketingowych.",
       "3": "Wyrażam zgodę na przetwarzanie moich danych osobowych w zakresie danych kontaktowych w celu informowania o przyszłych wydarzeniach oraz działalności statutowej Fundacji."
     },
@@ -73,6 +73,7 @@
     "SUPPORT_INDEX": "Kod pocztowy",
     "SUPPORT_CITY": "Miasto",
     "MESSAGE_TEXT": "Kopia wysłanej wiadomości pojawi się w Twojej skrzynce email.",
+    "MESSAGE_REQUIRED": "* Pola wymagane",
     "FORMS_BUTTON": "Wyślij wiadomość"
   },
   "PLACE": {

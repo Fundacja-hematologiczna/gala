@@ -54,14 +54,14 @@
     "HEADER_TITLE": "Registration",
     "HEADER_BODY": "Fill out the form to register your participation. After submitting it, you will be redirected to the donation option (a symbolic amount of 100 PLN) via bank transfer or online (below), which will enable your participation in the Gala.",
     "FORM_TITLE": "Registration Form",
-    "FORM_FULLNAME": "Full Name",
-    "FORM_EMAIL": "Email Address",
-    "FORM_STREET": "Street",
-    "FORM_BUILDING": "Building Number",
-    "FORM_INDEX": "Postal Code",
-    "FORM_CITY": "City",
+    "FORM_FULLNAME": "Full Name *",
+    "FORM_EMAIL": "Email Address *",
+    "FORM_STREET": "Street *",
+    "FORM_BUILDING": "Building Number *",
+    "FORM_INDEX": "Postal Code *",
+    "FORM_CITY": "City *",
     "FORM_RIGHTS": {
-      "1": "I accept the provisions of the Privacy Policy and Event Regulations.",
+      "1": "I accept the provisions of the Privacy Policy and Event Regulations. *",
       "2": "I consent to the processing of my personal data in the scope of my image captured during the Charity Gala for internal and external communication and marketing activities carried out by the Foundation.",
       "3": "I consent to the processing of my personal data in the scope of contact details for the purpose of informing about future events and statutory activities of the Foundation."
     },
@@ -73,6 +73,7 @@
     "SUPPORT_INDEX": "Postal Code",
     "SUPPORT_CITY": "City",
     "MESSAGE_TEXT": "A copy of the sent message will appear in your email inbox.",
+    "MESSAGE_REQUIRED": "* Required field",
     "FORMS_BUTTON": "Send Message"
   },
   "PLACE": {
