@@ -10,23 +10,24 @@
     "CONTACT": "kontakt"
   },
   "MAIN_PAGE": {
-    "HEADER_TITLE": "III Gala\n Charytatywna\n w Walewicach",
-    "HEADER_DATE": "Sobota, 14 września 2024",
-    "HEADER_BODY": "Serdecznie zapraszamy na trzecią\n edycję Gali Charytatywnej\n organizowanej w malowniczych\n Walewicach.",
+    "HEADER_TITLE": "IV Gala \nCharytatywna — Pałac Radziwiłłów w Nieborowie",
+    "HEADER_DATE": "Sobota, 6 września 2025",
+    "HEADER_BODY": "Serdecznie zapraszamy na czwartą \nedycję Gali Charytatywnej organizowanej \nw malowniczym Nieborowie.",
     "HEADER_BUTTON": "Zgłoś swój udział",
     "CEO_POSITION": "Prezes Fundacji",
     "CEO_TITLE": "Dołącz do nas i podaruj innym moc!",
     "CEO_BODY": {
-      "1": "Serdecznie zapraszamy na trzecią już w historii naszej Fundacji Galę Charytatywną organizowaną w malowniczych Walewicach.",
+      "1": "Serdecznie zapraszamy na czwartą w historii naszej Fundacji Galę Charytatywną organizowaną w urokliwym Nieborowie.",
       "2": "Ten wyjątkowy dzień pełen atrakcji będzie niepowtarzalną okazją do wsparcia naszych działań na rzecz pacjentów hematologicznych i ich rodzin. Wierzymy, że każdy zasługuje na szansę na zdrowie i życie bez cierpienia. To dzięki Państwa obecności i wsparciu możemy kontynuować naszą misję niesienia pomocy potrzebującym.",
       "3": "Dołączcie do nas, aby wspólnie celebrować życie, wspólnotę i siłę ludzkiej dobroci!"
     },
+    "CEO_ALTTEXT": "Mężczyzna o krótkich, ciemnych włosach i zaroście, ubrany w jasnoszary garnitur i białą koszulę, z ciemnym krawatem. Stoi w jasnym korytarzu, patrząc w obiektyw z lekkim uśmiechem.",
     "CHARITY_AUCTION_BODY": "Aukcja Charytatywna",
     "CHARITY_AUCTION_TITLE": "To główny punkt programu Gali. Środki pozyskane z licytacji przedmiotów ofiarowanych przez Darczyńców zostaną przeznaczone na pomoc pacjentom z chorobami hematologicznymi, podopiecznym Fundacji.",
     "CHARITY_AUCTION_BUTTON": "Katalog Aukcji",
     "DONORS_BODY": "Dla Darczyńców",
-    "DONORS_TITLE": "To wspaniałe wydarzenie nie odbyłoby się bez wsparcia i zaangażowania Darczyńców oraz naszych Partnerów. Jeżeli widzisz tu dla siebie przestrzeń, masz pomysł na udział w Gali lub po prostu chcesz podzielić się tym, co najlepsze - zapraszamy do kontaktu.",
-    "DONORS_BUTTON": "Zostań darczyńcą",
+    "DONORS_TITLE": "To wspaniałe wydarzenie nie odbyłoby się bez wsparcia i zaangażowania Darczyńców oraz naszych Partnerów. Jeżeli widzisz tu dla siebie przestrzeń, masz pomysł na udział w Gali lub po prostu chcesz podzielić się tym, co najlepsze — zapraszamy do kontaktu.",
+    "DONORS_BUTTON": "Zostań Darczyńcą",
     "VOLUNTEERS_BODY": "Dla Wolontariuszy",
     "VOLUNTEERS_TITLE": "Gala Charytatywna to przedsięwzięcie na dużą skalę. To wydarzenie, które wymaga ciągłego wsparcia przez cały rok. Jednak największy wysiłek organizacyjny przypada na czas jej trwania. Może zechcesz wesprzeć nas w tych działaniach?",
     "VOLUNTEERS_BUTTON": "Zostań Wolontariuszem",
@@ -35,14 +36,15 @@
     "AUCTION_ITEM_BUTTON_1": "Zostań darczyńcą",
     "AUCTION_ITEM_BUTTON_2": "Wpłać darowiznę",
     "ATTRACTIONS_BODY": "Atrakcje Gali",
-    "ATTRACTIONS_TITLE": "Pokaz jazdy konnej, degustacja regionalnych produktów, pokaz mody, wspólne rozkoszowanie się muzyką - a to wciąż nie wszystko. Na uczestników Gali czekają liczne atrakcje.",
+    "ATTRACTIONS_TITLE": "Zwiedzanie pałacu, degustacja regionalnych produktów, pokaz mody, wspólne rozkoszowanie się muzyką — a to wciąż nie wszystko. Na uczestników Gali czekają liczne atrakcje.",
     "ATTRACTIONS_BUTTON": "Poznaj program",
-    "PALACE_BODY": "Pałac i stadnina",
-    "PALACE_TITLE": "Pałac Walewice wraz z otaczającym go parkiem, to jedna z najcenniejszych siedzib magnackich w środkowej Polsce. To niezwykle czarujące miejsce nadaje Gali niepowtarzalnego uroku. Jeśli chcesz nieco dłużej cieszyć się pięknem okolic, możesz zarezerwować nocleg w Pałacu.",
-    "PALACE_BUTTON": "Zarezerwuj nocleg",
+    "PALACE_BODY": "Historia",
+    "PALACE_TITLE": "Pałac w Nieborowie został zbudowany w XVII wieku w stylu barokowym. Wraz z autentycznym układem i wyposażeniem wnętrz, ocalałymi zbiorami sztuki, biblioteką i archiwum, stanowi jedną z najlepiej zachowanych rezydencji magnackich w Polsce.",
+    "PALACE_BUTTON": "Poznaj muzeum",
     "PLACE_BODY": "Miejsce",
-    "PLACE_TITLE": "Pałac został zbudowany w stylu klasycystycznym pod koniec XVIII wieku. Był świadkiem romansu Marii Walewskiej z Napoleonem Bonaparte, którego owoc - syn - przyszedł tu na świat w 1810 roku.",
+    "PLACE_TITLE": "Na wyjątkowość Nieborowa wpływa nie tylko doskonale zachowany pałac, ale także piękny, barokowy ogród w stylu francuskim. To miejsce zachwyca precyzyjnie zaplanowaną kompozycją, stanowiąc doskonałe połączenie harmonii natury i ludzkiego kunsztu. ",
     "PLACE_BUTTON": "Sprawdź dojazd",
+    "IMAGE": "/gala/atrakcjeDlaUczestnikow.png",
     "WAITING_TITLE_1": "Czekamy na Ciebie!",
     "WAITING_TITLE_2": "Dołącz do nas!",
     "WAITING_BUTTON": "Zgłoś swój udział",
@@ -55,7 +57,7 @@
     "HEADER_BODY": "Wypełnij formularz, aby zgłosić swoje uczestnictwo. Po jego wysłaniu zostaniesz przekierowany do opcji dokonania darowizny (cegiełki o kwocie 100 zł) poprzez przelew bankowy lub online (poniżej), co umożliwi Ci udział w Galii.",
     "FORM_TITLE": "Formularz zgłoszeniowy",
     "FORM_FULLNAME": "Imię i Nazwisko",
-    "FORM_EMAIL": "Adres e-mail",
+    "FORM_EMAIL": "Adres e—mail",
     "FORM_STREET": "Ulica",
     "FORM_BUILDING": "Nr budynku",
     "FORM_INDEX": "Kod pocztowy",
@@ -67,7 +69,7 @@
     },
     "SUPPORT_TITLE": "Wesprzyj naszą inicjatywę",
     "SUPPORT_FULLNAME": "Imię i Nazwisko",
-    "SUPPORT_EMAIL": "Adres e-mail",
+    "SUPPORT_EMAIL": "Adres e—mail",
     "SUPPORT_STREET": "Ulica",
     "SUPPORT_BUILDING": "Nr budynku",
     "SUPPORT_INDEX": "Kod pocztowy",
@@ -77,7 +79,7 @@
   },
   "PLACE": {
     "HEADER_TITLE": "Miejsce wydarzenia",
-    "HEADER_BODY": "Pałac i stadnina znajdują się w malowniczej miejscowości Walewice, położonej w centralnej Polsce,\n w województwie łódzkim. To historyczne miejsce jest oddalone około 50 km na północny wschód od Łodzi - to około godzinna podróż autem.\n Z centrum Łodzi można także dotrzeć do Walewic podróżując początkowo pociągiem do Łowicza, a stamtąd taksówką do Pałacu.",
+    "HEADER_BODY": "Pałac i stadnina znajdują się w malowniczej miejscowości Walewice, położonej w centralnej Polsce,\n w województwie łódzkim. To historyczne miejsce jest oddalone około 50 km na północny wschód od Łodzi — to około godzinna podróż autem.\n Z centrum Łodzi można także dotrzeć do Walewic podróżując początkowo pociągiem do Łowicza, a stamtąd taksówką do Pałacu.",
     "MAP_TITLE": "III Gala Charytatywna odbędzie się w Pałacu Walewskich w Walewicach",
     "MAP_PLACE": "Miejsce:",
     "MAP_PLACE_NAME": "Pałac i Stadnina Koni w Walewicach",
@@ -127,7 +129,7 @@
     "HEADER_BODY_1": "Organizacja Gali jest ambitnym i niezwykle doniosłym przedsięwzięciem. Wydarzenie nie mogłoby się odbyć bez nieocenionego wsparcia, zaangażowania i pomocy Darczyńców oraz naszych Partnerów.",
     "HEADER_BODY_2": "Jako Fundacja doceniamy Darczyńców i Partnerów poprzez prezentowanie ich wsparcia w mediach społecznościowych oraz na stronie internetowej. Istnieje również możliwość rozstawienia materiałów promocyjnych podczas Gali oraz umieszczenia ich w pakietach powitalnych dla uczestników.",
     "JOIN_TITLE": "Dołącz do grona naszych Darczyńców i Partnerów!",
-    "JOIN_BODY": "Jeśli widzisz ze swojej strony możliwość udzielenia wsparcia rzeczowego, finansowego lub organizacyjnego, zapraszamy - Skontaktuj się z nami!",
+    "JOIN_BODY": "Jeśli widzisz ze swojej strony możliwość udzielenia wsparcia rzeczowego, finansowego lub organizacyjnego, zapraszamy — Skontaktuj się z nami!",
     "JOIN_BUTTON": "Zostań Darczyńcą"
   },
   "GALLERY": {
@@ -141,13 +143,13 @@
     "HEADER_AWAITING": "Czekamy na Ciebie!",
     "FORM_TITLE": "Formularz Kontaktowy",
     "FORM_NAME": "Imię i Nazwisko:",
-    "FORM_EMAIL": "Adres e-mail:",
+    "FORM_EMAIL": "Adres e—mail:",
     "FORM_MESSAGE": "Treść wiadomości:",
     "FORM_WARNING": "Kopia wysłanej wiadomości pojawi się w Twojej skrzynce email.",
     "FORM_BUTTON": "Wyślij wiadomość",
     "INFO_TITLE": "Dane Kontaktowe",
     "ACCEPT_TITLE": "Dziękujemy!",
-    "ACCEPT_BODY": "Twoja wiadomość została wysłana. Spodziewaj się od nas e-maila potwierdzającego.",
+    "ACCEPT_BODY": "Twoja wiadomość została wysłana. Spodziewaj się od nas e—maila potwierdzającego.",
     "ACCEPT_BUTTON": "Powrót do formularza"
   },
   "FOOTER": {
@@ -166,12 +168,12 @@
     "HEAD": "KLAUZULA INFORMACYJNA AUKCJI CHARYTATYWNEJ PROWADZONEJ PODCZAS III GALI CHARYTATYWNEJ ORGANIZOWANEJ PRZEZ FUNDACJĘ NA RZECZ POMOCY CHORYM NA BIAŁACZKI",
     "HEAD_PART_1": "Na podstawie art. 13 Rozporządzenia Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych",
     "HEAD_PART_2": "i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE (ogólne rozporządzenie o ochronie danych), dalej RODO, poniżej zamieszczamy informacje dotyczące przetwarzania danych osobowych Uczestników oraz w szczególności Zwycięzców Aukcji Charytatywnej organizowanego przez Fundację:",
-    "SECTION_1": "Administratorem Danych Osobowych (dalej: ADO) jest Fundacja Na Rzecz Pomocy Chorym Na Białaczki z siedzibą w Łodzi, przy ul. Pabianickiej 62, KRS 0000069531, e-mail: kontakt@fundacja.hematologiczna.org",
+    "SECTION_1": "Administratorem Danych Osobowych (dalej: ADO) jest Fundacja Na Rzecz Pomocy Chorym Na Białaczki z siedzibą w Łodzi, przy ul. Pabianickiej 62, KRS 0000069531, e—mail: kontakt@fundacja.hematologiczna.org",
     "SECTION_2": "ADO przetwarza dane osobowe dla celów:",
     "SECTION_2_SECTIONS": {
       "SECTION_1": "Realizacji wydarzenia III GALI CHARYTATYWNEJ oraz działań podjętych w związku z jej organizacją, w tym prawidłowego przeprowadzenia akcji (podstawa z art. 6 ust. 1 lit. b) RODO),",
       "SECTION_2": "Związanych z koniecznością wypełnienia ciążącego na nas obowiązku prawnego zgodnie z obowiązującymi przepisami prawa, w szczególności wynikających z przepisów podatkowych, w tym wystawiania zaświadczeń do celów podatkowych, prowadzenie ksiąg rachunkowych i dokumentacji podatkowej (podstawa z art. 6 ust. 1 lit. c) RODO),",
-      "SECTION_3": "Przesyłania drogą elektroniczną na podany adres email informacji marketingowych, w tym w formie newslettera, z najnowszymi informacjami o pracach i kampaniach, ofertach oraz z wiadomościami, służących promowaniu określonych postaw, zachowań oraz naszego wizerunku, a także w celu używania telekomunikacyjnych urządzeń końcowych w stosunku do podanego numeru telefonu dla celów marketingu bezpośredniego - w tym wysłania podziękowań za wsparcie, informowania o realizacji celów statutowych organizacji, informowania o organizowanych akcjach społecznych oraz możliwości dalszego wsparcia organizacji oraz w celu badania prawidłowości procesu realizacji darowizny i zbierania informacji zwrotnych od darczyńców (np. poprzez ankietę) - w oparciu o wyrażoną dobrowolną zgodę na prowadzenie takich działań (podstawa z art. 6 ust. 1 lit. a) RODO",
+      "SECTION_3": "Przesyłania drogą elektroniczną na podany adres email informacji marketingowych, w tym w formie newslettera, z najnowszymi informacjami o pracach i kampaniach, ofertach oraz z wiadomościami, służących promowaniu określonych postaw, zachowań oraz naszego wizerunku, a także w celu używania telekomunikacyjnych urządzeń końcowych w stosunku do podanego numeru telefonu dla celów marketingu bezpośredniego — w tym wysłania podziękowań za wsparcie, informowania o realizacji celów statutowych organizacji, informowania o organizowanych akcjach społecznych oraz możliwości dalszego wsparcia organizacji oraz w celu badania prawidłowości procesu realizacji darowizny i zbierania informacji zwrotnych od darczyńców (np. poprzez ankietę) — w oparciu o wyrażoną dobrowolną zgodę na prowadzenie takich działań (podstawa z art. 6 ust. 1 lit. a) RODO",
       "SECTION_4": "Wynikających z prawnie uzasadnionych interesów Administratora, jakim jest m.in. ustalenie, obrona i dochodzenie roszczeń oraz tworzenie zestawień, analiz i statystyk na potrzeby wewnętrzne Administratora, dopasowanie treści usług Administratora (np. serwisów internetowych) do Pani/Pana potrzeby, zapewnienie bezpieczeństwa tych usług, a także ich ciągłe udoskonalanie oraz rozpatrywanie zapytań i reklamacji produktów i usług Administratora, marketing bezpośredni prowadzony w formie tradycyjnej (np. listownej) (podstawa z art. 6 ust. 1 lit. f) RODO),"
     },
     "SECTION_3": "Odbiorcami danych osobowych może być firma zewnętrzna współorganizująca to wydarzenie oraz inne firmy, które na zlecenie Fundacji będą przygotowywały materiały dla celów komunikacyjnych i marketingowych oraz firmy ubezpieczeniowe oraz banki.",
@@ -187,7 +189,7 @@
     "PARAGRAPH_1": {
       "TITLE": "§1. AUKCJA CHARYTATYWNA",
       "PARAGRAPH_SECTIONS": {
-        "SECTION_1": "Organizatorem aukcji charytatywnej podczas III GALI CHARYTATYWNEJ (dalej zwaną „Galą”) jest FUNDACJA NA RZECZ POMOCY CHORYM NA BIAŁACZKI z siedzibą w Łodzi, przy ul. Pabianickiej 62, 93-513 Łódź, zarejestrowana w rejestrze stowarzyszeń, innych organizacji społecznych i zawodowych, fundacji oraz samodzielnych publicznych zakładów opieki zdrowotnej pod numerem KRS 0000069531, NIP: 7292325734 (dalej zwaną „Organizatorem”).",
+        "SECTION_1": "Organizatorem aukcji charytatywnej podczas III GALI CHARYTATYWNEJ (dalej zwaną „Galą”) jest FUNDACJA NA RZECZ POMOCY CHORYM NA BIAŁACZKI z siedzibą w Łodzi, przy ul. Pabianickiej 62, 93—513 Łódź, zarejestrowana w rejestrze stowarzyszeń, innych organizacji społecznych i zawodowych, fundacji oraz samodzielnych publicznych zakładów opieki zdrowotnej pod numerem KRS 0000069531, NIP: 7292325734 (dalej zwaną „Organizatorem”).",
         "SECTION_2": "Organizator jest jednocześnie beneficjentem aukcji charytatywnej (dalej zwaną „Aukcją”), która w rozumieniu niniejszego regulaminu (dalej zwanym „Regulaminem”) będzie odbywać się w formie szeregu licytacji (dalej zwanymi „Licytacjami”).",
         "SECTION_3": "Przedmiotem Aukcji są rzeczy stanowiące własność Organizatora lub osób trzecich, które dokonały darowizny określonych przedmiotów na rzecz Organizatora w celu sprzedaży i przekazania uzyskanej ceny na cele określone w art. 4 ustawy o działalności pożytku publicznego.",
         "SECTION_4": "Całkowity dochód uzyskany z aukcji charytatywnej zostanie przekazany na rzecz nieodpłatnej działalności pożytku publicznego oraz ewentualnego kosztu wysyłki wylicytowanego Przedmiotu.",
@@ -210,7 +212,7 @@
         "SECTION_5": {
           "TITLE": "Warunkiem nabycia licytowanego Przedmiotu podczas Aukcji jest:",
           "PARAGRAPH_SECTIONS": {
-            "SECTION_1": "podanie niezbędnych danych Uczestnika lub jego reprezentanta, tj.: imienia i nazwiska, adres zamieszkania, adresu e-mail, numeru telefonu,",
+            "SECTION_1": "podanie niezbędnych danych Uczestnika lub jego reprezentanta, tj.: imienia i nazwiska, adres zamieszkania, adresu e—mail, numeru telefonu,",
             "SECTION_2": "zaakceptowanie Regulaminu,",
             "SECTION_3": "zgłoszenie udziału w Aukcji poprzez podanie swojej oferty cenowej (dalej zwanym „Przebiciem”)."
           }
@@ -273,7 +275,7 @@
       "TITLE": "§5. DANE OSOBOWE",
       "PARAGRAPH_SECTIONS": {
         "SECTION_1": "W związku z treścią art. 13 ust. 1 i ust. 2 RODO, Organizator informuje o sposobie i celu, w jakim przetwarza dane osobowe Gości, Uczestników oraz Zwycięzcy, a także o przysługujących im prawach, wynikających z regulacji o ochronie danych osobowych.",
-        "SECTION_2": "Administratorem danych osobowych Gości, Uczestników oraz Zwycięzców jest FUNDACJA NA RZECZ POMOCY CHORYM NA BIAŁACZKI z siedzibą w Łodzi, przy ul. Pabianickiej 62, 93-513 Łódź, KRS 0000069531, zwana dalej Administratorem.",
+        "SECTION_2": "Administratorem danych osobowych Gości, Uczestników oraz Zwycięzców jest FUNDACJA NA RZECZ POMOCY CHORYM NA BIAŁACZKI z siedzibą w Łodzi, przy ul. Pabianickiej 62, 93—513 Łódź, KRS 0000069531, zwana dalej Administratorem.",
         "SECTION_3": "Z Administratorem można kontaktować się poprzez: email: kontakt@fundacja.hematologiczna.org.",
         "SECTION_4": "Dane osobowe Gości, Uczestników i Zwycięzców są udostępniane Administratorowi przez podmioty utrwalające na zlecenie Administratora przebieg Gali lub Aukcji. W takich wypadkach przetwarzane są następujące kategorie danych: imię, nazwisko, numer telefonu, adres email jak również wizerunek, o ile został on utrwalony w trakcie Gali lub Aukcji.",
         "SECTION_5": {
@@ -289,14 +291,14 @@
         "SECTION_6": {
           "TITLE": "Dane osobowe będą przechowywane przez Administratora przez następujący okres:",
           "PARAGRAPH_SECTIONS": {
-            "SECTION_1": "w odniesieniu do danych przetwarzanych na podstawie art. 6 ust. 1 lit. b, c i f RODO - przez czas realizacji umowy, a po jego upływie przez czas wynikający z obowiązujący przepisów prawa, w szczególności w zakresie dochodzenia roszczeń,",
-            "SECTION_2": "w odniesieniu do danych przetwarzanych na podstawie zgody - do czasu cofnięcia zgody."
+            "SECTION_1": "w odniesieniu do danych przetwarzanych na podstawie art. 6 ust. 1 lit. b, c i f RODO — przez czas realizacji umowy, a po jego upływie przez czas wynikający z obowiązujący przepisów prawa, w szczególności w zakresie dochodzenia roszczeń,",
+            "SECTION_2": "w odniesieniu do danych przetwarzanych na podstawie zgody — do czasu cofnięcia zgody."
           }
         },
         "SECTION_7": "Administrator informuje, że dane Gości, Uczestników oraz Zwycięzców mogą zostać przekazane: organom władzy publicznej oraz podmiotom wykonującym zadania publiczne lub działających na zlecenie organów władzy publicznej, w zakresie i w celach, które wynikają z przepisów powszechnie obowiązującego prawa oraz innym podmiotom, które na podstawie stosownych umów podpisanych z Administrator przetwarzają dane osobowe jako procesor i świadczą na jego rzecz określone usługi (np. doradcze, księgowe, informatyczne), z zastrzeżeniem, iż podmioty te nie będą miały dostępu do danych dotyczących zdrowia.",
         "SECTION_8": "Dane Gości, Uczestników oraz Zwycięzców nie będą przetwarzane w sposób zautomatyzowany i nie będą podlegać profilowaniu. Dane nie trafią poza Europejski Obszar Gospodarczy (obejmujący Unię Europejską, Norwegię, Liechtenstein i Islandię).",
         "SECTION_9": "Osoba, której dane są przetwarzane, ma prawo dostępu do swoich danych oraz otrzymania ich kopii, prawo do sprostowania (poprawiania) swoich danych, prawo do ograniczenia przetwarzania, prawo do bycia zapomnianym, prawo do sprzeciwu, prawo do przenoszenia danych, prawo do wniesienia skargi do Urzędu Ochrony Danych Osobowych.",
-        "SECTION_10": "W odniesieniu do danych, które zostały przekazanych na podstawie zgody - osoba, której dane są przetwarzane, ma prawo cofnięcia zgody w każdym czasie, z zastrzeżeniem, iż cofnięcie zgody pozostaje bez wpływu na ich skuteczne przetwarzanie przed złożeniem stosownego oświadczenia.",
+        "SECTION_10": "W odniesieniu do danych, które zostały przekazanych na podstawie zgody — osoba, której dane są przetwarzane, ma prawo cofnięcia zgody w każdym czasie, z zastrzeżeniem, iż cofnięcie zgody pozostaje bez wpływu na ich skuteczne przetwarzanie przed złożeniem stosownego oświadczenia.",
         "SECTION_11": "Podanie danych jest dobrowolne, ale niezbędne do wzięcia udziału w Gali lub Aukcji organizowanych przez Administratora.",
         "SECTION_12": "Załącznikiem nr 1 do Regulaminu jest informacja o przetwarzaniu danych osobowych w postaci wizerunku z wzorem zgody."
       }
@@ -304,7 +306,7 @@
     "PARAGRAPH_6": {
       "TITLE": "§6. POSTANOWIENIA KOŃCOWE",
       "PARAGRAPH_SECTIONS": {
-        "SECTION_1": "Biorąc udział w Gali oraz przystępując do Aukcji - Gość, Uczestnik oraz Zwycięzca akceptują postanowienia Regulaminu.",
+        "SECTION_1": "Biorąc udział w Gali oraz przystępując do Aukcji — Gość, Uczestnik oraz Zwycięzca akceptują postanowienia Regulaminu.",
         "SECTION_2": "Organizator zastrzega sobie prawo do zmiany Regulaminu, a także zawieszenia organizacji Aukcji z przyczyn technicznych bądź wystąpienia siły wyższej.",
         "SECTION_3": "Wszelkie spory w pierwszej kolejności będą rozstrzygane polubownie. Sądem właściwym w przypadku ewentualnego sporu pozostanie sąd właściwy miejscowo z uwagi na siedzibę pozwanego.",
         "SECTION_4": "W sprawach nieuregulowanych w Regulaminie zastosowanie mają powszechnie obowiązujące przepisy prawa polskiego."
@@ -318,7 +320,7 @@
         "TITLE": "KLAUZULA INFORMACYJNA FUNDACJI",
         "BODY": "Na podstawie art. 13 Rozporządzenia Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE (ogólne rozporządzenie o ochronie danych), dalej RODO, poniżej zamieszczamy informacje dotyczące przetwarzania danych osobowych w postaci wizerunku Gości, Uczestników oraz w szczególności Zwycięzców podczas Gali przez Fundację dalej ADO:",
         "SECTIONS": {
-          "SECTION_1": "Administratorem Danych Osobowych jest FUNDACJA NA RZECZ POMOCY CHORYM NA BIAŁACZKI z siedzibą w Łodzi, przy ul. Pabianickiej 62, 93-513 Łódź, KRS 0000069531, e-mail: kontakt@fundacja.hematologiczna.org.",
+          "SECTION_1": "Administratorem Danych Osobowych jest FUNDACJA NA RZECZ POMOCY CHORYM NA BIAŁACZKI z siedzibą w Łodzi, przy ul. Pabianickiej 62, 93—513 Łódź, KRS 0000069531, e—mail: kontakt@fundacja.hematologiczna.org.",
           "SECTION_2": "ADO przetwarza dane osobowe dla celów prowadzonych wewnętrznych i zewnętrznych działań komunikacyjnych i marketingowych (Art. 6 ust. 1 lit. a RODO),",
           "SECTION_3": "Odbiorcami danych osobowych może być firma zewnętrzna współorganizująca Galę oraz inne firmy, które na zlecenie Fundacji będą przygotowywały materiały dla celów komunikacyjnych i marketingowych.",
           "SECTION_4": "ADO nie przekazuje danych osobowych poza Europejski Obszar Gospodarczy.",

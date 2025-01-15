@@ -65,6 +65,7 @@ const Home = () => {
               )}
               src={welcomeSectionPhotos[welcomeSectionImage2]}
             />
+
             <div className=" sectionWelcome__textComntainer">
               <h1
                 className="sectionWelcome-title"
@@ -254,7 +255,9 @@ const Home = () => {
           </div>
         </section>
         <section className="Home-atrakcje">
-          <div className="Home-atrakcje-img"></div>
+          <div className="Home-atrakcje-img">
+            <img src={t('MAIN_PAGE.IMAGE')} alt="" />
+          </div>
         </section>
 
         <section className="Home__partners">
