@@ -90,14 +90,14 @@
   },
   "PROGRAM": {
     "HEADER_TITLE": "Program",
-    "HEADER_BODY": "The third charity gala offers a rich program full of diverse attractions, from a ceremonial polonaise to a concert by the band Heima. Participants will have the chance to take part in auctions, fashion and horseback riding shows, as well as explore the Palace. Reserve your spot now and join us for an unforgettable night ending with a barbecue and after-party!",
+    "HEADER_BODY": "Charity gala offers a rich program full of diverse attractions, from a ceremonial polonaise to a concert by the band Heima. Participants will have the chance to take part in auctions, fashion and horseback riding shows, as well as explore the Palace. Reserve your spot now and join us for an unforgettable night ending with a barbecue and after-party!",
     "HEADER_BUTTON": "Participate",
     "AGENDA_TITLE": "Agenda",
     "SCHEDULE": {
       "1": "Guest Registration",
       "2": "Gala Opening",
-      "3": "Alicja Borkowska's Recital",
-      "4": "Michał Borkowski's Concert",
+      "3": "Recital",
+      "4": "Concert",
       "5": "Lunch",
       "6": "Auction Items Exhibition in the Palace Cellars with Wine Tasting",
       "7": "Tour of Napoleon's Apartments",
@@ -108,8 +108,8 @@
       "12": "Charity Auction Part 3",
       "13": "Nomination of Foundation Ambassadors",
       "14": "Gala Summary",
-      "15": "Eni's Concert",
-      "16": "Kapela Szymon's Concert",
+      "15": "Concert",
+      "16": "Concert",
       "17": "Barbecue",
       "18": "After Party in the Palace Cellars"
     },

@@ -90,14 +90,14 @@
   },
   "PROGRAM": {
     "HEADER_TITLE": "Program",
-    "HEADER_BODY": "Trzecia gala charytatywna to bogaty program pełen różnorodnych atrakcji, od uroczystego poloneza po koncert zespołu Heima. Uczestnicy będą mogli wziąć udział w aukcjach, pokazach mody i jazdy konnej, a także zwiedzać Pałac. Zarezerwuj swój udział już teraz i dołącz do nas w tę niezapomnianą noc zakończoną grillem i after party!",
+    "HEADER_BODY": "Gala charytatywna to bogaty program pełen różnorodnych atrakcji, od uroczystego poloneza po koncert zespołu Heima. Uczestnicy będą mogli wziąć udział w aukcjach, pokazach mody i jazdy konnej,\n a także w zwiedzaniu Pałacu. Zarezerwuj swój udział już teraz i dołącz do nas w tę niezapomnianą noc zakończoną grillem i after party!",
     "HEADER_BUTTON": "Zgłoś swój udział",
     "AGENDA_TITLE": "Agenda",
     "SCHEDULE": {
       "1": "Rejestracja Gości",
       "2": "Otwarcie Gali",
-      "3": "Recital Alicji Borkowskiej",
-      "4": "Koncert Michała Borkowskiego",
+      "3": "Recital",
+      "4": "Koncert",
       "5": "Obiad",
       "6": "Wystawa przedmiotów aukcyjnych w Piwnicach Pałacu połączona z degustacją wina",
       "7": "Zwiedzanie apartamentów Napoleona",
@@ -108,8 +108,8 @@
       "12": "Aukcja charytatywna część 3",
       "13": "Nominowanie Ambasadorów Fundacji",
       "14": "Podsumowanie Gali",
-      "15": "Koncert Eni",
-      "16": "Koncert Kapela Szymona",
+      "15": "Koncert",
+      "16": "Koncert",
       "17": "Grill",
       "18": "After Party w piwnicach Pałacu"
     },
