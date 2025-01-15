@@ -52,7 +52,7 @@
   },
   "REGISTRATION": {
     "HEADER_TITLE": "Rejestracja",
-    "HEADER_BODY": "Wypełnij formularz, aby zgłosić swoje uczestnictwo. Po jego wysłaniu zostaniesz przekierowany do opcji dokonania darowizny (cegiełki o kwocie 100 zł) poprzez przelew bankowy lub online (poniżej), co umożliwi \n Ci udział w Galii.",
+    "HEADER_BODY": "Wypełnij formularz, aby zgłosić swoje uczestnictwo. Po jego wysłaniu zostaniesz przekierowany do opcji dokonania darowizny (cegiełki o kwocie 100 zł) poprzez przelew bankowy lub online (poniżej), co umożliwi Ci udział w Galii.",
     "FORM_TITLE": "Formularz zgłoszeniowy",
     "FORM_FULLNAME": "Imię i Nazwisko *",
     "FORM_EMAIL": "Adres e-mail *",
@@ -78,7 +78,7 @@
   },
   "PLACE": {
     "HEADER_TITLE": "Miejsce wydarzenia",
-    "HEADER_BODY": "Pałac i stadnina znajdują się w malowniczej miejscowości Walewice, położonej w centralnej Polsce,\n w województwie łódzkim. To historyczne miejsce jest oddalone około 50 km na północny wschód od Łodzi - to około godzinna podróż autem.\n Z centrum Łodzi można także dotrzeć do Walewic podróżując początkowo pociągiem do Łowicza,\n a stamtąd taksówką do Pałacu.",
+    "HEADER_BODY": "Pałac i stadnina znajdują się w malowniczej miejscowości Walewice, położonej w centralnej Polsce,\n w województwie łódzkim. To historyczne miejsce jest oddalone około 50 km na północny wschód od Łodzi \u2014 to około godzinna podróż autem.\n Z centrum Łodzi można także dotrzeć do Walewic podróżując początkowo pociągiem do Łowicza,\n a stamtąd taksówką do Pałacu.",
     "MAP_TITLE": "IV Gala Charytatywna odbędzie się w Pałacu Radziwiłłów w Nieborowie",
     "MAP_PLACE": "Miejsce:",
     "MAP_PLACE_NAME": "Muzeum w Nieborowie i Arkadii",
