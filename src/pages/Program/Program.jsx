@@ -36,7 +36,7 @@ const Program = () => {
             </h2>
             <div className="Program__agenda-list">
               <div className="Program__agenda-row">
-                <div className="Program__agenda-time ">10:30 - 12:30</div>
+                <div className="Program__agenda-time ">10:30 &#8212; 12:30</div>
                 <p className="Program__agenda-description">
                   {t('PROGRAM.SCHEDULE.1')}
                 </p>
@@ -44,7 +44,7 @@ const Program = () => {
 
               <div className="Program__agenda-row">
                 <div className="Program__agenda-time Program__agenda-time--gray">
-                  10:30 - 12:30
+                  10:30 &#8212; 12:30
                 </div>
                 <p className="Program__agenda-description">
                   {t('PROGRAM.SCHEDULE.2')}
@@ -52,7 +52,7 @@ const Program = () => {
               </div>
 
               <div className="Program__agenda-row">
-                <div className="Program__agenda-time ">10:30 - 12:30</div>
+                <div className="Program__agenda-time ">10:30 &#8212; 12:30</div>
                 <p className="Program__agenda-description">
                   {t('PROGRAM.SCHEDULE.3')}
                 </p>
@@ -60,7 +60,7 @@ const Program = () => {
 
               <div className="Program__agenda-row">
                 <div className="Program__agenda-time Program__agenda-time--gray">
-                  10:30 - 12:30
+                  10:30 &#8212; 12:30
                 </div>
                 <p className="Program__agenda-description">
                   {t('PROGRAM.SCHEDULE.4')}
@@ -68,7 +68,7 @@ const Program = () => {
               </div>
 
               <div className="Program__agenda-row">
-                <div className="Program__agenda-time ">10:30 - 12:30</div>
+                <div className="Program__agenda-time ">10:30 &#8212; 12:30</div>
                 <p className="Program__agenda-description">
                   {t('PROGRAM.SCHEDULE.5')}
                 </p>
@@ -76,7 +76,7 @@ const Program = () => {
 
               <div className="Program__agenda-row">
                 <div className="Program__agenda-time Program__agenda-time--gray">
-                  14:30 - 15:00
+                  14:30 &#8212; 15:00
                 </div>
                 <p className="Program__agenda-description">
                   {t('PROGRAM.SCHEDULE.6')}
@@ -84,7 +84,7 @@ const Program = () => {
               </div>
 
               <div className="Program__agenda-row">
-                <div className="Program__agenda-time ">14:45 - 15:00</div>
+                <div className="Program__agenda-time ">14:45 &#8212; 15:00</div>
                 <p className="Program__agenda-description">
                   {t('PROGRAM.SCHEDULE.7')}
                 </p>
@@ -92,7 +92,7 @@ const Program = () => {
 
               <div className="Program__agenda-row">
                 <div className="Program__agenda-time Program__agenda-time--gray">
-                  15:00 - 15:30
+                  15:00 &#8212; 15:30
                 </div>
                 <p className="Program__agenda-description">
                   {t('PROGRAM.SCHEDULE.8')}
@@ -100,7 +100,7 @@ const Program = () => {
               </div>
 
               <div className="Program__agenda-row">
-                <div className="Program__agenda-time ">15:30 - 15:45</div>
+                <div className="Program__agenda-time ">15:30 &#8212; 15:45</div>
                 <p className="Program__agenda-description">
                   {t('PROGRAM.SCHEDULE.9')}
                 </p>
@@ -108,7 +108,7 @@ const Program = () => {
 
               <div className="Program__agenda-row">
                 <div className="Program__agenda-time Program__agenda-time--gray">
-                  15:45 - 16:15
+                  15:45 &#8212; 16:15
                 </div>
                 <p className="Program__agenda-description">
                   {t('PROGRAM.SCHEDULE.10')}
@@ -116,7 +116,7 @@ const Program = () => {
               </div>
 
               <div className="Program__agenda-row">
-                <div className="Program__agenda-time ">16:15 - 16:30</div>
+                <div className="Program__agenda-time ">16:15 &#8212; 16:30</div>
                 <p className="Program__agenda-description">
                   {t('PROGRAM.SCHEDULE.11')}
                 </p>
@@ -124,7 +124,7 @@ const Program = () => {
 
               <div className="Program__agenda-row">
                 <div className="Program__agenda-time Program__agenda-time--gray">
-                  16:30 - 17:00
+                  16:30 &#8212; 17:00
                 </div>
                 <p className="Program__agenda-description">
                   {t('PROGRAM.SCHEDULE.12')}
@@ -132,7 +132,7 @@ const Program = () => {
               </div>
 
               <div className="Program__agenda-row">
-                <div className="Program__agenda-time ">17:00 - 17:15</div>
+                <div className="Program__agenda-time ">17:00 &#8212; 17:15</div>
                 <p className="Program__agenda-description">
                   {t('PROGRAM.SCHEDULE.13')}
                 </p>
@@ -140,7 +140,7 @@ const Program = () => {
 
               <div className="Program__agenda-row">
                 <div className="Program__agenda-time Program__agenda-time--gray">
-                  17:15 - 17:30
+                  17:15 &#8212; 17:30
                 </div>
                 <p className="Program__agenda-description">
                   {t('PROGRAM.SCHEDULE.14')}
@@ -148,7 +148,7 @@ const Program = () => {
               </div>
 
               <div className="Program__agenda-row">
-                <div className="Program__agenda-time ">17:30 - 18:00</div>
+                <div className="Program__agenda-time ">17:30 &#8212; 18:00</div>
                 <p className="Program__agenda-description">
                   {t('PROGRAM.SCHEDULE.15')}
                 </p>
@@ -156,7 +156,7 @@ const Program = () => {
 
               <div className="Program__agenda-row">
                 <div className="Program__agenda-time Program__agenda-time--gray">
-                  18:00 - 18:30
+                  18:00 &#8212; 18:30
                 </div>
                 <p className="Program__agenda-description">
                   {t('PROGRAM.SCHEDULE.16')}
@@ -164,7 +164,7 @@ const Program = () => {
               </div>
 
               <div className="Program__agenda-row">
-                <div className="Program__agenda-time ">18:30 - 21:00</div>
+                <div className="Program__agenda-time ">18:30 &#8212; 21:00</div>
                 <p className="Program__agenda-description">
                   {t('PROGRAM.SCHEDULE.17')}
                 </p>
@@ -172,7 +172,7 @@ const Program = () => {
 
               <div className="Program__agenda-row">
                 <div className="Program__agenda-time Program__agenda-time--gray">
-                  21:00 - 02:00
+                  21:00 &#8212; 02:00
                 </div>
                 <p className="Program__agenda-description">
                   {t('PROGRAM.SCHEDULE.18')}
