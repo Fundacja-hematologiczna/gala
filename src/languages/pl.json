@@ -1,11 +1,11 @@
 {
   "MENU_OPTIONS": {
-    "MAIN_PAGE": "strona główna",
+    "MAIN_PAGE": "strona\u00a0główna",
     "REGISTRATION": "rejestracja",
     "PLACE": "miejsce",
     "PROGRAM": "program",
     "AUCTION": "aukcja",
-    "CONTRIBUTORS": "dla darczyńców",
+    "CONTRIBUTORS": "dla\u00a0darczyńców",
     "GALLERY": "galeria",
     "CONTACT": "kontakt"
   },
@@ -119,7 +119,7 @@
   },
   "AUCTION": {
     "HEADER_TITLE": "Aukcja",
-    "HEADER_BODY": "Nasza charytatywna Aukcja to festiwal dobroczynności i bezinteresowności. Wspaniali ludzie o wielkich sercach dzielą się z nami tym, co najlepsze. Wśród artefaktów wystawianych na Aukcję znaleźć można m.in. dzieła sztuki współczesnej, wzornictwo użytkowe, rękodzieło, przedmioty codziennego użytku, przedmioty kolekcjonerskie czy vouchery na niezapomniane przeżycia i relaksujące chwile.",
+    "HEADER_BODY": "Nasza charytatywna Aukcja to festiwal dobroczynności i bezinteresowności. Wspaniali ludzie o wielkich sercach dzielą się z nami tym, co najlepsze. Wśród artefaktów wystawianych na Aukcję znaleźć można \n m.in. dzieła sztuki współczesnej, wzornictwo użytkowe, rękodzieło, przedmioty codziennego użytku, przedmioty kolekcjonerskie czy vouchery na niezapomniane przeżycia i relaksujące chwile.",
     "HEADER_AWAITING": "Znajdź coś dla siebie!",
     "ITEMS_TITLE": "Lista przedmiotów"
   },
