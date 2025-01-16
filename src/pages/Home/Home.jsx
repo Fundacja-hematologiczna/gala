@@ -74,13 +74,11 @@ const Home = () => {
               <p className="sectionWelcome-date">
                 {t('MAIN_PAGE.HEADER_DATE')}
               </p>
-
               <p
                 className="sectionWelcome-description"
                 style={{ whiteSpace: 'pre-line' }}>
                 {t('MAIN_PAGE.HEADER_BODY')}
               </p>
-
               <div className="Home__sectionWelcome-button">
                 <Button
                   buttonLabel={t('MAIN_PAGE.HEADER_BUTTON')}
@@ -92,7 +90,6 @@ const Home = () => {
             </div>
           </div>
         </section>
-
         <section className="home__sectionWelcomeMobile">
           <div className="home__sectionWelcomeMobile__buttons">
             <Button
@@ -117,20 +114,17 @@ const Home = () => {
           </div>
           <div className="home__sectionWelcomeMobile-video"></div>
         </section>
-
         <section className="Home__section2">
           <div className="container Home__section2-container">
             <div className="Home__section2__personCard">
               <div className="Home__section2__personCard-image"></div>
               <p className="Home__section2__personCard-name">
-                {' '}
-                dr Michał Witkowski{' '}
+                dr Michał Witkowski
               </p>
               <p className="Home__section2__personCard-description">
                 {t('MAIN_PAGE.CEO_POSITION')}
               </p>
             </div>
-
             <div className="Home__section2__grayCard">
               <img
                 className="Home__section2__grayCard-item Home__section2__grayCard-item--1"
@@ -145,17 +139,13 @@ const Home = () => {
               <h2 className="Home__section2__grayCard-title">
                 {t('MAIN_PAGE.CEO_TITLE')}
                 <p className="Home__section2__grayCard-smallDesctription">
-                  <p>&nbsp;</p>
-                  {t('MAIN_PAGE.CEO_BODY.1')}
-                  <p>&nbsp;</p>
-                  {t('MAIN_PAGE.CEO_BODY.2')}
-                  <p>&nbsp;</p>
+                  <p>&nbsp;</p> {t('MAIN_PAGE.CEO_BODY.1')} <p>&nbsp;</p>
+                  {t('MAIN_PAGE.CEO_BODY.2')} <p>&nbsp;</p>
                 </p>
                 <p className="Home__section2__grayCard-smallDesctription--bold">
                   {t('MAIN_PAGE.CEO_BODY.3')}
                 </p>
               </h2>
-
               <div className="Home__section2__grayCard__personCard">
                 <div className="Home__section2__grayCard__personCard-image"></div>
                 <div className="Home__section2__grayCard__personCard-text">
@@ -167,7 +157,6 @@ const Home = () => {
               </div>
             </div>
           </div>
-
           <div className="Home__section2__cards">
             <Card
               iconLink={'card1-icon.svg'}
@@ -196,7 +185,6 @@ const Home = () => {
             />
           </div>
         </section>
-
         <section className="Home__donateItem">
           <div className="Home__donateItem-container">
             <div className="Home__donateItem-image"></div>
@@ -207,7 +195,6 @@ const Home = () => {
               <p className="Home__donateItem-description">
                 {t('MAIN_PAGE.AUCTION_ITEM_BODY')}
               </p>
-
               <div className="Home__donateItem__buttons">
                 <button
                   className="Home__donateItem__buttons-button"
@@ -254,9 +241,10 @@ const Home = () => {
           </div>
         </section>
         <section className="Home-atrakcje">
-          <div className="Home-atrakcje-img"></div>
+          <div className="Home-atrakcje-img">
+            <img src={t('MAIN_PAGE.IMAGE')} alt="" />
+          </div>
         </section>
-
         <section className="Home__partners">
           <div className="Home__partners-Backgroundimg">
             <div className="Home__partners-container">
@@ -274,7 +262,6 @@ const Home = () => {
               </div>
             </div>
           </div>
-
           <h2 className="Home__partners-title">
             {t('MAIN_PAGE.DONORS_PARTNERS')}
           </h2>
