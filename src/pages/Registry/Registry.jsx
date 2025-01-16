@@ -12,6 +12,7 @@ const Registry = () => {
   const [isVerified, setIsVerified] = useState(false);
   const [captchaSize, setCaptchaSize] = useState('normal');
   const hCaptchaSiteKey = import.meta.env.VITE_HCAPTCHA_SITE_KEY;
+  const p24Images = Array.from({ length: 25 }, (_, i) => i + 1);
 
   const [formData, setFormData] = useState({
     name: '',
@@ -180,7 +181,7 @@ const Registry = () => {
           </p>
 
           <div className="Registry__donate__buttons">
-            {[10, 20, 50, 100, 250, 500].map((amount) => (
+            {[100, 200, 250, 400, 500, 1000].map((amount) => (
               <button
                 key={amount}
                 onClick={() => handleClick(amount)}
@@ -197,6 +198,31 @@ const Registry = () => {
           <button className="Registry__form-button" type="button">
             Przekaż darowiznę
           </button>
+        </div>
+      </section>
+
+      <section className="Registry__logos">
+        <div className="container">
+          <div className="Registry__logos__p24">
+            <p className="Registry__logos__p24-text">Płatności obsługuje:</p>
+            <img
+              className="Registry__logos__p24-img"
+              src="Przelewy24-logo/P24-logo.png"
+              alt="logo-p24"
+            />
+          </div>
+
+          <div className="Registry__logos__paymentImages">
+            {p24Images.map((i) => (
+              <img
+                className="Registry__logos__paymentImages-img"
+                src={`./Przelewy24-logo/P24-method-${i}.png`}
+                alt={`p24-method ${i}`}
+                key={`p24-method img ${i}`}
+                loading="lazy"
+              />
+            ))}
+          </div>
         </div>
       </section>
     </main>
