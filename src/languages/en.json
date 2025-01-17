@@ -63,10 +63,20 @@
     "FORM_INDEX": "Postal Code *",
     "FORM_CITY": "City *",
     "FORM_RIGHTS": {
-      "1": "I accept the provisions of the Privacy Policy and Event Regulations. *",
+      "1": {
+        "1": "I accept the provisions of the ",
+        "2": "Privacy Policy",
+        "3": " and ",
+        "4": "Event Regulations",
+        "5": " . *"
+      },
       "2": "I consent to the processing of my personal data in the scope of my image captured during the Charity Gala for internal and external communication and marketing activities carried out by the Foundation. *",
       "3": "I consent to the processing of my personal data in the scope of contact details for the purpose of informing about future events and statutory activities of the Foundation."
     },
+    "DONATE_TITLE": "Support our initiative",
+    "DONATE_DESCRIPTION": "By making a donation, you help support the statutory goals of the Foundation.",
+    "DONATE_BUTTON": "Make a donation",
+    "PAYMENTSUPPORT": "Payments are processed by:",
     "SUPPORT_TITLE": "Support Our Initiative",
     "SUPPORT_FULLNAME": "Full Name *",
     "SUPPORT_EMAIL": "Email Address *",

@@ -2,6 +2,7 @@ import '../../styles/index.scss';
 import './registry.scss';
 import HCaptcha from '@hcaptcha/react-hcaptcha';
 import { useState, useRef, useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
 import Checkbox from '../../components/Checkbox/Checkbox';
 import { useTranslation } from 'react-i18next';
 import { addUser } from '../../api/services';
@@ -140,7 +141,32 @@ const Registry = () => {
               ))}
             </div>
 
-            {[1, 2, 3].map((item) => (
+            <div className="Registry__form__checkbox">
+              <Checkbox />
+              <p className="Registry__form__checkbox-description">
+                {t(`REGISTRATION.FORM_RIGHTS.1.1`)}
+
+                <NavLink
+                  className="Registry__form__checkbox-description 
+                  Registry__form__checkbox-description--link"
+                  to={'/klauzula-informacyjna'}>
+                  {t(`REGISTRATION.FORM_RIGHTS.1.2`)}
+                </NavLink>
+
+                {t(`REGISTRATION.FORM_RIGHTS.1.3`)}
+
+                <NavLink
+                  className="Registry__form__checkbox-description 
+                  Registry__form__checkbox-description--link"
+                  to={'/regulamin'}>
+                  {t(`REGISTRATION.FORM_RIGHTS.1.4`)}
+                </NavLink>
+
+                {t(`REGISTRATION.FORM_RIGHTS.1.5`)}
+              </p>
+            </div>
+
+            {[2, 3].map((item) => (
               <div className="Registry__form__checkbox" key={item}>
                 <Checkbox />
                 <p className="Registry__form__checkbox-description">
@@ -174,10 +200,12 @@ const Registry = () => {
 
       <section className="Registry__donate">
         <div className="container Registry__donate-container">
-          <h2 className="Registry__donate-title">Wesprzyj naszą inicjatywę</h2>
+          <h2 className="Registry__donate-title">
+            {' '}
+            {t('REGISTRATION.DONATE_TITLE')}
+          </h2>
           <p className="Registry__donate-description">
-            Przekazując darowiznę, pomagasz w realizacji zadań statutowych
-            Fundacji.
+            {t('REGISTRATION.DONATE_DESCRIPTION')}
           </p>
 
           <div className="Registry__donate__buttons">
@@ -196,7 +224,7 @@ const Registry = () => {
           </div>
 
           <button className="Registry__form-button" type="button">
-            Przekaż darowiznę
+            {t('REGISTRATION.DONATE_BUTTON')}
           </button>
         </div>
       </section>
@@ -204,7 +232,9 @@ const Registry = () => {
       <section className="Registry__logos">
         <div className="container">
           <div className="Registry__logos__p24">
-            <p className="Registry__logos__p24-text">Płatności obsługuje:</p>
+            <p className="Registry__logos__p24-text">
+              {t('REGISTRATION.PAYMENTSUPPORT')}
+            </p>
             <img
               className="Registry__logos__p24-img"
               src="Przelewy24-logo/P24-logo.png"
