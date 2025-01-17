@@ -8,6 +8,13 @@
     width: 100%;
     padding: 14px 17px 0;
 
+    background-image: url('/registration-latki.jpg');
+    background-position: center 585px;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+   // background-color: red;
+
     @include device (tablet) {
         padding: 14px 5px;
     }
@@ -109,6 +116,7 @@
 
         &-container {
             border: 3px solid #345B55;
+            background-color: #FFFFFF;
             border-radius: 20px;
             padding: 89px 95px 40px;
 
@@ -210,6 +218,7 @@
                     font-weight: 500;
                     line-height: 21px;
                     text-align: left;
+                    text-decoration: underline;
 
                 }
 
@@ -256,6 +265,7 @@
             transition: 0.2s;
             display: flex;
             margin: 0 auto;
+            justify-content: center;
 
             &:hover {
                 scale: 103%;
@@ -273,6 +283,7 @@
 
         &-container {
             border: 3px solid #345B55;
+            background-color: #FFFFFF;
             border-radius: 20px;
             padding: 89px 84.5px 40px;
 
@@ -356,6 +367,48 @@
     }
 
 
+    &__logos {
+        padding: 0 20px;
 
+        &__p24 {
+            display: flex;
+            align-items: center;
+            height: 60px;
+            border-bottom: 1px solid #345B55;
+            margin-bottom: 17px;
+
+            &-text {
+                font-family: Poppins;
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 30px;
+                text-align: left;
+                text-underline-position: from-font;
+                text-decoration-skip-ink: none;
+                margin-right: 20px;
+
+            }
+
+            &-img {
+                margin-bottom: 20px;
+            }
+        }
+
+        &__paymentImages {
+           // display: flex;
+           display: flex;
+           flex-wrap: wrap;
+           row-gap: 20px;
+           column-gap: 30px;
+           align-items: center;
+           justify-content: center;
+           margin-bottom: 51px;
+
+           &-img {
+            height: 42px;
+            width: auto;
+           }
+        }
+    }
 
 }
