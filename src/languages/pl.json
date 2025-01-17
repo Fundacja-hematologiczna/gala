@@ -63,10 +63,20 @@
     "FORM_INDEX": "Kod pocztowy *",
     "FORM_CITY": "Miasto *",
     "FORM_RIGHTS": {
-      "1": "Akceptuję postanowienia Regulaminu prywatności i Regulaminu imprezy. *",
+      "1": {
+        "1": "Akceptuję postanowienia ",
+        "2": "Regulaminu prywatności",
+        "3": " i ",
+        "4": "Regulaminu imprezy",
+        "5": ". *"  
+      },
       "2": "Wyrażam zgodę na przetwarzanie moich danych osobowych w zakresie mojego wizerunku utrwalonego podczas Gali Charytatywnej dla celów prowadzonych przez Fundację wewnętrznych i zewnętrznych działań komunikacyjnych i marketingowych. *",
       "3": "Wyrażam zgodę na przetwarzanie moich danych osobowych w zakresie danych kontaktowych w celu informowania o przyszłych wydarzeniach oraz działalności statutowej Fundacji."
     },
+    "DONATE_TITLE": "Wesprzyj naszą inicjatywę",
+    "DONATE_DESCRIPTION": "Przekazując darowiznę, pomagasz w realizacji zadań statutowych Fundacji.",
+    "DONATE_BUTTON": "Przekaż darowiznę",
+    "PAYMENTSUPPORT": "Płatności obsługuje:",
     "SUPPORT_TITLE": "Wesprzyj naszą inicjatywę",
     "SUPPORT_FULLNAME": "Imię i Nazwisko *",
     "SUPPORT_EMAIL": "Adres e-mail *",
