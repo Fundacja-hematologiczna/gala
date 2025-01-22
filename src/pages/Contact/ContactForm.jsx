@@ -59,6 +59,7 @@ const ContactForm = ({ onChange, onSubmit, formData }) => {
                 name="name"
                 value={formData.name}
                 onChange={onChange}
+                title="Fill is required"
                 required
               />
             </div>
@@ -73,6 +74,7 @@ const ContactForm = ({ onChange, onSubmit, formData }) => {
                 name="email"
                 value={formData.email}
                 onChange={onChange}
+                title="Fill is required"
                 required
               />
             </div>
@@ -86,6 +88,7 @@ const ContactForm = ({ onChange, onSubmit, formData }) => {
                 name="message"
                 value={formData.message}
                 onChange={onChange}
+                title="Fill is required"
                 required
               />
             </div>
