@@ -661,7 +661,7 @@
 
 .Home-atrakcje {
   &-img {
-    width: 100dvw;
+    width: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -670,7 +670,7 @@
     max-width: 1440px;
 
     img {
-      width: 100dvw;
+     width: 100%;
     }
   }
 }
