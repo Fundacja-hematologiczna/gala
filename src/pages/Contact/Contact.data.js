@@ -18,6 +18,6 @@ export const contactData = [
     href: 'https://www.google.com/maps?q=ul.+Bratysławska+52,+92-112+Łódź',
     imgSrc: './contact-place-icon.svg',
     imgAlt: 'place-icon',
-    title: 'ul. Bratysławska 52, 94-112 Łódź',
+    title: 'ul. Pabianicka 62, 93-513 Łódź',
   },
 ];
