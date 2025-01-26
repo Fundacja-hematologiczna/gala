@@ -5,6 +5,7 @@ import ContactBanner from './ContactBanner';
 import ContactForm from './ContactForm';
 import ContactInfo from './ContactInfo';
 import ContactFormAccepted from './ContactFormAccepted/ContactFormAccepted';
+import useScrollLock from '../../hooks/useScrollLock.hook';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -13,6 +14,8 @@ const Contact = () => {
     message: '',
   });
   const [isAcknowledgementOpen, setIsAcknowledgementOpen] = useState(false);
+
+  useScrollLock(isAcknowledgementOpen);
 
   const handleChange = (e) => {
     setFormData({
@@ -24,7 +27,6 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    console.log('Przyjęte');
     setFormData({
       name: '',
       email: '',
