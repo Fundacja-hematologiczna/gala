@@ -68,7 +68,7 @@ const Gallery = () => {
         setLoading(false);
       })
       .catch((e) => {
-        console.log('error:', e);
+        throw alert('error:', e);
       });
   }, []);
 

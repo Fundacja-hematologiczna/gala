@@ -23,8 +23,6 @@ export const Slider = () => {
           modules={[Autoplay]}
           spaceBetween={50}
           slidesPerView={5}
-          onSlideChange={() => console.log('slide change')}
-          onSwiper={(swiper) => console.log(swiper)}
           breakpoints={{
             320: {
               slidesPerView: 1,
@@ -64,8 +62,6 @@ export const Slider = () => {
           modules={[Autoplay]}
           spaceBetween={50}
           slidesPerView={5}
-          onSlideChange={() => console.log('slide change')}
-          onSwiper={(swiper) => console.log(swiper)}
           breakpoints={{
             320: {
               slidesPerView: 1,

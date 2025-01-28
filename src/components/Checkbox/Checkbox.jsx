@@ -6,7 +6,6 @@ const Checkbox = () => {
 
   const handleCheckboxChange = () => {
     setIsChecked(!isChecked);
-    console.log('clicked');
   };
   return (
     <>

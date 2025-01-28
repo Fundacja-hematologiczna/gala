@@ -50,8 +50,6 @@ const Registry = () => {
     }
 
     addUser(formData);
-
-    console.log('siema');
   };
 
   const handleClick = (pln) => setDonate(pln);
