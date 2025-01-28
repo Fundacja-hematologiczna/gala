@@ -11,6 +11,7 @@ const ContactInfo = () => {
         <div className="Contact__details-cardsWrapper">
           {contactData.map((info) => (
             <a
+              title={t(info.hoverText)}
               key={info.name}
               className={`Contact__details__card Contact__details__card--${info.name}`}
               href={info.href}

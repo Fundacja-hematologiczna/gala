@@ -17,7 +17,7 @@ const HomePartners = () => {
             <Button
               buttonLabel={t('MAIN_PAGE.WAITING_BUTTON')}
               backgroundColor={'#B7C274'}
-              navigateTo={'/about'}
+              navigateTo={'/rejestracja'}
               arrow={true}
             />
           </div>
