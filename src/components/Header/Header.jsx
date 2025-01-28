@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import './header.scss';
 import { menuOptions } from './header.data';
 import BurgerMenu from './BurgerMenu/BurgerMenu';
@@ -12,6 +12,7 @@ const Header = () => {
   const { width } = useWindowSize();
   const [isActive, setIsActive] = useLocalStorage('navigation', 'home');
   const [isBurgerMenuActive, setIsBurgerMenuActive] = useState(false);
+  const { pathname } = useLocation();
   const { t } = useTranslation();
 
   const handleClick = (page) => {
@@ -32,6 +33,10 @@ const Header = () => {
       setIsBurgerMenuActive(false);
     }
   }, [width]);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   return (
     <>
