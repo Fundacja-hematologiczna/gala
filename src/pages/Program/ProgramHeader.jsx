@@ -18,7 +18,7 @@ const ProgramHeader = () => {
             <Button
               buttonLabel={t('PROGRAM.HEADER_BUTTON')}
               backgroundColor={'#B7C274'}
-              navigateTo={'/about'}
+              navigateTo={'/rejestracja'}
             />
           </div>
         </div>

@@ -206,7 +206,7 @@ const Registry = () => {
             {t('REGISTRATION.DONATE_DESCRIPTION')}
           </p>
 
-          <div className="Registry__donate__buttons">
+          <div className="Registry__donate__buttons" id="platnosci">
             {[100, 200, 250, 400, 500, 1000].map((amount) => (
               <button
                 key={amount}

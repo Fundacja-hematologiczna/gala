@@ -13,7 +13,7 @@ const PlaceJoinLabel = () => {
           <Button
             buttonLabel={t('PLACE.JOIN_BUTTON')}
             backgroundColor={'#FFFFFF'}
-            navigateTo={'/about'}
+            navigateTo={'/rejestracja'}
           />
         </div>
       </div>

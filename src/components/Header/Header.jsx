@@ -48,7 +48,9 @@ const Header = () => {
               <li className="nav__item" key={option.name}>
                 <NavLink
                   onClick={() => handleClick(option.name)}
-                  className={`nav-link ${isActive === option.name ? 'nav-link--active' : ''}`}
+                  className={({ isActive: act }) =>
+                    `nav-link ${act ? 'nav-link--active' : ''}`
+                  }
                   to={option.to}>
                   {t(option.title)}
                 </NavLink>
