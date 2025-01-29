@@ -29,7 +29,7 @@ const PlaceMapContainer = ({ onClick }) => {
             </p>
             <p data-empty>&nbsp;</p>
             <p className="Place__map-card-descriptionBold">E-mail:</p>
-            <p>kontakt@fundacja.hematologiczna.org</p>
+            <p>gala@fundacja.hematologiczna.org</p>
           </div>
         </div>
 
