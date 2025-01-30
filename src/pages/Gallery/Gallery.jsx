@@ -38,7 +38,7 @@ const Gallery = () => {
     );
   };
 
-  const handleClickNextPhoto = () => {
+  const handleClickNextImg = () => {
     const imgIndex = images[isActive].indexOf(chosenImage) + 1;
 
     if (imgIndex > images[isActive].length - 1) {
@@ -90,6 +90,19 @@ const Gallery = () => {
     };
   }, [loading, images, isActive, visibleImages]);
 
+  dialogRef.current?.addEventListener('keyup', (e) => {
+    switch (e.key) {
+      case 'ArrowRight':
+        handleClickNextImg();
+        break;
+      case 'ArrowLeft':
+        handleClickPrevImg();
+        break;
+      default:
+        break;
+    }
+  });
+
   const handleClick = (year) => {
     setIsActive(year);
     setVisibleImages(10);
@@ -129,26 +142,24 @@ const Gallery = () => {
 
           <div className="Gallery__pictures__grid">
             {!loading &&
-              images[isActive]
-                .slice(0, visibleImages) // Wyświetlaj tylko widoczne obrazy
-                .map((image, i) => (
-                  <div className="Gallery__pictures__grid-item" key={image}>
-                    <img
-                      src={image}
-                      onClick={() => handleClickShowGallery(i)}
-                      alt={`image-${i}`}
-                      className="Gallery__pictures__grid-item--img"
-                      loading="lazy" // Lazy loading
-                    />
-                  </div>
-                ))}
+              images[isActive].slice(0, visibleImages).map((image, i) => (
+                <div className="Gallery__pictures__grid-item" key={image}>
+                  <img
+                    src={image}
+                    onClick={() => handleClickShowGallery(i)}
+                    alt={`image-${i}`}
+                    className="Gallery__pictures__grid-item--img"
+                    loading="lazy" // Lazy loading
+                  />
+                </div>
+              ))}
           </div>
 
           <GalleryZoomed
             dialogRef={dialogRef}
             onClickClose={handleClickCloseGallery}
             chosenImage={chosenImage}
-            onClickNextImage={handleClickNextPhoto}
+            onClickNextImage={handleClickNextImg}
             onClickPrevImage={handleClickPrevImg}
           />
         </div>

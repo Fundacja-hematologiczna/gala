@@ -24,7 +24,7 @@ const Footer = () => {
                 93-513 Łódź, ul. Pabianicka 62
               </p>
               <p className="Footer__content-contact-description">
-                kontakt@fundacja.hematologiczna.org
+                gala@fundacja.hematologiczna.org
               </p>
               <p className="Footer__content-contact-description">730-118-500</p>
             </div>
@@ -56,14 +56,14 @@ const Footer = () => {
 
             <div className="Footer__content-icons">
               <a
-                href="https://www.example1.com"
+                href="https://www.facebook.com/Fundacja.Hematologiczna/"
                 target="_blank"
                 rel="noopener noreferrer">
                 <img src="./footer-icon-fb.svg" alt="facebook" />
               </a>
 
               <a
-                href="https://www.example1.com"
+                href="https://www.youtube.com/@FundacjaHematologiczna"
                 target="_blank"
                 rel="noopener noreferrer">
                 <img src="./footer-icon-yt.svg" alt="youtube" />

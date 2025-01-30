@@ -19,12 +19,12 @@
       background-repeat: no-repeat;
       width: 446px;
       height: 76px;
-      background-image: url('/footer-logo.png');
+      background-image: url('/footer-logo.webp');
 
       @include device(mobile) {
         height: 52px;
         max-width: 279px;
-        background-image: url('/stopka-logo-mobile.png');
+        background-image: url('/stopka-logo-mobile.webp');
       }
     }
   }

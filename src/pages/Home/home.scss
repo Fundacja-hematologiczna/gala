@@ -49,8 +49,8 @@
   height: 867px;
   border: 1px solid white;
   box-sizing: border-box;
-  // background-image: url('/VIDEO.png');
-  // background-image: url('/test.jpg');
+  // background-image: url('/VIDEO.webp');
+  // background-image: url('/test.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -184,7 +184,7 @@
   }
 
   &-video {
-    background-image: url('/VIDEO-mobile.png');
+    background-image: url('/VIDEO-mobile.webp');
     background-position: center;
     width: 100%;
     aspect-ratio: 390/223;
@@ -229,7 +229,7 @@
     }
 
     &-image {
-      background-image: url('/person.jpg');
+      background-image: url('/person.webp');
       width: 250px;
       height: 250px;
       background-size: cover;
@@ -415,7 +415,7 @@
     }
 
     &-image {
-      background-image: url('/person.jpg');
+      background-image: url('/person.webp');
       width: 130px;
       height: 130px;
       background-size: cover;
@@ -493,7 +493,7 @@
   }
 
   &-image {
-    background-image: url('/spotkanieLudowe.jpg');
+    background-image: url('/spotkanieLudowe.webp');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -670,7 +670,7 @@
     max-width: 1440px;
 
     img {
-     width: 100%;
+      width: 100%;
     }
   }
 }
@@ -683,7 +683,7 @@
   &-Backgroundimg {
     max-width: 1440px;
     width: 100%;
-    background-image: url('/czekamyNaCiebie.jpg');
+    background-image: url('/czekamyNaCiebie.webp');
     height: 470px;
     margin: 0 auto;
     background-position: center;

@@ -20,10 +20,10 @@ const Home = () => {
   };
 
   const welcomeSectionPhotos = [
-    '/gala/VIDEO.png',
-    '/gala/aukcje.jpg',
-    '/gala/place.jpg',
-    '/gala/program.jpg',
+    '/gala/VIDEO.webp',
+    '/gala/aukcje.webp',
+    '/gala/place.webp',
+    '/gala/program.webp',
   ];
   const [photoChanging, setPhotoChanging] = useState(true);
   const [welcomeSectionImage1, setWelcomeSectionImage1] = useState(0);

@@ -1,0 +1,56 @@
+.Cookies {
+  animation: open 1s ease;
+  align-items: center;
+  background-color: rgb(93, 124, 119);
+  color: white;
+  display: flex;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 400;
+  inset: auto 0 0 auto;
+  justify-content: space-between;
+  padding: 8px 16px;
+  position: fixed;
+  width: 100dvw;
+  z-index: 500;
+
+  @media (width < 640px) {
+    flex-direction: column;
+    gap: 16px;
+    padding: 12px 24px;
+  }
+
+  &--closing {
+    animation: close 1s ease;
+  }
+
+  &--hidden {
+    display: none;
+  }
+
+  &__link {
+    color: white;
+  }
+
+  &__button {
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 100dvw;
+    cursor: pointer;
+  }
+}
+
+@keyframes open {
+  0% {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes close {
+  100% {
+    transform: translateY(100%);
+  }
+}
