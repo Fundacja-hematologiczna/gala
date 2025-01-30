@@ -44,7 +44,7 @@
     "PLACE_BODY": "Miejsce",
     "PLACE_TITLE": "Na wyjątkowość Nieborowa wpływa nie tylko doskonale zachowany pałac, ale także piękny, barokowy ogród w stylu francuskim. To miejsce zachwyca precyzyjnie zaplanowaną kompozycją, stanowiąc doskonałe połączenie harmonii natury i ludzkiego kunsztu. ",
     "PLACE_BUTTON": "Sprawdź dojazd",
-    "IMAGE": "/gala/atrakcjeDlaUczestnikow.png",
+    "IMAGE": "/gala/atrakcjeDlaUczestnikow.webp",
     "WAITING_TITLE_1": "Czekamy na Ciebie!",
     "WAITING_TITLE_2": "Dołącz do nas!",
     "WAITING_BUTTON": "Zgłoś swój udział",
@@ -133,7 +133,9 @@
     "HEADER_TITLE": "Aukcja",
     "HEADER_BODY": "Nasza charytatywna Aukcja to festiwal dobroczynności i bezinteresowności. Wspaniali ludzie o wielkich sercach dzielą się z nami tym, co najlepsze. Wśród artefaktów wystawianych na Aukcję znaleźć można \n m.in. dzieła sztuki współczesnej, wzornictwo użytkowe, rękodzieło, przedmioty codziennego użytku, przedmioty kolekcjonerskie czy vouchery na niezapomniane przeżycia i relaksujące chwile.",
     "HEADER_AWAITING": "Znajdź coś dla siebie!",
-    "ITEMS_TITLE": "Lista przedmiotów"
+    "ITEMS_TITLE": "Lista przedmiotów",
+    "ITEMS_LABEL_TITLE": "Zobacz listę przedmiotow",
+    "ITEMS_LABEL_BUTTON": "Katalog aukcji"
   },
   "CONTRIBUTORS": {
     "HEADER_TITLE": "Dla Darczyńców",
@@ -165,6 +167,11 @@
     "ACCEPT_TITLE": "Dziękujemy!",
     "ACCEPT_BODY": "Twoja wiadomość została wysłana. Spodziewaj się od nas e—maila potwierdzającego.",
     "ACCEPT_BUTTON": "Powrót do formularza"
+  },
+  "COOKIES": {
+    "TITLE": "Ta strona korzysta z ciasteczek, aby świadczyć usługi na najwyższym poziomie. Dalsze korzystanie ze strony oznacza, że zgadzasz się na ich użycie. Zapoznaj się z naszą ",
+    "LINK": "polityką prywatności",
+    "BUTTON": "Potwierdzam"
   },
   "FOOTER": {
     "CONTACT": "Kontakt",

@@ -13,17 +13,17 @@
   &-container-top {
     padding: 14px 17px 0;
 
-    @include device (tablet) {
+    @include device(tablet) {
       padding: 14px 5px;
     }
 
-    @include device (mobile) {
+    @include device(mobile) {
       padding: 14px 0px;
     }
   }
 
   &__topContainer {
-    background-image: url('/place.jpg');
+    background-image: url('/place.webp');
     width: 100%;
     min-height: 475px;
     background-position: center;
@@ -41,13 +41,11 @@
     position: relative;
     z-index: 1;
 
-    @include device (tablet) {
+    @include device(tablet) {
       border-radius: 22px;
     }
 
-   
-  
-    @include device (mobile) {
+    @include device(mobile) {
       border-radius: 0;
       margin-bottom: 35px;
       padding: 82px 20px 80px;
@@ -57,19 +55,18 @@
     &-greenLayer {
       background-color: #345b55;
       opacity: 85%;
-     
+
       border-radius: 49px;
       position: absolute;
       top: 0px;
-      left:0px;
-      right:0px;
+      left: 0px;
+      right: 0px;
       bottom: 0px;
       z-index: 2;
 
-      @include device (tablet) {
+      @include device(tablet) {
         border-radius: 22px;
       }
-      
 
       @media (width < 640px) {
         padding: 96px 20px 20px;
@@ -194,7 +191,7 @@
     }
 
     &-img {
-      background-image: url('/place-map.jpg');
+      background-image: url('/place-map.webp');
       height: 100%;
       width: 100%;
       background-position: center;

@@ -10,12 +10,12 @@ export const HomeWelcomeMobile = () => {
         <Button
           buttonLabel={t('MAIN_PAGE.MOBILE_BUTTON_1')}
           backgroundColor={'#B7C274'}
-          navigateTo={'/about'}
+          navigateTo={'/rejestracja'}
         />
         <Button
           buttonLabel={t('MAIN_PAGE.MOBILE_BUTTON_2')}
           backgroundColor={'#FFFFFF'}
-          navigateTo={'/about'}
+          navigateTo={'/rejestracja'}
           border={'1px solid #000000'}
         />
       </div>

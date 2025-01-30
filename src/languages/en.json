@@ -44,7 +44,7 @@
     "PLACE_BODY": "Location",
     "PLACE_TITLE": "The uniqueness of Nieborów lies not only in its perfectly preserved palace but also in its beautiful Baroque garden in the French style. This place enchants with its meticulously designed composition, offering a perfect blend of natural harmony and human craftsmanship.",
     "PLACE_BUTTON": "Check directions",
-    "IMAGE": "/gala/atrakcjeDlaUczestnikow(eng).png",
+    "IMAGE": "/gala/atrakcjeDlaUczestnikow(eng).webp",
     "WAITING_TITLE_1": "We are waiting for you!",
     "WAITING_TITLE_2": "Join us!",
     "WAITING_BUTTON": "Participate",
@@ -133,7 +133,9 @@
     "HEADER_TITLE": "Auction",
     "HEADER_BODY": "Our charity Auction is a festival of generosity and selflessness. Wonderful people with big hearts share the best they have with us. Among the artifacts presented at the Auction, you can find contemporary art, utility design, handicrafts, everyday items, collectibles, and vouchers for unforgettable experiences and relaxing moments.",
     "HEADER_AWAITING": "Find something for yourself!",
-    "ITEMS_TITLE": "List of Items"
+    "ITEMS_TITLE": "List of Items",
+    "ITEMS_LABEL_TITLE": "Look item list",
+    "ITEMS_LABEL_BUTTON": "Auction catalog"
   },
   "CONTRIBUTORS": {
     "HEADER_TITLE": "For Contributors",
@@ -165,6 +167,11 @@
     "ACCEPT_TITLE": "Thank you!",
     "ACCEPT_BODY": "Your message has been sent. Expect a confirmation email from us.",
     "ACCEPT_BUTTON": "Return to form"
+  },
+  "COOKIES": {
+    "TITLE": "This website uses cookies to provide services at the highest level. Continuing to use the site means you agree to their use. Please review our ",
+    "LINK": "privacy policy",
+    "BUTTON": "Accept"
   },
   "FOOTER": {
     "CONTACT": "Contact",

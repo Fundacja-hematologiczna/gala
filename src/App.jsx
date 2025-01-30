@@ -13,6 +13,7 @@ import Footer from './components/Footer/Footer';
 import NotFound from './pages/NotFound';
 
 import { Routes, Route, Outlet, HashRouter } from 'react-router-dom';
+import Cookies from './components/Cookies/Cookies';
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
         </Routes>
 
         <Footer />
+        <Cookies />
       </HashRouter>
     </>
   );
