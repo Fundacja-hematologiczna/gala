@@ -13,7 +13,6 @@
   background-size: contain;
   background-repeat: no-repeat;
 
-  // background-color: red;
 
   @include device(tablet) {
     padding: 14px 5px;
@@ -348,7 +347,7 @@
       align-items: center;
       height: 60px;
       border-bottom: 1px solid #345b55;
-      margin-bottom: 17px;
+      margin-bottom: 30px;
 
       &-text {
         font-family: Poppins;
@@ -363,6 +362,7 @@
 
       &-img {
         margin-bottom: 20px;
+        height: 50px;
       }
     }
 
@@ -377,7 +377,8 @@
       margin-bottom: 51px;
 
       &-img {
-        height: 42px;
+        // height: 42px;
+        height: 32px;
         width: auto;
       }
     }

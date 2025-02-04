@@ -17,7 +17,7 @@ export const contactData = [
   },
   {
     name: 'place',
-    href: 'https://www.google.com/maps?q=ul.+Bratysławska+52,+92-112+Łódź',
+    href: 'https://www.google.com/maps?q=ul.+Pabianicka+62,+93-513+Łódź',
     imgSrc: './contact-place-icon.svg',
     imgAlt: 'place-icon',
     title: 'ul. Pabianicka 62, 93-513 Łódź',
