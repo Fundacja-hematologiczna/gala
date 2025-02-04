@@ -9,10 +9,10 @@ export const contactData = [
   },
   {
     name: 'email',
-    href: 'mailto:kontakt@fundacja.hematologiczna.org',
+    href: 'mailto:gala@fundacja.hematologiczna.org',
     imgSrc: './contact-mail-icon.svg',
     imgAlt: 'mail-icon',
-    title: 'kontakt@fundacja.hematologiczna.org',
+    title: 'gala@fundacja.hematologiczna.org',
     hoverText: 'CONTACT.CARD_HOVER_TEXT_2',
   },
   {

@@ -7,6 +7,7 @@
   display: grid;
   place-items: center;
   animation: burgerMenuOpen 0.3s ease;
+  z-index: 1000;
 
   &--close {
     animation: burgerMenuClose 0.3s ease;

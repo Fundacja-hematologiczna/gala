@@ -15,7 +15,7 @@ const HomeCEOCards = () => {
       scale: '100%',
     },
     {
-      icon: 'Card2-icon.png',
+      icon: 'Card2-icon.webp',
       title: 'MAIN_PAGE.DONORS_BODY',
       description: 'MAIN_PAGE.DONORS_TITLE',
       buttonLabel: 'MAIN_PAGE.DONORS_BUTTON',
