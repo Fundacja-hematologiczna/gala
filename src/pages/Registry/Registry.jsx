@@ -13,7 +13,7 @@ const Registry = () => {
   const [isVerified, setIsVerified] = useState(false);
   const [captchaSize, setCaptchaSize] = useState('normal');
   const hCaptchaSiteKey = import.meta.env.VITE_HCAPTCHA_SITE_KEY;
-  const p24Images = Array.from({ length: 25 }, (_, i) => i + 1);
+  const p24Images = Array.from({ length: 29 }, (_, i) => i + 1);
 
   const [formData, setFormData] = useState({
     name: '',
@@ -235,7 +235,7 @@ const Registry = () => {
             </p>
             <img
               className="Registry__logos__p24-img"
-              src="Przelewy24-logo/P24-logo.webp"
+              src="Przelewy24-logo/P24-logo.png"
               alt="logo-p24"
             />
           </div>
@@ -244,7 +244,7 @@ const Registry = () => {
             {p24Images.map((i) => (
               <img
                 className="Registry__logos__paymentImages-img"
-                src={`./Przelewy24-logo/P24-method-${i}.webp`}
+                src={`./Przelewy24-logo/P24-method-${i}.png`}
                 alt={`p24-method ${i}`}
                 key={`p24-method img ${i}`}
                 loading="lazy"
