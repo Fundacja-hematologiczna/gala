@@ -55,6 +55,21 @@ export const HomeWelcome = ({
               navigateTo={'/rejestracja'}
               arrow={'true'}
             />
+
+<Button
+              buttonLabel={t('MAIN_PAGE.AUCTION_ITEM_BUTTON_2')}
+              backgroundColor={'#FFFFFF'}
+              navigateTo={'/rejestracja#platnosci'}
+              arrow={'false'}
+            />
+
+{/* <button
+              className="Home__donateItem__buttons-button"
+              onClick={() => {
+                onClick('/rejestracja#platnosci');
+              }}>
+              {t('MAIN_PAGE.AUCTION_ITEM_BUTTON_2')}
+            </button> */}
           </div>
         </div>
       </div>

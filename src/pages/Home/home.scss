@@ -138,6 +138,9 @@
 
 .Home__sectionWelcome-button {
   width: 246px;
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
 }
 
 .home__sectionWelcomeMobile {

@@ -21,13 +21,13 @@ export const HomeDonate = ({ onClick }) => {
               onClick={() => onClick('/contributors')}>
               {t('MAIN_PAGE.AUCTION_ITEM_BUTTON_1')}
             </button>
-            <button
+            {/* <button
               className="Home__donateItem__buttons-button"
               onClick={() => {
                 onClick('/rejestracja#platnosci');
               }}>
               {t('MAIN_PAGE.AUCTION_ITEM_BUTTON_2')}
-            </button>
+            </button> */}
           </div>
         </div>
       </div>
