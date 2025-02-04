@@ -12,13 +12,8 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import NotFound from './pages/NotFound';
 
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Outlet,
-  HashRouter,
-} from 'react-router-dom';
+import { Routes, Route, Outlet, HashRouter } from 'react-router-dom';
+import Cookies from './components/Cookies/Cookies';
 
 function App() {
   return (
@@ -42,6 +37,7 @@ function App() {
         </Routes>
 
         <Footer />
+        <Cookies />
       </HashRouter>
     </>
   );

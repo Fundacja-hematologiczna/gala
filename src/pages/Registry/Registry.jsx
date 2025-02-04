@@ -206,7 +206,7 @@ const Registry = () => {
             {t('REGISTRATION.DONATE_DESCRIPTION')}
           </p>
 
-          <div className="Registry__donate__buttons">
+          <div className="Registry__donate__buttons" id="platnosci">
             {[100, 200, 250, 400, 500, 1000].map((amount) => (
               <button
                 key={amount}
@@ -235,7 +235,7 @@ const Registry = () => {
             </p>
             <img
               className="Registry__logos__p24-img"
-              src="Przelewy24-logo/P24-logo.png"
+              src="Przelewy24-logo/P24-logo.webp"
               alt="logo-p24"
             />
           </div>
@@ -244,7 +244,7 @@ const Registry = () => {
             {p24Images.map((i) => (
               <img
                 className="Registry__logos__paymentImages-img"
-                src={`./Przelewy24-logo/P24-method-${i}.png`}
+                src={`./Przelewy24-logo/P24-method-${i}.webp`}
                 alt={`p24-method ${i}`}
                 key={`p24-method img ${i}`}
                 loading="lazy"

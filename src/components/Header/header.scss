@@ -14,14 +14,14 @@
 
   @include device(tablet, mobile) {
     top: 0;
-    padding:0
+    padding: 0;
   }
 
   &-logo {
-    background-image: url('/logo3.png');
+    background-image: url('/logo3.webp');
     width: 51px;
     height: 51px;
-    background-size: cover; 
+    background-size: cover;
     background-position: center;
     margin-top: 10px;
   }
@@ -36,7 +36,7 @@
   background-color: #f5f5f5;
   display: flex;
   align-items: center;
-  
+
   @include device(tablet) {
     border-radius: 0;
     justify-content: space-between;
@@ -91,7 +91,6 @@
       background-color: #b7c274;
       font-weight: 600;
     }
-
 
     &:active {
       color: #345b55;

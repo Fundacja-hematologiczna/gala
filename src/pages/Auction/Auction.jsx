@@ -32,11 +32,11 @@ const Program = () => {
               </h2>
               <div className="Auction__agenda1__greenCard">
                 <h3 className="Auction__agenda1__greenCard-title">
-                  Zobacz listę przedmiotow
+                  {t('AUCTION.ITEMS_LABEL_TITLE')}
                 </h3>
                 <div className="Auction__agenda1__greenCard-buttonWrapper">
                   <Button
-                    buttonLabel={'Katalog aukcji'}
+                    buttonLabel={t('AUCTION.ITEMS_LABEL_BUTTON')}
                     backgroundColor={'#B7C274'}
                     navigateTo={'/about'}
                     arrow={'true'}

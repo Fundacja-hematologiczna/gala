@@ -5,13 +5,15 @@ export const contactData = [
     imgSrc: './contact-phone-icon.svg',
     imgAlt: 'phone-icon',
     title: '730-118-500',
+    hoverText: 'CONTACT.CARD_HOVER_TEXT_1',
   },
   {
     name: 'email',
-    href: 'mailto:kontakt@fundacja.hematologiczna.org',
+    href: 'mailto:gala@fundacja.hematologiczna.org',
     imgSrc: './contact-mail-icon.svg',
     imgAlt: 'mail-icon',
-    title: 'kontakt@fundacja.hematologiczna.org',
+    title: 'gala@fundacja.hematologiczna.org',
+    hoverText: 'CONTACT.CARD_HOVER_TEXT_2',
   },
   {
     name: 'place',
@@ -19,5 +21,6 @@ export const contactData = [
     imgSrc: './contact-place-icon.svg',
     imgAlt: 'place-icon',
     title: 'ul. Pabianicka 62, 93-513 Łódź',
+    hoverText: 'CONTACT.CARD_HOVER_TEXT_3',
   },
 ];

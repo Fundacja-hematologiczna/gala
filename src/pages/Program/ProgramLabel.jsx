@@ -13,7 +13,7 @@ const ProgramLabel = () => {
           <Button
             buttonLabel={t('PROGRAM.JOIN_BUTTON')}
             backgroundColor={'#FFFFFF'}
-            navigateTo={'/about'}
+            navigateTo={'/rejestracja'}
           />
         </div>
       </div>

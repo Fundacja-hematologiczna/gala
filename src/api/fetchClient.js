@@ -1,6 +1,4 @@
-// const BASE_URL = 'https://mate.academy/students-api';
-//const BASE_URL = 'http://localhost:5000';
-const BASE_URL = 'https://testowaniebe.onrender.com';
+const BASE_URL = 'https://gala.fundacja.hematologiczna.org';
 
 // returns a promise resolved after a given delay
 function wait(delay) {

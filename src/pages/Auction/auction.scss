@@ -1,240 +1,215 @@
 @import '../../styles/mixins.scss';
 
 .Auction {
-    white-space: pre-wrap;   
-    display: flex;
-    flex: 11;
-    flex-direction: column;
-    box-sizing: border-box;
+  white-space: pre-wrap;
+  display: flex;
+  flex: 11;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
+
+  &-container {
+    padding: 14px 17px 0;
+  }
+
+  &__sectionWelcome {
+    padding: 17px 17px 0;
+
+    @include device(tablet) {
+      padding: 17px 5px 0;
+    }
+
+    @include device(mobile) {
+      padding: 17px 0;
+    }
+  }
+
+  &__topContainer {
+    background-image: url('/aukcje.webp');
     width: 100%;
-   
+    min-height: 475px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 1406px;
+    border-radius: 49px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 96px 85px 52px;
+    //  padding: 14px 17px 0 ;
+
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 95px;
+
+    @include device(tablet) {
+      border-radius: 22px;
+    }
+
+    @include device(mobile) {
+      border-radius: 0px;
+      padding: 82px 20px 20px;
+      min-height: 0px;
+      margin-bottom: 45px;
+    }
+
+    &-greenLayer {
+      background: #345b55cc;
+      width: 100%;
+      height: 100%;
+
+      box-sizing: border-box;
+      border-radius: 49px;
+
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      z-index: 1;
+
+      @include device(tablet) {
+        border-radius: 22px;
+      }
+
+      @include device(mobile) {
+        border-radius: 0px;
+        padding: 82px 20px 20px;
+      }
+    }
+
+    &-title {
+      font-family: Poppins;
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 60px;
+      letter-spacing: 0.01em;
+      text-align: left;
+      margin-bottom: 20px;
+      color: white;
+      z-index: 2;
+    }
+
+    &-description {
+      font-family: Poppins;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 36px;
+      letter-spacing: -0.02em;
+      text-align: left;
+      color: white;
+      margin-bottom: 45px;
+      z-index: 2;
+
+      @include device(mobile) {
+        //styleName: WP_Small copy;
+        font-family: Poppins;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
+        text-align: left;
+
+        margin-bottom: 72px;
+      }
+    }
+
+    &-bigText {
+      font-family: Poppins;
+      font-size: 40px;
+      font-weight: 600;
+      line-height: 60px;
+      text-align: center;
+      color: white;
+      z-index: 2;
+
+      @include device(mobile) {
+        //styleName: WP_H3;
+        font-family: Poppins;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 36px;
+        text-align: center;
+      }
+    }
+  }
+
+  &__agenda1 {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    // padding-bottom: 138px;
+    padding: 0 17px 138px;
+
     &-container {
-        padding: 14px 17px 0;
+      max-width: 1240px;
+      margin: 0 auto;
+      color: #345b55;
     }
-    
-    &__sectionWelcome {
-        padding: 17px 17px 0;
-        
-        @include device(tablet) {
-            padding:  17px 5px 0 ;
-        }
+
+    &-title {
+      font-family: Poppins;
+      font-size: 40px;
+      font-weight: 600;
+      line-height: 60px;
+      text-align: center;
+      margin-bottom: 66px;
+
+      color: #345b55;
+
+      @include device(mobile) {
+        //styleName: WP_H3;
+        font-family: Poppins;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 36px;
+        text-align: left;
+        text-align: center;
+      }
+    }
+
+    // &-grid {
+    //     display: grid;
+    //     grid-auto-columns: 385px;
+    //     grid-auto-rows: 385px;
+    //     grid-template-columns: repeat(auto-fill, 358px);
+    //     row-gap: 64px;
+    //     column-gap: 81px;
+    //     justify-content: center;
+
+    //     &--item {
+    //          background-color: #F5F5F5;
+    //          border-radius: 10px;
+    //          width: 100%;
+    //          height: 100%;
+
+    //     }
+    // }
+
+    &__greenCard {
+      max-width: 420px;
+      margin: 0 auto;
+      border-radius: 30px;
+      padding: 15px 14px 28px;
+      box-shadow: 0px 4px 4px 0px #00000040;
+
+      &-title {
+        font-family: 'Poppins';
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 36px;
+        letter-spacing: -0.02em;
+        text-align: center;
+        margin-bottom: 30px;
 
         @include device(mobile) {
-            padding:  17px 0 ;
+          font-size: 20px;
+          font-weight: 400;
         }
-    }
+      }
 
-    &__topContainer {
-        background-image: url('/aukcje.jpg');
-        width: 100%;
-        min-height: 475px;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        max-width: 1406px;
-        border-radius: 49px;
-        margin: 0 auto ;
-        box-sizing: border-box;
-        padding: 96px 85px 52px;
-      //  padding: 14px 17px 0 ;
-
-      
-
-      display: flex;
-      flex-direction: column;
-      position: relative;
-      margin-bottom: 95px;
-
-        @include device(tablet) {
-            border-radius: 22px;
-        }
-
-        @include device(mobile) {
-            border-radius: 0px;
-            padding: 82px 20px 20px;
-            min-height: 0px;
-            margin-bottom: 45px;
-            
-        }
-
-        &-greenLayer {
-            background: #345B55CC; ;
-            width: 100%;
-            height: 100%;
-              
-            box-sizing: border-box;
-            border-radius: 49px;
-
-
-
-            position: absolute;
-            top: 0px;
-            left:0px;
-            z-index: 1;
-
-            @include device(tablet) {
-                border-radius: 22px;
-            }
-    
-            @include device(mobile) {
-                border-radius: 0px;
-                padding: 82px 20px 20px
-            }
-    
-             
-        }
-
-        
-       
-        &-title {
-            font-family: Poppins;
-            font-size: 40px;
-            font-weight: 700;
-            line-height: 60px;
-            letter-spacing: 0.01em;
-            text-align: left;
-            margin-bottom: 20px;
-            color: white;
-            z-index: 2;
-       
-        }
-
-        &-description {
-            font-family: Poppins;
-            font-size: 24px;
-            font-weight: 400;
-            line-height: 36px;
-            letter-spacing: -0.02em;
-            text-align: left;
-            color: white;
-            margin-bottom: 45px;
-            z-index: 2;
-
-            @include device(mobile) {
-               //styleName: WP_Small copy;
-                font-family: Poppins;
-                font-size: 14px;
-                font-weight: 400;
-                line-height: 21px;
-                text-align: left;
-
-                margin-bottom: 72px;
-
-
-            }
-
-        }
-
-        &-bigText {
-            font-family: Poppins;
-            font-size: 40px;
-            font-weight: 600;
-            line-height: 60px;
-            text-align: center;
-            color: white;
-            z-index: 2;
-
-            @include device(mobile) {
-               //styleName: WP_H3;
-                font-family: Poppins;
-                font-size: 24px;
-                font-weight: 600;
-                line-height: 36px;
-                text-align: center;
-
-
-            }
-
-        }
-    }
-
-
-    &__agenda1 {
-        width: 100%;  
-        max-width: 1440px;
+      &-buttonWrapper {
+        width: fit-content;
         margin: 0 auto;
-       // padding-bottom: 138px;
-        padding: 0 17px 138px;
-
-        &-container {
-            max-width: 1240px;
-            margin: 0 auto;
-            color: #345B55;
-        }
-
-        &-title {
-            font-family: Poppins;
-            font-size: 40px;
-            font-weight: 600;
-            line-height: 60px;
-            text-align: center;
-            margin-bottom:  66px;
-            
-            color:#345B55;
-
-            @include device(mobile) {
-                //styleName: WP_H3;
-                font-family: Poppins;
-                font-size: 24px;
-                font-weight: 600;
-                line-height: 36px;
-                text-align: left;
-                text-align: center;
-
-            }
-
-            
-        }
-
-        // &-grid {
-        //     display: grid;
-        //     grid-auto-columns: 385px; 
-        //     grid-auto-rows: 385px;
-        //     grid-template-columns: repeat(auto-fill, 358px);
-        //     row-gap: 64px; 
-        //     column-gap: 81px;
-        //     justify-content: center;
-  
- 
-        //     &--item {
-        //          background-color: #F5F5F5;
-        //          border-radius: 10px;
-        //          width: 100%;
-        //          height: 100%;
-                
-        //     }
-        // }
-
-        &__greenCard {
-            max-width: 420px;
-            margin: 0 auto;
-            border-radius: 30px;
-            padding: 15px 14px 28px;
-            box-shadow: 0px 4px 4px 0px #00000040;
-
-            &-title {
-                font-family: 'Poppins';
-                font-size: 24px;
-                font-weight: 500;
-                line-height: 36px;
-                letter-spacing: -0.02em;
-                text-align: center;
-                margin-bottom: 30px;
-        
-                @include device(mobile) {
-                    font-size: 20px;
-                    font-weight: 400;
-        
-                }
-            }
-
-            &-buttonWrapper {
-                width: fit-content;
-                margin: 0 auto;
-            }
-        }
-
-       
+      }
     }
-
+  }
 }

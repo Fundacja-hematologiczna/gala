@@ -1,237 +1,215 @@
 @import '../../styles/mixins.scss';
 
 .Gallery {
-   
-    display: flex;
-    flex: 11;
-    flex-direction: column;
-    box-sizing: border-box;
+  display: flex;
+  flex: 11;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
+  // background-image: url('/program-latki.svg');
+  // background-position: center;
+  // background-size: cover;
+  // background-repeat: no-repeat;
+
+  &-container {
+    padding: 14px 17px 0;
+
+    @include device(tablet) {
+      padding: 14px 5px 0;
+    }
+
+    @include device(mobile) {
+      padding: 14px 0 0;
+    }
+  }
+
+  &__topContainer {
+    background-image: url('/galeria-bg.webp');
     width: 100%;
-    // background-image: url('/program-latki.svg');
-    // background-position: center;
-    // background-size: cover;
-    // background-repeat: no-repeat;
+    min-height: 475px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 1406px;
+    border-radius: 49px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 96px 85px 52px;
+    margin-bottom: 57px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
 
-    &-container {
-        padding: 14px 17px 0;
-
-        @include device(tablet) {
-            padding: 14px 5px 0;
-        }
-
-        @include device(mobile) {
-            padding: 14px 0 0;
-        }
+    @include device(tablet) {
+      border-radius: 22px;
     }
-    
-    
 
-    &__topContainer {
-        background-image: url('/galeria-bg.jpg');
+    @include device(mobile) {
+      border-radius: 0px;
+      padding: 113px 20px 110px;
+      background-image: url('./galeria-bg--mobile.webp ');
+    }
+
+    &-greenLayer {
+      @include device(mobile) {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        background-color: #345b55b2;
+        z-index: 1;
+      }
+    }
+
+    &-title {
+      font-family: Poppins;
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 60px;
+      letter-spacing: 0.01em;
+      text-align: left;
+      margin-bottom: 20px;
+      color: white;
+      z-index: 2;
+    }
+
+    &-description {
+      font-family: Poppins;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 36px;
+      letter-spacing: -0.02em;
+      text-align: left;
+      color: white;
+      margin-bottom: 45px;
+      z-index: 2;
+
+      @include device(mobile) {
+        //styleName: WP_Small copy;
+        font-family: Poppins;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+      }
+    }
+  }
+
+  &__pictures {
+    margin-bottom: 96px;
+    padding: 0 17px;
+
+    &__buttons {
+      display: flex;
+      margin: 0 auto;
+      gap: 34px;
+      width: fit-content;
+      box-sizing: border-box;
+      margin-bottom: 56px;
+
+      @include device(mobile) {
+        max-width: 350px;
+        justify-content: space-between;
+        gap: 3px;
         width: 100%;
-        min-height: 475px;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        max-width: 1406px;
-        border-radius: 49px;
-        margin: 0 auto ;  
-        box-sizing: border-box;
-        padding: 96px 85px 52px;  
-        margin-bottom: 57px;
-        display: flex;
-        flex-direction: column;
-        position: relative;
+      }
 
-        @include device(tablet) {
-            border-radius: 22px;
-        }
+      &-button {
+        all: unset;
+        cursor: pointer;
+        font-family: Poppins;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px;
+        text-align: left;
+        color: #345b55;
+        padding: 11px 68px;
+        gap: 10px;
+        border: 2px 0px 0px 0px;
+        opacity: 0px;
+        border: 2px solid #345b55;
+        border-radius: 50px;
+        transition: 0.2s;
 
         @include device(mobile) {
-            border-radius: 0px;
-            padding: 113px 20px 110px;
-            background-image: url('./galeria-bg--mobile.jpg ');
+          padding: 11px 28px;
         }
 
-        &-greenLayer {
-            @include device(mobile) {
-                position: absolute;
-                top:0px;
-                left:0px;
-                right:0px;
-                bottom:0px;
-                background-color: #345B55B2;
-                z-index: 1;
-
-            }
+        &:hover {
+          scale: 105%;
         }
 
-        
-
-        &-title {
-            font-family: Poppins;
-            font-size: 40px;
-            font-weight: 700;
-            line-height: 60px;
-            letter-spacing: 0.01em;
-            text-align: left;
-            margin-bottom: 20px;
-            color: white;
-            z-index: 2;          
+        &--active {
+          color: white;
+          background-color: #1f413c;
         }
-
-        &-description {
-            font-family: Poppins;
-            font-size: 24px;
-            font-weight: 400;
-            line-height: 36px;
-            letter-spacing: -0.02em;
-            text-align: left;
-            color: white;
-            margin-bottom: 45px;
-            z-index: 2;
-
-            @include device(mobile) {
-                //styleName: WP_Small copy;
-                font-family: Poppins;
-                font-size: 14px;
-                font-weight: 400;
-                line-height: 21px;
-                text-align: left;
-                text-underline-position: from-font;
-                text-decoration-skip-ink: none;
-
-            }
-        }
+      }
     }
 
+    &__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 10px;
+      min-height: 2684px;
+      height: min-content;
+      grid-auto-rows: 385px 245px 238px;
 
-   
-    &__pictures {
-        margin-bottom: 96px;
-        padding: 0 17px;
+      @include device(tablet) {
+        grid-template-columns: 1fr 1fr;
+      }
 
-        &__buttons {
-            display: flex;
-            margin: 0 auto;
-            gap:34px;
-            width: fit-content;
-            box-sizing: border-box;
-            margin-bottom: 56px;
+      @include device(mobile) {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 385px;
+        gap: 20px;
+      }
 
-            @include device(mobile) {
-              max-width: 350px;
-              justify-content: space-between;
-              gap: 3px;
-              width: 100%;
+      &-item {
+        height: 100%;
+        width: 100%;
+        margin: 0 auto;
+        object-fit: cover;
+        border-radius: 20px;
 
-            }
+        @include device(desktop) {
+          &:nth-child(6n + 1) {
+            grid-row: span 2;
+          }
 
-            
+          &:nth-child(6n + 2) {
+            grid-column: span 2;
+          }
 
-            &-button {
-                all: unset;
-                cursor: pointer;
-                font-family: Poppins;
-                font-size: 16px;
-                font-weight: 700;
-                line-height: 24px;
-                text-align: left;
-                color: #345B55;
-                padding: 11px 68px ;
-                gap: 10px;
-                border: 2px 0px 0px 0px;
-                opacity: 0px;
-                border: 2px solid #345B55;
-                border-radius: 50px;
-                transition: 0.2s;
-
-                @include device(mobile) {
-                    padding: 11px 28px;
-                } 
-
-                &:hover {
-                    scale: 105%
-                }
-
-                &--active {
-                    color: white;
-                    background-color: #1F413C;
-                }
-
-            }
-            
+          &:nth-child(6n + 4) {
+            grid-row: span 2;
+          }
         }
 
-        &__grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap:10px;
-            min-height: 2684px;
-            height: min-content;
-            grid-auto-rows: 385px 245px 238px;
+        @include device(tablet) {
+          &:nth-child(4n + 1) {
+            grid-column: span 2;
+          }
 
-            @include device(tablet) {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            @include device(mobile) {
-                grid-template-columns: 1fr;
-                grid-auto-rows: 385px;
-                gap: 20px;
-            }
-
-            
-            &-item {
-                height: 100%;
-                width: 100%;
-                margin: 0 auto;
-                object-fit: cover;
-                border-radius: 20px;
-
-                @include device(desktop) {
-                    &:nth-child(6n+1) {
-                        grid-row: span 2;
-                    }
-    
-                    &:nth-child(6n+2) {
-                        grid-column: span 2;
-                    }
-    
-                    &:nth-child(6n+4) {
-                        grid-row: span 2;
-                    }
-    
-                    
-                }
-
-                @include device(tablet) {
-                    &:nth-child(4n+1) {
-                        grid-column: span 2;
-                    }
-    
-                    &:nth-child(4n+3) {
-                        grid-row: span 2;
-                    }
-    
-                    
-                }
-
-                &--img {
-   
-                    position: center;
-                    width: 100%;
-                    height: 100%; 
-                    height: 100%;
-                    width: 100%;
-                    margin: 0 auto; 
-                    object-fit: cover; 
-                    border-radius: 20px;
-                    cursor: zoom-in;
-                    
-                }      
-            }
+          &:nth-child(4n + 3) {
+            grid-row: span 2;
+          }
         }
-    } 
-    
+
+        &--img {
+          position: center;
+          width: 100%;
+          height: 100%;
+          height: 100%;
+          width: 100%;
+          margin: 0 auto;
+          object-fit: cover;
+          border-radius: 20px;
+          cursor: zoom-in;
+        }
+      }
+    }
+  }
 }
