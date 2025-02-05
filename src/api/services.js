@@ -7,3 +7,7 @@ export const addUser = (userData) => {
 export const getImages = () => {
   return client.get(`/api/photos`);
 };
+
+export const getAcessToken = (credentials) => {
+  return client.post('/api/admin/login', credentials);
+};

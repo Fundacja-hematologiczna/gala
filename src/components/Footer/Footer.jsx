@@ -70,7 +70,7 @@ const Footer = () => {
               </a>
 
               <a
-                href="https://www.example1.com"
+                href="https://pl.linkedin.com/company/fundacja-na-rzecz-pomocy-chorym-na-bia%C5%82aczki"
                 target="_blank"
                 rel="noopener noreferrer">
                 <img src="./footer-icon-in.svg" alt="linkedin" />

@@ -214,6 +214,7 @@
      // border: 1px solid red;
       display: flex;
       margin: 17px 0 0;
+      justify-content: center;
 
       @media (width < 1200px) {
         margin:  0 auto;
@@ -228,7 +229,7 @@
       }
 
       &:hover {
-        scale: 105%;
+        scale: 102%;
         cursor: pointer;
       }
     }
