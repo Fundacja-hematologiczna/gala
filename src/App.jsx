@@ -11,10 +11,10 @@ import Regulamin from './pages/Regulamin/Regulamin';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import NotFound from './pages/NotFound';
-import Admin from './pages/Admin/Admin';
 
 import { Routes, Route, Outlet, HashRouter } from 'react-router-dom';
 import Cookies from './components/Cookies/Cookies';
+import { ScrollToHash } from './ScrollToHash';
 
 function App() {
   return (
@@ -33,12 +33,12 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/klauzula-informacyjna" element={<Klauzula />} />
             <Route path="/regulamin" element={<Regulamin />} />
-            <Route path="/admin" element={<Admin />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
 
         <Footer />
+        <ScrollToHash />
         <Cookies />
       </HashRouter>
     </>
