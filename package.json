@@ -19,7 +19,7 @@
   "dependencies": {
     "@hcaptcha/react-hcaptcha": "^1.11.0",
     "@react-google-maps/api": "^2.20.5",
-    "axios": "^1.6.8",
+    "axios": "^1.7.9",
     "bootstrap": "^5.3.3",
     "classnames": "^2.5.1",
     "dotenv": "^16.4.7",
