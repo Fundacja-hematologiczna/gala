@@ -6,12 +6,22 @@ import { NavLink } from 'react-router-dom';
 import Checkbox from '../../components/Checkbox/Checkbox';
 import { useTranslation } from 'react-i18next';
 import { addUser } from '../../api/services';
+import Modal from './Modal/Modal.jsx';
 
 const Registry = () => {
   const [donate, setDonate] = useState(10);
   const { t } = useTranslation();
   const [isVerified, setIsVerified] = useState(false);
   const [captchaSize, setCaptchaSize] = useState('normal');
+  const [userId, setUserId] = useState('');
+
+  const [modal, setModal] = useState({
+    isOpen: false,
+    type: 'success',
+    message: '',
+  });
+  const [message, setMessage] = useState('');
+
   const hCaptchaSiteKey = import.meta.env.VITE_HCAPTCHA_SITE_KEY;
   const p24Images = Array.from({ length: 29 }, (_, i) => i + 1);
 
@@ -42,6 +52,16 @@ const Registry = () => {
 
   const hcaptchaRef = useRef(null);
 
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+
+  //   if (!isVerified) {
+  //     return alert('Proszę potwierdzić, że jesteś człowiekiem.');
+  //   }
+
+  //   addUser(formData).then();
+  // };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -49,7 +69,36 @@ const Registry = () => {
       return alert('Proszę potwierdzić, że jesteś człowiekiem.');
     }
 
-    addUser(formData);
+    try {
+      const response = await addUser(formData);
+
+      if (response.success) {
+        setModal({
+          isOpen: true,
+          type: 'success',
+        });
+        setFormData({
+          name: '',
+          email: '',
+          street: '',
+          buildingNumber: '',
+          zipCode: '',
+          city: '',
+        });
+      } else {
+        setModal({
+          isOpen: true,
+          type: 'warning',
+          message: response.message || 'Wystąpił problem z rejestracją.',
+        });
+      }
+    } catch (error) {
+      setModal({
+        isOpen: true,
+        type: 'error',
+        message: 'Błąd rejestracji: ' + error.message,
+      });
+    }
   };
 
   const handleClick = (pln) => setDonate(pln);
@@ -253,6 +302,12 @@ const Registry = () => {
           </div>
         </div>
       </section>
+
+      <Modal
+        isOpen={modal.isOpen}
+        message={message}
+        onClose={() => setModal({ isOpen: false })}
+      />
     </main>
   );
 };
