@@ -6,7 +6,7 @@ import useLocalStorage from '../../hooks/useLocaleStorage.hook';
 
 const Cookies = () => {
   const { t } = useTranslation();
-  const [isOpened, setIsOpened] = useLocalStorage('cookies', true);
+  const [isOpened, setIsOpened] = useLocalStorage('cookies', false);
   const cookiesRef = useRef(null);
 
   const handleClickCloseCookies = () => {

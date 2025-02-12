@@ -1,4 +1,3 @@
-//const BASE_URL = 'https://gala.fundacja.hematologiczna.org';
 const BASE_URL = 'http://localhost:5000';
 
 // returns a promise resolved after a given delay

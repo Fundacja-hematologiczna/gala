@@ -10,7 +10,6 @@
     padding: 8px 32px 8px 32px;
     gap: 10px;
     border-radius: 30px ;
-    opacity: 0px;
     font-family: Poppins;
     font-size: 16px;
     font-weight: 700;
@@ -43,7 +42,7 @@
             width: 9px;
             height:15.56px;
             margin-left: 10px;
-            background-image: url('arrow-right.svg');
+            background-image: url('/arrow-right.svg');
             background-position: center;
 
             @include device(mobile) {
