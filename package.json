@@ -2,7 +2,7 @@
   "name": "gala",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://Fundacja-hematologiczna.github.io/gala",
+  "homepage": "https://gala.fundacja.hematologiczna.org",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",

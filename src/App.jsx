@@ -13,17 +13,17 @@ import Footer from './components/Footer/Footer';
 import NotFound from './pages/NotFound';
 import Admin from './pages/Admin/Admin';
 
-import { Routes, Route, Outlet, HashRouter } from 'react-router-dom';
+import { Routes, Route, Outlet, HashRouter, BrowserRouter } from 'react-router-dom';
 import Cookies from './components/Cookies/Cookies';
 
 function App() {
   return (
     <>
-      <HashRouter>
+      <BrowserRouter>
         <Header />
         <Routes>
           <Route path="/" element={<Outlet />}>
-            <Route path="/" element={<Home />} index />
+            <Route path="/" element={<Home />}  />
             <Route path="/rejestracja" element={<Registry />} />
             <Route path="/Place" element={<Place />} />
             <Route path="/Program" element={<Program />} />
@@ -40,7 +40,7 @@ function App() {
 
         <Footer />
         <Cookies />
-      </HashRouter>
+      </BrowserRouter>
     </>
   );
 }

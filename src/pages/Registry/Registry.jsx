@@ -7,6 +7,7 @@ import Checkbox from '../../components/Checkbox/Checkbox';
 import { useTranslation } from 'react-i18next';
 import { addUser } from '../../api/services';
 import Modal from './Modal/Modal.jsx';
+import P24Form from './P24Form/P24Form.jsx';
 
 const Registry = () => {
   const [donate, setDonate] = useState(10);
@@ -14,6 +15,7 @@ const Registry = () => {
   const [isVerified, setIsVerified] = useState(false);
   const [captchaSize, setCaptchaSize] = useState('normal');
   const [userId, setUserId] = useState('');
+  const [p24formIsOpen, setP24FormIsOpen] = useState(false);
 
   const [modal, setModal] = useState({
     isOpen: false,
@@ -308,6 +310,8 @@ const Registry = () => {
         message={message}
         onClose={() => setModal({ isOpen: false })}
       />
+
+      <P24Form p24formIsOpen={p24formIsOpen} />
     </main>
   );
 };
