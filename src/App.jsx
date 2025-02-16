@@ -12,18 +12,18 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import NotFound from './pages/NotFound';
 
-import { Routes, Route, Outlet, HashRouter } from 'react-router-dom';
+import { Routes, Route, Outlet, HashRouter, BrowserRouter } from 'react-router-dom';
 import Cookies from './components/Cookies/Cookies';
 import { ScrollToHash } from './ScrollToHash';
 
 function App() {
   return (
     <>
-      <HashRouter>
+      <BrowserRouter>
         <Header />
         <Routes>
           <Route path="/" element={<Outlet />}>
-            <Route path="/" element={<Home />} index />
+            <Route path="/" element={<Home />}  />
             <Route path="/rejestracja" element={<Registry />} />
             <Route path="/Place" element={<Place />} />
             <Route path="/Program" element={<Program />} />
@@ -40,7 +40,7 @@ function App() {
         <Footer />
         <ScrollToHash />
         <Cookies />
-      </HashRouter>
+      </BrowserRouter>
     </>
   );
 }

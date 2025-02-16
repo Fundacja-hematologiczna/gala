@@ -1,0 +1,83 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+  }
+  
+  .modal {
+    background:  #345B55;
+    padding: 36px 68px 96px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 600px;
+    max-width: 98%;
+    color: white;
+    display: flex;
+  // box-sizing: border-box;
+    flex-direction: column;
+   
+    
+
+    &-title {
+        font-family: Poppins;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 60px;
+        letter-spacing: 1%;
+        text-align: center;
+        margin-bottom: 10px;
+
+    }
+
+    &-description {
+        font-family: Poppins;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22.4px;
+        letter-spacing: 0%;
+        text-align: center;
+        margin-bottom: 59px;
+
+    }
+  }
+  
+  .modal-button {
+    margin-top: 10px;
+    padding: 11.5px 70px;
+    width: 266px;
+    border: none;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: 0.3s;
+    margin: 10px auto;
+    box-sizing: border-box;
+
+    font-family: Poppins;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0%;
+
+
+    &--white {
+        background: white;
+        color: #345B55;
+    }
+
+    &--green {
+        background: #B7C274;
+        color: #000000;
+    }
+  }
+  
+  .modal button:hover {
+    scale: 103%;
+  }
