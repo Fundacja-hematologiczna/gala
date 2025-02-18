@@ -215,14 +215,19 @@ const Registry = () => {
               </p>
             </div>
 
-            {[2, 3].map((item) => (
-              <div className="Registry__form__checkbox" key={item}>
-                <Checkbox />
-                <p className="Registry__form__checkbox-description">
-                  {t(`REGISTRATION.FORM_RIGHTS.${item}`)}
-                </p>
-              </div>
-            ))}
+            <div className="Registry__form__checkbox">
+              <Checkbox />
+              <p className="Registry__form__checkbox-description">
+                {t(`REGISTRATION.FORM_RIGHTS.2`)}
+              </p>
+            </div>
+
+            <div className="Registry__form__checkbox">
+              <Checkbox required={false} />
+              <p className="Registry__form__checkbox-description">
+                {t(`REGISTRATION.FORM_RIGHTS.3`)}
+              </p>
+            </div>
 
             <p className="Registry__form-description">
               {t('REGISTRATION.MESSAGE_TEXT')}

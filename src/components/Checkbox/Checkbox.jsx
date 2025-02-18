@@ -1,7 +1,16 @@
 import { useState } from 'react';
 import './checkbox.scss';
+import PropTypes from 'prop-types';
 
-const Checkbox = () => {
+const propTypes = {
+  required: PropTypes.bool,
+};
+
+const defaultProps = {
+  required: true,
+};
+
+const Checkbox = ({ required = true }) => {
   const [isChecked, setIsChecked] = useState(false);
 
   const handleCheckboxChange = () => {
@@ -20,11 +29,14 @@ const Checkbox = () => {
           name="terms"
           checked={isChecked}
           onChange={handleCheckboxChange}
-          required
+          required={required}
         />
       </div>
     </>
   );
 };
+
+Checkbox.propTypes = propTypes;
+Checkbox.defaultProps = defaultProps;
 
 export default Checkbox;

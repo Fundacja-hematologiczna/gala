@@ -165,7 +165,12 @@
       border-radius: 5px;
       border: none;
       border: 1px solid #345b55;
-
+      font-family: Poppins;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 22.4px;
+      text-align: left;
+     
       &--big {
         min-height: 300px;
         resize: none;
