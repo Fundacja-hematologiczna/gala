@@ -14,12 +14,13 @@ const HomeCards = () => {
       backgroundColor: '#E5E9CD',
     },
     {
-      icon: 'card5-icon.svg',
+      icon: 'waza.svg',
       title: 'MAIN_PAGE.PALACE_BODY',
       description: 'MAIN_PAGE.PALACE_TITLE',
       buttonLabel: 'MAIN_PAGE.PALACE_BUTTON',
       navigateTo: '/Place',
       backgroundColor: '#99ADAA',
+      scale: '1.1',
     },
     {
       icon: 'card6-icon.svg',
@@ -43,6 +44,7 @@ const HomeCards = () => {
             buttonLabel={t(card.buttonLabel)}
             navigateTo={card.navigateTo}
             backgroundColor={card.backgroundColor}
+            scale={card.scale}
           />
         ))}
       </div>

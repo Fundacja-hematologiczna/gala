@@ -18,6 +18,12 @@
     text-wrap: nowrap;
     transition: 0.2s;
 
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+     filter: blur(0.2px);
+
     @include device(mobile) {
         //styleName: WP_M_Button;
         font-family: Poppins;
@@ -44,6 +50,8 @@
             margin-left: 10px;
             background-image: url('/arrow-right.svg');
             background-position: center;
+
+            
 
             @include device(mobile) {
                 display: none;

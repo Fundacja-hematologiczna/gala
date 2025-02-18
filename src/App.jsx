@@ -13,7 +13,7 @@ import Footer from './components/Footer/Footer';
 import NotFound from './pages/NotFound';
 import Admin from './pages/Admin/Admin';
 
-import { Routes, Route, Outlet, HashRouter, BrowserRouter } from 'react-router-dom';
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import Cookies from './components/Cookies/Cookies';
 
 function App() {
@@ -22,20 +22,18 @@ function App() {
       <BrowserRouter>
         <Header />
         <Routes>
-          <Route path="/" element={<Outlet />}>
-            <Route path="/" element={<Home />}  />
-            <Route path="/rejestracja" element={<Registry />} />
-            <Route path="/Place" element={<Place />} />
-            <Route path="/Program" element={<Program />} />
-            <Route path="/Auction" element={<Auction />} />
-            <Route path="/contributors" element={<Contributors />} />
-            <Route path="/gallery" element={<Gallery />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/klauzula-informacyjna" element={<Klauzula />} />
-            <Route path="/regulamin" element={<Regulamin />} />
-            <Route path="/admin" element={<Admin />} />
-            <Route path="*" element={<NotFound />} />
-          </Route>
+          <Route path="/" element={<Home />} />
+          <Route path="/rejestracja" element={<Registry />} />
+          <Route path="/Place" element={<Place />} />
+          <Route path="/Program" element={<Program />} />
+          <Route path="/Auction" element={<Auction />} />
+          <Route path="/contributors" element={<Contributors />} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/klauzula-informacyjna" element={<Klauzula />} />
+          <Route path="/regulamin" element={<Regulamin />} />
+          <Route path="/admin" element={<Admin />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
 
         <Footer />
