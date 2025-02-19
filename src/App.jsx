@@ -12,9 +12,9 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import NotFound from './pages/NotFound';
 
-import { Routes, Route, Outlet, HashRouter, BrowserRouter } from 'react-router-dom';
+import { Routes, Route, Outlet, BrowserRouter } from 'react-router-dom';
 import Cookies from './components/Cookies/Cookies';
-import { ScrollToHash } from './ScrollToHash';
+import { ScrollToHash } from './pages/ScrollToHash';
 
 function App() {
   return (
@@ -23,7 +23,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Outlet />}>
-            <Route path="/" element={<Home />}  />
+            <Route path="/" element={<Home />} />
             <Route path="/rejestracja" element={<Registry />} />
             <Route path="/Place" element={<Place />} />
             <Route path="/Program" element={<Program />} />
