@@ -6,11 +6,12 @@
   inset: 0 auto auto 0;
   display: grid;
   place-items: center;
-  animation: burgerMenuOpen 0.3s ease;
+  animation: burgerMenuOpen 0.3s ease t;
   z-index: 1000;
+  transition: 0.5s ease;
 
   &--close {
-    animation: burgerMenuClose 0.3s ease;
+   transform: translateY(-110vh);
   }
 
   &__button {
@@ -56,17 +57,5 @@
     &--active {
       text-decoration: underline;
     }
-  }
-}
-
-@keyframes burgerMenuOpen {
-  from {
-    inset: -100dvh auto auto 0;
-  }
-}
-
-@keyframes burgerMenuClose {
-  to {
-    inset: -100dvh auto auto 0;
   }
 }

@@ -24,7 +24,6 @@ const Header = () => {
   };
 
   useEffect(() => {
-    setIsBurgerMenuActive(false);
     window.scrollTo({ top: 0, behavior: 'instant' });
   }, [isActive]);
 
@@ -62,13 +61,12 @@ const Header = () => {
             className={`nav__burgerMenu ${isBurgerMenuActive ? 'nav__burgerMenu--active' : ''}`}
             onClick={handleClickBurgerMenu}></div>
 
-          {isBurgerMenuActive && (
-            <BurgerMenu
-              onClickOption={handleClick}
-              isActive={isActive}
-              onClickButton={handleClickBurgerMenu}
-            />
-          )}
+          <BurgerMenu
+            onClickOption={handleClick}
+            isActive={isActive}
+            isBurgerMenuActive={isBurgerMenuActive}
+            setIsBurgerMenuActive={setIsBurgerMenuActive}
+          />
         </nav>
       </header>
     </>

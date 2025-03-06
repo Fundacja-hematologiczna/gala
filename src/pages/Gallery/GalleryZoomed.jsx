@@ -30,17 +30,19 @@ export const GalleryZoomed = ({
   return (
     <dialog {...handlers} id="galleryZoom" ref={dialogRef}>
       <button id="closeButton" onClick={onClickClose}>
-        <img src="/gala/menu-hamburger.svg" alt="Close button" />
+        <img src="menu-hamburger.svg" alt="Close button" />
       </button>
       <button
         className="galleryArrow galleryArrow--left"
         onClick={onClickNextImage}>
         {'<'}
+        {/* <div /> */}
       </button>
       <button
         className="galleryArrow galleryArrow--right"
         onClick={onClickPrevImage}>
         {'>'}
+        {/* <div /> */}
       </button>
       <img className="galleryPhoto" src={chosenImage} alt={chosenImage} />
     </dialog>
