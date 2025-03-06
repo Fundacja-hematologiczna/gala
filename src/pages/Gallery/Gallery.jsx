@@ -98,6 +98,9 @@ const Gallery = () => {
       case 'ArrowLeft':
         handleClickPrevImg();
         break;
+      case 'Escape':
+        handleClickCloseGallery();
+        break;
       default:
         break;
     }

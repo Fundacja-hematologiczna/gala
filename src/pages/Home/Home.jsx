@@ -16,7 +16,7 @@ const Home = () => {
   const navigate = useNavigate();
 
   const handleClick = (navigateTo) => {
-    navigate(navigateTo);
+    navigate(navigateTo, { replace: true });
   };
 
   const welcomeSectionPhotos = [

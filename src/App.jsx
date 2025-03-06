@@ -11,10 +11,12 @@ import Regulamin from './pages/Regulamin/Regulamin';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import NotFound from './pages/NotFound';
-import Admin from './pages/Admin/Admin';
 
-import { Routes, Route, BrowserRouter } from 'react-router-dom';
+
+import { Routes, Route, Outlet, BrowserRouter } from 'react-router-dom';
+
 import Cookies from './components/Cookies/Cookies';
+import { ScrollToHash } from './pages/ScrollToHash';
 
 function App() {
   return (
@@ -22,21 +24,25 @@ function App() {
       <BrowserRouter>
         <Header />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/rejestracja" element={<Registry />} />
-          <Route path="/Place" element={<Place />} />
-          <Route path="/Program" element={<Program />} />
-          <Route path="/Auction" element={<Auction />} />
-          <Route path="/contributors" element={<Contributors />} />
-          <Route path="/gallery" element={<Gallery />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/klauzula-informacyjna" element={<Klauzula />} />
-          <Route path="/regulamin" element={<Regulamin />} />
-          <Route path="/admin" element={<Admin />} />
-          <Route path="*" element={<NotFound />} />
+
+          <Route path="/" element={<Outlet />}>
+            <Route path="/" element={<Home />} />
+            <Route path="/rejestracja" element={<Registry />} />
+            <Route path="/Place" element={<Place />} />
+            <Route path="/Program" element={<Program />} />
+            <Route path="/Auction" element={<Auction />} />
+            <Route path="/contributors" element={<Contributors />} />
+            <Route path="/gallery" element={<Gallery />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/klauzula-informacyjna" element={<Klauzula />} />
+            <Route path="/regulamin" element={<Regulamin />} />
+            <Route path="*" element={<NotFound />} />
+          </Route>         
+
         </Routes>
 
         <Footer />
+        <ScrollToHash />
         <Cookies />
       </BrowserRouter>
     </>
