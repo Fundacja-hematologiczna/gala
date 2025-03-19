@@ -11,7 +11,7 @@ import Regulamin from './pages/Regulamin/Regulamin';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import NotFound from './pages/NotFound';
-
+import Admin from './pages/Admin/Admin';
 
 import { Routes, Route, Outlet, BrowserRouter } from 'react-router-dom';
 
@@ -24,7 +24,6 @@ function App() {
       <BrowserRouter>
         <Header />
         <Routes>
-
           <Route path="/" element={<Outlet />}>
             <Route path="/" element={<Home />} />
             <Route path="/rejestracja" element={<Registry />} />
@@ -36,9 +35,9 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/klauzula-informacyjna" element={<Klauzula />} />
             <Route path="/regulamin" element={<Regulamin />} />
+            <Route path="/admin" element={<Admin />} />
             <Route path="*" element={<NotFound />} />
-          </Route>         
-
+          </Route>
         </Routes>
 
         <Footer />

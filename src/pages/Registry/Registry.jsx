@@ -8,6 +8,7 @@ import { useTranslation } from 'react-i18next';
 import { addUser } from '../../api/services';
 import Modal from './Modal/Modal.jsx';
 import P24Form from './P24Form/P24Form.jsx';
+import { PaymentButton } from '../../components/PaymentButton.jsx';
 
 const Registry = () => {
   const [donate, setDonate] = useState(10);
@@ -252,6 +253,8 @@ const Registry = () => {
         </div>
       </section>
 
+      <PaymentButton />
+
       <section className="Registry__donate" id="platnosci">
         <div className="container Registry__donate-container">
           <h2 className="Registry__donate-title">
@@ -300,7 +303,7 @@ const Registry = () => {
             {p24Images.map((i) => (
               <img
                 className="Registry__logos__paymentImages-img"
-                src={`./Przelewy24-logo/P24-method-${i}.webp`}
+                src={`./Przelewy24-logo/P24-method-${i}.png`}
                 alt={`p24-method ${i}`}
                 key={`p24-method img ${i}`}
                 loading="lazy"
