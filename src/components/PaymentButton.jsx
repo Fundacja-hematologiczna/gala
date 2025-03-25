@@ -11,7 +11,7 @@ export const PaymentButton = () => {
     const paymentData = {
       userId: '12345',
       referrer: 'gala',
-      amount: 100,
+      amount: 111,
       email: 'user@example.com',
       description: 'Testowa płatność',
       returnUrl: 'https://pnet.pl',
@@ -36,7 +36,6 @@ export const PaymentButton = () => {
       if (response.data?.url) {
         window.open(response.data.url, '_blank');
       }
-     // window.location.href = response.datata.url;
     } catch (error) {
       console.error('Błąd płatności:', error);
       console.error('Błąd płatności:', error.response?.data || error.message);
