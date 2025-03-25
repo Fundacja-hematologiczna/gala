@@ -10,7 +10,7 @@ import Gallery from './pages/Gallery/Gallery';
 import Regulamin from './pages/Regulamin/Regulamin';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
-import NotFound from './pages/NotFound';
+import NotFound from './pages/NotFound/NotFound';
 import Admin from './pages/Admin/Admin';
 
 import { Routes, Route, Outlet, BrowserRouter } from 'react-router-dom';
