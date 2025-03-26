@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types';
 import './galleryZoomed.scss';
 import { useSwipeable } from 'react-swipeable';
+import galleryArrowRight from '../../../public/GalleryArrowRight.svg';
+import galleryArrowLeft from '../../../public/GalleryArrowLeft.svg';
 
 const propTypes = {
   chosenImage: PropTypes.string,
@@ -35,14 +37,12 @@ export const GalleryZoomed = ({
       <button
         className="galleryArrow galleryArrow--left"
         onClick={onClickNextImage}>
-        {'<'}
-        {/* <div /> */}
+        <img src={galleryArrowLeft} alt="Gallery Arrow left" />
       </button>
       <button
         className="galleryArrow galleryArrow--right"
         onClick={onClickPrevImage}>
-        {'>'}
-        {/* <div /> */}
+        <img src={galleryArrowRight} alt="Gallery Arrow right" />
       </button>
       <img className="galleryPhoto" src={chosenImage} alt={chosenImage} />
     </dialog>
