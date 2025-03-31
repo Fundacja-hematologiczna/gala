@@ -24,11 +24,24 @@ const P24Form = ({ p24formIsOpen }) => {
           <h2>Dane Sprzedawcy</h2>
         </div>
 
-        <div></div>
+        <div>
+          <div className='wrapper'>
+          <div className='tytul wrapper'>
+            <p className='desc'>Tytuł płatności:</p>
+            <input type="text" />
+          </div>
+          </div>
+         
+
+        </div>
+
+        <div>
+        <h2>Zamówienie</h2>
+        </div>
 
         <div></div>
 
-        <div></div>
+        <div><h2>Dane kupującego</h2></div>
       </div>
     </div>
   );

@@ -12,7 +12,7 @@ export const PaymentButton = () => {
       userId: '12345',
       referrer: 'gala',
       amount: 111,
-      email: 'user@example.com',
+      email: 'some@gmail.com',
       description: 'Testowa płatność',
       returnUrl: 'https://pnet.pl',
     };
