@@ -3,13 +3,32 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/scss';
 import 'swiper/scss/autoplay';
 import { Autoplay } from 'swiper/modules';
+import { useEffect, useState } from 'react';
+import { getLogos } from '../../api/services';
 import './slider.scss';
 
 export const Slider = () => {
-  const patronHonorowy = Array.from({ length: 6 }, (_, i) => i + 1);
-  const patronMedialny = Array.from({ length: 6 }, (_, i) => i + 1);
-  const patron = Array.from({ length: 5 }, (_, i) => i + 1);
-  const partnerzy = Array.from({ length: 83 }, (_, i) => i + 1);
+  const [slider1, setSlider1] = useState([]);
+  const [slider2, setSlider2] = useState([]);
+
+  useEffect(() => {
+    getLogos()
+      .then((response) => {
+        if (response.data.data && Array.isArray(response.data.data)) {
+          const logos = response.data.data.filter(
+            (logo) => logo.on_gala === true,
+          );
+
+          const mid = Math.ceil(logos.length / 2);
+
+          setSlider1(logos.slice(0, mid));
+          setSlider2(logos.slice(mid));
+        }
+      })
+      .catch(() => {
+        console.error('Błąd podczas pobierania danych:');
+      });
+  }, []);
 
   return (
     <>
@@ -41,14 +60,16 @@ export const Slider = () => {
               spaceBetween: 50,
             },
           }}>
-          {patronHonorowy.map((i) => (
-            <SwiperSlide key={`patronHonorowy-${i}`}>
-              <img
-                className="Slider-img"
-                src={`./partners&contibutors/patroniHonorowi/patron-${i}.webp`}
-                alt={`patronHonorowy-${i}`}
-                loading="lazy"
-              />
+          {slider1.map((logo) => (
+            <SwiperSlide key={`logo - ${logo.id}`}>
+              <a href={logo.link} target="blank" rel="noopener noreferrer">
+                <img
+                  className="Slider-img"
+                  src={logo.logo}
+                  alt={logo.title}
+                  loading="lazy"
+                />
+              </a>
             </SwiperSlide>
           ))}
         </Swiper>
@@ -80,39 +101,16 @@ export const Slider = () => {
               spaceBetween: 50,
             },
           }}>
-          {patronMedialny.map((i) => (
-            <SwiperSlide key={`patronMedialny-${i}`}>
-              <img
-                className="Slider-img"
-                key={i}
-                src={`./partners&contibutors/patronMedialny/patron-${i}.webp`}
-                alt={`Patron medialny ${i}`}
-                loading="lazy"
-              />
-            </SwiperSlide>
-          ))}
-
-          {patron.map((i) => (
-            <SwiperSlide key={`patron-${i}`}>
-              <img
-                className="Slider-img"
-                key={i}
-                src={`./partners&contibutors/patron/patron-${i}.webp`}
-                alt={`Patron ${i}`}
-                loading="lazy"
-              />
-            </SwiperSlide>
-          ))}
-
-          {partnerzy.map((i) => (
-            <SwiperSlide key={`partner-${i}`}>
-              <img
-                className="Slider-img"
-                key={i}
-                src={`./partners&contibutors/partnerzy/patron-${i}.webp`}
-                alt={`partner ${i}`}
-                loading="lazy"
-              />
+          {slider2.map((logo) => (
+            <SwiperSlide key={`logo - ${logo.id}`}>
+              <a href={logo.link} target="blank" rel="noopener noreferrer">
+                <img
+                  className="Slider-img"
+                  src={logo.logo}
+                  alt={logo.title}
+                  loading="lazy"
+                />
+              </a>
             </SwiperSlide>
           ))}
         </Swiper>

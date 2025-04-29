@@ -3,11 +3,13 @@ import { client } from './fetchClient.js';
 
 const URL = import.meta.env.VITE_API_URL;
 
-export const addUser = async (user) => {
-  const response = await axios.post(URL + '/user/registerUser', user);
+//const URL = 'http://localhost:5000/api';
 
-  return response.data;
-};
+// export const addUser = async (user) => {
+//   const response = await axios.post(URL + '/user/registerUser', user);
+
+//   return response.data;
+// };
 
 export const getAcessToken = (credentials) => {
   return client.post('/api/admin/login', credentials);
@@ -33,4 +35,57 @@ export const getImages = async () => {
   // const response = await axios.get('http://localhost:5000/api/admin/users');
   console.log(response.data);
   return response.data;
+};
+
+export const getLogos = async () => {
+  const data = await axios.get(
+    'https://fundacja.hematologiczna.org/api/supporters',
+  );
+  return data;
+};
+
+// export const checkPaymentStatus = async (paymentId) => {
+//   const data = await axios.get(
+//     'https://fundacja.hematologiczna.org/api/supporters',
+//   );
+//   return data;
+// };
+
+export const checkPaymentStatus = async (transactionId) => {
+  const data = await axios.get(
+    `https://payments.fundacja.hematologiczna.org/api/payment/status/${transactionId}`,
+  );
+  return data;
+};
+
+export const sendContactForm = async (formData) => {
+  try {
+    const response = await axios.post(`${URL}/user/contact`, {
+      form: {
+        fullName: formData.name,
+        email: formData.email,
+        message: formData.message,
+      },
+    });
+
+    return response.data;
+  } catch (error) {
+    console.error('Błąd przy wysyłaniu formularza kontaktowego:', error);
+    throw error.response?.data || { status: 'failed', error: 'Nieznany błąd' };
+  }
+};
+
+export const addUser = async (userData) => {
+  try {
+    const response = await axios.post(`${URL}/user/registerUser`, userData, {
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+      },
+    });
+
+    return response.data;
+  } catch (error) {
+    console.error('Błąd płatności:');
+  }
 };

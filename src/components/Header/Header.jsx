@@ -41,7 +41,10 @@ const Header = () => {
     <>
       <header className="header">
         <nav className="nav">
-          <div className="header-logo" />
+          <a href="https://fundacja.hematologiczna.org/" target="blink">
+            <div className="header-logo" />
+          </a>
+
           <ul className="nav__links">
             {menuOptions.map((option) => (
               <li className="nav__item" key={option.name}>
