@@ -86,7 +86,29 @@
     "SUPPORT_CITY": "City *",
     "MESSAGE_TEXT": "A copy of the sent message will appear in your email inbox. *",
     "MESSAGE_REQUIRED": "* Required field",
-    "FORMS_BUTTON": "Send Message"
+    "FORMS_BUTTON": "Send Message",
+   "MODAL": {
+      "REGISTRATION_SUCCESS_TITLE": "Thank you for your willingness\nto participate in the Gala!",
+      "REGISTRATION_SUCCESS_DESC": "To complete your registration, please make the payment. You also have the option to pay later. We will send all necessary information to your email address.",
+      "PAY_LATER": "Pay later",
+      "PAY_NOW": "Pay now",
+
+      "REGISTRATION_FAILED_TITLE": "Registration failed!",
+      "REGISTRATION_FAILED_DESC": "Registration could not be completed at this time. Please try again later. If the problem persists, contact us.",
+
+      "PAYMENT_SUCCESS_TITLE": "Payment completed\nsuccessfully!",
+      "PAYMENT_SUCCESS_DESC": "Thank you for your payment. Your registration has been accepted and all the details have been sent to the email address you provided. See you at the Gala!",
+
+      "PAYMENT_PENDING_TITLE": "Payment under verification",
+      "PAYMENT_PENDING_DESC": "Your payment is being processed. Please do not close or refresh the page. This may take up to 15 minutes.",
+      "TIME_LEFT": "Time remaining",
+
+      "PAYMENT_FAILED_TITLE": "Payment failed!",
+      "PAYMENT_FAILED_DESC": "Unfortunately, the payment could not be completed. Try again or use another payment method. If the problem persists, please contact us.",
+
+      "BACK": "Back"
+    }
+
   },
   "PLACE": {
     "HEADER_TITLE": "Event Venue",

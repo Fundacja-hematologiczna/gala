@@ -6,6 +6,7 @@ import ContactForm from './ContactForm';
 import ContactInfo from './ContactInfo';
 import ContactFormAccepted from './ContactFormAccepted/ContactFormAccepted';
 import useScrollLock from '../../hooks/useScrollLock.hook';
+import { sendContactForm } from '../../api/services.js';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -24,15 +25,30 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    setFormData({
-      name: '',
-      email: '',
-      message: '',
-    });
-    setIsAcknowledgementOpen(true);
+    console.log('wysylanie');
+
+    try {
+      const result = await sendContactForm(formData);
+
+      console.log(result);
+
+      if (result.status === 'success') {
+        setFormData({
+          name: '',
+          email: '',
+          message: '',
+        });
+        setIsAcknowledgementOpen(true);
+      } else {
+        alert(result.error || 'Wystąpił problem podczas wysyłania wiadomości.');
+      }
+    } catch (error) {
+      console.error('Błąd wysyłania formularza:', error);
+      alert('Nie udało się wysłać wiadomości. Spróbuj ponownie później.');
+    }
   };
 
   const handleClickCloseAccept = () => {

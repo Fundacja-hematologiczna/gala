@@ -1,3 +1,5 @@
+@import '../../../styles/mixins.scss';
+
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -8,24 +10,31 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 99999999999999999;
    
   }
   
   .modal {
+    font-family: Poppins;
     background:  #345B55;
-    padding: 36px 68px 96px;
+    // padding: 36px 68px 96px;
+    padding: 36px 68px 46px;
     border-radius: 20px;
     text-align: center;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     width: 600px;
     max-width: 98%;
+    max-width: 62%;
     color: white;
     display: flex;
   // box-sizing: border-box;
     flex-direction: column;
-   
-    
 
+    &-timer {
+      font-family: Poppins;
+    }
+
+  
     &-title {
         font-family: Poppins;
         font-weight: 700;
@@ -44,7 +53,9 @@
         line-height: 22.4px;
         letter-spacing: 0%;
         text-align: center;
+        margin: 0 auto;
         margin-bottom: 59px;
+        max-width: 92%;
 
     }
   }

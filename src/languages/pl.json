@@ -86,7 +86,29 @@
     "SUPPORT_CITY": "Miasto *",
     "MESSAGE_TEXT": "Kopia wysłanej wiadomości pojawi się w Twojej skrzynce email. *",
     "MESSAGE_REQUIRED": "* Pola wymagane",
-    "FORMS_BUTTON": "Wyślij wiadomość"
+    "FORMS_BUTTON": "Wyślij wiadomość",
+
+    "MODAL": {
+  "REGISTRATION_SUCCESS_TITLE": "Dziękujemy za chęć\nudziału w Gali !",
+  "REGISTRATION_SUCCESS_DESC": "W celu sfinalizowania zgłoszenia prosimy o dokonanie wpłaty. Masz też możliwość zapłacić później. Następnie wszystkie niezbędne informację wyślemy na Twój e-mail.",
+  "PAY_LATER": "Zapłać później",
+  "PAY_NOW": "Zapłać teraz",
+
+  "REGISTRATION_FAILED_TITLE": "Rejestracja nie powiodła się !",
+  "REGISTRATION_FAILED_DESC": "Nie udało się zakończyć rejestracji w tym momencie. Prosimy spróbować ponownie później. W razie problemów prosimy o kontakt.",
+  
+  "PAYMENT_SUCCESS_TITLE": "Płatność zakończona\npomyślnie!",
+  "PAYMENT_SUCCESS_DESC": "Dziękujemy za dokonanie wpłaty. Twoje zgłoszenie zostało przyjęte, a wszystkie szczegóły wysłaliśmy na podany adres e-mail. Do zobaczenia na Gali!",
+
+  "PAYMENT_PENDING_TITLE": "Płatność w trakcie weryfikacji",
+  "PAYMENT_PENDING_DESC": "Twoja płatność jest przetwarzana. Prosimy nie zamykać ani nie odświeżać strony. Może to potrwać do 15 minut.",
+  "TIME_LEFT": "Czas pozostały",
+
+  "PAYMENT_FAILED_TITLE": "Płatność nie powiodła się",
+  "PAYMENT_FAILED_DESC": "Niestety nie udało się zrealizować płatności. Spróbuj ponownie lub użyj innej metody płatności. Jeśli problem będzie się powtarzał, skontaktuj się z nami.",
+  
+  "BACK": "Powrót"
+}
   },
   "PLACE": {
     "HEADER_TITLE": "Miejsce wydarzenia",

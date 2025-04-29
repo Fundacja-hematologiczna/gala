@@ -1,14 +1,28 @@
 import '../../styles/index.scss';
 import './contributors.scss';
+import { useEffect, useState } from 'react';
 import { Button } from '../../components/Button/Button.jsx';
 import { useTranslation } from 'react-i18next';
+import { getLogos } from '../../api/services.js';
 
 const Contributors = () => {
+  const [logos, setLogos] = useState([]);
   const { t } = useTranslation();
-  const patronHonorowy = Array.from({ length: 6 }, (_, i) => i + 1);
-  const patronMedialny = Array.from({ length: 6 }, (_, i) => i + 1);
-  const patron = Array.from({ length: 5 }, (_, i) => i + 1);
-  const partnerzy = Array.from({ length: 83 }, (_, i) => i + 1);
+
+  useEffect(() => {
+    getLogos()
+      .then((response) => {
+        if (response.data.data && Array.isArray(response.data.data)) {
+          const logosForGala = response.data.data.filter(
+            (logo) => logo.on_gala === true,
+          );
+          setLogos(logosForGala);
+        }
+      })
+      .catch((e) => {
+        console.error('Błąd podczas pobierania danych:', e);
+      });
+  }, []);
 
   return (
     <>
@@ -33,59 +47,21 @@ const Contributors = () => {
         <section className="Contributors__partners">
           <div className="Contributors__partners-container">
             <div className="Contributors__partners-grid">
-              {patronHonorowy.map((i) => (
-                <div
-                  className="Contributors__partners-grid--item"
-                  key={`patronHonorowy ${i}`}>
-                  <img
-                    className="Contributors__partners-grid--item--img"
-                    src={`./partners&contibutors/patroniHonorowi/patron-${i}.webp`}
-                    alt={`Obrazek ${i}`}
-                    loading="lazy"
-                  />
-                </div>
-              ))}
-
-              {patronMedialny.map((i) => (
-                <div
-                  className="Contributors__partners-grid--item"
-                  key={`patronMedialny ${i}`}>
-                  <img
-                    className="Contributors__partners-grid--item--img"
-                    key={i}
-                    src={`./partners&contibutors/patronMedialny/patron-${i}.webp`}
-                    alt={`Obrazek ${i}`}
-                    loading="lazy"
-                  />
-                </div>
-              ))}
-
-              {patron.map((i) => (
-                <div
-                  className="Contributors__partners-grid--item"
-                  key={`patron${i}`}>
-                  <img
-                    className="Contributors__partners-grid--item--img"
-                    key={i}
-                    src={`./partners&contibutors/patron/patron-${i}.webp`}
-                    alt={`Obrazek ${i}`}
-                    loading="lazy"
-                  />
-                </div>
-              ))}
-
-              {partnerzy.map((i) => (
-                <div
-                  className="Contributors__partners-grid--item"
-                  key={`partner${i}`}>
-                  <img
-                    className="Contributors__partners-grid--item--img"
-                    key={i}
-                    src={`./partners&contibutors/partnerzy/patron-${i}.webp`}
-                    alt={`Obrazek ${i}`}
-                    loading="lazy"
-                  />
-                </div>
+              {logos.map((logo) => (
+                <a
+                  href={logo.link}
+                  key={`patron ${logo.id}`}
+                  target="blank"
+                  rel="noopener noreferrer">
+                  <div className="Contributors__partners-grid--item">
+                    <img
+                      className="Contributors__partners-grid--item--img"
+                      src={logo.logo}
+                      alt={`logo - ${logo.title}`}
+                      loading="lazy"
+                    />
+                  </div>
+                </a>
               ))}
             </div>
           </div>

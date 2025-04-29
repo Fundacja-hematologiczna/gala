@@ -2,31 +2,25 @@ import '../../styles/index.scss';
 import './registry.scss';
 import HCaptcha from '@hcaptcha/react-hcaptcha';
 import { useState, useRef, useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 import Checkbox from '../../components/Checkbox/Checkbox';
 import { useTranslation } from 'react-i18next';
-import { addUser } from '../../api/services';
+import { addUser, checkPaymentStatus } from '../../api/services';
 import Modal from './Modal/Modal.jsx';
 import P24Form from './P24Form/P24Form.jsx';
-import { PaymentButton } from '../../components/PaymentButton.jsx';
 
 const Registry = () => {
-  const [donate, setDonate] = useState(10);
-  const { t } = useTranslation();
+  const [donate, setDonate] = useState(100);
+  const [searchParams] = useSearchParams();
   const [isVerified, setIsVerified] = useState(false);
   const [captchaSize, setCaptchaSize] = useState('normal');
-  const [userId, setUserId] = useState('');
   const [p24formIsOpen, setP24FormIsOpen] = useState(false);
-
   const [modal, setModal] = useState({
     isOpen: false,
-    type: 'success',
-    message: '',
+    event: '',
+    url: null,
   });
-  const [message, setMessage] = useState('');
-
-  const hCaptchaSiteKey = import.meta.env.VITE_HCAPTCHA_SITE_KEY;
-  const p24Images = Array.from({ length: 25 }, (_, i) => i + 1);
 
   const [formData, setFormData] = useState({
     name: '',
@@ -35,7 +29,28 @@ const Registry = () => {
     buildingNumber: '',
     zipCode: '',
     city: '',
+    consents: {
+      privacyPolicyAndRegulaminAccepted: false,
+      dataProcessingConsentAccepted: false,
+      marketingConsentAccepted: false,
+    },
   });
+
+  const { t } = useTranslation();
+  const hCaptchaSiteKey = import.meta.env.VITE_HCAPTCHA_SITE_KEY;
+  const p24Images = Array.from({ length: 25 }, (_, i) => i + 1);
+
+  const handleConsentChange = (e) => {
+    const { name, checked } = e.target;
+
+    setFormData((prevData) => ({
+      ...prevData,
+      consents: {
+        ...prevData.consents,
+        [name]: checked,
+      },
+    }));
+  };
 
   const handleHCaptcha = () => {
     const res = hcaptchaRef.current.getResponse();
@@ -55,16 +70,6 @@ const Registry = () => {
 
   const hcaptchaRef = useRef(null);
 
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-
-  //   if (!isVerified) {
-  //     return alert('Proszę potwierdzić, że jesteś człowiekiem.');
-  //   }
-
-  //   addUser(formData).then();
-  // };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -75,10 +80,11 @@ const Registry = () => {
     try {
       const response = await addUser(formData);
 
-      if (response.success) {
+      if (response && response.status === 'success') {
         setModal({
           isOpen: true,
-          type: 'success',
+          event: 'registration-success',
+          url: response.paymentUrl,
         });
         setFormData({
           name: '',
@@ -87,19 +93,22 @@ const Registry = () => {
           buildingNumber: '',
           zipCode: '',
           city: '',
+          consents: {
+            privacyPolicyAndRegulaminAccepted: false,
+            dataProcessingConsentAccepted: false,
+            marketingConsentAccepted: false,
+          },
         });
       } else {
         setModal({
           isOpen: true,
-          type: 'warning',
-          message: response.message || 'Wystąpił problem z rejestracją.',
+          event: 'registration-failed',
         });
       }
     } catch (error) {
       setModal({
         isOpen: true,
-        type: 'error',
-        message: 'Błąd rejestracji: ' + error.message,
+        event: 'registration-failed',
       });
     }
   };
@@ -119,6 +128,47 @@ const Registry = () => {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
+
+  useEffect(() => {
+    const transactionId = searchParams.get('transactionId');
+    const status = searchParams.get('status');
+
+    if (transactionId && status) {
+      setModal({ isOpen: true, event: 'payment-pending' });
+      pollPaymentStatus(transactionId);
+    }
+  }, []);
+
+  const pollPaymentStatus = async (transactionId) => {
+    const maxAttempts = 15;
+    let attempts = 0;
+
+    const interval = setInterval(async () => {
+      attempts++;
+
+      if (attempts >= maxAttempts) {
+        clearInterval(interval);
+
+        setModal({ isOpen: true, event: 'payment-failed' });
+      }
+
+      try {
+        const res = await checkPaymentStatus(transactionId);
+
+        const currentStatus = res?.data?.status;
+
+        if (currentStatus === 'success') {
+          clearInterval(interval);
+          setModal({ isOpen: true, event: 'payment-success' });
+        } else if (currentStatus === 'failure') {
+          clearInterval(interval);
+          setModal({ isOpen: true, event: 'payment-failed' });
+        }
+      } catch (err) {
+        console.error('Błąd przy sprawdzaniu statusu płatności:');
+      }
+    }, 60 * 1000);
+  };
 
   return (
     <main className="Registry">
@@ -192,7 +242,11 @@ const Registry = () => {
             </div>
 
             <div className="Registry__form__checkbox">
-              <Checkbox />
+              <Checkbox
+                name="privacyPolicyAndRegulaminAccepted"
+                checked={formData.consents.privacyPolicyAndRegulaminAccepted}
+                onChange={handleConsentChange}
+              />
               <p className="Registry__form__checkbox-description">
                 {t(`REGISTRATION.FORM_RIGHTS.1.1`)}
 
@@ -217,14 +271,24 @@ const Registry = () => {
             </div>
 
             <div className="Registry__form__checkbox">
-              <Checkbox />
+              <Checkbox
+                name="dataProcessingConsentAccepted"
+                checked={formData.consents.dataProcessingConsentAccepted}
+                onChange={handleConsentChange}
+              />
+
               <p className="Registry__form__checkbox-description">
                 {t(`REGISTRATION.FORM_RIGHTS.2`)}
               </p>
             </div>
 
             <div className="Registry__form__checkbox">
-              <Checkbox required={false} />
+              <Checkbox
+                name="marketingConsent"
+                checked={formData.consents.marketingConsent}
+                onChange={handleConsentChange}
+                required={false}
+              />
               <p className="Registry__form__checkbox-description">
                 {t(`REGISTRATION.FORM_RIGHTS.3`)}
               </p>
@@ -253,7 +317,7 @@ const Registry = () => {
         </div>
       </section>
 
-      <PaymentButton />
+     
 
       <section className="Registry__donate" id="platnosci">
         <div className="container Registry__donate-container">
@@ -314,8 +378,9 @@ const Registry = () => {
       </section>
 
       <Modal
+        event={modal.event}
         isOpen={modal.isOpen}
-        message={message}
+        url={modal.url}
         onClose={() => setModal({ isOpen: false })}
       />
 

@@ -11,43 +11,103 @@
     
    
 }
+
+b {
+    font-weight: bold;
+}
+
+.flex-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+}
   
 .P24Form {
     border-radius: 20px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 90%;
-   
-    display: flex;
-  // box-sizing: border-box;
+   display: flex;
+   font-family: Poppins;
+  
     flex-direction: column;
     background-color: white;
+    background-color: rgb(245, 241, 241);
 
-    & div {
-        padding: 20px;
-        
+    &-container {
 
-        &:first-child{
-            
-            justify-content: space-between;
+        width: 90%;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    &-title {
+        text-transform: uppercase;
+    }
+
+    &-input {
+        border-radius: 2px;
+    }
+    
+
+   
+
+    &__group {
+
+        &-title {
+           // padding: 15px 0;
+           font-weight: 500;
+           font-size: 24px;
         }
-    
-           
-            &:nth-child(n+2):nth-child(odd) {
-               // background-color: rgb(245, 241, 241);
-               background-color: rgb(245, 241, 241);
-                display: grid;
-               // grid-template-columns: 400px minmax(200px, 400px) auto;
-                }
-    
+       
+
+      
+        &--1 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+           // padding:20px 0 10px;
+        }
+
+        &--3 {
+          //  border: 1px solid red;
+            display: flex;
+            flex-direction: column;
+            gap:5px;
+            justify-content: space-between;
             
-    
-            &:nth-child(even) {
-                
-                background-color: white;
-                }
-    
-            }
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    &-bottomLabel {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    &-bottomMargin {
+        height: 50px;
+    }
+
+    & section {
+        padding: 16px 0;
+        
+        &:nth-child(n+2):nth-child(odd) {     
+            background-color: rgb(245, 241, 241);
+            display: grid;    
+        }
+
+        &:nth-child(even) {     
+            background-color: white;
+        }
+    }
        
 
     &-title {
@@ -59,33 +119,28 @@
         height: auto;
     }
 
-    &-group1 {
-        display: flex;
-       // justify-content: space-between;
+   
 
-    }
-
-
-    // &-group {
-    //     border: 10px solid red;
-    //     &--1 {
-    //         display: flex;
-    //         border: 10px solid red;
-    //     }
-    // }
-
-    
-    
+      
 }
 
 .wrapper {
     display: flex;
-   // background-color: red;
-   
-   padding: 1px;
 }
   
+
+
+
+
+
+
+
+
 .desc {
     margin-right:20px ;
     padding: 0;
+}
+
+.border {
+    border: 1px solid red;
 }
