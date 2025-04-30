@@ -11,6 +11,7 @@ import Modal from './Modal/Modal.jsx';
 import P24Form from './P24Form/P24Form.jsx';
 
 const Registry = () => {
+  const { i18n, t } = useTranslation();
   const [donate, setDonate] = useState(100);
   const [searchParams] = useSearchParams();
   const [isVerified, setIsVerified] = useState(false);
@@ -29,6 +30,7 @@ const Registry = () => {
     buildingNumber: '',
     zipCode: '',
     city: '',
+    lang: i18n.language,
     consents: {
       privacyPolicyAndRegulaminAccepted: false,
       dataProcessingConsentAccepted: false,
@@ -36,7 +38,6 @@ const Registry = () => {
     },
   });
 
-  const { t } = useTranslation();
   const hCaptchaSiteKey = import.meta.env.VITE_HCAPTCHA_SITE_KEY;
   const p24Images = Array.from({ length: 25 }, (_, i) => i + 1);
 
@@ -93,6 +94,7 @@ const Registry = () => {
           buildingNumber: '',
           zipCode: '',
           city: '',
+          lang: i18n.language,
           consents: {
             privacyPolicyAndRegulaminAccepted: false,
             dataProcessingConsentAccepted: false,
@@ -186,7 +188,6 @@ const Registry = () => {
           </div>
         </div>
       </div>
-
       <section className="Registry__form">
         <div className="container Registry__form-container">
           <h2 className="Registry__form-title">
@@ -317,8 +318,6 @@ const Registry = () => {
         </div>
       </section>
 
-     
-
       <section className="Registry__donate" id="platnosci">
         <div className="container Registry__donate-container">
           <h2 className="Registry__donate-title">
@@ -342,6 +341,34 @@ const Registry = () => {
                 {`${amount} zł`}
               </button>
             ))}
+
+            <div className="Registry__donate__buttons-button Registry__donate__buttons-custom">
+              <input
+                type="number"
+                min="1"
+                placeholder="............"
+                // value={
+                //   ![100, 200, 250, 400, 500].includes(donate) ? donate : ''
+                // }
+                onChange={(e) => handleClick(Number(e.target.value))}
+                className="Registry__donate__buttons-custom-input"
+              />
+              <span className="Registry__donate__buttons-currency">zł</span>
+            </div>
+          </div>
+
+          <div className="Registry__donate__field">
+            <label className="Registry__donate__field-label">
+              {t('REGISTRATION.FORM_EMAIL')}
+            </label>
+            <input
+              className="Registry__donate__field-input"
+              type="email"
+              name="donate-email"
+              value={formData[name]}
+              onChange={handleChange}
+              required
+            />
           </div>
 
           <button className="Registry__form-button" type="button">

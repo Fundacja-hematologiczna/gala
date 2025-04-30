@@ -268,6 +268,8 @@
       background-color: #ffffff;
       border-radius: 20px;
       padding: 89px 84.5px 40px;
+      display: flex;
+      flex-direction: column;
 
       @include device(mobile) {
         padding: 82px 27px 45px;
@@ -309,7 +311,8 @@
       width: 100%;
       justify-content: center;
       flex-wrap: wrap;
-      margin-bottom: 62px;
+    //  margin-bottom: 62px;
+    margin-bottom: 42px;
 
       &-button {
         display: flex;
@@ -336,6 +339,87 @@
         &--active {
           color: white;
           background-color: #345b55;
+        }
+      }
+
+      &-custom {
+       // border: 1px solid red;
+        padding: 0 20px;
+       //                        min-width: 146px;
+        min-width: 196px;
+    
+        &-input {
+         // width: 83px;
+          min-width: 83px;
+          width: auto;
+          height: 39px;
+          border: none;
+          color: #345b55;
+          font-family: Poppins;
+          font-size: 32px;
+          font-weight: 700;
+          line-height: 48px; 
+          margin-right: 2px;
+
+          &::placeholder {
+            color: #345b55;
+          }
+
+          &:focus {
+            border: none;
+            outline: none;   
+            border: none;   
+            box-shadow: none;
+          }
+
+          // &:active {
+          //   border: none;
+          // }
+        }
+      }
+    }
+
+    &__field {
+     // border: 1px solid red;
+     // justify-self: center;
+     max-width: 328px;
+      margin: 0 auto;
+      margin-bottom: 50px;
+      
+
+      &-label {
+        //styleName: WP_body copy;
+        font-family: Poppins;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22.4px;
+        text-align: left;
+        color: #345b55;
+
+        
+      }
+  
+      &-input {
+        width: 100%;
+        box-sizing: border-box;
+        height: 62px;
+        padding: 13px 29px 13px 29px;
+        gap: 10px;
+        border-radius: 5px;
+        border: none;
+        border: 1px solid #345b55;
+        font-family: Poppins;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22.4px;
+        text-align: left;
+        
+
+
+  
+        &:focus {
+          outline: none;
+          border: 2px solid #345b55;
         }
       }
     }
