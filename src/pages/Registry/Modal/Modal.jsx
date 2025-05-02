@@ -1,6 +1,7 @@
 import './modal.scss';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import PropTypes from 'prop-types';
 
 const Modal = ({ isOpen, url, onClose, event }) => {
   const [timeLeft, setTimeLeft] = useState(15 * 60);
@@ -117,6 +118,20 @@ const Modal = ({ isOpen, url, onClose, event }) => {
       )}
     </div>
   );
+};
+
+Modal.propTypes = {
+  isOpen: PropTypes.bool.isRequired,
+  url: PropTypes.string,
+  onClose: PropTypes.func.isRequired,
+  event: PropTypes.oneOf([
+    'registration-success',
+    'registration-failed',
+    'payment-success',
+    'payment-pending',
+    'payment-failed',
+    '',
+  ]).isRequired,
 };
 
 export default Modal;

@@ -32,6 +32,11 @@
 
     &-timer {
       font-family: Poppins;
+      margin-bottom: 6px;
+    }
+
+    @include device(mobile) {
+      padding: 26px 48px 26px;
     }
 
   
@@ -43,6 +48,12 @@
         letter-spacing: 1%;
         text-align: center;
         margin-bottom: 10px;
+
+        @include device(mobile) {   
+          font-size: 30px;
+          line-height: 51px;
+         
+        }
 
     }
 
@@ -56,6 +67,10 @@
         margin: 0 auto;
         margin-bottom: 59px;
         max-width: 92%;
+
+        @include device(mobile) {
+          font-size: 13px;
+        }
 
     }
   }
@@ -76,6 +91,12 @@
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0%;
+
+    @include device(mobile) {
+      
+      width: 100%;
+      max-width: 270px;
+    }
 
 
     &--white {
