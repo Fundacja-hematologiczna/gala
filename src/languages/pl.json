@@ -75,9 +75,11 @@
     },
     "DONATE_TITLE": "Wesprzyj naszą inicjatywę",
     "DONATE_DESCRIPTION": "Przekazując darowiznę, pomagasz w realizacji zadań statutowych Fundacji.",
+    "DONATE_INPUT_AMOUNT": "Kwota darowizny w PLN *",
+    "DONATE_INPUT_EMAIL": "Adres e-mail *",
     "DONATE_BUTTON": "Przekaż darowiznę",
     "PAYMENTSUPPORT": "Płatności obsługuje:",
-    "SUPPORT_TITLE": "Wesprzyj naszą inicjatywę",
+    "SUPPORT_TITLE": "Wesprzyj naszą inicjatywę *",
     "SUPPORT_FULLNAME": "Imię i Nazwisko *",
     "SUPPORT_EMAIL": "Adres e-mail *",
     "SUPPORT_STREET": "Ulica *",
@@ -104,7 +106,7 @@
   "PAYMENT_PENDING_DESC": "Twoja płatność jest przetwarzana. Prosimy nie zamykać ani nie odświeżać strony. Może to potrwać do 15 minut.",
   "TIME_LEFT": "Czas pozostały",
 
-  "PAYMENT_FAILED_TITLE": "Płatność nie powiodła się",
+  "PAYMENT_FAILED_TITLE": "Płatność nie powiodła się !",
   "PAYMENT_FAILED_DESC": "Niestety nie udało się zrealizować płatności. Spróbuj ponownie lub użyj innej metody płatności. Jeśli problem będzie się powtarzał, skontaktuj się z nami.",
   
   "BACK": "Powrót"

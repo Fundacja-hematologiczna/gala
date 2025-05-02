@@ -75,6 +75,8 @@
     },
     "DONATE_TITLE": "Support our initiative",
     "DONATE_DESCRIPTION": "By making a donation, you help support the statutory goals of the Foundation.",
+    "DONATE_INPUT_AMOUNT": "Donation amount in PLN *",
+    "DONATE_INPUT_EMAIL": "Email address *",
     "DONATE_BUTTON": "Make a donation",
     "PAYMENTSUPPORT": "Payments are processed by:",
     "SUPPORT_TITLE": "Support Our Initiative",

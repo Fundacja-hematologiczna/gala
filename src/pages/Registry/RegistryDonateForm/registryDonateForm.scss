@@ -1,0 +1,174 @@
+@import '../../../styles/mixins.scss';
+
+.RegistryDonateForm {
+    color: #345b55;
+    padding: 0 20px;
+    margin-bottom: 72px;
+
+    &-container {
+      border: 3px solid #345b55;
+      background-color: #ffffff;
+      border-radius: 20px;
+      padding: 89px 84.5px 40px;
+      display: flex;
+      flex-direction: column;
+
+      @include device(mobile) {
+        padding: 82px 27px 45px;
+      }
+    }
+
+    &-title {
+      //styleName: WP_Title H1';
+      font-family: Poppins;
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 72px;
+      letter-spacing: 0.01em;
+      text-align: center;
+      margin-bottom: 16px;
+
+      @include device(mobile) {
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 48px;
+      }
+    }
+
+    &-description {
+      //styleName: WP_body copy;
+      font-family: Poppins;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 22.4px;
+      text-align: center;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+      margin-bottom: 51px;
+    }
+
+    &__buttons {
+      display: flex;
+      gap: 34px;
+      width: 100%;
+      justify-content: center;
+      flex-wrap: wrap;
+    
+    margin-bottom: 42px;
+
+      &-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 146px;
+        height: 71px;
+        border: 3px solid #345b55;
+        border-radius: 12px;
+        background-color: #ffffff;
+        color: #345b55;
+        //styleName: WP_H2';
+        font-family: Poppins;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 48px;
+        letter-spacing: 0.01em;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        box-sizing: border-box;
+        cursor: pointer;
+
+        &--active {
+          color: white;
+          background-color: #345b55;
+        }
+      }
+
+      
+    }
+
+    &__field {
+    
+     max-width: 328px;
+      margin: 0 auto;
+    
+    margin-bottom:25px;
+      
+
+      &-label {
+        //styleName: WP_body copy;
+        font-family: Poppins;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22.4px;
+        text-align: left;
+        color: #345b55;
+
+        
+      }
+  
+      &-input {
+        width: 100%;
+        box-sizing: border-box;
+        height: 53px;
+        padding: 13px 29px 13px 29px;
+        gap: 10px;
+        border-radius: 5px;
+        border: none;
+        border: 1px solid #345b55;
+        font-family: Poppins;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22.4px;
+        text-align: left;
+        
+
+
+  
+        &:focus {
+          outline: none;
+          border: 2px solid #345b55;
+        }
+      }
+    }
+
+    &-button {
+        all: unset;
+        min-width: 246px;
+        padding: 11.5px 49px;
+        gap: 10px;
+        border-radius: 30px;
+        background: #345b55;
+        color: white;
+        font-family: Poppins;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 24px;
+        letter-spacing: 0.0012em;
+        text-align: center;
+        box-sizing: border-box;
+        transition: 0.2s;
+        display: flex;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+
+        @include device(mobile) {
+          //styleName: WP_M_Button;
+          font-family: Poppins;
+          font-size: 14px;
+          line-height: 23px;
+          text-align: left;
+          padding: 9px 25px;
+          min-width: 210px; 
+        }
+  
+  
+        &:hover {
+          scale: 103%;
+          cursor: pointer;
+        }
+      }
+
+}
