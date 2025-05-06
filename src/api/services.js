@@ -2,7 +2,7 @@ import axios from 'axios';
 import { client } from './fetchClient.js';
 
 const URL = import.meta.env.VITE_API_URL;
-const PAYMENT_API_URL = import.meta.env.PAYMENT_API_URL;
+const PAYMENT_API_URL = import.meta.env.VITE_PAYMENT_API_URL;
 
 //const URL = 'http://localhost:5000/api';
 
@@ -83,9 +83,9 @@ export const addUser = async (userData) => {
   }
 };
 
-export const createPayment = (payload) => {
+export const createPayment = async (payload) => {
   try {
-    const response = axios.post(
+    const response = await axios.post(
       `${PAYMENT_API_URL}/payment/createPayment`,
       payload,
       {
@@ -98,6 +98,6 @@ export const createPayment = (payload) => {
 
     return response.data;
   } catch (error) {
-    console.error('Błąd płatności:');
+    console.error('Błąd płatności:', error);
   }
 };

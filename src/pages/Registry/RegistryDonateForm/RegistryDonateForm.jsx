@@ -21,7 +21,7 @@ export const RegistryDonateForm = ({ setModal }) => {
     e.preventDefault();
 
     const payload = {
-      amount,
+      amount: amount * 100,
       email,
       referrer: 'gala',
       returnUrl: 'https://gala.fundacja.hematologiczna.org/rejestracja',
@@ -43,6 +43,7 @@ export const RegistryDonateForm = ({ setModal }) => {
         });
       }
     } catch (error) {
+      console.log(error);
       setModal({
         isOpen: true,
         event: 'payment-failed',
