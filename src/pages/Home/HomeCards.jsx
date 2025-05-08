@@ -10,7 +10,7 @@ const HomeCards = () => {
       title: 'MAIN_PAGE.ATTRACTIONS_BODY',
       description: 'MAIN_PAGE.ATTRACTIONS_TITLE',
       buttonLabel: 'MAIN_PAGE.ATTRACTIONS_BUTTON',
-      navigateTo: '/Program',
+      navigateTo: '/program',
       backgroundColor: '#E5E9CD',
     },
     {
@@ -18,7 +18,7 @@ const HomeCards = () => {
       title: 'MAIN_PAGE.PALACE_BODY',
       description: 'MAIN_PAGE.PALACE_TITLE',
       buttonLabel: 'MAIN_PAGE.PALACE_BUTTON',
-      navigateTo: '/Place',
+      navigateTo: '/miejsce',
       backgroundColor: '#99ADAA',
       scale: '1.1',
     },
@@ -27,7 +27,7 @@ const HomeCards = () => {
       title: 'MAIN_PAGE.PLACE_BODY',
       description: 'MAIN_PAGE.PLACE_TITLE',
       buttonLabel: 'MAIN_PAGE.PLACE_BUTTON',
-      navigateTo: '/Place',
+      navigateTo: '/miejsce',
       backgroundColor: '#F3F2F2',
     },
   ];
