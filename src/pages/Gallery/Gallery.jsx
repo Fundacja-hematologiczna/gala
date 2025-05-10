@@ -152,7 +152,7 @@ const Gallery = () => {
                     onClick={() => handleClickShowGallery(i)}
                     alt={`image-${i}`}
                     className="Gallery__pictures__grid-item--img"
-                    loading="lazy" // Lazy loading
+                    loading="lazy"
                   />
                 </div>
               ))}
