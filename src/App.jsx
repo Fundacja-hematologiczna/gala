@@ -27,12 +27,12 @@ function App() {
           <Route path="/" element={<Outlet />}>
             <Route path="/" element={<Home />} />
             <Route path="/rejestracja" element={<Registry />} />
-            <Route path="/Place" element={<Place />} />
-            <Route path="/Program" element={<Program />} />
-            <Route path="/Auction" element={<Auction />} />
-            <Route path="/contributors" element={<Contributors />} />
-            <Route path="/gallery" element={<Gallery />} />
-            <Route path="/contact" element={<Contact />} />
+            <Route path="/miejsce" element={<Place />} />
+            <Route path="/program" element={<Program />} />
+            <Route path="/aukcja" element={<Auction />} />
+            <Route path="/darczyncy" element={<Contributors />} />
+            <Route path="/galeria" element={<Gallery />} />
+            <Route path="/kontakt" element={<Contact />} />
             <Route path="/klauzula-informacyjna" element={<Klauzula />} />
             <Route path="/regulamin" element={<Regulamin />} />
             <Route path="/admin" element={<Admin />} />

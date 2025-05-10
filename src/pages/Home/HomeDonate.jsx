@@ -18,7 +18,7 @@ export const HomeDonate = ({ onClick }) => {
           <div className="Home__donateItem__buttons">
             <button
               className="Home__donateItem__buttons-button"
-              onClick={() => onClick('/contributors')}>
+              onClick={() => onClick('/darczyncy')}>
               {t('MAIN_PAGE.AUCTION_ITEM_BUTTON_1')}
             </button>
           </div>
