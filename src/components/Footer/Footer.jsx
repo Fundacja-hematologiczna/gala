@@ -105,15 +105,6 @@ const Footer = () => {
 
             <p>{t('FOOTER.MENU_OPTIONS.RIGHTS')}</p>
           </div>
-          <div className="BackToTop BackToTop--margin">
-            <p className="BackToTop__text">{t('FOOTER.BACK_TO_TOP')}</p>
-            <button
-              className="BackToTop__button"
-              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-              aria-label="Back to top">
-              ↑
-            </button>
-          </div>
         </div>
       </section>
     </>
