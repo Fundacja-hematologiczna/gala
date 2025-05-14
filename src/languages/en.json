@@ -89,7 +89,7 @@
     "MESSAGE_TEXT": "A copy of the sent message will appear in your email inbox. *",
     "MESSAGE_REQUIRED": "* Required field",
     "FORMS_BUTTON": "Send Message",
-   "MODAL": {
+    "MODAL": {
       "REGISTRATION_SUCCESS_TITLE": "Thank you for your willingness\nto participate in the Gala!",
       "REGISTRATION_SUCCESS_DESC": "To complete your registration, please make the payment. You also have the option to pay later. We will send all necessary information to your email address.",
       "PAY_LATER": "Pay later",
@@ -110,7 +110,6 @@
 
       "BACK": "Back"
     }
-
   },
   "PLACE": {
     "HEADER_TITLE": "Event Venue",

@@ -1,10 +1,30 @@
 import { useTranslation } from 'react-i18next';
 import '../../styles/index.scss';
 import './auction.scss';
-import { Button } from '../../components/Button/Button';
 
 const Program = () => {
   const { t } = useTranslation();
+
+  const handleClickDownload = async () => {
+    try {
+      const response = await fetch('/api/itemCatalog.json');
+
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+
+      const data = await response.json();
+      const link = document.createElement('a');
+
+      link.href = data.link;
+      link.setAttribute('download', '');
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } catch (e) {
+      console.error('Something goes wrong: ', e);
+    }
+  };
 
   return (
     <>
@@ -35,12 +55,17 @@ const Program = () => {
                   {t('AUCTION.ITEMS_LABEL_TITLE')}
                 </h3>
                 <div className="Auction__agenda1__greenCard-buttonWrapper">
-                  <Button
+                  {/* <Button
                     buttonLabel={t('AUCTION.ITEMS_LABEL_BUTTON')}
                     backgroundColor={'#B7C274'}
                     navigateTo={'/about'}
                     arrow={'true'}
-                  />
+                  /> */}
+                  <button
+                    className="Auction__button"
+                    onClick={handleClickDownload}>
+                    {t('AUCTION.ITEMS_LABEL_BUTTON')}
+                  </button>
                 </div>
               </div>
 

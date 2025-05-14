@@ -29,8 +29,6 @@ const LoginForm = ({ onLogin }) => {
   };
 
   return (
-   
-
     <form onSubmit={handleSubmit} className="Admin__form">
       <h1 className="Admin__form-title">logowanie</h1>
       <div className="Admin__form__fieldsGrid">

@@ -102,8 +102,10 @@ const Footer = () => {
             <NavLink className="Footer__links-link" to={'/regulamin'}>
               {t('FOOTER.MENU_OPTIONS.STATUTE')}
             </NavLink>
-
-            <p>{t('FOOTER.MENU_OPTIONS.RIGHTS')}</p>
+          </div>
+          <div className="Footer__rights">
+            Wszelkie prawa zastrzeżone © Fundacja na Rzecz Pomocy Chorym na
+            Białaczki
           </div>
         </div>
       </section>

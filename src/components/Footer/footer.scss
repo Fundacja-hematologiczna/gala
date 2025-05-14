@@ -126,7 +126,7 @@
         max-width: 231px;
         width: 100%;
         margin: 0 auto;
-       // gap: 65px;
+        // gap: 65px;
       }
 
       & img {
@@ -166,5 +166,21 @@
       }
     }
   }
-}
 
+  &__rights {
+    text-align: center;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 30px;
+    margin-top: 24px;
+
+    @include device(mobile) {
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 15px;
+      letter-spacing: 0.03em;
+      text-align: center;
+    }
+  }
+}
