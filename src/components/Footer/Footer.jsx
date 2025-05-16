@@ -13,7 +13,7 @@ const Footer = () => {
         <div className="container Footer-container">
           <div className="Footer__logo">
             <img
-              src="stopka-logo.webp"
+              src="/stopka-logo.webp"
               alt="logo fundacja hematologiczna"
               className="Footer__logo-img"
             />
@@ -63,21 +63,21 @@ const Footer = () => {
                 href="https://www.facebook.com/Fundacja.Hematologiczna/"
                 target="_blank"
                 rel="noopener noreferrer">
-                <img src="footer-icon-fb.svg" alt="facebook icon" />
+                <img src="/footer-icon-fb.svg" alt="facebook icon" />
               </a>
 
               <a
                 href="https://www.youtube.com/@FundacjaHematologiczna"
                 target="_blank"
                 rel="noopener noreferrer">
-                <img src="footer-icon-yt.svg" alt="youtube icon" />
+                <img src="/footer-icon-yt.svg" alt="youtube icon" />
               </a>
 
               <a
                 href="https://pl.linkedin.com/company/fundacja-na-rzecz-pomocy-chorym-na-bia%C5%82aczki"
                 target="_blank"
                 rel="noopener noreferrer">
-                <img src="footer-icon-in.svg" alt="linkedin icon" />
+                <img src="/footer-icon-in.svg" alt="linkedin icon" />
               </a>
 
               <a
@@ -86,7 +86,7 @@ const Footer = () => {
                 rel="noopener noreferrer">
                 <img
                   className="test"
-                  src="footer-icon-instagram.webp"
+                  src="/footer-icon-instagram.webp"
                   alt="instagram icon"
                 />
               </a>

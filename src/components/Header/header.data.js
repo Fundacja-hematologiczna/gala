@@ -11,32 +11,32 @@ export const menuOptions = [
   },
   {
     name: 'miejsce',
-    to: '/Place',
+    to: '/miejsce',
     title: 'MENU_OPTIONS.PLACE',
   },
   {
     name: 'program',
-    to: '/Program',
+    to: '/program',
     title: 'MENU_OPTIONS.PROGRAM',
   },
   {
     name: 'aukcja',
-    to: '/Auction',
+    to: '/aukcja',
     title: 'MENU_OPTIONS.AUCTION',
   },
   {
     name: 'dlaDarczyncow',
-    to: '/contributors',
+    to: '/darczyncy',
     title: 'MENU_OPTIONS.CONTRIBUTORS',
   },
   {
     name: 'galeria',
-    to: '/gallery',
+    to: '/galeria',
     title: 'MENU_OPTIONS.GALLERY',
   },
   {
     name: 'kontakt',
-    to: '/contact',
+    to: '/kontakt',
     title: 'MENU_OPTIONS.CONTACT',
   },
 ];

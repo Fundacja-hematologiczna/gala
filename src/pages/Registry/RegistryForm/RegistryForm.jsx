@@ -215,7 +215,7 @@ export const RegistryForm = ({ setModal }) => {
 
           <div className="RegistryForm__checkbox">
             <Checkbox
-              name="marketingConsent"
+              name="marketingConsentAccepted"
               checked={formData.consents.marketingConsentAccepted}
               onChange={handleConsentChange}
               required={false}

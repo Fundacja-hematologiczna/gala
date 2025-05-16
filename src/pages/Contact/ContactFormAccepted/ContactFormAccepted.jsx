@@ -20,7 +20,7 @@ const ContactFormAccepted = ({ onClick }) => {
         </p>
         <div className="acknowledgement__button" onClick={onClick}>
           <Button
-            navigateTo="/contact"
+            navigateTo="/kontakt"
             buttonLabel={t('CONTACT.ACCEPT_BUTTON')}
             backgroundColor="#FFFFFF"
           />

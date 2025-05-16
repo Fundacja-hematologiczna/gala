@@ -18,6 +18,8 @@ const Gallery = () => {
   const [chosenImage, setChosenImage] = useState('');
   const [isGalleryOpened, setIsGalleryOpened] = useState(false);
 
+  const [isBackToTopButton, setIsBackToTopButton] = useState(false);
+
   const handleClickShowGallery = (img) => {
     dialogRef.current?.showModal();
     setIsGalleryOpened(true);
@@ -81,6 +83,8 @@ const Gallery = () => {
       if (bottom && !loading && images[isActive]?.length > visibleImages) {
         setVisibleImages((prev) => prev + 6);
       }
+
+      setIsBackToTopButton(window.scrollY > 600);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -152,7 +156,7 @@ const Gallery = () => {
                     onClick={() => handleClickShowGallery(i)}
                     alt={`image-${i}`}
                     className="Gallery__pictures__grid-item--img"
-                    loading="lazy" // Lazy loading
+                    loading="lazy"
                   />
                 </div>
               ))}
@@ -166,6 +170,17 @@ const Gallery = () => {
             onClickPrevImage={handleClickPrevImg}
           />
         </div>
+        {isBackToTopButton && (
+          <div className="BackToTop">
+            <button
+              className="BackToTop__button"
+              onClick={() => window.scrollTo({ top: 50, behavior: 'smooth' })}
+              aria-label={t('FOOTER.BACK_TO_TOP')}
+              title={t('FOOTER.BACK_TO_TOP')}>
+              ↑
+            </button>
+          </div>
+        )}
       </section>
     </main>
   );
