@@ -79,7 +79,7 @@ const Contributors = () => {
               <Button
                 buttonLabel={t('CONTRIBUTORS.JOIN_BUTTON')}
                 backgroundColor={'#FFFFFF'}
-                navigateTo={'/about'}
+                navigateTo={'/rejestracja#platnosci'}
               />
             </div>
           </div>

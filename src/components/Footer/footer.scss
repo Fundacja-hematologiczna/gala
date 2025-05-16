@@ -166,4 +166,21 @@
       }
     }
   }
+
+  &__rights {
+    text-align: center;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 30px;
+    margin-top: 24px;
+
+    @include device(mobile) {
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 15px;
+      letter-spacing: 0.03em;
+      text-align: center;
+    }
+  }
 }
