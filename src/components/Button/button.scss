@@ -10,7 +10,6 @@
     padding: 8px 32px 8px 32px;
     gap: 10px;
     border-radius: 30px ;
-    opacity: 0px;
     font-family: Poppins;
     font-size: 16px;
     font-weight: 700;
@@ -18,6 +17,12 @@
     text-align: center;
     text-wrap: nowrap;
     transition: 0.2s;
+
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+     filter: blur(0.2px);
 
     @include device(mobile) {
         //styleName: WP_M_Button;
@@ -31,7 +36,7 @@
     }
 
     &:hover {
-        scale: 105%;
+        scale: 102%;
     }
 
     &__label {
@@ -43,8 +48,10 @@
             width: 9px;
             height:15.56px;
             margin-left: 10px;
-            background-image: url('arrow-right.svg');
+            background-image: url('/arrow-right.svg');
             background-position: center;
+
+            
 
             @include device(mobile) {
                 display: none;

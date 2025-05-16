@@ -1,12 +1,16 @@
 import { useTranslation } from 'react-i18next';
 import './cookies.scss';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import classNames from 'classnames';
-import useLocalStorage from '../../hooks/useLocaleStorage.hook';
+import Cookies from 'js-cookie';
+import '../../styles/index.scss';
 
-const Cookies = () => {
+const CookiesComponent = () => {
+  const [isOpened, setIsOpened] = useState(
+    () => !Cookies.get('cookiesAccepted'),
+  );
+
   const { t } = useTranslation();
-  const [isOpened, setIsOpened] = useLocalStorage('cookies', true);
   const cookiesRef = useRef(null);
 
   const handleClickCloseCookies = () => {
@@ -15,26 +19,25 @@ const Cookies = () => {
     cookiesRef.current?.addEventListener(
       'animationend',
       () => {
-        setIsOpened((prev) => !prev);
-        cookiesRef.current?.classList.remove('Cookies--closing');
+        Cookies.set('cookiesAccepted', 'true', { expires: 365 });
+        setIsOpened(false);
       },
-      {
-        once: true,
-      },
+      { once: true },
     );
   };
 
-  return (
+  return !isOpened ? null : (
     <section
-      className={classNames('Cookies', { 'Cookies--hidden': isOpened })}
+      className={classNames('Cookies', { 'Cookies--hidden': !isOpened })}
       ref={cookiesRef}>
-      <div>
+      <div className="container">
         <p>
           {t('COOKIES.TITLE')}{' '}
           <a
             className="Cookies__link"
             href="https://fundacja.hematologiczna.org/polityka-prywatnosci"
-            target="_blank">
+            target="_blank"
+            rel="noopener noreferrer">
             {t('COOKIES.LINK')}
           </a>
           .
@@ -47,4 +50,4 @@ const Cookies = () => {
   );
 };
 
-export default Cookies;
+export default CookiesComponent;

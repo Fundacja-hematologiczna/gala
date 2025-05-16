@@ -68,7 +68,7 @@ const Gallery = () => {
         setLoading(false);
       })
       .catch((e) => {
-        throw alert('error:', e);
+        console.log(e);
       });
   }, []);
 
@@ -97,6 +97,9 @@ const Gallery = () => {
         break;
       case 'ArrowLeft':
         handleClickPrevImg();
+        break;
+      case 'Escape':
+        handleClickCloseGallery();
         break;
       default:
         break;

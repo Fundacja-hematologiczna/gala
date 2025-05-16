@@ -24,7 +24,6 @@ const Header = () => {
   };
 
   useEffect(() => {
-    setIsBurgerMenuActive(false);
     window.scrollTo({ top: 0, behavior: 'instant' });
   }, [isActive]);
 
@@ -42,7 +41,10 @@ const Header = () => {
     <>
       <header className="header">
         <nav className="nav">
-          <div className="header-logo" />
+          <a href="https://fundacja.hematologiczna.org/" target="blink">
+            <div className="header-logo" />
+          </a>
+
           <ul className="nav__links">
             {menuOptions.map((option) => (
               <li className="nav__item" key={option.name}>
@@ -62,13 +64,12 @@ const Header = () => {
             className={`nav__burgerMenu ${isBurgerMenuActive ? 'nav__burgerMenu--active' : ''}`}
             onClick={handleClickBurgerMenu}></div>
 
-          {isBurgerMenuActive && (
-            <BurgerMenu
-              onClickOption={handleClick}
-              isActive={isActive}
-              onClickButton={handleClickBurgerMenu}
-            />
-          )}
+          <BurgerMenu
+            onClickOption={handleClick}
+            isActive={isActive}
+            isBurgerMenuActive={isBurgerMenuActive}
+            setIsBurgerMenuActive={setIsBurgerMenuActive}
+          />
         </nav>
       </header>
     </>

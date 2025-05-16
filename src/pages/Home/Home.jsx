@@ -16,14 +16,14 @@ const Home = () => {
   const navigate = useNavigate();
 
   const handleClick = (navigateTo) => {
-    navigate(navigateTo);
+    navigate(navigateTo, { replace: true });
   };
 
   const welcomeSectionPhotos = [
-    '/gala/VIDEO.webp',
-    '/gala/aukcje.webp',
-    '/gala/place.webp',
-    '/gala/program.webp',
+    'VIDEO.webp',
+    'aukcje.webp',
+    'place.webp',
+    'program.webp',
   ];
   const [photoChanging, setPhotoChanging] = useState(true);
   const [welcomeSectionImage1, setWelcomeSectionImage1] = useState(0);

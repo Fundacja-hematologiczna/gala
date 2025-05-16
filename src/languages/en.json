@@ -10,7 +10,7 @@
     "CONTACT": "contact"
   },
   "MAIN_PAGE": {
-    "HEADER_TITLE": "The 4th Charity Gala \nRadziwiłł Palace in Nieborów",
+    "HEADER_TITLE": "The 4th Charity Gala \nRadziwiłł Palace \n in Nieborów",
     "HEADER_DATE": "Saturday, September 6, 2025",
     "HEADER_BODY": "We cordially invite you to the fourth \nedition of the Charity Gala organized \nin the picturesque Nieborów.",
     "HEADER_BUTTON": "Participate",
@@ -44,7 +44,7 @@
     "PLACE_BODY": "Location",
     "PLACE_TITLE": "The uniqueness of Nieborów lies not only in its perfectly preserved palace but also in its beautiful Baroque garden in the French style. This place enchants with its meticulously designed composition, offering a perfect blend of natural harmony and human craftsmanship.",
     "PLACE_BUTTON": "Check directions",
-    "IMAGE": "/gala/atrakcjeDlaUczestnikow(eng).webp",
+    "IMAGE": "atrakcjeDlaUczestnikow(eng).webp",
     "WAITING_TITLE_1": "We are waiting for you!",
     "WAITING_TITLE_2": "Join us!",
     "WAITING_BUTTON": "Participate",
@@ -75,6 +75,8 @@
     },
     "DONATE_TITLE": "Support our initiative",
     "DONATE_DESCRIPTION": "By making a donation, you help support the statutory goals of the Foundation.",
+    "DONATE_INPUT_AMOUNT": "Donation amount in PLN *",
+    "DONATE_INPUT_EMAIL": "Email address *",
     "DONATE_BUTTON": "Make a donation",
     "PAYMENTSUPPORT": "Payments are processed by:",
     "SUPPORT_TITLE": "Support Our Initiative",
@@ -86,17 +88,38 @@
     "SUPPORT_CITY": "City *",
     "MESSAGE_TEXT": "A copy of the sent message will appear in your email inbox. *",
     "MESSAGE_REQUIRED": "* Required field",
-    "FORMS_BUTTON": "Send Message"
+    "FORMS_BUTTON": "Send Message",
+    "MODAL": {
+      "REGISTRATION_SUCCESS_TITLE": "Thank you for your willingness\nto participate in the Gala!",
+      "REGISTRATION_SUCCESS_DESC": "To complete your registration, please make the payment. You also have the option to pay later. We will send all necessary information to your email address.",
+      "PAY_LATER": "Pay later",
+      "PAY_NOW": "Pay now",
+
+      "REGISTRATION_FAILED_TITLE": "Registration failed!",
+      "REGISTRATION_FAILED_DESC": "Registration could not be completed at this time. Please try again later. If the problem persists, contact us.",
+
+      "PAYMENT_SUCCESS_TITLE": "Payment completed\nsuccessfully!",
+      "PAYMENT_SUCCESS_DESC": "Thank you for your payment. Your registration has been accepted and all the details have been sent to the email address you provided. See you at the Gala!",
+
+      "PAYMENT_PENDING_TITLE": "Payment under verification",
+      "PAYMENT_PENDING_DESC": "Your payment is being processed. Please do not close or refresh the page. This may take up to 15 minutes.",
+      "TIME_LEFT": "Time remaining",
+
+      "PAYMENT_FAILED_TITLE": "Payment failed!",
+      "PAYMENT_FAILED_DESC": "Unfortunately, the payment could not be completed. Try again or use another payment method. If the problem persists, please contact us.",
+
+      "BACK": "Back"
+    }
   },
   "PLACE": {
     "HEADER_TITLE": "Event Venue",
-    "HEADER_BODY": "The palace and stable are located in the picturesque village of Walewice, situated in central Poland,\n in the Łódź Voivodeship. This historic place is approximately 50 km northeast of Łódź \u2014 about an hour's drive by car.\n From the center of Łódź, you can also reach Walewice by taking a train to Łowicz and then a taxi to the palace.",
+    "HEADER_BODY": "The palace and stable are located in the picturesque village of Nieborów, situated in central Poland,\n in the Łódź Voivodeship. This historic place is approximately 50 km northeast of Łódź \u2014 about an hour's drive by car.\n From the center of Łódź, you can also reach Nieborów by taking a train to Łowicz and then a taxi to the palace.",
     "MAP_TITLE": "The 4th Charity Gala will take place at the Radziwiłł Palace in Nieborów",
     "MAP_PLACE": "Location:",
     "MAP_PLACE_NAME": "Radziwiłł Palace in Nieborów and Romantic Park in Arkadia",
     "MAP_ADDRESS": "Address:\n Aleja Lipowa 35 99-416 Nieborów",
     "MAP_TELEPHONE": "Phone:",
-    "JOIN_TITLE": "Want to join us but don't know how?",
+    "JOIN_TITLE": "Want to join us but \n don't know how?",
     "JOIN_BODY": "The form will guide you through the registration process.",
     "JOIN_BUTTON": "Participate"
   },
@@ -147,7 +170,7 @@
   },
   "GALLERY": {
     "HEADER_TITLE": "Gallery",
-    "HEADER_BODY_1": "The Charity Gala in Walewice has traditionally been a festival of beautiful hearts. Each edition gathers a large group of people eager to support patients with hematological diseases and their families.",
+    "HEADER_BODY_1": "The Charity Gala in Nieborów has traditionally been a festival of beautiful hearts. Each edition gathers a large group of people eager to support patients with hematological diseases and their families.",
     "HEADER_BODY_2": "Take a look at the photo gallery to feel the power of kindness and the unique atmosphere of the Gala."
   },
   "CONTACT": {
@@ -155,9 +178,9 @@
     "HEADER_BODY": "If you would like to donate an item and become a Benefactor, are considering collaboration as a Partner, or are thinking about supporting our efforts as a Volunteer, please contact us for more information. We will be happy to answer your questions and assist you in fulfilling your intention.",
     "HEADER_AWAITING": "We’re waiting for you!",
     "FORM_TITLE": "Contact form",
-    "FORM_NAME": "Full Name* :",
-    "FORM_EMAIL": "Email Address* :",
-    "FORM_MESSAGE": "Message* :",
+    "FORM_NAME": "Full Name * :",
+    "FORM_EMAIL": "Email Address * :",
+    "FORM_MESSAGE": "Message * :",
     "FORM_WARNING": "A copy of the sent message will appear in your email inbox.",
     "FORM_BUTTON": "Send Message",
     "CARD_HOVER_TEXT_1": "Telephone",
@@ -244,7 +267,7 @@
     "PARAGRAPH_3": {
       "TITLE": "§3. ADDITIONAL CONDITIONS FOR PARTICIPATION IN THE EVENT",
       "PARAGRAPH_SECTIONS": {
-        "SECTION_1": "The Third Charity Gala and the Auction take place at the Palace in Walewice. Participants present at the venue must adhere to the rules in place at this location as well as the provisions of these Regulations.",
+        "SECTION_1": "The Third Charity Gala and the Auction take place at the Palace in Nieborów. Participants present at the venue must adhere to the rules in place at this location as well as the provisions of these Regulations.",
         "SECTION_2": "The Organizer is not liable for damages caused by Participants who do not comply with the provisions of the Regulations.",
         "SECTION_3": "Minors may participate in the Event under the supervision of a parent or legal guardian. Minors attend the Gala under the sole responsibility of those supervising them.",
         "SECTION_4": "Participants of the Gala and all persons on the premises are required to behave in a manner that does not endanger the safety of others present at the Event, specifically complying with the provisions of the Regulations and following the instructions of the Organizer’s representatives aimed at ensuring their safety and order.",
@@ -276,7 +299,7 @@
     "PARAGRAPH_4": {
       "TITLE": "§4. CHARITY AUCTION COURSE",
       "PARAGRAPH_SECTIONS": {
-        "SECTION_1": "The auction will take place on September 14, 2024, in Walewice during the Gala.",
+        "SECTION_1": "The auction will take place on September 14, 2024, in Nieborów during the Gala.",
         "SECTION_2": "The auction will be preceded by a presentation of the items being auctioned.",
         "SECTION_3": "The auction will be held in person unless, due to force majeure, the organizer decides to hold the auction using electronic communication methods.",
         "SECTION_4": "A minimum price (starting bid) will be set for all items listed in the auction.",
@@ -297,7 +320,7 @@
       "TITLE": "§5. PERSONAL DATA",
       "PARAGRAPH_SECTIONS": {
         "SECTION_1": "In accordance with Article 13, Section 1 and 2 of the GDPR, the Organizer informs about the method and purpose of processing the personal data of Guests, Participants, and Winners, as well as their rights under personal data protection regulations.",
-        "SECTION_2": "The Administrator of personal data of Guests, Participants, and Winners is the **FOUNDATION FOR SUPPORTING PATIENTS WITH LEUKEMIA**, located in Łódź, at ul. Pabianicka 62, 93-513 Łódź, KRS 0000069531, hereafter referred to as the Administrator.",
+        "SECTION_2": "The Administrator of personal data of Guests, Participants, and Winners is the **FOUNDATION FOR HELPING LEUKEMIA PATIENTS**, located in Łódź, at ul. Pabianicka 62, 93-513 Łódź, KRS 0000069531, hereafter referred to as the Administrator.",
         "SECTION_3": "The Administrator can be contacted via email: gala@fundacja.hematologiczna.org.",
         "SECTION_4": "Personal data of Guests, Participants, and Winners are made available to the Administrator by entities recording the course of the Gala or Auction on behalf of the Administrator. In such cases, the following categories of data are processed: first name, last name, phone number, email address, and image if captured during the Gala or Auction.",
         "SECTION_5": {

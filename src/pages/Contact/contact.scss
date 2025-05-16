@@ -40,7 +40,6 @@
       right: 0;
       bottom:0;
       gap: 0px;
-      opacity: 0px;
       background-repeat: no-repeat;
 
       @include device(mobile) {
@@ -162,9 +161,13 @@
       padding: 13px 29px;
       gap: 10px;
       border-radius: 5px;
-      opacity: 0px;
       border: none;
       background-color: #345b5540;
+      font-family: Poppins;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 22.4px;
+      text-align: left;
 
       &--big {
         min-height: 300px;
@@ -199,7 +202,6 @@
       padding: 11.5px 49px;
       gap: 10px;
       border-radius: 30px;
-      opacity: 0px;
       background: #345b55;
       color: white;
       font-family: Poppins;
@@ -210,16 +212,24 @@
       text-align: center;
       box-sizing: border-box;
       transition: 0.2s;
+      display: flex;
+      margin: 17px 0 0;
+      justify-content: center;
+
+      @media (width < 1200px) {
+        margin:  0 auto;
+      }
 
       @media (width < 640px) {
         font-size: 12px;
         line-height: 18px;
         padding: 9px 25px;
         min-width: 161px;
+        margin: 14px auto 0;
       }
 
       &:hover {
-        scale: 105%;
+        scale: 102%;
         cursor: pointer;
       }
     }
@@ -253,6 +263,7 @@
       text-align: center;
       margin-bottom: 101px;
       gap: 44px;
+      flex-wrap: wrap;
 
       @media (width < 640px) {
         flex-direction: column;

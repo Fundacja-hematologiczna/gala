@@ -47,7 +47,7 @@
     @include device(mobile) {
       border-radius: 0px;
       padding: 113px 20px 110px;
-      background-image: url('./galeria-bg--mobile.webp ');
+      background-image: url('/galeria-bg--mobile.webp ');
     }
 
     &-greenLayer {
@@ -129,7 +129,6 @@
         padding: 11px 68px;
         gap: 10px;
         border: 2px 0px 0px 0px;
-        opacity: 0px;
         border: 2px solid #345b55;
         border-radius: 50px;
         transition: 0.2s;

@@ -1,4 +1,4 @@
-const BASE_URL = 'https://gala.fundacja.hematologiczna.org';
+const BASE_URL = 'http://localhost:5000';
 
 // returns a promise resolved after a given delay
 function wait(delay) {
@@ -23,9 +23,10 @@ function request(url, method = 'GET', data = null) {
   return wait(100)
     .then(() => fetch(BASE_URL + url, options))
     .then((response) => {
-      if (!response.ok) {
-        throw new Error();
-      }
+      // if (!response.ok) {
+      //   throw new Error()
+      //  // throw new Error();
+      // }
 
       return response.json();
     });

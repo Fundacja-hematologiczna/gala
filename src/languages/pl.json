@@ -10,7 +10,7 @@
     "CONTACT": "kontakt"
   },
   "MAIN_PAGE": {
-    "HEADER_TITLE": "IV Gala \nCharytatywna — Pałac Radziwiłłów w Nieborowie",
+    "HEADER_TITLE": "IV Gala Charytatywna \n Pałac  Radziwiłłów\n  w Nieborowie",
     "HEADER_DATE": "Sobota, 6 września 2025",
     "HEADER_BODY": "Serdecznie zapraszamy na czwartą \nedycję Gali Charytatywnej organizowanej \nw malowniczym Nieborowie.",
     "HEADER_BUTTON": "Zgłoś swój udział",
@@ -44,7 +44,7 @@
     "PLACE_BODY": "Miejsce",
     "PLACE_TITLE": "Na wyjątkowość Nieborowa wpływa nie tylko doskonale zachowany pałac, ale także piękny, barokowy ogród w stylu francuskim. To miejsce zachwyca precyzyjnie zaplanowaną kompozycją, stanowiąc doskonałe połączenie harmonii natury i ludzkiego kunsztu. ",
     "PLACE_BUTTON": "Sprawdź dojazd",
-    "IMAGE": "/gala/atrakcjeDlaUczestnikow.webp",
+    "IMAGE": "atrakcjeDlaUczestnikow.webp",
     "WAITING_TITLE_1": "Czekamy na Ciebie!",
     "WAITING_TITLE_2": "Dołącz do nas!",
     "WAITING_BUTTON": "Zgłoś swój udział",
@@ -75,9 +75,11 @@
     },
     "DONATE_TITLE": "Wesprzyj naszą inicjatywę",
     "DONATE_DESCRIPTION": "Przekazując darowiznę, pomagasz w realizacji zadań statutowych Fundacji.",
+    "DONATE_INPUT_AMOUNT": "Kwota darowizny w PLN *",
+    "DONATE_INPUT_EMAIL": "Adres e-mail *",
     "DONATE_BUTTON": "Przekaż darowiznę",
     "PAYMENTSUPPORT": "Płatności obsługuje:",
-    "SUPPORT_TITLE": "Wesprzyj naszą inicjatywę",
+    "SUPPORT_TITLE": "Wesprzyj naszą inicjatywę *",
     "SUPPORT_FULLNAME": "Imię i Nazwisko *",
     "SUPPORT_EMAIL": "Adres e-mail *",
     "SUPPORT_STREET": "Ulica *",
@@ -86,11 +88,33 @@
     "SUPPORT_CITY": "Miasto *",
     "MESSAGE_TEXT": "Kopia wysłanej wiadomości pojawi się w Twojej skrzynce email. *",
     "MESSAGE_REQUIRED": "* Pola wymagane",
-    "FORMS_BUTTON": "Wyślij wiadomość"
+    "FORMS_BUTTON": "Wyślij wiadomość",
+
+    "MODAL": {
+  "REGISTRATION_SUCCESS_TITLE": "Dziękujemy za chęć\nudziału w Gali !",
+  "REGISTRATION_SUCCESS_DESC": "W celu sfinalizowania zgłoszenia prosimy o dokonanie wpłaty. Masz też możliwość zapłacić później. Następnie wszystkie niezbędne informację wyślemy na Twój e-mail.",
+  "PAY_LATER": "Zapłać później",
+  "PAY_NOW": "Zapłać teraz",
+
+  "REGISTRATION_FAILED_TITLE": "Rejestracja nie powiodła się !",
+  "REGISTRATION_FAILED_DESC": "Nie udało się zakończyć rejestracji w tym momencie. Prosimy spróbować ponownie później. W razie problemów prosimy o kontakt.",
+  
+  "PAYMENT_SUCCESS_TITLE": "Płatność zakończona\npomyślnie!",
+  "PAYMENT_SUCCESS_DESC": "Dziękujemy za dokonanie wpłaty. Twoje zgłoszenie zostało przyjęte, a wszystkie szczegóły wysłaliśmy na podany adres e-mail. Do zobaczenia na Gali!",
+
+  "PAYMENT_PENDING_TITLE": "Płatność w trakcie weryfikacji",
+  "PAYMENT_PENDING_DESC": "Twoja płatność jest przetwarzana. Prosimy nie zamykać ani nie odświeżać strony. Może to potrwać do 15 minut.",
+  "TIME_LEFT": "Czas pozostały",
+
+  "PAYMENT_FAILED_TITLE": "Płatność nie powiodła się !",
+  "PAYMENT_FAILED_DESC": "Niestety nie udało się zrealizować płatności. Spróbuj ponownie lub użyj innej metody płatności. Jeśli problem będzie się powtarzał, skontaktuj się z nami.",
+  
+  "BACK": "Powrót"
+}
   },
   "PLACE": {
     "HEADER_TITLE": "Miejsce wydarzenia",
-    "HEADER_BODY": "Pałac i stadnina znajdują się w malowniczej miejscowości Walewice, położonej w centralnej Polsce,\n w województwie łódzkim. To historyczne miejsce jest oddalone około 50 km na północny wschód od Łodzi \u2014 to około godzinna podróż autem.\n Z centrum Łodzi można także dotrzeć do Walewic podróżując początkowo pociągiem do Łowicza,\n a stamtąd taksówką do Pałacu.",
+    "HEADER_BODY": "Pałac i stadnina znajdują się w malowniczej miejscowości Nieborów, położonej w centralnej Polsce,\n w województwie łódzkim. To historyczne miejsce jest oddalone około 50 km na północny wschód od Łodzi \u2014 to około godzinna podróż autem.\n Z centrum Łodzi można także dotrzeć do Nieborówa podróżując początkowo pociągiem do Łowicza,\n a stamtąd taksówką do Pałacu.",
     "MAP_TITLE": "IV Gala Charytatywna odbędzie się w Pałacu Radziwiłłów w Nieborowie",
     "MAP_PLACE": "Miejsce:",
     "MAP_PLACE_NAME": "Muzeum w Nieborowie i Arkadii",
@@ -147,7 +171,7 @@
   },
   "GALLERY": {
     "HEADER_TITLE": "Galeria",
-    "HEADER_BODY_1": "Gala Charytatywna w Walewicach to już tradycyjnie festiwal pięknych serc. Każda odsłona gromadzi liczne grono osób pragnących wspierać pacjentów chorób hematologicznych i ich rodziny.",
+    "HEADER_BODY_1": "Gala Charytatywna w Nieborowie to już tradycyjnie festiwal pięknych serc. Każda odsłona gromadzi liczne grono osób pragnących wspierać pacjentów chorób hematologicznych i ich rodziny.",
     "HEADER_BODY_2": "Zajrzyj do fotorelacji, by poczuć tę moc dobra i wyjątkową atmosferę Gali."
   },
   "CONTACT": {
@@ -155,9 +179,9 @@
     "HEADER_BODY": "Jeśli chcesz przekazać przedmiot i stać się Darczyńcą, rozważasz współpracę jako Partner lub myślisz o wsparciu naszych działań jako Wolontariusz, skontaktuj się z nami, aby uzyskać więcej informacji. Z radością odpowiemy na pytania i pomożemy Ci w realizacji Twojej intencji.",
     "HEADER_AWAITING": "Czekamy na Ciebie!",
     "FORM_TITLE": "Formularz kontaktowy",
-    "FORM_NAME": "Imię i Nazwisko* :",
-    "FORM_EMAIL": "Adres e-mail* :",
-    "FORM_MESSAGE": "Treść wiadomości* :",
+    "FORM_NAME": "Imię i Nazwisko * :",
+    "FORM_EMAIL": "Adres e-mail * :",
+    "FORM_MESSAGE": "Treść wiadomości * :",
     "FORM_WARNING": "Kopia wysłanej wiadomości pojawi się w Twojej skrzynce email.",
     "FORM_BUTTON": "Wyślij wiadomość",
     "CARD_HOVER_TEXT_1": "Telefon",

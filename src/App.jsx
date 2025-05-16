@@ -10,19 +10,22 @@ import Gallery from './pages/Gallery/Gallery';
 import Regulamin from './pages/Regulamin/Regulamin';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
-import NotFound from './pages/NotFound';
+import NotFound from './pages/NotFound/NotFound';
+import Admin from './pages/Admin/Admin';
 
-import { Routes, Route, Outlet, HashRouter } from 'react-router-dom';
+import { Routes, Route, Outlet, BrowserRouter } from 'react-router-dom';
+
 import Cookies from './components/Cookies/Cookies';
+import { ScrollToHash } from './pages/ScrollToHash';
 
 function App() {
   return (
     <>
-      <HashRouter>
+      <BrowserRouter>
         <Header />
         <Routes>
           <Route path="/" element={<Outlet />}>
-            <Route path="/" element={<Home />} index />
+            <Route path="/" element={<Home />} />
             <Route path="/rejestracja" element={<Registry />} />
             <Route path="/Place" element={<Place />} />
             <Route path="/Program" element={<Program />} />
@@ -32,13 +35,15 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/klauzula-informacyjna" element={<Klauzula />} />
             <Route path="/regulamin" element={<Regulamin />} />
+            <Route path="/admin" element={<Admin />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
 
         <Footer />
+        <ScrollToHash />
         <Cookies />
-      </HashRouter>
+      </BrowserRouter>
     </>
   );
 }

@@ -12,7 +12,11 @@ const Footer = () => {
       <section className="Footer">
         <div className="container Footer-container">
           <div className="Footer__logo">
-            <div className="Footer__logo-img"> </div>
+            <img
+              src="stopka-logo.webp"
+              alt="logo fundacja hematologiczna"
+              className="Footer__logo-img"
+            />
           </div>
 
           <div className="Footer__content">
@@ -59,21 +63,32 @@ const Footer = () => {
                 href="https://www.facebook.com/Fundacja.Hematologiczna/"
                 target="_blank"
                 rel="noopener noreferrer">
-                <img src="./footer-icon-fb.svg" alt="facebook" />
+                <img src="footer-icon-fb.svg" alt="facebook icon" />
               </a>
 
               <a
                 href="https://www.youtube.com/@FundacjaHematologiczna"
                 target="_blank"
                 rel="noopener noreferrer">
-                <img src="./footer-icon-yt.svg" alt="youtube" />
+                <img src="footer-icon-yt.svg" alt="youtube icon" />
               </a>
 
               <a
-                href="https://www.example1.com"
+                href="https://pl.linkedin.com/company/fundacja-na-rzecz-pomocy-chorym-na-bia%C5%82aczki"
                 target="_blank"
                 rel="noopener noreferrer">
-                <img src="./footer-icon-in.svg" alt="linkedin" />
+                <img src="footer-icon-in.svg" alt="linkedin icon" />
+              </a>
+
+              <a
+                href="https://www.instagram.com/fundacja.hematologiczna/"
+                target="_blank"
+                rel="noopener noreferrer">
+                <img
+                  className="test"
+                  src="footer-icon-instagram.webp"
+                  alt="instagram icon"
+                />
               </a>
             </div>
           </div>
@@ -87,8 +102,10 @@ const Footer = () => {
             <NavLink className="Footer__links-link" to={'/regulamin'}>
               {t('FOOTER.MENU_OPTIONS.STATUTE')}
             </NavLink>
-
-            <p>{t('FOOTER.MENU_OPTIONS.RIGHTS')}</p>
+          </div>
+          <div className="Footer__rights">
+            Wszelkie prawa zastrzeżone © Fundacja na Rzecz Pomocy Chorym na
+            Białaczki
           </div>
         </div>
       </section>

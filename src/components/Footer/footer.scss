@@ -14,17 +14,10 @@
   &__logo {
     &-img {
       margin: 18px 0 42px;
-      background-size: contain;
-      background-position: center;
-      background-repeat: no-repeat;
       width: 446px;
-      height: 76px;
-      background-image: url('/footer-logo.webp');
 
       @include device(mobile) {
-        height: 52px;
-        max-width: 279px;
-        background-image: url('/stopka-logo-mobile.webp');
+        max-width: 299px;
       }
     }
   }
@@ -131,8 +124,13 @@
       @media (width < 720px) {
         flex-direction: row;
         max-width: 231px;
+        width: 100%;
         margin: 0 auto;
-        gap: 65px;
+        // gap: 65px;
+      }
+
+      & img {
+        width: 30px;
       }
     }
   }
@@ -166,6 +164,23 @@
       &:hover {
         scale: 103%;
       }
+    }
+  }
+
+  &__rights {
+    text-align: center;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 30px;
+    margin-top: 24px;
+
+    @include device(mobile) {
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 15px;
+      letter-spacing: 0.03em;
+      text-align: center;
     }
   }
 }
