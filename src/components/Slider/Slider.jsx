@@ -15,6 +15,7 @@ export const Slider = () => {
     honor: [],
     media: [],
     patron: [],
+    sponsor: [],
   });
 
   useEffect(() => {
@@ -30,12 +31,14 @@ export const Slider = () => {
           );
 
           const patron = response.data.data.filter(
-            (logo) =>
-              logo.on_gala === true &&
-              ['patron', 'sponsor'].includes(logo.gala_category),
+            (logo) => logo.on_gala === true && logo.gala_category === 'patron',
           );
 
-          setLogos({ honor, media, patron });
+          const sponsor = response.data.data.filter(
+            (logo) => logo.on_gala === true && logo.gala_category === 'sponsor',
+          );
+
+          setLogos({ honor, media, patron, sponsor });
         }
       })
       .catch(() => {
@@ -58,6 +61,11 @@ export const Slider = () => {
       id: 'patron',
       title: t('MAIN_PAGE.PATRONS'),
       slides: logos.patron,
+    },
+    {
+      id: 'sponsor',
+      title: t('MAIN_PAGE.PARTNERS'),
+      slides: logos.sponsor,
     },
   ];
 

@@ -439,6 +439,116 @@
       "gala_category": "honor",
       "on_hematobieg": false,
       "hematobieg_category": "sponsor"
+    },
+    {
+      "id": 33,
+      "title": "Revers Cosmetics",
+      "link": "https://www.sklep.reverscosmetics.pl/",
+      "logo": "https://fundacja.hematologiczna.org/img/41fbf3cd-60e2-4096-81d2-3e45e3b3868f/logo-revers-cosmetics.png?fm=webp&q=80&fit=max&crop=8396%2C2341%2C0%2C0&w=320",
+      "on_fundacja": true,
+      "on_gala": true,
+      "gala_category": "sponsor",
+      "on_hematobieg": false,
+      "hematobieg_category": "sponsor"
+    },
+    {
+      "id": 34,
+      "title": "Tlen i Przyjaciele",
+      "link": "https://tleniprzyjaciele.pl/",
+      "logo": "https://fundacja.hematologiczna.org/img/41fbf3cd-60e2-4096-81d2-3e45e3b3868f/logo-tlen.png?fm=webp&q=80&fit=max&crop=2481%2C2481%2C0%2C0&w=320",
+      "on_fundacja": true,
+      "on_gala": true,
+      "gala_category": "sponsor",
+      "on_hematobieg": true,
+      "hematobieg_category": "sponsor"
+    },
+    {
+      "id": 35,
+      "title": "Maciek Janowicz Fotograf",
+      "link": "https://www.fotojanowicz.com/",
+      "logo": "https://fundacja.hematologiczna.org/img/41fbf3cd-60e2-4096-81d2-3e45e3b3868f/logo-janowicz.png?fm=webp&q=80&fit=max&crop=1164%2C846%2C0%2C0&w=320",
+      "on_fundacja": true,
+      "on_gala": true,
+      "gala_category": "sponsor",
+      "on_hematobieg": false,
+      "hematobieg_category": "sponsor"
+    },
+    {
+      "id": 36,
+      "title": "Superfala",
+      "link": "https://superfala.pl/",
+      "logo": "https://fundacja.hematologiczna.org/img/41fbf3cd-60e2-4096-81d2-3e45e3b3868f/logo-superfala.png?fm=webp&q=80&fit=max&crop=720%2C146%2C0%2C0&w=320",
+      "on_fundacja": true,
+      "on_gala": true,
+      "gala_category": "sponsor",
+      "on_hematobieg": false,
+      "hematobieg_category": "sponsor"
+    },
+    {
+      "id": 37,
+      "title": "Sknocone",
+      "link": "https://sknocone-po-lodzku.jimdosite.com/",
+      "logo": "https://fundacja.hematologiczna.org/img/41fbf3cd-60e2-4096-81d2-3e45e3b3868f/logo-sknocone.png?fm=webp&q=80&fit=max&crop=2200%2C2200%2C0%2C0&w=320",
+      "on_fundacja": true,
+      "on_gala": true,
+      "gala_category": "sponsor",
+      "on_hematobieg": false,
+      "hematobieg_category": "sponsor"
+    },
+    {
+      "id": 38,
+      "title": "Teatr Muzyczny w Łodzi",
+      "link": "https://www.teatr-muzyczny.lodz.pl/",
+      "logo": "https://fundacja.hematologiczna.org/img/41fbf3cd-60e2-4096-81d2-3e45e3b3868f/logo-tm.jpg?fm=webp&q=80&fit=max&crop=1465%2C1007%2C274%2C178&w=320",
+      "on_fundacja": true,
+      "on_gala": true,
+      "gala_category": "sponsor",
+      "on_hematobieg": false,
+      "hematobieg_category": "sponsor"
+    },
+    {
+      "id": 39,
+      "title": "Quest Art Films",
+      "link": "https://www.questart.pl/",
+      "logo": "https://fundacja.hematologiczna.org/img/41fbf3cd-60e2-4096-81d2-3e45e3b3868f/logo-art.jpeg?fm=webp&q=80&fit=max&crop=1125%2C633%2C0%2C0&w=320",
+      "on_fundacja": true,
+      "on_gala": true,
+      "gala_category": "sponsor",
+      "on_hematobieg": false,
+      "hematobieg_category": "sponsor"
+    },
+    {
+      "id": 40,
+      "title": "GAMA wypożyczalnia sprzętu gastronomicznego",
+      "link": "https://www.gama-wynajem.pl/",
+      "logo": "https://fundacja.hematologiczna.org/img/41fbf3cd-60e2-4096-81d2-3e45e3b3868f/logo-gama.jpg?fm=webp&q=80&fit=max&crop=709%2C369%2C0%2C0&w=320",
+      "on_fundacja": true,
+      "on_gala": true,
+      "gala_category": "sponsor",
+      "on_hematobieg": false,
+      "hematobieg_category": "sponsor"
+    },
+    {
+      "id": 41,
+      "title": "La-Ka",
+      "link": "https://la-ka.pl/",
+      "logo": "https://fundacja.hematologiczna.org/img/41fbf3cd-60e2-4096-81d2-3e45e3b3868f/logo-laka.png?fm=webp&q=80&fit=max&crop=971%2C271%2C0%2C0&w=320",
+      "on_fundacja": true,
+      "on_gala": true,
+      "gala_category": "sponsor",
+      "on_hematobieg": false,
+      "hematobieg_category": "sponsor"
+    },
+    {
+      "id": 42,
+      "title": "HAVET Hotel Resort & SPA",
+      "link": "https://www.havethotel.pl/",
+      "logo": "https://fundacja.hematologiczna.org/img/41fbf3cd-60e2-4096-81d2-3e45e3b3868f/logo-havet.png?fm=webp&q=80&fit=max&crop=1397%2C979%2C0%2C0&w=320",
+      "on_fundacja": true,
+      "on_gala": true,
+      "gala_category": "sponsor",
+      "on_hematobieg": false,
+      "hematobieg_category": "sponsor"
     }
   ]
 }
