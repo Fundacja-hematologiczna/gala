@@ -40,6 +40,8 @@ export const getImages = async () => {
 export const getLogos = async () => {
   const data = await axios.get(
     'https://fundacja.hematologiczna.org/api/supporters',
+    // 'api/test.json',
+    // 'api/test2.json',
   );
   return data;
 };

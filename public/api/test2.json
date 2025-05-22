@@ -1,0 +1,59 @@
+{
+  "data": [
+    {
+      "id": 4,
+      "title": "ABB",
+      "link": "https://abb.com/",
+      "logo": "https://fundacja.hematologiczna.org/img/b26aff28-352c-490b-a802-8fdc1868e643/logo-abb.png?fm=webp&q=80&fit=max&crop=2400%2C1274%2C0%2C0&w=320",
+      "on_fundacja": true,
+      "on_gala": true,
+      "gala_category": "sponsor",
+      "on_hematobieg": false,
+      "hematobieg_category": "sponsor"
+    },
+    {
+      "id": 19,
+      "title": "BUSINESS CENTRE CLUB",
+      "link": "https://www.bcc.org.pl/",
+      "logo": "https://fundacja.hematologiczna.org/img/b1de5f23-0d4b-4a6b-998f-0d79f290e12a/logo-bcc.png?fm=webp&q=80&fit=max&crop=200%2C78%2C0%2C0&w=320",
+      "on_fundacja": true,
+      "on_gala": true,
+      "gala_category": "media",
+      "on_hematobieg": true,
+      "hematobieg_category": "sponsor"
+    },
+    {
+      "id": 20,
+      "title": "RADIO ŁÓDŹ",
+      "link": "https://radiolodz.pl/",
+      "logo": "https://fundacja.hematologiczna.org/img/b1de5f23-0d4b-4a6b-998f-0d79f290e12a/logo-radio-lodz.jpg?fm=webp&q=80&fit=max&crop=3508%2C2480%2C0%2C0&w=320",
+      "on_fundacja": false,
+      "on_gala": true,
+      "gala_category": "media",
+      "on_hematobieg": true,
+      "hematobieg_category": "media"
+    },
+    {
+      "id": 41,
+      "title": "La-Ka",
+      "link": "https://la-ka.pl/",
+      "logo": "https://fundacja.hematologiczna.org/img/41fbf3cd-60e2-4096-81d2-3e45e3b3868f/logo-laka.png?fm=webp&q=80&fit=max&crop=971%2C271%2C0%2C0&w=320",
+      "on_fundacja": true,
+      "on_gala": true,
+      "gala_category": "honor",
+      "on_hematobieg": false,
+      "hematobieg_category": "sponsor"
+    },
+    {
+      "id": 42,
+      "title": "HAVET Hotel Resort & SPA",
+      "link": "https://www.havethotel.pl/",
+      "logo": "https://fundacja.hematologiczna.org/img/41fbf3cd-60e2-4096-81d2-3e45e3b3868f/logo-havet.png?fm=webp&q=80&fit=max&crop=1397%2C979%2C0%2C0&w=320",
+      "on_fundacja": true,
+      "on_gala": true,
+      "gala_category": "honor",
+      "on_hematobieg": false,
+      "hematobieg_category": "sponsor"
+    }
+  ]
+}

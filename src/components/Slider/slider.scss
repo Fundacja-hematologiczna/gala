@@ -1,6 +1,8 @@
+@import '../../styles/mixins.scss';
+
 .Slider {
   background-color: white;
-  padding-top: 44px;
+  padding-top: 20px;
 
   &-img {
     width: auto;
@@ -30,6 +32,41 @@
   &-wrapper {
     height: 110px !important;
     align-items: center;
+  }
+}
+
+.Patrons {
+  background-color: white;
+  padding: 30px 17px 0;
+
+  &__title {
+    font-family: Poppins;
+    font-size: 31px;
+    line-height: 39px;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: #345b55;;
+    text-align: center;
+  }
+}
+
+.Slider-static {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  padding: 0 17px 0;
+  height: 160px;
+  
+  &__img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    display: flex;
+    margin: auto auto;
+    max-height: 80px;
+    object-fit: cover;
+    pointer-events: none;
   }
 }
 
