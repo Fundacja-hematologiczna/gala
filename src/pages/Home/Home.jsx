@@ -19,10 +19,59 @@ const Home = () => {
     navigate(navigateTo, { replace: true });
   };
 
+  // const welcomeSectionPhotos = [
+  //   'VIDEO.webp',
+  //   'aukcje.webp',
+  //   'place.webp',
+  //   'program.webp',
+  // ];
+
   const welcomeSectionPhotos = [
-    'VIDEO.webp',
-    'aukcje.webp',
-    'place.webp',
+    'test1.jpg', //fajne
+    'test2.jpg', //fajne
+    'test3.jpg', // fajne
+   'test10.jpg', // fajne - czrnobiale
+   'test15.jpg',
+   'test17.jpg',
+   'test18.jpg',
+   'test19.jpg',
+
+   'test21.jpg',
+   'test22.jpg',
+   'test23.jpg',
+   'test24.jpg',
+   'test25.jpg',
+   'test26.jpg',
+   'test27.jpg',
+   'test28.jpg',
+   'test29.jpg',
+   'test30.jpg',
+   'test31.jpg',
+   'test32.jpg',
+   'test33.jpg',
+   'test34.jpg',
+   'test35.jpg',
+   'test36.jpg',
+   'test37.jpg',
+   'test38.jpg',
+   'test39.jpg',
+   'test40.jpg',
+   'test41.jpg',
+   
+
+
+    // DARIA
+    // 'test5.jpg',
+    // 'test6.jpg',
+    // 'test7.jpg',
+    // 'test8.jpg',
+    // 'test9.jpg',
+
+
+
+   // 'person.webp',
+   // 'aukcje.webp',
+    //'place.webp',
     'program.webp',
   ];
   const [photoChanging, setPhotoChanging] = useState(true);

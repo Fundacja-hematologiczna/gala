@@ -19,6 +19,8 @@ export const Slider = () => {
             (logo) => logo.on_gala === true,
           );
 
+          console.log(response);
+
           const mid = Math.ceil(logos.length / 2);
 
           setSlider1(logos.slice(0, mid));
