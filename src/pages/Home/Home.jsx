@@ -74,6 +74,23 @@ const Home = () => {
     //'place.webp',
     'program.webp',
   ];
+
+  // const welcomeSectionPhotos = [
+   
+   
+
+
+  //   // DARIA
+  //   'test5.jpg',
+  //   'test6.jpg',
+  //   'test7.jpg',
+  //   'test8.jpg',
+  //   'test9.jpg',
+
+
+
+  
+  // ];
   const [photoChanging, setPhotoChanging] = useState(true);
   const [welcomeSectionImage1, setWelcomeSectionImage1] = useState(0);
   const [welcomeSectionImage2, setWelcomeSectionImage2] = useState(1);

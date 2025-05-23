@@ -15,7 +15,6 @@ const Registry = () => {
   const [modal, setModal] = useState({
     isOpen: false,
     event: '',
-    url: null,
   });
 
   useEffect(() => {
@@ -111,7 +110,6 @@ const Registry = () => {
       <Modal
         event={modal.event}
         isOpen={modal.isOpen}
-        url={modal.url}
         onClose={() => setModal({ isOpen: false })}
       />
     </main>

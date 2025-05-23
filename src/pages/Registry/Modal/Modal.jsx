@@ -3,9 +3,11 @@ import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 
-const Modal = ({ isOpen, url, onClose, event }) => {
+const Modal = ({ isOpen, onClose, event }) => {
   const [timeLeft, setTimeLeft] = useState(15 * 60);
   const { t } = useTranslation();
+
+  const target = document.getElementById('platnosci');
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -41,7 +43,9 @@ const Modal = ({ isOpen, url, onClose, event }) => {
             className="modal-button modal-button--green"
             onClick={() => {
               onClose();
-              window.open(url, '_blank');
+              if (target) {
+                target.scrollIntoView({ behavior: 'smooth' });
+              }
             }}>
             {t('REGISTRATION.MODAL.PAY_NOW')}
           </button>
