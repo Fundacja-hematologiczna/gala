@@ -14,7 +14,7 @@ const Contributors = () => {
       .then((response) => {
         if (response.data.data && Array.isArray(response.data.data)) {
           const logosForGala = response.data.data.filter(
-            (logo) => logo.on_gala === true,
+            (logo) => logo.on_gala === true && logo.gala_category,
           );
           setLogos(logosForGala);
         }
