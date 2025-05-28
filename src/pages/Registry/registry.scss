@@ -1,4 +1,4 @@
-@import '../../styles/mixins.scss';
+@use '../../styles/mixins.scss' as mixin;
 
 .Registry {
   display: flex;
@@ -14,11 +14,11 @@
   background-repeat: no-repeat;
 
 
-  @include device(tablet) {
+  @include mixin.device(tablet) {
     padding: 14px 5px;
   }
 
-  @include device(mobile) {
+  @include mixin.device(mobile) {
     padding: 14px 0;
   }
 
@@ -38,11 +38,11 @@
     padding: 96px 85px 29px;
     position: relative;
 
-    @include device(tablet) {
+    @include mixin.device(tablet) {
       border-radius: 22px;
     }
 
-    @include device(mobile) {
+    @include mixin.device(mobile) {
       border-radius: 0;
       padding: 82px 40px 83px 20px;
       height: auto;
@@ -60,7 +60,7 @@
       gap: 0px;
       background-repeat: no-repeat;
 
-      @include device(mobile) {
+      @include mixin.device(mobile) {
         top: 37px;
         width: 137%;
         right: 0;
@@ -89,7 +89,7 @@
       text-align: left;
       margin-bottom: 100px;
 
-      @include device(mobile) {
+      @include mixin.device(mobile) {
         //styleName: WP_Small copy;
         font-family: Poppins;
         font-size: 14px;

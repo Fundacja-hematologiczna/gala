@@ -1,4 +1,4 @@
-@import '../../styles/mixins.scss';
+@use '../../styles/mixins.scss' as mixin;
 
 .Button {
     all: unset;
@@ -24,7 +24,7 @@
     text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
      filter: blur(0.2px);
 
-    @include device(mobile) {
+    @include mixin.device(mobile) {
         //styleName: WP_M_Button;
         font-family: Poppins;
         font-size: 12px;
@@ -53,7 +53,7 @@
 
             
 
-            @include device(mobile) {
+            @include mixin.device(mobile) {
                 display: none;
             }
 

@@ -1,4 +1,5 @@
-@import '../../styles/mixins.scss';
+@use '../../styles/mixins.scss' as mixin;
+
 .Place {
   display: flex;
   flex: 11;
@@ -13,11 +14,11 @@
   &-container-top {
     padding: 14px 17px 0;
 
-    @include device(tablet) {
+    @include mixin.device(tablet) {
       padding: 14px 5px;
     }
 
-    @include device(mobile) {
+    @include mixin.device(mobile) {
       padding: 14px 0px;
     }
   }
@@ -41,11 +42,11 @@
     position: relative;
     z-index: 1;
 
-    @include device(tablet) {
+    @include mixin.device(tablet) {
       border-radius: 22px;
     }
 
-    @include device(mobile) {
+    @include mixin.device(mobile) {
       border-radius: 0;
       margin-bottom: 35px;
       padding: 82px 20px 80px;
@@ -64,7 +65,7 @@
       bottom: 0px;
       z-index: 2;
 
-      @include device(tablet) {
+      @include mixin.device(tablet) {
         border-radius: 22px;
       }
 

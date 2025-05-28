@@ -1,10 +1,9 @@
-@import '../../styles/mixins.scss';
+@use '../../styles/mixins.scss' as mixin;
 
 .Admin {
     padding: 120px 17px 0;
     display: flex;
-    //flex-grow: 1; 
-
+    
     &-title {
     font-family: Poppins;
     font-size: 40px;
@@ -28,7 +27,7 @@
           background-color: #ffffff;
           
     
-          @include device(mobile) {
+          @include mixin.device(mobile) {
             padding: 42px 20px 45px;
             width: 100%;
             box-sizing: border-box;
@@ -45,7 +44,7 @@
           text-align: left;
          // margin-bottom: 15px;
     
-          @include device(mobile) {
+          @include mixin.device(mobile) {
             font-size: 32px;
             font-weight: 700;
             line-height: 48px;
@@ -60,7 +59,7 @@
         //  row-gap: 15px;
           margin-bottom: 10px;
     
-          @include device(mobile) {
+          @include mixin.device(mobile) {
             grid-template-columns: 1fr;
           }
         }

@@ -1,4 +1,4 @@
-@import '../../styles/mixins.scss';
+@use '../../styles/mixins.scss' as mixin;
 
 .Contributors {
     display: flex;
@@ -10,12 +10,12 @@
     &-container {
         padding: 14px 17px 0;
 
-        @include device(tablet) {
+        @include mixin.device(tablet) {
             padding: 14px 5px 0;
         
         }
 
-        @include device( mobile) {
+        @include mixin.device( mobile) {
             padding: 14px 0 0;
         
         }
@@ -37,12 +37,12 @@
         padding: 96px 85px;   
         position:relative;
 
-        @include device(tablet) {
+        @include mixin.device(tablet) {
             border-radius: 22px;
 
         }
 
-        @include device(mobile) {
+        @include mixin.device(mobile) {
             border-radius:0;
             padding: 82px 20px 31px;
             min-height: auto;
@@ -70,7 +70,7 @@
             margin-bottom: 20px;
             z-index: 999;
 
-            @include device (mobile) {
+            @include mixin.device (mobile) {
                 //styleName: WP_H2;
                 font-family: Poppins;
                 font-size: 40px;
@@ -91,7 +91,7 @@
             letter-spacing: -0.02em;
             text-align: left;
 
-            @include device (mobile) {
+            @include mixin.device (mobile) {
                //styleName: WP_Small copy;
                 font-family: Poppins;
                 font-size: 14px;
@@ -169,7 +169,7 @@
             text-align: center;
             margin-bottom: 48px; 
             
-            @include device(mobile) {
+            @include mixin.device(mobile) {
                 //styleName: WP_H2;
                 font-family: Poppins;
                 font-size: 40px;
@@ -189,7 +189,7 @@
             text-align: center;
             margin-bottom: 48px;
             
-            @include device(mobile) {
+            @include mixin.device(mobile) {
                 font-family: Poppins;
                 font-size: 25px;
                 font-weight: 600;

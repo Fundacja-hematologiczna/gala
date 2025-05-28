@@ -1,4 +1,4 @@
-@import '../../styles/mixins.scss';
+@use '../../styles/mixins.scss' as mixin;
 
 .Contact {
   display: flex;
@@ -42,7 +42,7 @@
       gap: 0px;
       background-repeat: no-repeat;
 
-      @include device(mobile) {
+      @include mixin.device(mobile) {
           top: 37px;
           width: 137%;
           right:0;
@@ -104,7 +104,7 @@
     }
 
     &__captcha {
-      @include device(mobile) {
+      @include mixin.device(mobile) {
         width: 180px
 
     }

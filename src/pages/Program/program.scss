@@ -1,4 +1,5 @@
-@import '../../styles/mixins.scss';
+
+@use '../../styles/mixins.scss' as mixin;
 
 .Program {
   white-space: pre-wrap;
@@ -9,15 +10,15 @@
   width: 100%;
 
   &-container {
-    @include device(desktop) {
+    @include mixin.device(desktop) {
       padding: 14px 17px 0;
     }
 
-    @include device(tablet) {
+    @include mixin.device(tablet) {
       padding: 14px 5px 0;
     }
 
-    @include device(mobile) {
+    @include mixin.device(mobile) {
       padding-top: 14px;
     }
   }
@@ -35,11 +36,11 @@
     box-sizing: border-box;
     padding: 96px 85px 52px;
 
-    @include device(tablet) {
+    @include mixin.device(tablet) {
       border-radius: 22px;
     }
 
-    @include device(mobile) {
+    @include mixin.device(mobile) {
       border-radius: 0px;
       padding: 91px 20px 24px;
       justify-content: space-between;
@@ -58,7 +59,7 @@
       margin-bottom: 20px;
       color: white;
 
-      @include device(mobile) {
+      @include mixin.device(mobile) {
         //styleName: WP_H2;
         font-family: Poppins;
         font-size: 40px;
@@ -79,7 +80,7 @@
       color: white;
       margin-bottom: 45px;
 
-      @include device(mobile) {
+      @include mixin.device(mobile) {
         //styleName: WP_Small copy;
         font-family: Poppins;
         font-size: 14px;
@@ -92,7 +93,7 @@
     &-button {
       max-width: 256px;
 
-      @include device(mobile) {
+      @include mixin.device(mobile) {
         max-width: 171px;
       }
     }
@@ -110,11 +111,11 @@
 
     padding: 71px 25px 130px;
 
-    @include device(tablet) {
+    @include mixin.device(tablet) {
       padding-top: 71px;
     }
 
-    @include device(mobile) {
+    @include mixin.device(mobile) {
       padding-top: 41px;
       padding-bottom: 71px;
     }
@@ -138,7 +139,7 @@
       margin-bottom: 66px;
       padding-top: 20px;
 
-      @include device(mobile) {
+      @include mixin.device(mobile) {
         //styleName: WP_H3;
         font-family: Poppins;
         font-size: 24px;
@@ -158,12 +159,12 @@
       gap: 180px;
 
       &:first-child {
-        @include device(desktop, tablet) {
+        @include mixin.device(desktop, tablet) {
           border-top: 2px solid #345b55;
         }
       }
 
-      @include device(mobile) {
+      @include mixin.device(mobile) {
         flex-direction: column;
         gap: 14px;
         padding: 30px 0;
@@ -206,7 +207,7 @@
       line-height: 36px;
       text-align: left;
 
-      @include device(mobile) {
+      @include mixin.device(mobile) {
         text-align: center;
       }
     }
