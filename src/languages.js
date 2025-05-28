@@ -19,7 +19,7 @@ const defaultLanguage = JSON.parse(savedLanguage);
 i18n.use(initReactI18next).init({
   resources,
   lng: defaultLanguage,
-  fallbackLng: 'ENG',
+  fallbackLng: 'PLN',
   debug: true,
   react: {
     useSuspense: false,
