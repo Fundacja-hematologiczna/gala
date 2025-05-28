@@ -62,8 +62,8 @@
     "FORM_TITLE": "Formularz zgłoszeniowy",
     "FORM_FULLNAME": "Imię i nazwisko *",
     "FORM_EMAIL": "Adres e-mail *",
-    "FORM_STREET": "Ulica *",
-    "FORM_BUILDING": "Nr budynku *",
+    "FORM_STREET": "Ulica - nr budynku *",
+    "FORM_BUILDING": "Nr telefonu *",
     "FORM_INDEX": "Kod pocztowy *",
     "FORM_CITY": "Miasto *",
     "FORM_RIGHTS": {
@@ -77,6 +77,7 @@
       "2": "Wyrażam zgodę na przetwarzanie moich danych osobowych w zakresie mojego wizerunku utrwalonego podczas Gali Charytatywnej dla celów prowadzonych przez Fundację wewnętrznych i zewnętrznych działań komunikacyjnych i marketingowych. *",
       "3": "Wyrażam zgodę na przetwarzanie moich danych osobowych w zakresie danych kontaktowych w celu informowania o przyszłych wydarzeniach oraz działalności statutowej Fundacji."
     },
+    "FORM_BUTTON": "Wyślij zgłoszenie",
     "DONATE_TITLE": "Wesprzyj naszą inicjatywę",
     "DONATE_DESCRIPTION": "Przekazując darowiznę, pomagasz w realizacji zadań statutowych Fundacji.",
     "DONATE_INPUT_AMOUNT": "Kwota darowizny w PLN *",

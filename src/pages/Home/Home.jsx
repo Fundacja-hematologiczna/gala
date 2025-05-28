@@ -20,11 +20,22 @@ const Home = () => {
   };
 
   const welcomeSectionPhotos = [
-    'VIDEO.webp',
-    'aukcje.webp',
-    'place.webp',
-    'program.webp',
+    '/WelcomeGallery/welcome-img-02.webp',
+    '/WelcomeGallery/welcome-img-03.webp',
+    '/WelcomeGallery/welcome-img-04.webp',
+    '/WelcomeGallery/welcome-img-05.webp',
+    '/WelcomeGallery/welcome-img-06.webp',
+    '/WelcomeGallery/welcome-img-07.webp',
+    '/WelcomeGallery/welcome-img-08.webp',
+    '/WelcomeGallery/welcome-img-09.webp',
+    '/WelcomeGallery/welcome-img-10.webp',
+    '/WelcomeGallery/welcome-img-11.webp',
+    '/WelcomeGallery/welcome-img-12.webp',
+    '/WelcomeGallery/welcome-img-13.webp',
+    '/WelcomeGallery/welcome-img-14.webp',
+    '/WelcomeGallery/welcome-img-15.webp',
   ];
+
   const [photoChanging, setPhotoChanging] = useState(true);
   const [welcomeSectionImage1, setWelcomeSectionImage1] = useState(0);
   const [welcomeSectionImage2, setWelcomeSectionImage2] = useState(1);

@@ -17,8 +17,8 @@ export const RegistryForm = ({ setModal }) => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    street: '',
-    buildingNumber: '',
+    address: '',
+    phone: null,
     zipCode: '',
     city: '',
     lang: i18n.language,
@@ -75,13 +75,12 @@ export const RegistryForm = ({ setModal }) => {
         setModal({
           isOpen: true,
           event: 'registration-success',
-          url: response.paymentUrl,
         });
         setFormData({
           name: '',
           email: '',
-          street: '',
-          buildingNumber: '',
+          address: '',
+          phone: null,
           zipCode: '',
           city: '',
           lang: i18n.language,
@@ -139,13 +138,13 @@ export const RegistryForm = ({ setModal }) => {
               },
               {
                 label: t('REGISTRATION.FORM_STREET'),
-                name: 'street',
+                name: 'address',
                 type: 'text',
               },
               {
                 label: t('REGISTRATION.FORM_BUILDING'),
-                name: 'buildingNumber',
-                type: 'text',
+                name: 'phone',
+                type: 'number',
               },
               {
                 label: t('REGISTRATION.FORM_INDEX'),
@@ -242,7 +241,7 @@ export const RegistryForm = ({ setModal }) => {
           />
 
           <button className="RegistryForm-button" type="submit">
-            {t('REGISTRATION.FORMS_BUTTON')}
+            {t('REGISTRATION.FORM_BUTTON')}
           </button>
         </form>
       </div>
