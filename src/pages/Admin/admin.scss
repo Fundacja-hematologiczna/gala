@@ -3,8 +3,17 @@
 .Admin {
     padding: 120px 17px 0;
     display: flex;
-    //flex-grow: 1;
+    //flex-grow: 1; 
 
+    &-title {
+    font-family: Poppins;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 60px;
+    text-align: center;
+    margin-bottom: 66px;
+    color: #345b55;
+    }
 
     &__form {
         color: #345b55;
@@ -176,5 +185,23 @@
     &-head {
       border: 2px solid #345b55;
     }
+  }
+}
+
+.AdminDownloadCSV__button {
+  
+  width: 200px;
+  display: flex;
+  margin: 0 auto;
+  padding: 13px;
+  border-radius: 20px;
+  margin-bottom: 60px;
+  align-items: center;
+  justify-content: center;
+  font-family: poppins;
+  cursor: pointer;
+
+  &:active {
+    background-color: gray;
   }
 }

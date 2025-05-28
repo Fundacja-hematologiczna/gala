@@ -3,7 +3,10 @@ import { getAcessToken } from '../../api/services';
 import './admin.scss';
 
 const LoginForm = ({ onLogin }) => {
-  const [formData, setFormData] = useState({ username: '', password: '' });
+  const [formData, setFormData] = useState({
+    username: 'FundHemGala',
+    password: 'qweas76!@',
+  });
   const [message, setMessage] = useState('');
 
   const handleChange = (e) => {
@@ -15,6 +18,7 @@ const LoginForm = ({ onLogin }) => {
     event.preventDefault();
     try {
       const response = await getAcessToken(formData);
+
       if (response.token) {
         sessionStorage.setItem('token', response.token);
         onLogin();
