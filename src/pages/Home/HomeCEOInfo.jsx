@@ -27,10 +27,10 @@ const HomeCEOInfo = () => {
           />
           <h2 className="Home__section2__grayCard-title">
             {t('MAIN_PAGE.CEO_TITLE')}
-            <p className="Home__section2__grayCard-smallDesctription">
+            <div className="Home__section2__grayCard-smallDesctription">
               <p>&nbsp;</p> {t('MAIN_PAGE.CEO_BODY.1')} <p>&nbsp;</p>
               {t('MAIN_PAGE.CEO_BODY.2')} <p>&nbsp;</p>
-            </p>
+            </div>
             <p className="Home__section2__grayCard-smallDesctription--bold">
               {t('MAIN_PAGE.CEO_BODY.3')}
             </p>

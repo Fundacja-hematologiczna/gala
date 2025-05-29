@@ -35,11 +35,11 @@ const Contributors = () => {
               <h1 className="Contributors__topContainer-title">
                 {t('CONTRIBUTORS.HEADER_TITLE')}
               </h1>
-              <p className="Contributors__topContainer-description">
+              <div className="Contributors__topContainer-description">
                 {t('CONTRIBUTORS.HEADER_BODY_1')}
                 <p>&nbsp;</p>
                 {t('CONTRIBUTORS.HEADER_BODY_2')}
-              </p>
+              </div>
             </div>
           </div>
         </div>
