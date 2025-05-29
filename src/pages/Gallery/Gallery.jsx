@@ -123,10 +123,11 @@ const Gallery = () => {
           <h1 className="Gallery__topContainer-title">
             {t('GALLERY.HEADER_TITLE')}
           </h1>
-          <p className="Gallery__topContainer-description">
-            {t('GALLERY.HEADER_BODY_1')}
+
+          <div className="Gallery__topContainer-description">
+            <p>{t('GALLERY.HEADER_BODY_1')}</p>
             <p>{t('GALLERY.HEADER_BODY_2')}</p>
-          </p>
+          </div>
         </div>
       </div>
 

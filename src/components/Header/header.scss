@@ -1,4 +1,4 @@
-@import '../../styles/mixins.scss';
+@use '../../styles/mixins.scss' as mixin;
 
 .header {
   width: 100%;
@@ -12,7 +12,7 @@
   transform: translateX(-50%);
   padding: 0 7px;
 
-  @include device(tablet, mobile) {
+  @include mixin.device(tablet, mobile) {
     top: 0;
     padding: 0;
   }
@@ -37,13 +37,13 @@
   display: flex;
   align-items: center;
 
-  @include device(tablet) {
+  @include mixin.device(tablet) {
     border-radius: 0;
     justify-content: space-between;
     padding: 0px 20px 0px 20px;
   }
 
-  @include device(mobile) {
+  @include mixin.device(mobile) {
     border-radius: 0;
     justify-content: space-between;
     padding: 0px 20px 0px 20px;
@@ -55,11 +55,11 @@
     gap: 10px;
     margin: 0 auto;
 
-    @include device(tablet) {
+    @include mixin.device(tablet) {
       display: none;
     }
 
-    @include device(mobile) {
+    @include mixin.device(mobile) {
       display: none;
     }
   }
@@ -132,7 +132,7 @@
       background-image: url('/menu-hamburger.svg');
     }
 
-    @include device(desktop) {
+    @include mixin.device(desktop) {
       display: none;
     }
   }

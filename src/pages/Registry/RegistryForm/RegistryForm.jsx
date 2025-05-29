@@ -18,7 +18,7 @@ export const RegistryForm = ({ setModal }) => {
     name: '',
     email: '',
     address: '',
-    phone: null,
+    phone: '',
     zipCode: '',
     city: '',
     lang: i18n.language,

@@ -1,4 +1,4 @@
-@import '../../styles/mixins.scss';
+@use '../../styles/mixins.scss' as mixin;
 
 .notFound {
   display: flex;
@@ -13,11 +13,11 @@
 
   text-align: center;
 
-  @include device(tablet) {
+  @include mixin.device(tablet) {
     padding: 99px 5px;
   }
 
-  @include device(mobile) {
+  @include mixin.device(mobile) {
     padding: 99px 0;
   }
 

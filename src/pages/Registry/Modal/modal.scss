@@ -1,4 +1,4 @@
-@import '../../../styles/mixins.scss';
+@use '../../../styles/mixins.scss' as mixin;
 
 .modal-overlay {
     position: fixed;
@@ -35,7 +35,7 @@
       margin-bottom: 6px;
     }
 
-    @include device(mobile) {
+    @include mixin.device(mobile) {
       padding: 26px 48px 26px;
     }
 
@@ -49,7 +49,7 @@
         text-align: center;
         margin-bottom: 10px;
 
-        @include device(mobile) {   
+        @include mixin.device(mobile) {   
           font-size: 30px;
           line-height: 51px;
          
@@ -68,7 +68,7 @@
         margin-bottom: 59px;
         max-width: 92%;
 
-        @include device(mobile) {
+        @include mixin.device(mobile) {
           font-size: 13px;
         }
 
@@ -92,7 +92,7 @@
     line-height: 24px;
     letter-spacing: 0%;
 
-    @include device(mobile) {
+    @include mixin.device(mobile) {
       
       width: 100%;
       max-width: 270px;

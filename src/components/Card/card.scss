@@ -1,4 +1,4 @@
-@import '../../styles/mixins.scss';
+@use '../../styles/mixins.scss' as mixin;
 
 .Card {
     width: 302px;
@@ -12,12 +12,12 @@
     background-color: #B7C274;
     justify-content: space-between;
 
-    @include device(tablet) {
+    @include mixin.device(tablet) {
         width: 300px;
         height: 460px;
     }
 
-    @include device(mobile, tablet ) {
+    @include mixin.device(mobile, tablet ) {
         width: 350px;
         height: 360px;
         padding: 15px 10px 28px;
@@ -27,7 +27,7 @@
         margin-bottom: 29px;
         height: 60px;
 
-        @include device(mobile) {
+        @include mixin.device(mobile) {
             margin-bottom: 13px;
         }
     }
@@ -45,7 +45,7 @@
         text-align: center;
         margin-bottom: 17px;
 
-        @include device(mobile,tablet) {
+        @include mixin.device(mobile,tablet) {
             margin-bottom: 5px;
 
         }
@@ -58,7 +58,7 @@
         line-height: 21px;
         text-align: center;
 
-        @include device(mobile, tablet) {
+        @include mixin.device(mobile, tablet) {
             margin-bottom: 13px; 
         }
     }
@@ -85,7 +85,7 @@
             scale: 102%;
         }
 
-        @include device(mobile, tablet) {
+        @include mixin.device(mobile, tablet) {
             //styleName: WP_M_Button;
             font-family: Poppins;
             font-size: 12px;

@@ -1,4 +1,4 @@
-@import '../../styles/mixins.scss';
+@use '../../styles/mixins.scss' as mixin;
 
 .Footer {
   background-color: #345b55;
@@ -6,7 +6,7 @@
   padding: 0 17px 28px;
 
   &-container {
-    @include device(mobile) {
+    @include mixin.device(mobile) {
       max-width: 400px;
     }
   }
@@ -16,7 +16,7 @@
       margin: 18px 0 42px;
       width: 446px;
 
-      @include device(mobile) {
+      @include mixin.device(mobile) {
         max-width: 299px;
       }
     }
@@ -44,7 +44,7 @@
         text-align: left;
         margin-bottom: 5px;
 
-        @include device(mobile) {
+        @include mixin.device(mobile) {
           font-size: 16px;
           font-weight: 700;
           line-height: 24px;
@@ -62,7 +62,7 @@
 
         margin-bottom: 8px;
 
-        @include device(mobile) {
+        @include mixin.device(mobile) {
           //styleName: WP_Small copy;
           font-family: Poppins;
           font-size: 14px;
@@ -82,7 +82,7 @@
         text-align: left;
         margin-bottom: 5px;
 
-        @include device(mobile) {
+        @include mixin.device(mobile) {
           font-size: 16px;
           font-weight: 700;
           line-height: 24px;
@@ -100,7 +100,7 @@
 
         margin-bottom: 8px;
 
-        @include device(mobile) {
+        @include mixin.device(mobile) {
           //styleName: WP_Small copy;
           font-family: Poppins;
           font-size: 14px;
@@ -148,7 +148,7 @@
     text-align: center;
     color: white;
 
-    @include device(mobile) {
+    @include mixin.device(mobile) {
       font-size: 10px;
       font-weight: 400;
       line-height: 15px;
@@ -175,7 +175,7 @@
     line-height: 30px;
     margin-top: 24px;
 
-    @include device(mobile) {
+    @include mixin.device(mobile) {
       font-size: 10px;
       font-weight: 400;
       line-height: 15px;

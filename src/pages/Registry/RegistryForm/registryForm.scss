@@ -1,4 +1,4 @@
-@import '../../../styles/mixins.scss';
+@use '../../../styles/mixins.scss' as mixin;
 
 .RegistryForm {
     color: #345b55;
@@ -11,7 +11,7 @@
       border-radius: 20px;
       padding: 89px 95px 40px;
 
-      @include device(mobile) {
+      @include mixin.device(mobile) {
         padding: 82px 27px 45px;
       }
     }
@@ -26,7 +26,7 @@
       text-align: center;
       margin-bottom: 95px;
 
-      @include device(mobile) {
+      @include mixin.device(mobile) {
         font-size: 32px;
         font-weight: 700;
         line-height: 48px;
@@ -41,7 +41,7 @@
       row-gap: 59px;
       margin-bottom: 71px;
 
-      @include device(mobile) {
+      @include mixin.device(mobile) {
         grid-template-columns: 1fr;
       }
     }
@@ -151,7 +151,7 @@
       margin: 0 auto;
       justify-content: center;
 
-      @include device(mobile) {
+      @include mixin.device(mobile) {
         //styleName: WP_M_Button;
         font-family: Poppins;
         font-size: 14px;

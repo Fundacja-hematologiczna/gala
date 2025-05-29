@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { Button } from '../../components/Button/Button';
 
 const propTypes = {
-  photoChanging: PropTypes.boolean,
+  photoChanging: PropTypes.bool,
   welcomeSectionPhotos: PropTypes.array,
   welcomeSectionImage1: PropTypes.number,
   welcomeSectionImage2: PropTypes.number,
@@ -53,14 +53,14 @@ export const HomeWelcome = ({
               buttonLabel={t('MAIN_PAGE.HEADER_BUTTON')}
               backgroundColor={'#B7C274'}
               navigateTo={'/rejestracja'}
-              arrow={'true'}
+              arrow={true}
             />
 
             <Button
               buttonLabel={t('MAIN_PAGE.AUCTION_ITEM_BUTTON_2')}
               backgroundColor={'#FFFFFF'}
               navigateTo={'/rejestracja#platnosci'}
-              arrow={'false'}
+              arrow={false}
             />
           </div>
         </div>

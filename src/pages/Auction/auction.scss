@@ -1,4 +1,4 @@
-@import '../../styles/mixins.scss';
+@use '../../styles/mixins.scss' as mixin;
 
 .Auction {
   white-space: pre-wrap;
@@ -15,11 +15,11 @@
   &__sectionWelcome {
     padding: 14px 17px 0;
 
-    @include device(tablet) {
+    @include mixin.device(tablet) {
       padding: 17px 5px 0;
     }
 
-    @include device(mobile) {
+    @include mixin.device(mobile) {
       padding: 17px 0;
     }
   }
@@ -43,11 +43,11 @@
     position: relative;
     margin-bottom: 95px;
 
-    @include device(tablet) {
+    @include mixin.device(tablet) {
       border-radius: 22px;
     }
 
-    @include device(mobile) {
+    @include mixin.device(mobile) {
       border-radius: 0px;
       padding: 82px 20px 20px;
       min-height: 0px;
@@ -67,11 +67,11 @@
       left: 0px;
       z-index: 1;
 
-      @include device(tablet) {
+      @include mixin.device(tablet) {
         border-radius: 22px;
       }
 
-      @include device(mobile) {
+      @include mixin.device(mobile) {
         border-radius: 0px;
         padding: 82px 20px 20px;
       }
@@ -100,7 +100,7 @@
       margin-bottom: 45px;
       z-index: 2;
 
-      @include device(mobile) {
+      @include mixin.device(mobile) {
         //styleName: WP_Small copy;
         font-family: Poppins;
         font-size: 14px;
@@ -121,7 +121,7 @@
       color: white;
       z-index: 2;
 
-      @include device(mobile) {
+      @include mixin.device(mobile) {
         //styleName: WP_H3;
         font-family: Poppins;
         font-size: 24px;
@@ -155,7 +155,7 @@
 
       color: #345b55;
 
-      @include device(mobile) {
+      @include mixin.device(mobile) {
         //styleName: WP_H3;
         font-family: Poppins;
         font-size: 24px;
@@ -200,7 +200,7 @@
         text-align: center;
         margin-bottom: 30px;
 
-        @include device(mobile) {
+        @include mixin.device(mobile) {
           font-size: 20px;
           font-weight: 400;
         }
@@ -236,7 +236,7 @@
     text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
     filter: blur(0.2px);
 
-    @include device(mobile) {
+    @include mixin.device(mobile) {
       font-family: Poppins;
       font-size: 12px;
       font-weight: 600;
