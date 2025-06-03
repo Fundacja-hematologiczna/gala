@@ -22,7 +22,7 @@ const AdminPanel = () => {
   }, []);
 
   return (
-    <>
+    <div style={{ overflowX: 'auto', maxWidth: '100%' }}>
       <h2 className="Admin-title">Lista użytkowników</h2>
       <table className="Admin__table">
         <thead>
@@ -31,6 +31,7 @@ const AdminPanel = () => {
             <th className="Admin__table-field ">Email</th>
             <th className="Admin__table-field ">Telefon</th>
             <th className="Admin__table-field ">Potwierdzony</th>
+            <th className="Admin__table-field ">Data</th>
           </tr>
         </thead>
         <tbody>
@@ -48,12 +49,13 @@ const AdminPanel = () => {
                   {user.confirmed ? 'tak' : 'nie'}
                 </span>
               </td>
+              <td className="Admin__table-field">{user.registrationDate}</td>
             </tr>
           ))}
         </tbody>
       </table>
       <AdminDownloadCSV users={users} />
-    </>
+    </div>
   );
 };
 
