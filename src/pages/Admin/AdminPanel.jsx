@@ -31,6 +31,7 @@ const AdminPanel = () => {
             <th className="Admin__table-field ">Email</th>
             <th className="Admin__table-field ">Telefon</th>
             <th className="Admin__table-field ">Potwierdzony</th>
+            <th className="Admin__table-field ">Data</th>
           </tr>
         </thead>
         <tbody>
@@ -48,6 +49,7 @@ const AdminPanel = () => {
                   {user.confirmed ? 'tak' : 'nie'}
                 </span>
               </td>
+              <td className="Admin__table-field">{user.registrationDate}</td>
             </tr>
           ))}
         </tbody>
