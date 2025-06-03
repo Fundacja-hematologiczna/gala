@@ -22,7 +22,7 @@ const AdminPanel = () => {
   }, []);
 
   return (
-    <div style={{ overflowX: 'auto', maxWidth: '100%' }}>
+    <>
       <h2 className="Admin-title">Lista użytkowników</h2>
       <table className="Admin__table">
         <thead>
@@ -55,7 +55,7 @@ const AdminPanel = () => {
         </tbody>
       </table>
       <AdminDownloadCSV users={users} />
-    </div>
+    </>
   );
 };
 
