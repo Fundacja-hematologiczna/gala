@@ -1,3 +1,5 @@
+@use '../../styles/mixins.scss' as *;
+
 #galleryZoom {
   animation: openGallery 0.31415s ease-in-out;
   background: transparent;
@@ -25,7 +27,7 @@
 
   #closeButton {
     aspect-ratio: 1;
-    width: 30px;
+    width: 25px;
     position: absolute;
     top: 0;
     right: -70px;
@@ -51,9 +53,10 @@
       background-color: rgba(0, 0, 0, 0.7);
     }
 
-    @media (width < 730px) {
+    @include device(mobile, tablet) {
       right: 10px;
       top: 10px;
+      transform: scale(1);
     }
   }
 
@@ -78,17 +81,21 @@
   .galleryZoom__buttons {
     display: flex;
     flex-direction: row;
-    gap: 100px;
     margin-top: 20px;
+    position: fixed;
+    gap: 50px;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
 
-    @media (width < 730px) {
-      gap: 50px;
+    @include device(mobile, tablet) {
+      bottom: 20px;
     }
   }
 
   .galleryArrow {
-    width: 3rem;
-    height: 3rem;
+    width: 32px;
+    height: 32px;
     background-color: rgba(255, 255, 255, 0.55);
     border: 1px solid rgba(0, 0, 0, 0.4);
     border-radius: 50%;
