@@ -1,28 +1,23 @@
 import '../../styles/index.scss';
 import './contributors.scss';
-import { useEffect, useState } from 'react';
+// import { useEffect, useState } from 'react';
 import { Button } from '../../components/Button/Button.jsx';
 import { useTranslation } from 'react-i18next';
-import { getLogos } from '../../api/services.js';
+// import { getLogos } from '../../api/services.js';
+import { Slider } from '../../components/Slider/Slider.jsx';
+import { usePartnerCategories } from '../../hooks/usePartnerCategories.js';
 
 const Contributors = () => {
-  const [logos, setLogos] = useState([]);
   const { t } = useTranslation();
+  const { sponsor } = usePartnerCategories();
 
-  useEffect(() => {
-    getLogos()
-      .then((response) => {
-        if (response.data.data && Array.isArray(response.data.data)) {
-          const logosForGala = response.data.data.filter(
-            (logo) => logo.on_gala === true && logo.gala_category,
-          );
-          setLogos(logosForGala);
-        }
-      })
-      .catch((e) => {
-        console.error('Błąd podczas pobierania danych:', e);
-      });
-  }, []);
+  const sponsors = [
+    {
+      id: 'sponsor',
+      title: t('MAIN_PAGE.PARTNERS'),
+      slides: sponsor,
+    },
+  ];
 
   return (
     <>
@@ -46,24 +41,7 @@ const Contributors = () => {
 
         <section className="Contributors__partners">
           <div className="Contributors__partners-container">
-            <div className="Contributors__partners-grid">
-              {logos.map((logo) => (
-                <a
-                  href={logo.link}
-                  key={`patron ${logo.id}`}
-                  target="blank"
-                  rel="noopener noreferrer">
-                  <div className="Contributors__partners-grid--item">
-                    <img
-                      className="Contributors__partners-grid--item--img"
-                      src={logo.logo}
-                      alt={`logo - ${logo.title}`}
-                      loading="lazy"
-                    />
-                  </div>
-                </a>
-              ))}
-            </div>
+            <Slider patrons={sponsors} />
           </div>
         </section>
 
