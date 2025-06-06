@@ -87,9 +87,9 @@
     text-align: center;
     transition: background-color 0.3s;
 
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    filter: blur(0.3px);
+    // -webkit-font-smoothing: antialiased;
+    // -moz-osx-font-smoothing: grayscale;
+    // filter: blur(0.3px);
 
     &--active {
       background-color: #b7c274;
