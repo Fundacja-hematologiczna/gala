@@ -176,7 +176,8 @@
   "GALLERY": {
     "HEADER_TITLE": "Gallery",
     "HEADER_BODY_1": "The Charity Gala in Nieborów has traditionally been a festival of beautiful hearts. Each edition gathers a large group of people eager to support patients with hematological diseases and their families.",
-    "HEADER_BODY_2": "Take a look at the photo gallery to feel the power of kindness and the unique atmosphere of the Gala."
+    "HEADER_BODY_2": "Take a look at the photo gallery to feel the power of kindness and the unique atmosphere of the Gala.",
+     "NO_PHOTOS_YET": "Photos from the {{year}} edition will be published soon. Stay tuned for updates."
   },
   "CONTACT": {
     "HEADER_TITLE": "Contact",

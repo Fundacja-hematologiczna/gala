@@ -12,7 +12,7 @@ const Gallery = () => {
   const [images, setImages] = useState(null);
   const [loading, setLoading] = useState(true);
   const [visibleImages, setVisibleImages] = useState(15);
-  const years = ['2022', '2023', '2024'];
+  const years = ['2022', '2023', '2024', '2025'];
 
   const dialogRef = useRef(null);
   const [chosenImage, setChosenImage] = useState('');
@@ -148,20 +148,28 @@ const Gallery = () => {
             ))}
           </div>
 
-          <div className="Gallery__pictures__grid">
-            {!loading &&
-              images[isActive].slice(0, visibleImages).map((image, i) => (
-                <div className="Gallery__pictures__grid-item" key={image}>
-                  <img
-                    src={image}
-                    onClick={() => handleClickShowGallery(i)}
-                    alt={`image-${i}`}
-                    className="Gallery__pictures__grid-item--img"
-                    loading="lazy"
-                  />
-                </div>
-              ))}
-          </div>
+          {!loading && images[isActive] === undefined && (
+            <p className="Gallery__pictures-text">
+              {t('GALLERY.NO_PHOTOS_YET', { year: isActive })}
+            </p>
+          )}
+
+          {!loading && images[isActive] !== undefined && (
+            <div className="Gallery__pictures__grid">
+              {!loading &&
+                images[isActive].slice(0, visibleImages).map((image, i) => (
+                  <div className="Gallery__pictures__grid-item" key={image}>
+                    <img
+                      src={image}
+                      onClick={() => handleClickShowGallery(i)}
+                      alt={`image-${i}`}
+                      className="Gallery__pictures__grid-item--img"
+                      loading="lazy"
+                    />
+                  </div>
+                ))}
+            </div>
+          )}
 
           <GalleryZoomed
             dialogRef={dialogRef}

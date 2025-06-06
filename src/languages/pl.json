@@ -177,7 +177,8 @@
   "GALLERY": {
     "HEADER_TITLE": "Galeria",
     "HEADER_BODY_1": "Gala Charytatywna w Nieborowie to już tradycyjnie festiwal pięknych serc. Każda odsłona gromadzi liczne grono osób pragnących wspierać pacjentów chorób hematologicznych i ich rodziny.",
-    "HEADER_BODY_2": "Zajrzyj do fotorelacji, by poczuć tę moc dobra i wyjątkową atmosferę Gali."
+    "HEADER_BODY_2": "Zajrzyj do fotorelacji, by poczuć tę moc dobra i wyjątkową atmosferę Gali.",
+    "NO_PHOTOS_YET": "Zdjęcia z edycji {{year}} zostaną opublikowane wkrótce. Zapraszamy do śledzenia aktualizacji."
   },
   "CONTACT": {
     "HEADER_TITLE": "Kontakt",
