@@ -83,19 +83,16 @@
     flex-direction: row;
     margin-top: 20px;
     position: fixed;
-    gap: 50px;
+    gap: 68px;
     bottom: 25px;
     left: 50%;
     transform: translateX(-50%);
 
-    @include device(mobile, tablet) {
-      bottom: 20px;
-    }
   }
 
-  .galleryArrow {
-    width: 32px;
-    height: 32px;
+  .galleryArrow { 
+    width: 40px;
+    height: 40px;
     background-color: rgba(255, 255, 255, 0.55);
     border: 1px solid rgba(0, 0, 0, 0.4);
     border-radius: 50%;
