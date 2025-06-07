@@ -29,20 +29,27 @@ export const GalleryZoomed = ({
 
   return (
     <dialog {...handlers} id="galleryZoom" ref={dialogRef}>
-      <button id="closeButton" onClick={onClickClose}>
-        <img src="menu-hamburger.svg" alt="Close button" />
-      </button>
-      <button
-        className="galleryArrow galleryArrow--left"
-        onClick={onClickNextImage}>
-        <img src="/GalleryArrowLeft.svg" alt="Gallery Arrow left" />
-      </button>
-      <button
-        className="galleryArrow galleryArrow--right"
-        onClick={onClickPrevImage}>
-        <img src="/GalleryArrowRight.svg" alt="Gallery Arrow right" />
-      </button>
-      <img className="galleryPhoto" src={chosenImage} alt={chosenImage} />
+      <div className="galleryZoom__imageWrapper">
+        <img className="galleryPhoto" src={chosenImage} alt={chosenImage} />
+        <button id="closeButton" onClick={onClickClose}>
+          <img src="menu-hamburger.svg" alt="Close button" />
+        </button>
+      </div>
+      <div className="galleryZoom__buttons">
+        <button
+          className="galleryArrow galleryArrow--left"
+          aria-label="Poprzednie zdjęcie"
+          onClick={onClickPrevImage}>
+          <img src="/GalleryArrowLeft.svg" alt="Previous image" />
+        </button>
+
+        <button
+          className="galleryArrow galleryArrow--right"
+          aria-label="Następne zdjęcie"
+          onClick={onClickNextImage}>
+          <img src="/GalleryArrowRight.svg" alt="Next image" />
+        </button>
+      </div>
     </dialog>
   );
 };
