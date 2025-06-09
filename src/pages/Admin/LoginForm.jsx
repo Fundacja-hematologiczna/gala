@@ -4,8 +4,8 @@ import './admin.scss';
 
 const LoginForm = ({ onLogin }) => {
   const [formData, setFormData] = useState({
-    username: 'FundHemGala',
-    password: 'qweas76!@',
+    username: '',
+    password: '',
   });
   const [message, setMessage] = useState('');
 

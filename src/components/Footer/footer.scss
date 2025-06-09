@@ -126,7 +126,6 @@
         max-width: 231px;
         width: 100%;
         margin: 0 auto;
-        // gap: 65px;
       }
 
       & img {
@@ -174,6 +173,10 @@
     font-weight: 300;
     line-height: 30px;
     margin-top: 24px;
+    background-color: #5d7c77;
+    border-radius: 45px;
+    padding: 5px;
+
 
     @include mixin.device(mobile) {
       font-size: 10px;
