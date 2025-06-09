@@ -1,10 +1,16 @@
-@use '../../styles/mixins.scss' as mixin;
+@use '../../styles/mixins.scss' as *;
 
 .Admin {
-    padding: 120px 17px 0;
-    display: flex;
-    
-    &-title {
+  padding: 120px 17px 0;
+  display: flex;
+
+  &__container {
+    display: grid;
+    place-items: center;
+    width: 100dvw;
+  }
+
+  &-title {
     font-family: Poppins;
     font-size: 40px;
     font-weight: 600;
@@ -12,185 +18,204 @@
     text-align: center;
     margin-bottom: 66px;
     color: #345b55;
+  }
+
+  &__form {
+    color: #345b55;
+    margin-bottom: 104px;
+    padding: 0 20px;
+    border: 3px solid #345b55;
+    border-radius: 20px;
+    padding: 40px 25px 40px;
+
+    background-color: #ffffff;
+
+    @include device(mobile) {
+      padding: 42px 20px 45px;
+      width: 100%;
+      box-sizing: border-box;
     }
 
-    &__form {
-        color: #345b55;
-        margin-bottom: 104px;
-        padding: 0 20px;
-        border: 3px solid #345b55;
-        border-radius: 20px;
-        padding: 40px 25px 40px;
-    
-       
-          
-          background-color: #ffffff;
-          
-    
-          @include mixin.device(mobile) {
-            padding: 42px 20px 45px;
-            width: 100%;
-            box-sizing: border-box;
-          }
-        
-    
-        &-title {
-          //styleName: WP_Title H1';
-          font-family: Poppins;
-          font-size: 32px;
-          font-weight: 700;
-          line-height: 72px;
-          letter-spacing: 0.01em;
-          text-align: left;
-         // margin-bottom: 15px;
-    
-          @include mixin.device(mobile) {
-            font-size: 32px;
-            font-weight: 700;
-            line-height: 48px;
-          }
-        }
-    
-        &__fieldsGrid {
-          display: grid;
-          grid-template-rows: 92px auto;
-          grid-template-columns: 1fr ;
-          column-gap: 39px;
-        //  row-gap: 15px;
-          margin-bottom: 10px;
-    
-          @include mixin.device(mobile) {
-            grid-template-columns: 1fr;
-          }
-        }
+    &-title {
+      //styleName: WP_Title H1';
+      font-family: Poppins;
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 72px;
+      letter-spacing: 0.01em;
+      text-align: left;
+      // margin-bottom: 15px;
 
-        &-info {
-         // background-color: red;
-          margin-bottom: 20px;
-          text-align: center;
-          color: palevioletred;
-          height: 20px;
-        }
-    
-        &-label {
-          //styleName: WP_body copy;
-          font-family: Poppins;
-          font-size: 16px;
-          font-weight: 400;
-          line-height: 22.4px;
-          text-align: left;
-          color: #345b55;
-        }
-    
-        &-input {
-          width: 100%;
-          display: flex;
-          box-sizing: border-box;
-          height: 42px;
-          padding: 13px 29px 13px 29px;
-          gap: 10px;
-          border-radius: 5px;
-          border: none;
-          border: 1px solid #345b55;
-          box-sizing: border-box;
-          
-    
-          &--big {
-            min-height: 300px;
-            resize: none;
-          }
-    
-          &:focus {
-            outline: none;
-            border: 2px solid #345b55;
-            
-          }
-        }
-    
-        
-    
-        &-description {
-          font-family: Poppins;
-          font-size: 16px;
-          font-weight: 500;
-          line-height: 24px;
-          letter-spacing: -0.011em;
-          text-align: left;
-          color: #345b55;
-          margin-bottom: 29px;
-        }
-    
-        &-required {
-          color: black;
-          font-family: Poppins;
-          font-size: 14px;
-          font-weight: 400;
-          line-height: 21px;
-          text-align: left;
-          margin-bottom: 29px;
-        }
-    
-        &-button {
-          all: unset;
-         // min-width: 246px;
-          width: 180px;
-          padding: 11.5px 49px;
-          gap: 10px;
-          border-radius: 30px;
-          background: #345b55;
-          color: white;
-          font-family: Poppins;
-          font-size: 16px;
-          font-weight: 600;
-          line-height: 24px;
-          letter-spacing: 0.0012em;
-          text-align: center;
-          box-sizing: border-box;
-          transition: 0.2s;
-          display: flex;
-          margin: 0 auto;
-          justify-content: center;
-    
-          &:hover {
-            // scale: 103%;
-            cursor: pointer;
-          }
-        }
+      @include device(mobile) {
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 48px;
+      }
+    }
+
+    &__fieldsGrid {
+      display: grid;
+      grid-template-rows: 92px auto;
+      grid-template-columns: 1fr;
+      column-gap: 39px;
+      //  row-gap: 15px;
+      margin-bottom: 10px;
+
+      @include device(mobile) {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    &-info {
+      // background-color: red;
+      margin-bottom: 20px;
+      text-align: center;
+      color: palevioletred;
+      height: 20px;
+    }
+
+    &-label {
+      //styleName: WP_body copy;
+      font-family: Poppins;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 22.4px;
+      text-align: left;
+      color: #345b55;
+    }
+
+    &-input {
+      width: 100%;
+      display: flex;
+      box-sizing: border-box;
+      height: 42px;
+      padding: 13px 29px 13px 29px;
+      gap: 10px;
+      border-radius: 5px;
+      border: none;
+      border: 1px solid #345b55;
+      box-sizing: border-box;
+
+      &--big {
+        min-height: 300px;
+        resize: none;
       }
 
-  
+      &:focus {
+        outline: none;
+        border: 2px solid #345b55;
+      }
+    }
+
+    &-description {
+      font-family: Poppins;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+      letter-spacing: -0.011em;
+      text-align: left;
+      color: #345b55;
+      margin-bottom: 29px;
+    }
+
+    &-required {
+      color: black;
+      font-family: Poppins;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 21px;
+      text-align: left;
+      margin-bottom: 29px;
+    }
+
+    &-button {
+      all: unset;
+      // min-width: 246px;
+      width: 180px;
+      padding: 11.5px 49px;
+      gap: 10px;
+      border-radius: 30px;
+      background: #345b55;
+      color: white;
+      font-family: Poppins;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 24px;
+      letter-spacing: 0.0012em;
+      text-align: center;
+      box-sizing: border-box;
+      transition: 0.2s;
+      display: flex;
+      margin: 0 auto;
+      justify-content: center;
+
+      &:hover {
+        // scale: 103%;
+        cursor: pointer;
+      }
+    }
+  }
 
   &__table {
-    border: 3px solid #345b55;
-   // padding: 105px;
-    border-radius: 50px;
-    gap: 10px;
-    width: 80vw;
-    margin-bottom: 50px;
-    color: #345b55;
+    border-collapse: collapse;
+    border-radius: 8px;
+    background-color: #ececec;
+    width: 80%;
+    overflow: hidden;
+    margin-bottom: 32px;
 
     font-family: Poppins;
-    font-size:16px;
+    font-size: 16px;
     font-weight: 600;
     line-height: 36px;
     text-align: left;
 
-    
+    &--row {
+      display: grid;
 
-    &-field {
-      border-top: 2px solid #345b55;
-      padding:2px;
-      min-height: 20px;
+      &:not(:first-child) {
+        border-top: 1px solid #345b55;
+      }
+
+      @include device(desktop) {
+        grid-template-columns: 4fr 10fr 5fr 4fr 4fr;
+      }
+
+      @include device(tablet) {
+        grid-template-columns: 6fr 5fr;
+      }
     }
 
-    &-head {
-      border: 2px solid #345b55;
+    &--img {
+      aspect-ratio: 1;
+      width: 32px;
+      padding-right: 4px;
+
+      @include device(desktop) {
+        display: none;
+      }
+    }
+
+    &--head {
+      text-align: left;
+      background-color: #345b55;
+      color: white;
+
+      @include device(tablet, mobile) {
+        display: none;
+      }
+    }
+
+    th,
+    td {
+      padding: 10px;
+      display: flex;
+      align-items: center;
     }
   }
 }
 
 .AdminDownloadCSV__button {
-  
   width: 200px;
   display: flex;
   margin: 0 auto;

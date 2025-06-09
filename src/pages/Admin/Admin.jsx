@@ -14,7 +14,7 @@ const Admin = () => {
 
   return (
     <section className="Admin">
-      <div className="container">
+      <div className="Admin__container">
         {isLogged ? (
           <AdminPanel />
         ) : (
