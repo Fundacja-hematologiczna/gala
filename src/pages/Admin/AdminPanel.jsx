@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { getUsers } from '../../api/services';
 import AdminDownloadCSV from './AdminDownloadCSV';
+import AdminPanelLine from './AdminpanelLine';
 
 const AdminPanel = () => {
   const [users, setUsers] = useState([]);
@@ -25,32 +26,25 @@ const AdminPanel = () => {
     <>
       <h2 className="Admin-title">Lista użytkowników</h2>
       <table className="Admin__table">
-        <thead>
-          <tr>
-            <th className=" Admin__table-field ">Imię</th>
-            <th className="Admin__table-field ">Email</th>
-            <th className="Admin__table-field ">Telefon</th>
-            <th className="Admin__table-field ">Potwierdzony</th>
-            <th className="Admin__table-field ">Data</th>
+        <thead className="Admin__table--head">
+          <tr className="Admin__table--row">
+            <th className="Admin__table--field">Imię</th>
+            <th className="Admin__table--field">Email</th>
+            <th className="Admin__table--field">Telefon</th>
+            <th className="Admin__table--field">Potwierdzony</th>
+            <th className="Admin__table--field">Data</th>
           </tr>
         </thead>
         <tbody>
           {users.map((user) => (
-            <tr key={user.id}>
-              <td className="Admin__table-field">{user.name}</td>
-              <td className="Admin__table-field">{user.email}</td>
-              <td className="Admin__table-field">{user.phone}</td>
-              <td className="Admin__table-field">
-                <span
-                  style={{
-                    color: user.confirmed ? 'green' : 'red',
-                    fontWeight: 'bold',
-                  }}>
-                  {user.confirmed ? 'tak' : 'nie'}
-                </span>
-              </td>
-              <td className="Admin__table-field">{user.registrationDate}</td>
-            </tr>
+            <AdminPanelLine
+              key={user.id}
+              name={user.name}
+              email={user.email}
+              tel={user.phone}
+              accepted={user.confirmed}
+              date={user.registrationDate}
+            />
           ))}
         </tbody>
       </table>
