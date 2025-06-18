@@ -28,7 +28,15 @@ export const GalleryZoomed = ({
   });
 
   return (
-    <dialog {...handlers} id="galleryZoom" ref={dialogRef}>
+    <dialog
+      {...handlers}
+      id="galleryZoom"
+      ref={dialogRef}
+      onCancel={(e) => {
+        e.preventDefault();
+
+        onClickClose();
+      }}>
       <div className="galleryZoom__imageWrapper">
         <img className="galleryPhoto" src={chosenImage} alt={chosenImage} />
         <button id="closeButton" onClick={onClickClose}>

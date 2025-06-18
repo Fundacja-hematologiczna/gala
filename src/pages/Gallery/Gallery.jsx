@@ -18,8 +18,6 @@ const Gallery = () => {
   const [chosenImage, setChosenImage] = useState('');
   const [isGalleryOpened, setIsGalleryOpened] = useState(false);
 
-  const [isBackToTopButton, setIsBackToTopButton] = useState(false);
-
   const handleClickShowGallery = (img) => {
     dialogRef.current?.showModal();
     setIsGalleryOpened(true);
@@ -73,26 +71,6 @@ const Gallery = () => {
         console.log(e);
       });
   }, []);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const bottom =
-        window.innerHeight + window.scrollY >=
-        document.body.offsetHeight - 1000;
-
-      if (bottom && !loading && images[isActive]?.length > visibleImages) {
-        setVisibleImages((prev) => prev + 6);
-      }
-
-      setIsBackToTopButton(window.scrollY > 600);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [loading, images, isActive, visibleImages]);
 
   dialogRef.current?.addEventListener('keyup', (e) => {
     switch (e.key) {
@@ -179,17 +157,6 @@ const Gallery = () => {
             onClickPrevImage={handleClickPrevImg}
           />
         </div>
-        {isBackToTopButton && (
-          <div className="BackToTop">
-            <button
-              className="BackToTop__button"
-              onClick={() => window.scrollTo({ top: 50, behavior: 'smooth' })}
-              aria-label={t('FOOTER.BACK_TO_TOP')}
-              title={t('FOOTER.BACK_TO_TOP')}>
-              ↑
-            </button>
-          </div>
-        )}
       </section>
     </main>
   );

@@ -17,8 +17,30 @@ import { Routes, Route, Outlet, BrowserRouter } from 'react-router-dom';
 
 import Cookies from './components/Cookies/Cookies';
 import { ScrollToHash } from './pages/ScrollToHash';
+import { useEffect, useState } from 'react';
+import BackToTop from './components/BackToTop/BackToTop';
+import useLocalStorage from './hooks/useLocaleStorage.hook';
 
 function App() {
+  const [isBackToTopButton, setIsBackToTopButton] = useLocalStorage(
+    'scroll',
+    false,
+  );
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsBackToTopButton(window.scrollY > 600);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    handleScroll();
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <>
       <BrowserRouter>
@@ -43,6 +65,8 @@ function App() {
         <Footer />
         <ScrollToHash />
         <Cookies />
+
+        {isBackToTopButton && <BackToTop />}
       </BrowserRouter>
     </>
   );
