@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { getUsers } from '../../api/services';
 import AdminDownloadCSV from './AdminDownloadCSV';
-import AdminPanelLine from './AdminPanelLine';
+import AdminPanelLine from './AdminpanelLine';
 
 const AdminPanel = () => {
   const [users, setUsers] = useState([]);
